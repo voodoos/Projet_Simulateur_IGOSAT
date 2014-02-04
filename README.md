@@ -1,2 +1,2 @@
-Projet_Simulateur_IGOSAT
+Projet Simulateur IGOSAT
 ========================
