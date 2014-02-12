@@ -11,3 +11,13 @@
 *.lai
 *.la
 *.a
+
+# VIsual basic:
+*.opensdf
+*.sdf
+*.sln
+*.v12.suo
+*.vcxproj*
+ipch
+stdafx*
+targetver.h
