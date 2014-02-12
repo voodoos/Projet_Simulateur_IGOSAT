@@ -3,6 +3,88 @@
   dslVersion="1.0.0.0"
   Id="6da98633-7ca9-41aa-87d5-48678de8dfea"
   name="IGOsat" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="6442c60f-00d1-4318-8a1f-358122c55240"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="31f83fcd-854a-45ac-82ad-c2b86c8f5d07">
+          <propertyInstance
+            Id="1b85847e-bd9b-40c9-83e0-85d489e02cf4"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="41cbc9e7-5cb9-45ac-af0a-dd9441640b12">
+          <propertyInstance
+            Id="512e451e-722b-4c77-9362-db14102530b5"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="c2a33c2c-5bfd-4293-88bb-637cdf0d8cda">
+          <propertyInstance
+            Id="bbce4a5e-1d94-4862-92f3-91b8ef8ec17a"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="33dee1da-4142-459d-af24-f3c5114b7902"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="45124489-b721-4c79-a7e1-ad7a3b1f853f">
+          <propertyInstance
+            Id="a45c9383-fc49-467d-8b11-b2d44963ad7c"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="49651ca4-f2fa-4af4-b027-cba5d354c6a4">
+          <propertyInstance
+            Id="633661d0-92a1-40fd-803d-3d65552eb998"
+            name="TemplateFilePath"
+            value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="beffd89c-9539-4d2a-a479-c6b487c71f30">
+          <propertyInstance
+            Id="b30570d0-b7d3-448b-85c8-77076177e6fb"
+            name="ProjectPath"
+            value="ClassTemplate=..\IGOsatLib\IGOsatLib.csproj|EnumTemplate=..\IGOsatLib\IGOsatLib.csproj|InterfaceTemplate=..\IGOsatLib\IGOsatLib.csproj|StructTemplate=..\IGOsatLib\IGOsatLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="add3ec54-a944-4647-8bd5-685e3210d302">
+          <propertyInstance
+            Id="fc0d6897-424c-44c9-b003-0955d973d036"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="51a70aa0-1335-4ae2-a49d-7b930140625d">
+          <propertyInstance
+            Id="f224923b-6c33-402e-b8a1-100abfc9b100"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="45f0240e-5bb5-4c9b-86e1-b23b4f381480">
+          <propertyInstance
+            Id="70b83079-952a-4490-83fc-637df9288a99"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="7dd92ad1-eff5-4ed3-b246-6489d5c80e3c">
+          <propertyInstance
+            Id="5ae1bc41-8451-4064-a44f-5a590e73a1c3"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -15,6 +97,18 @@
       <profileInstance
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="299b4a3c-6ac8-4336-bb61-7f1d21bc180f">
+      <profileInstance
+        Id="899abd87-064d-4eec-817e-155b0fd9a7f2"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="8bdc937c-17d4-45f4-a5d6-472ea4d3922a">
+      <profileInstance
+        Id="15669c06-d09d-4dff-a681-b2534cd68ad7"
+        name="TextTemplateBindings" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
@@ -886,6 +980,52 @@
             <classMoniker
               Id="5c7e1ded-6a5d-49d7-8264-ec9be242cb4a"
               LastKnownName="Command"
+              LastKnownLocation="IGOsat.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="93f0afab-c7f6-4431-bdf5-6223e55f5064"
+        name="HCI"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="697c1253-af7c-4836-984f-8f70f1f47f90"
+        name="GUI"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="2b36fb85-6c8f-434c-91de-2391e365da63"
+            isSubstitutable="false">
+            <classMoniker
+              Id="93f0afab-c7f6-4431-bdf5-6223e55f5064"
+              LastKnownName="HCI"
+              LastKnownLocation="IGOsat.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="53f57e08-ae67-420b-81f8-81d80530d60e"
+        name="CLI"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="ba627593-080d-49ae-a8fc-db7d0c959122"
+            isSubstitutable="false">
+            <classMoniker
+              Id="93f0afab-c7f6-4431-bdf5-6223e55f5064"
+              LastKnownName="HCI"
               LastKnownLocation="IGOsat.uml" />
           </generalization>
         </generalsInternal>

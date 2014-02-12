@@ -1,3 +1,6 @@
+12/02/2014
+	Première ébauche d'un modèle objet du simulateur.
+
 10/02/2014
 	Rencontre avec Natacha Combier, chef de projet IGOsat. De nombreux points ont étés éclaircis. Ainsi  l'équipe des physiciens souhaite avant tout un simulateur fonctionnel, afin de déterminer le choix de l'ordinateur de bord.
 	Cependant, dans l'idéal, il serait intéressant de rendre la structure assez souple pour introduire plus tard de réels éléments de simulation, afin d'affiner les contraintes et donc les choix.
