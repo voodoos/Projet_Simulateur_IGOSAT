@@ -18,6 +18,7 @@ public:
      * \brief Constructeur
      */
     MacroModule();
+    MacroModule(Memory<int>);
     
     /*!
      * \fn ~MacroModule()
@@ -25,8 +26,10 @@ public:
      */
     ~MacroModule();
     
-private:
     
+    void addSubModule(Module);
+    void addConnexion(Connexion);
+private:
     std::vector<Module>modules;         /*!< Les sous-modules de module */
     std::vector<Connexion>connexions;   /*!< Les connexions de module */
 };
