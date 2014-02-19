@@ -24,6 +24,9 @@ targetver.h
 Debug
 Prod
 
+#XCode
+*.xcodeproj
+
 
 
 
