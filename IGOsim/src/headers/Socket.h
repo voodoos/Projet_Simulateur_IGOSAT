@@ -31,10 +31,10 @@ private:
 
 public:
     /*!
-    * \fn Socket()
+    * \fn Socket(std::string name, stype type)
     * \brief Constructeur
     */
-    Socket();
+    Socket(std::string name, stype type);
 
     /*!
     * \fn virtual ~Socket()
