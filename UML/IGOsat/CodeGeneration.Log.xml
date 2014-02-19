@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2014-02-19T15:33:21" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2014-02-19T15:33:21" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2014-02-19T15:33:21" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2014-02-19T15:33:21" Importance="Diagnostic" Text="ProjectPath = ..\IGOsatLib\IGOsatLib.csproj" />
+  <Message Timestamp="2014-02-19T15:33:21" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2014-02-19T15:33:21" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2014-02-19T15:33:21" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2014-02-19T15:33:21" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2014-02-19T15:33:21" Importance="Medium" Text="IGOsat's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'IGOsat::Module' -  (Class) " />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Medium" Text="Project Added: D:\Mes trucs\Programmes\C++\Projet_Simulateur_IGOSAT\UML\IGOsatLib\IGOsatLib.csproj" />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Medium" Text="'IGOsat::Module' -  (Class) : success (file created) - D:\Mes trucs\Programmes\C++\Projet_Simulateur_IGOSAT\UML\IGOsatLib\GeneratedCode\Module.cs" />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Diagnostic" Text="ProjectPath = ..\IGOsatLib\IGOsatLib.csproj" />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Medium" Text="IGOsat's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'IGOsat::Module' -  (Class) " />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="Diagnostic" Text="'IGOsat::Module' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2014-02-19T15:33:29" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>
