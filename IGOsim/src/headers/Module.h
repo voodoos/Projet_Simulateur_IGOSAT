@@ -2,9 +2,10 @@
 
 #include <vector>
 
-#include <Memory.h>
-#include <Message.h>
-#include <Socket.h>
+#include "Memory.h"
+#include "Message.h"
+#include "Socket.h"
+
 
 /*!
 * \class Module
@@ -18,7 +19,7 @@ class Module
 {
 private:
     std::string name;               /*!< Le nom du module */
-    Memory mem;                     /*!< La mémoire du module */
+    Memory<int> mem;                /*!< La mémoire du module */
     std::vector<Socket> sockets;    /*!< Les connecteurs du module */
     std::vector<Message> messages;  /*!< Les messages compris par le module */
 
