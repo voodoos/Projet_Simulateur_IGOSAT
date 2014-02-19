@@ -22,17 +22,21 @@ private:
     Memory<int> mem;                /*!< La mémoire du module */
     std::vector<Socket> sockets;    /*!< Les connecteurs du module */
     std::vector<Message> messages;  /*!< Les messages compris par le module */
-
 public:
     /*!
     * \fn Module()
     * \brief Constructeur
     */
     Module();
+    
+    Module(Memory<int>);
 
     /*!
     * \fn virtual ~Module()
     * \brief Destructeur
     */
     virtual ~Module();
+    
+    void addSocket(Socket);
+    void addMessage(Message);
 };
