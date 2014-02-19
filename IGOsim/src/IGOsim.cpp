@@ -3,12 +3,13 @@
 
 #include <iostream>
 
-#include <Module.h>
+#include "Module.h"
 
 
 int main()
 {
-    std::cout << "Hello wordl";;
+    std::cout << "Hello world" << std::endl;;
 	return 0;
 }
+
 
