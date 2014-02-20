@@ -1735,8 +1735,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="d44cb084-2a46-479c-9357-a64ca0c6c4de"
-                LastKnownName="hash_map&lt;string, T&gt;"
+                Id="4f2ef917-fc51-4961-becd-008bee08c14f"
+                LastKnownName="unordered_map&lt;string, T&gt;"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
@@ -2606,6 +2606,11 @@
           </generalization>
         </generalsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4f2ef917-fc51-4961-becd-008bee08c14f"
+        name="unordered_map&lt;string, T&gt;" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
