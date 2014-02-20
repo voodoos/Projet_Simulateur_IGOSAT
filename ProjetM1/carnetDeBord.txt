@@ -1,3 +1,7 @@
+19/02/2014
+	Réflexions sur un meilleur modèle. 
+	Premières lignes de code, structure globale des différentes classes centrales. Problème du passage de messages.
+
 12/02/2014
 	Première ébauche d'un modèle objet du simulateur.
 

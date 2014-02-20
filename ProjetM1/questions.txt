@@ -3,7 +3,8 @@ Natacha:
 	Dès que modèle objet prêt: rencontrer/communiquer avec les personnes chargées de chacun des composants, pour connaître les différentes commandes à implémenter.
 	
 Profs:
-	Validation idées modèle objet ?
-	Nottament les commandes. Trop haut niveau ? Trop bas niveau ?
-	On voudrait un truc vraiment évolutif. Notamment possibilité de descendre plus bas niveau, en multipliant les modules.
-	Utilisation de doxygen ? En plus d'une doc manuelle d'installation / utilisation.
+	Problème des messages
+X	Validation idées modèle objet ?
+X	Nottament les commandes. Trop haut niveau ? Trop bas niveau ?
+X	On voudrait un truc vraiment évolutif. Notamment possibilité de descendre plus bas niveau, en multipliant les modules.
+X	Utilisation de doxygen ? En plus d'une doc manuelle d'installation / utilisation.
