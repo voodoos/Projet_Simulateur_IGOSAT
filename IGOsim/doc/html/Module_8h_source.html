@@ -102,15 +102,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classMemory.html">Memory&lt;int&gt;</a> mem;                </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::vector&lt;Socket&gt; sockets;    </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::vector&lt;Message&gt; messages;  </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classModule.html#a5a240a8a9ab1813b17bcb810b24ceaea" title="Constructeur.">Module</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classModule.html#a7c9d9c096786d127590fdd8aa2b7d681" title="Destructeur.">~Module</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classModule.html#a5a240a8a9ab1813b17bcb810b24ceaea" title="Constructeur.">Module</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classModule.html#a5a240a8a9ab1813b17bcb810b24ceaea" title="Constructeur.">Module</a>(<a class="code" href="classMemory.html">Memory&lt;int&gt;</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classModule.html#a7c9d9c096786d127590fdd8aa2b7d681" title="Destructeur.">~Module</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> addSocket(<a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> addMessage(<a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Février 20 2014 14:31:08 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Février 20 2014 16:50:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
