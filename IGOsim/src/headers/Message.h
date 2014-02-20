@@ -14,7 +14,7 @@ class Message
 {
 private:
     std::string name; /*!< Nom du message*/
-
+//pour commit
 public:
     /*!
     * \fn Message(std::string)
