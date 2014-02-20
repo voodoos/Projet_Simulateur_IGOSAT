@@ -23,7 +23,7 @@ stdafx*
 targetver.h
 Debug
 Prod
-.cd
+*.cd
 
 #XCode
 *.xcodeproj
