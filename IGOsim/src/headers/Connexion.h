@@ -11,7 +11,7 @@ public:
      * \fn Connexion()
      * \brief Constructeur
      */
-    Connexion(Socket in, Socket out);
+    Connexion(Socket &in, Socket &out);
     /*!
      * \fn ~Connexion()
      * \brief Destrcuteur
