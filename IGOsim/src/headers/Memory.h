@@ -1,4 +1,4 @@
-#pragma once
+Ôªø#pragma once
 #include <unordered_map>
 #include <string>
 #include <sstream>
@@ -6,15 +6,15 @@
 
 /*!
 * \class Memory
-* \brief ReprÈsente une mÈmoire
+* \brief Repr√©sente une m√©moire
 *
-* La mÈmoire est ici simplement modÈlisÈe comme une liste de clÈes et de valeurs, associÈe ‡ des contraintes.
+* La m√©moire est ici simplement mod√©lis√©e comme une liste de cl√©es et de valeurs, associ√©e √† des contraintes.
 */
 template <class T>
 class Memory
 {
 private:
-    std::unordered_map<std::string, T> cells; /*!< Les cellules de memoire */
+    std::unordered_map<std::string, T> cells; /*!< Les cellules de m√©moire */
 public:
     /*!
     * \fn Memory()
@@ -24,19 +24,19 @@ public:
     
     /*!
      * \fn Memory(std::unordered_map<std::string, T>)
-     * \brief Constructeur parametrisé avec cells
+     * \brief Constructeur parametris√© avec cells
      */
     Memory(std::unordered_map<std::string, T>);
     
     /*!
      * \fn  unsigned int getSize();
-     * \brief Retourne la taille courante de la memoire
+     * \brief Retourne la taille courante de la m√©moire
      */
     unsigned int getSize();
     
     /*!
      * \fn  int setValueForKey(std::string key, T value);;
-     * \brief Écrit une valeur "value" dans la case memoire avec un nom "key"
+     * \brief √©crit une valeur "value" dans la case m√©moire avec un nom "key"
      */
     int setValueForKey(std::string, T);
 

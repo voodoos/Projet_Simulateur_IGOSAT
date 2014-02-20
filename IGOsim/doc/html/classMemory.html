@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>IGOsat Simulator: Référence de la classe Memory</title>
+<title>IGOsat Simulator: Référence du modèle de la classe Memory&lt; T &gt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -84,27 +85,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="classMemory-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
-<div class="title">Référence de la classe Memory</div>  </div>
+<div class="title">Référence du modèle de la classe Memory&lt; T &gt;</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Repr�sente une m�moire.  
+<p>Représente une mémoire.  
  <a href="classMemory.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Memory_8h_source.html">Memory.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a585d7bb6fc6f2237bcebf94a86b7dd99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a585d7bb6fc6f2237bcebf94a86b7dd99"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMemory.html#a585d7bb6fc6f2237bcebf94a86b7dd99">Memory</a> ()</td></tr>
-<tr class="memdesc:a585d7bb6fc6f2237bcebf94a86b7dd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur. <br/></td></tr>
-<tr class="memitem:a0ffa9759ebbf103f11132a505b93bdc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ffa9759ebbf103f11132a505b93bdc0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMemory.html#a0ffa9759ebbf103f11132a505b93bdc0">~Memory</a> ()</td></tr>
-<tr class="memdesc:a0ffa9759ebbf103f11132a505b93bdc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
+<tr class="memitem:aa546b7c6e170e45a4e4f74492d8fe8bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa546b7c6e170e45a4e4f74492d8fe8bf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMemory.html#aa546b7c6e170e45a4e4f74492d8fe8bf">Memory</a> ()</td></tr>
+<tr class="memdesc:aa546b7c6e170e45a4e4f74492d8fe8bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur. <br/></td></tr>
+<tr class="memitem:af1e6452dbe3bb1650604140814710b95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1e6452dbe3bb1650604140814710b95"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMemory.html#af1e6452dbe3bb1650604140814710b95">Memory</a> (std::unordered_map&lt; std::string, T &gt;)</td></tr>
+<tr class="memdesc:af1e6452dbe3bb1650604140814710b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur parametrisŽ avec cells. <br/></td></tr>
+<tr class="memitem:add46d3ed56cf1e88efee2ed59b38c995"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add46d3ed56cf1e88efee2ed59b38c995"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMemory.html#add46d3ed56cf1e88efee2ed59b38c995">getSize</a> ()</td></tr>
+<tr class="memdesc:add46d3ed56cf1e88efee2ed59b38c995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la taille courante de la memoire. <br/></td></tr>
+<tr class="memitem:a3514e7594615bb1748ba5b57259c9eca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3514e7594615bb1748ba5b57259c9eca"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMemory.html#a3514e7594615bb1748ba5b57259c9eca">setValueForKey</a> (std::string, T)</td></tr>
+<tr class="memdesc:a3514e7594615bb1748ba5b57259c9eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">ƒcrit une valeur "value" dans la case memoire avec un nom "key". <br/></td></tr>
+<tr class="memitem:a2d153fdede89954dc0875ab6c8d804c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d153fdede89954dc0875ab6c8d804c3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMemory.html#a2d153fdede89954dc0875ab6c8d804c3">~Memory</a> ()</td></tr>
+<tr class="memdesc:a2d153fdede89954dc0875ab6c8d804c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Description détaillée</h2>
-<div class="textblock"><p>Repr�sente une m�moire. </p>
-<p>La m�moire est ici simplement mod�lis�e comme une liste de cl�es et de valeurs, associ�e � des contraintes. </p>
+<div class="textblock"><h3>template&lt;class T&gt;<br/>
+class Memory&lt; T &gt;</h3>
+
+<p>Représente une mémoire. </p>
+<p>La mémoire est ici simplement modélisée comme une liste de clées et de valeurs, associée à des contraintes. </p>
 </div><hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/headers/<a class="el" href="Memory_8h_source.html">Memory.h</a></li>
 <li>src/includes/Memory.cpp</li>
@@ -112,7 +125,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Février 19 2014 17:34:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Février 20 2014 14:31:10 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
