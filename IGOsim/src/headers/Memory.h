@@ -14,7 +14,7 @@ template <class T>
 class Memory
 {
 private:
-    std::unordered_map<std::string, T> cells; /*!< Les cellules de memoire */
+    std::unordered_map<std::string, T> cells; /*!< Les cellules de mémoire */
 public:
     /*!
     * \fn Memory()
@@ -24,19 +24,19 @@ public:
     
     /*!
      * \fn Memory(std::unordered_map<std::string, T>)
-     * \brief Constructeur parametrisŽ avec cells
+     * \brief Constructeur parametrisé avec cells
      */
     Memory(std::unordered_map<std::string, T>);
     
     /*!
      * \fn  unsigned int getSize();
-     * \brief Retourne la taille courante de la memoire
+     * \brief Retourne la taille courante de la mémoire
      */
     unsigned int getSize();
     
     /*!
      * \fn  int setValueForKey(std::string key, T value);;
-     * \brief ƒcrit une valeur "value" dans la case memoire avec un nom "key"
+     * \brief écrit une valeur "value" dans la case mémoire avec un nom "key"
      */
     int setValueForKey(std::string, T);
 
