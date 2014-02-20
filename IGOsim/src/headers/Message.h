@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <string>
 
@@ -6,7 +6,7 @@
 * \class Message
 * \brief Classe abstraite de base pour les messages
 *
-* Les messages sont les diff�rentes informations que peuvent se communiquer les modules.
+* Les messages sont les différentes informations que peuvent se communiquer les modules.
 *
 */
 

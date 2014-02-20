@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <string>
 
@@ -6,22 +6,22 @@
 * \class Socket
 * \brief Classe abstraite pour les connecteurs des modules
 *
-* Les sockets modélisent les connections entre les modules.
-* Un connecteur peut-être soit un connecteur d'entrée, \a InSocket, soit un connecteur de sortie, \a OutSOcket. 
-* Les connecteurs sont reliés entre-eux via les objets Connexion.
+* Les sockets modÃ©lisent les connections entre les modules.
+* Un connecteur peut-Ãªtre soit un connecteur d'entrÃ©e, \a InSocket, soit un connecteur de sortie, \a OutSOcket. 
+* Les connecteurs sont reliÃ©s entre-eux via les objets Connexion.
 */
 
 class Socket
 {
 public:
     /*! \enum Socket::stype
-    * Simple énumération pour les différents types de sockets
+    * Simple Ã©numÃ©ration pour les diffÃ©rents types de sockets
     *
     * \var Socket::stype::IN
-    * Caractérise un connecteur d'entrée.
+    * CaractÃ©rise un connecteur d'entrÃ©e.
     *
     * \var Socket::stype::OUT
-    * Caractérise un connecteur de sortie.
+    * CaractÃ©rise un connecteur de sortie.
     */
     enum stype { IN, OUT };
 

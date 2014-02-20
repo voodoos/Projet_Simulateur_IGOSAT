@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <vector>
 
@@ -19,7 +19,7 @@ class Module
 {
 private:
     std::string name;               /*!< Le nom du module */
-    Memory<int> mem;                /*!< La m�moire du module */
+    Memory<int> mem;                /*!< La mémoire du module */
     std::vector<Socket> sockets;    /*!< Les connecteurs du module */
     std::vector<Message> messages;  /*!< Les messages compris par le module */
 
