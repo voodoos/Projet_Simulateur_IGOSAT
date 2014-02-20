@@ -17,10 +17,10 @@ private:
 
 public:
     /*!
-    * \fn Message()
+    * \fn Message(std::string)
     * \brief Constructeur
     */
-    Message();
+    Message(std::string name);
 
     /*!
     * \fn ~Message()

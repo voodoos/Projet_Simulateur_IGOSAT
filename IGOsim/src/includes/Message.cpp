@@ -1,8 +1,9 @@
 #include "Message.h"
 
 
-Message::Message()
+Message::Message(std::string name)
 {
+    this->name = name;
 }
 
 
