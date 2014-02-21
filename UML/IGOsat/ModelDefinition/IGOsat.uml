@@ -1100,7 +1100,7 @@
             isAbstract="false">
             <classMoniker
               Id="a727dbb8-0424-47f8-bf69-949f5c074d5a"
-              LastKnownName="Timer"
+              LastKnownName="Timer : Pattern Singleton"
               LastKnownLocation="IGOsat.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -2713,7 +2713,7 @@
     <packageHasNamedElement>
       <class
         Id="a727dbb8-0424-47f8-bf69-949f5c074d5a"
-        name="Timer"
+        name="Timer : Pattern Singleton"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">

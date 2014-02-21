@@ -218,7 +218,7 @@
       </nodes>
     </generalizationConnector>
     <classShape Id="4f4b0847-2903-439b-b6ac-7a7c51951b41" absoluteBounds="5.75, 1.125, 2, 1.3828124701976776" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
-      <classMoniker Id="82a3316e-b69e-4199-86c2-b45f031c3971" LastKnownName="Timer" />
+      <classMoniker Id="82a3316e-b69e-4199-86c2-b45f031c3971" LastKnownName="Timer : Pattern Singleton" />
       <nestedChildShapes>
         <AttributeElementListCompartment Id="79e30171-d2e2-4c59-afcd-e6a692f8f090" absoluteBounds="5.7650000000000006, 1.5150000000000006, 1.9700000000000002, 0.36132811258236563" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="dfa473c0-8bd0-4c5d-ab92-0e91a13b8d30" absoluteBounds="5.7650000000000006, 1.8863281125823654, 1.9700000000000002, 0.52148435761531187" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
