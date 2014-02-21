@@ -94,11 +94,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="e719f3ea-34a8-4600-8a47-f953f5c507b1" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
-        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="316031e5-e52d-456b-b5a3-7edc52d2f22d" name="T" isAbstract="false" isLeaf="false" cachedFullName="T">
         <elementDefinition Id="6aecbf45-05b6-4e52-be90-30e79d1bed3b" />
       </referencedType>
@@ -137,6 +132,32 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="d7d10321-8995-4294-9005-54ff70ee3c63" />
+          </association>
+          <association Id="1e05ee8b-70f1-4b4a-966e-0e59f232eb25" isDerived="false" sourceEndRoleName="Module" targetEndRoleName="Timer" isLeaf="false" isAbstract="false">
+            <classMoniker Id="82a3316e-b69e-4199-86c2-b45f031c3971" LastKnownName="Timer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d96a6a4-fe57-47a1-836e-c1887314cbb9" name="Module" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="6e20c955-1aaf-4482-89fe-719bd20eb121" name="Lower" value="*">
+                      <elementDefinition Id="64f8c762-5e03-4890-b739-ea5bc6f3ad2a" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="2e3ae22a-a1a1-484b-b5db-8f7200c54c79" name="Upper" value="*">
+                      <elementDefinition Id="37960ad5-cf11-438d-a979-e95f851fe9b8" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0ac91ebf-17e3-4fa9-a930-3ea3c21cb1f2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ff57e6fb-7438-4fb1-b918-4f9881eb0630" name="Timer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5f492625-e4ab-4d53-8fb5-3f6bdd094654" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5d3db9a5-2ccc-42f8-92ab-563472b48437" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -565,6 +586,9 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="7aac9f20-4ebb-4df4-814e-013383281aea" name="clock" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3c952d0f-9036-4ba7-8641-35f72049ea51" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -596,10 +620,10 @@
               <referencedTypeMoniker Id="7668e469-3a3e-4aa0-b831-f90c4f13af28" LastKnownName="unordered_map&lt;string, T&gt;" />
             </type_NamedElement>
           </property>
-          <property Id="079b9e0e-4d93-44c4-88d3-4cdc7832b6de" name="size" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="079b9e0e-4d93-44c4-88d3-4cdc7832b6de" name="sizeMax" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="a217cf6c-fcd9-4328-a127-4cc5957f680a" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="e719f3ea-34a8-4600-8a47-f953f5c507b1" LastKnownName="Integer" />
+              <referencedTypeMoniker Id="12764478-158b-423c-9ef4-10bb4d0510d3" LastKnownName="Integer" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -841,11 +865,11 @@
       <class Id="5e3a999f-02e8-43be-82e3-f678ff45364f" name="Connexion" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="5aef5608-5bbc-4a44-b355-b4a9c743ae12" />
         <targetEnds>
-          <association Id="e65b05db-748c-437e-860f-93eeb6ef601a" isDerived="false" sourceEndRoleName="Canal" targetEndRoleName="Socket" isLeaf="false" isAbstract="false">
+          <association Id="e65b05db-748c-437e-860f-93eeb6ef601a" isDerived="false" sourceEndRoleName="Connexion" targetEndRoleName="Socket" isLeaf="false" isAbstract="false">
             <classMoniker Id="c2e22b95-cac4-49ad-a963-38b227baa12b" LastKnownName="Socket" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="54c5f8e3-1b4a-45eb-bcdf-772958d35426" name="Canal" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="54c5f8e3-1b4a-45eb-bcdf-772958d35426" name="Connexion" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString Id="6590c5fc-f7dd-4ce3-ab13-bd4796c3f87a" name="Lower" value="2">
                       <elementDefinition Id="54f04002-60f1-4666-a61b-1784708cfb7b" />
@@ -897,6 +921,18 @@
             <elementDefinition Id="ce74c3d6-8747-40f1-bb43-ae173a5feecc" />
             <type_NamedElement>
               <referencedTypeMoniker Id="be02f151-4ad1-49d9-83f0-b505e55bd91b" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="122098aa-df64-4847-a7ce-326e93793076" name="operations?" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2318cc42-1481-4914-aa2b-8a1fb3550221" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3a5ad786-1712-4477-ad3f-6d122ee79fcf" LastKnownName="vector&lt;Operation&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="fe891e16-af13-42a6-a82d-77cd4871761f" name="data" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7cfbed60-9cd9-41e2-ab7e-ba019a65c20d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6a293374-2358-4a49-9f95-5555bb8a3126" LastKnownName="Memory?" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -981,6 +1017,83 @@
         <elementDefinition Id="4f2ef917-fc51-4961-becd-008bee08c14f" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="82a3316e-b69e-4199-86c2-b45f031c3971" name="Timer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a727dbb8-0424-47f8-bf69-949f5c074d5a" />
+        <ownedAttributesInternal>
+          <property Id="b3290d2b-9fc4-4ee8-a840-e2c6cc85d7f0" name="modules" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6183cc05-9cac-430d-8b97-0abb5f41d8cd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="07733701-727f-485c-ad1b-5459a323e186" LastKnownName="vector&lt;Module&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="2ce825ee-af3a-4eb8-96ff-5090d0d76b12" name="start" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bc64bb51-c024-4fa6-a0de-14052b87305a" />
+          </operation>
+          <operation Id="2e350b66-46b4-427c-a419-e9718af56d8e" name="stop" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a24292ea-6db0-4274-86a5-c912ae03f1dc" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ea07fd01-6ef1-4b43-b923-088af3baf7f4" name="Operation" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c854e826-f19f-4ce0-9247-341e0a88609a" />
+        <ownedAttributesInternal>
+          <property Id="1e6c9b4a-627e-4a54-9ba6-dfd881b4b225" name="name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a79b812f-9852-4166-b5ee-63cbeb47a92b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="be02f151-4ad1-49d9-83f0-b505e55bd91b" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="57413329-90aa-42f4-bfd4-f7470ad6ffde" name="timeNeeded" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b12db1c3-972e-4962-b6b8-4d9a05106fbb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4808a3fb-24b8-48f6-8acd-f8e3f81b9a2d" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="6ec9696b-e20b-438a-8f0b-62fc6329e9a5" name="spaceNeeded" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f810de8b-d319-42c8-b3b8-84f9974c908c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4808a3fb-24b8-48f6-8acd-f8e3f81b9a2d" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="4808a3fb-24b8-48f6-8acd-f8e3f81b9a2d" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="5624f5d4-9b80-4e82-89c4-dcb0693a093e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6a293374-2358-4a49-9f95-5555bb8a3126" name="Memory?" isAbstract="false" isLeaf="false" cachedFullName="Memory?">
+        <elementDefinition Id="8685dd9d-6a5b-4015-ba07-8d2b0b7d7902" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3a5ad786-1712-4477-ad3f-6d122ee79fcf" name="vector&lt;Operation&gt;" isAbstract="false" isLeaf="false" cachedFullName="vector&lt;Operation&gt;">
+        <elementDefinition Id="5f6ece72-72c4-4021-a3ea-57f32ac5d7d8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="12764478-158b-423c-9ef4-10bb4d0510d3" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cc86aa80-4a06-41ad-9e39-bf837ce9be20" name="GPSComputeCoords" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b31ad7c3-8820-4073-a409-2215f0fd38ac" />
+        <generalsInternal>
+          <generalization Id="8395ca10-8114-4ea4-86e2-89fece1874f1" isSubstitutable="false">
+            <classMoniker Id="ea07fd01-6ef1-4b43-b923-088af3baf7f4" LastKnownName="Operation" />
+            <elementDefinition Id="7515f340-018c-493c-a2be-3d884f6fca07" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="1874f015-41f9-47f0-a2ff-da4f2c2256fd" name="IGOsat">
     <elementDefinition Id="6da98633-7ca9-41aa-87d5-48678de8dfea" />

@@ -1091,6 +1091,58 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="5d3db9a5-2ccc-42f8-92ab-563472b48437"
+            isDerived="false"
+            sourceEndRoleName="Module"
+            targetEndRoleName="Timer"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a727dbb8-0424-47f8-bf69-949f5c074d5a"
+              LastKnownName="Timer"
+              LastKnownLocation="IGOsat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0ac91ebf-17e3-4fa9-a930-3ea3c21cb1f2"
+                  name="Module"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="64f8c762-5e03-4890-b739-ea5bc6f3ad2a"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="37960ad5-cf11-438d-a979-e95f851fe9b8"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f492625-e4ab-4d53-8fb5-3f6bdd094654"
+                  name="Timer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -1669,6 +1721,14 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="3c952d0f-9036-4ba7-8641-35f72049ea51"
+            name="clock"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1742,7 +1802,7 @@
           </property>
           <property
             Id="a217cf6c-fcd9-4328-a127-4cc5957f680a"
-            name="size"
+            name="sizeMax"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -2389,7 +2449,7 @@
           <association
             Id="d2bebfb0-2f2e-48eb-bbe9-6151b74fb522"
             isDerived="false"
-            sourceEndRoleName="Canal"
+            sourceEndRoleName="Connexion"
             targetEndRoleName="Socket"
             isLeaf="false"
             isAbstract="false">
@@ -2401,7 +2461,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="35c2a68c-9ebb-4419-8e87-7dfdf56cd9b8"
-                  name="Canal"
+                  name="Connexion"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2518,6 +2578,44 @@
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="2318cc42-1481-4914-aa2b-8a1fb3550221"
+            name="operations?"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="5f6ece72-72c4-4021-a3ea-57f32ac5d7d8"
+                LastKnownName="vector&lt;Operation&gt;"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7cfbed60-9cd9-41e2-ab7e-ba019a65c20d"
+            name="data"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8685dd9d-6a5b-4015-ba07-8d2b0b7d7902"
+                LastKnownName="Memory?"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -2611,6 +2709,155 @@
       <undefinedType
         Id="4f2ef917-fc51-4961-becd-008bee08c14f"
         name="unordered_map&lt;string, T&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a727dbb8-0424-47f8-bf69-949f5c074d5a"
+        name="Timer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="6183cc05-9cac-430d-8b97-0abb5f41d8cd"
+            name="modules"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4a203295-478a-4041-bae2-c7a188d46f21"
+                LastKnownName="vector&lt;Module&gt;"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bc64bb51-c024-4fa6-a0de-14052b87305a"
+            name="start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a24292ea-6db0-4274-86a5-c912ae03f1dc"
+            name="stop"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c854e826-f19f-4ce0-9247-341e0a88609a"
+        name="Operation"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="a79b812f-9852-4166-b5ee-63cbeb47a92b"
+            name="name"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a08bbadc-ebac-4894-9010-de38cfb43e06"
+                LastKnownName="string"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b12db1c3-972e-4962-b6b8-4d9a05106fbb"
+            name="timeNeeded"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="5624f5d4-9b80-4e82-89c4-dcb0693a093e"
+                LastKnownName="int"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f810de8b-d319-42c8-b3b8-84f9974c908c"
+            name="spaceNeeded"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="5624f5d4-9b80-4e82-89c4-dcb0693a093e"
+                LastKnownName="int"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5624f5d4-9b80-4e82-89c4-dcb0693a093e"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5f6ece72-72c4-4021-a3ea-57f32ac5d7d8"
+        name="vector&lt;Operation&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8685dd9d-6a5b-4015-ba07-8d2b0b7d7902"
+        name="Memory?" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b31ad7c3-8820-4073-a409-2215f0fd38ac"
+        name="GPSComputeCoords"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="7515f340-018c-493c-a2be-3d884f6fca07"
+            isSubstitutable="false">
+            <classMoniker
+              Id="c854e826-f19f-4ce0-9247-341e0a88609a"
+              LastKnownName="Operation"
+              LastKnownLocation="IGOsat.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

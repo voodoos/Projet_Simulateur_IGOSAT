@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>secondStep.classdiagram</DependentUpon>
     </Content>
+    <Content Include="UMLSequenceDiagram1.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceDiagram1.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceDiagram1.sequencediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="firstStep.classdiagram">
       <SubType>Content</SubType>
