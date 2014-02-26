@@ -8,4 +8,6 @@
 class NumberGeneratorModule:public Module{
 public:
     NumberGeneratorModule();
+    void start();
+    Socket *getOutSocket();
 };

@@ -6,17 +6,18 @@
 #include "Module.h"
 #include "MacroModule.h"
 #include "Socket.h"
+#include "NumberGeneratorModule.h"
+#include "DisplayModule.h"
 
 
 int main()
 {
     std::cout << "Hello world" << std::endl;;
-    Memory<int> mem;
-    Socket pin1("pin1", Socket::IN);
-    Socket pin2("pin2", Socket::OUT);
-    MacroModule macro(mem);
-    macro.addSocket(pin1);
-    macro.addSocket(pin2);
+    NumberGeneratorModule gen;
+    DisplayModule disp;
+    Connexion wire(gen.getOutSocket(), disp.getInSocket());
+    gen.start();
+    disp.start();
     
 
 	return 0;

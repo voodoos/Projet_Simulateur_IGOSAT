@@ -1,6 +1,9 @@
 ﻿#pragma once
 
 #include <string>
+#include <queue>
+#include "Message.h"
+#include "Connexion.h"
 
 /*!
 * \class Socket
@@ -13,33 +16,29 @@
 
 class Socket
 {
-public:
-    /*! \enum Socket::stype
-    * Simple énumération pour les différents types de sockets
-    *
-    * \var Socket::stype::IN
-    * Caractérise un connecteur d'entrée.
-    *
-    * \var Socket::stype::OUT
-    * Caractérise un connecteur de sortie.
-    */
-    enum stype { IN, OUT };
-
 private:
-    stype type;         /*!< Type du connecteur */
     std::string name;   /*!< Nom du connecteur */
+    std::queue<Message> messageQueue;
+    Connexion *connexion;
 
 public:
     /*!
     * \fn Socket(std::string name, stype type)
     * \brief Constructeur
     */
-    Socket(std::string name, stype type);
+    Socket(std::string name);
 
     /*!
     * \fn virtual ~Socket()
     * \brief Destructeur
     */
     ~Socket();
+    
+    void setConnexion(Connexion c);
+    std::string getName();
+    void receive(Message m);
+    void send(Message m);
+    bool hasMessage();
+    Message getLastMessage();
 };
 

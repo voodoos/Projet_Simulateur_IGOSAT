@@ -17,9 +17,9 @@
 
 class Module
 {
-private:
+protected:
     std::string name;               /*!< Le nom du module */
-    Memory<int> mem;                /*!< La mémoire du module */
+    Memory<int> memory;             /*!< La mémoire du module */
     std::vector<Socket> sockets;    /*!< Les connecteurs du module */
     std::vector<Message> messages;  /*!< Les messages compris par le module */
 public:
@@ -38,5 +38,6 @@ public:
     virtual ~Module();
     
     void addSocket(Socket);
+    Socket *socketWithName(std::string sname);
     void addMessage(Message);
 };

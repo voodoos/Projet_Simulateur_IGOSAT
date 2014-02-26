@@ -14,18 +14,19 @@ class Message
 {
 private:
     std::string name; /*!< Nom du message*/
-//pour commit
+    std::string payload; /*!< Charge utile du message*/
 public:
     /*!
     * \fn Message(std::string)
     * \brief Constructeur
     */
-    Message(std::string name);
+    Message(std::string name, std::string payload);
 
     /*!
     * \fn ~Message()
     * \brief Destructeur
     */
     virtual ~Message();
+    std::string getPayload();
 };
 

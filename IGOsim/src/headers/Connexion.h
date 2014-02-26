@@ -1,23 +1,27 @@
-#pragma once
 #include <iostream>
-#include "Socket.h"
+#include "Message.h"
+#pragma once
 /*!
  * \class Connexion
  * \brief
  */
+
+class Socket;
 class Connexion{
 public:
     /*!
-     * \fn Connexion()
+     * \fn Connexion(Socket *, Socket *)
      * \brief Constructeur
      */
-    Connexion(Socket &in, Socket &out);
+    Connexion(Socket *a, Socket *b);
     /*!
      * \fn ~Connexion()
      * \brief Destrcuteur
      */
     ~Connexion();
+    
+    void dispatch(Message m, Socket *s);
 private:
-    Socket inSocket;
-    Socket outSocket;
+    Socket *socketA;
+    Socket *socketB;
 };
