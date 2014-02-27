@@ -10,7 +10,11 @@
  * \brief
  */
 
-class MacroModule:public Module{
+class MacroModule :public Module{
+private:
+    std::vector<Module>modules;         /*!< Les sous-modules de module */
+    std::vector<Connexion>connexions;   /*!< Les connexions entre les sous-modules */
+
 public:
     
     /*!
@@ -29,7 +33,4 @@ public:
     
     void addSubModule(Module);
     void addConnexion(Connexion);
-private:
-    std::vector<Module>modules;         /*!< Les sous-modules de module */
-    std::vector<Connexion>connexions;   /*!< Les connexions de module */
 };
