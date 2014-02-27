@@ -1,3 +1,13 @@
+26/02/2014
+	Poursuite du dévellopement du simulateur.
+
+25/02/2014
+	Rdv entre équipe physique et informatique, décidé continuer projet c++ ad hoc, mais permettre un passage futur à scade. Par exemple en générant automatiquement le graphe des connexions entre modules.
+
+20/02/2014
+	Rdv projet. Envisagé un changement complet de direction: SCADE. Utiliser un outil graphique renommé (EADS) de programmation synchrone.
+	Objectif de la semaine: choisir...
+
 19/02/2014
 	Réflexions sur un meilleur modèle. 
 	Premières lignes de code, structure globale des différentes classes centrales. Problème du passage de messages.
