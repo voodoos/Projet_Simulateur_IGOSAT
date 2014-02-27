@@ -268,7 +268,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="de9104b9-0fd2-4a0b-85fb-b1a1ff7f2359" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="56995090-307d-44ec-8445-17676c582f57" LastKnownName="vector&lt;Socket&gt;" />
+              <referencedTypeMoniker Id="60438f76-9e7d-4e5f-b9a4-814d7bc3e090" LastKnownName="unordered_map&lt;Socket&gt;" />
             </type_NamedElement>
           </property>
           <property Id="0771c55f-6d45-4547-a197-8e3c3873f181" name="name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -378,7 +378,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="60f3c6f8-0c10-4b67-a150-f4a8dae5ddfb" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="1a74dca4-3860-41f8-b7dc-af523ac32b7d" LastKnownName="vector&lt;Message&gt;" />
+              <referencedTypeMoniker Id="474f81c5-09f0-43cf-88ab-58376cdfbf8b" LastKnownName="unordered_map&lt;Message&gt;" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -741,7 +741,7 @@
           <property Id="11726859-6dcb-42aa-b790-313dc3ebe8c9" name="modules" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="8a7b569c-97a0-4b3a-9a05-5dc3d060ed2c" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="07733701-727f-485c-ad1b-5459a323e186" LastKnownName="vector&lt;Module&gt;" />
+              <referencedTypeMoniker Id="398ae314-e95c-479f-bccb-325cab82ec23" LastKnownName="unordered_map&lt;Module&gt;" />
             </type_NamedElement>
           </property>
           <property Id="5c24a868-0e17-44ab-9911-1c4d865d158c" name="connexions" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -794,24 +794,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="c2e22b95-cac4-49ad-a963-38b227baa12b" name="Socket" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="679f1d6f-dff8-435c-b514-5eb121862a53" />
-        <targetEnds>
-          <association Id="cae2e960-f39a-435c-b41b-35662457d253" isDerived="false" sourceEndRoleName="Socket" targetEndRoleName="SocketType" isLeaf="false" isAbstract="false">
-            <enumerationMoniker Id="c7eca6fc-f0c8-4df2-8f5e-37cdf48a73a2" LastKnownName="SocketType" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="99d468e9-a641-40ee-abda-e2afcd6be7cd" name="Socket" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="3ec4061e-c3d0-4e64-aa6e-c340baaf4263" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="014b2447-e3ea-47e4-aded-baf2cb33bced" name="SocketType" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="95b04065-9e75-42c4-8db1-6fb579bb9190" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="fff119f7-dd7f-450a-a72b-7636ce3645d8" />
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property Id="1e2b4bdc-4ebf-494b-be37-493d563370d8" name="name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="b0166af9-c30b-4165-95c3-c9328aad79c6" />
@@ -819,48 +801,29 @@
               <referencedTypeMoniker Id="6f03c0ae-2f55-41f2-b97a-2cbe8b91b770" LastKnownName="string" />
             </type_NamedElement>
           </property>
-          <property Id="0dd71eee-cf78-43e5-9bb0-6bfee1b01f29" name="type" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="9e3e8a8d-5f3f-4eb9-9542-31498b8906c3" />
+          <property Id="d9657cac-4cf6-4704-a184-ade3dd82b31f" name="messageQueue" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="513803af-7380-455b-88f4-9fe2ccfaaace" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="f23c90eb-aa2a-42ef-89f3-7c6d779b4323" LastKnownName="SocketType" />
+              <referencedTypeMoniker Id="153cdc8c-ea43-4eca-9cfd-a61804beeb43" LastKnownName="queue&lt;Message&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="838df69d-1d32-4de4-8312-c94bacea964b" name="connexion" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="60192c4c-46f8-4c8b-a67e-ebff20193d81" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="208dfca5-7771-4297-a24f-18bf460d4752" LastKnownName="Connexion*" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="88c53aa7-abc1-4ade-bfec-5f5b9fe7e6a0" name="send" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4f7a1df5-1362-4e78-98ee-c5062110bf39" />
+          </operation>
+          <operation Id="f99e84ba-aeef-4237-b0fd-952087ed147e" name="receive" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7d5cb93b-176e-4234-a07a-ef8447ef945b" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <enumeration Id="c7eca6fc-f0c8-4df2-8f5e-37cdf48a73a2" name="SocketType" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="22309372-1c3a-4370-a34b-1ae0080241a8" />
-        <ownedLiterals>
-          <enumerationLiteral Id="1839147a-d263-4b92-8502-2fb6b0d9c2f1" name="IN">
-            <elementDefinition Id="1d77229c-c408-454f-8442-cfff67cd9d34" />
-            <specification>
-              <literalInteger Id="31ecfbd4-4f08-4770-87f0-1d16f396f151" name="Integer" value="0">
-                <elementDefinition Id="86f067b6-0176-4052-8395-d2534aac2b7c" />
-              </literalInteger>
-            </specification>
-          </enumerationLiteral>
-          <enumerationLiteral Id="10513393-f876-4397-9244-4a636d2f8ae1" name="OUT">
-            <elementDefinition Id="409c4a88-0e76-4244-b461-0739900e248f" />
-            <specification>
-              <literalInteger Id="a7d7396c-9492-415d-b4e2-1ddb332b6a3b" name="Integer" value="1">
-                <elementDefinition Id="e34b7806-4298-46f9-a179-188353817bc5" />
-              </literalInteger>
-            </specification>
-          </enumerationLiteral>
-        </ownedLiterals>
-      </enumeration>
-    </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="f23c90eb-aa2a-42ef-89f3-7c6d779b4323" name="SocketType" isAbstract="false" isLeaf="false" cachedFullName="IGOsat::SocketType">
-        <elementDefinition Id="22309372-1c3a-4370-a34b-1ae0080241a8" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="56995090-307d-44ec-8445-17676c582f57" name="vector&lt;Socket&gt;" isAbstract="false" isLeaf="false" cachedFullName="vector&lt;Socket&gt;">
-        <elementDefinition Id="07153e77-42d4-4577-a2c4-7540400f024e" />
-      </referencedType>
-    </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
       <class Id="5e3a999f-02e8-43be-82e3-f678ff45364f" name="Connexion" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="5aef5608-5bbc-4a44-b355-b4a9c743ae12" />
@@ -914,7 +877,7 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
-      <class Id="67a8526a-1f2f-4ddd-8dc0-2f91c347adff" name="Message" isAbstract="true" isLeaf="false" isActiveClass="false">
+      <class Id="67a8526a-1f2f-4ddd-8dc0-2f91c347adff" name="Message&lt;T&gt;" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="e82c095e-6bb5-46a6-a4e2-6147b50be96b" />
         <ownedAttributesInternal>
           <property Id="5c3996a9-e527-4349-acb5-70957c4c2ad8" name="name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -923,16 +886,10 @@
               <referencedTypeMoniker Id="be02f151-4ad1-49d9-83f0-b505e55bd91b" LastKnownName="string" />
             </type_NamedElement>
           </property>
-          <property Id="122098aa-df64-4847-a7ce-326e93793076" name="operations?" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="2318cc42-1481-4914-aa2b-8a1fb3550221" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="3a5ad786-1712-4477-ad3f-6d122ee79fcf" LastKnownName="vector&lt;Operation&gt;" />
-            </type_NamedElement>
-          </property>
-          <property Id="fe891e16-af13-42a6-a82d-77cd4871761f" name="data" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="fe891e16-af13-42a6-a82d-77cd4871761f" name="payload" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="7cfbed60-9cd9-41e2-ab7e-ba019a65c20d" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="6a293374-2358-4a49-9f95-5555bb8a3126" LastKnownName="Memory?" />
+              <referencedTypeMoniker Id="310a0309-afe7-4555-bdd8-11a0aaba0cbb" LastKnownName="T" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -963,17 +920,12 @@
         <elementDefinition Id="a08bbadc-ebac-4894-9010-de38cfb43e06" />
       </referencedType>
     </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="1a74dca4-3860-41f8-b7dc-af523ac32b7d" name="vector&lt;Message&gt;" isAbstract="false" isLeaf="false" cachedFullName="vector&lt;Message&gt;">
-        <elementDefinition Id="c8f831e8-05ef-40d1-9b37-fddeb30ef7b6" />
-      </referencedType>
-    </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
       <class Id="0437919d-75e6-4e1c-bc24-777b861b56a5" name="GPSMessage" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="0c3fbaae-8bdb-4f65-a4b3-f65346a81233" />
         <generalsInternal>
           <generalization Id="5861cd58-2bef-4ee5-9bb3-ac9d33c868e1" isSubstitutable="false">
-            <classMoniker Id="67a8526a-1f2f-4ddd-8dc0-2f91c347adff" LastKnownName="Message" />
+            <classMoniker Id="67a8526a-1f2f-4ddd-8dc0-2f91c347adff" LastKnownName="Message&lt;T&gt;" />
             <elementDefinition Id="6237fc44-0a55-4fa6-ad9e-78603e67afc6" />
           </generalization>
         </generalsInternal>
@@ -986,28 +938,6 @@
           <generalization Id="eeb2bcec-0d8c-498a-ac3c-b9dd12c0dcd0" isSubstitutable="false">
             <classMoniker Id="0437919d-75e6-4e1c-bc24-777b861b56a5" LastKnownName="GPSMessage" />
             <elementDefinition Id="7d6d64d9-e4e9-48ab-8db5-6264b4074a2b" />
-          </generalization>
-        </generalsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="34094eeb-18e3-42b5-89be-318d3a248e48" name="InSocket" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="a7b3b0f7-510f-4a21-8fa4-910eb435690f" />
-        <generalsInternal>
-          <generalization Id="b32c6c86-8dd2-4ffa-b34b-6d8b0171d20e" isSubstitutable="false">
-            <classMoniker Id="c2e22b95-cac4-49ad-a963-38b227baa12b" LastKnownName="Socket" />
-            <elementDefinition Id="2dcf65c3-79b1-4c7b-9e9b-451ed9594b9e" />
-          </generalization>
-        </generalsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="2a82536c-aaa7-40ff-a1e0-4419fad948ab" name="OutSocket" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="51ed4654-a30b-4f4f-b066-9ee156ec809b" />
-        <generalsInternal>
-          <generalization Id="e4024c63-a9e0-4329-a366-34eeaddff3e5" isSubstitutable="false">
-            <classMoniker Id="c2e22b95-cac4-49ad-a963-38b227baa12b" LastKnownName="Socket" />
-            <elementDefinition Id="3d291ad3-678a-4e62-94a0-fbf19f57c26f" />
           </generalization>
         </generalsInternal>
       </class>
@@ -1069,16 +999,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="6a293374-2358-4a49-9f95-5555bb8a3126" name="Memory?" isAbstract="false" isLeaf="false" cachedFullName="Memory?">
-        <elementDefinition Id="8685dd9d-6a5b-4015-ba07-8d2b0b7d7902" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="3a5ad786-1712-4477-ad3f-6d122ee79fcf" name="vector&lt;Operation&gt;" isAbstract="false" isLeaf="false" cachedFullName="vector&lt;Operation&gt;">
-        <elementDefinition Id="5f6ece72-72c4-4021-a3ea-57f32ac5d7d8" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="12764478-158b-423c-9ef4-10bb4d0510d3" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
         <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
       </referencedType>
@@ -1094,6 +1014,36 @@
         </generalsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="60438f76-9e7d-4e5f-b9a4-814d7bc3e090" name="unordered_map&lt;Socket&gt;" isAbstract="false" isLeaf="false" cachedFullName="unordered_map&lt;Socket&gt;">
+        <elementDefinition Id="32dbf67d-0996-460c-8863-b813e14bffcc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="398ae314-e95c-479f-bccb-325cab82ec23" name="unordered_map&lt;Module&gt;" isAbstract="false" isLeaf="false" cachedFullName="unordered_map&lt;Module&gt;">
+        <elementDefinition Id="5354cdc4-c245-4ed4-adcb-c17ec223a6c6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="474f81c5-09f0-43cf-88ab-58376cdfbf8b" name="unordered_map&lt;Message&gt;" isAbstract="false" isLeaf="false" cachedFullName="unordered_map&lt;Message&gt;">
+        <elementDefinition Id="7ccac686-400f-49be-b169-201452fcb836" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="310a0309-afe7-4555-bdd8-11a0aaba0cbb" name="T" isAbstract="false" isLeaf="false" cachedFullName="T">
+        <elementDefinition Id="6aecbf45-05b6-4e52-be90-30e79d1bed3b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="153cdc8c-ea43-4eca-9cfd-a61804beeb43" name="queue&lt;Message&gt;" isAbstract="false" isLeaf="false" cachedFullName="queue&lt;Message&gt;">
+        <elementDefinition Id="eea110b1-485a-40ae-a520-93a02cf09d88" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="208dfca5-7771-4297-a24f-18bf460d4752" name="Connexion*" isAbstract="false" isLeaf="false" cachedFullName="Connexion*">
+        <elementDefinition Id="23d4a73e-973f-4cf1-96da-98284e91fc85" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="1874f015-41f9-47f0-a2ff-da4f2c2256fd" name="IGOsat">
     <elementDefinition Id="6da98633-7ca9-41aa-87d5-48678de8dfea" />

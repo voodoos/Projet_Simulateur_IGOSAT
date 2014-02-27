@@ -1292,8 +1292,8 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="07153e77-42d4-4577-a2c4-7540400f024e"
-                LastKnownName="vector&lt;Socket&gt;"
+                Id="32dbf67d-0996-460c-8863-b813e14bffcc"
+                LastKnownName="unordered_map&lt;Socket&gt;"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
@@ -1444,8 +1444,8 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="c8f831e8-05ef-40d1-9b37-fddeb30ef7b6"
-                LastKnownName="vector&lt;Message&gt;"
+                Id="7ccac686-400f-49be-b169-201452fcb836"
+                LastKnownName="unordered_map&lt;Message&gt;"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
@@ -2193,8 +2193,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="4a203295-478a-4041-bae2-c7a188d46f21"
-                LastKnownName="vector&lt;Module&gt;"
+                Id="5354cdc4-c245-4ed4-adcb-c17ec223a6c6"
+                LastKnownName="unordered_map&lt;Module&gt;"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
@@ -2382,8 +2382,8 @@
             </type_NamedElement>
           </property>
           <property
-            Id="9e3e8a8d-5f3f-4eb9-9542-31498b8906c3"
-            name="type"
+            Id="513803af-7380-455b-88f4-9fe2ccfaaace"
+            name="messageQueue"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -2394,13 +2394,50 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <enumerationMoniker
-                Id="22309372-1c3a-4370-a34b-1ae0080241a8"
-                LastKnownName="SocketType"
+              <undefinedTypeMoniker
+                Id="eea110b1-485a-40ae-a520-93a02cf09d88"
+                LastKnownName="queue&lt;Message&gt;"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="60192c4c-46f8-4c8b-a67e-ebff20193d81"
+            name="connexion"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="23d4a73e-973f-4cf1-96da-98284e91fc85"
+                LastKnownName="Connexion*"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4f7a1df5-1362-4e78-98ee-c5062110bf39"
+            name="send"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7d5cb93b-176e-4234-a07a-ef8447ef945b"
+            name="receive"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -2554,7 +2591,7 @@
     <packageHasNamedElement>
       <class
         Id="e82c095e-6bb5-46a6-a4e2-6147b50be96b"
-        name="Message"
+        name="Message&lt;T&gt;"
         isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
@@ -2579,27 +2616,8 @@
             </type_NamedElement>
           </property>
           <property
-            Id="2318cc42-1481-4914-aa2b-8a1fb3550221"
-            name="operations?"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="5f6ece72-72c4-4021-a3ea-57f32ac5d7d8"
-                LastKnownName="vector&lt;Operation&gt;"
-                LastKnownLocation="IGOsat.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="7cfbed60-9cd9-41e2-ab7e-ba019a65c20d"
-            name="data"
+            name="payload"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -2611,8 +2629,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="8685dd9d-6a5b-4015-ba07-8d2b0b7d7902"
-                LastKnownName="Memory?"
+                Id="6aecbf45-05b6-4e52-be90-30e79d1bed3b"
+                LastKnownName="T"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
@@ -2642,7 +2660,7 @@
             isSubstitutable="false">
             <classMoniker
               Id="e82c095e-6bb5-46a6-a4e2-6147b50be96b"
-              LastKnownName="Message"
+              LastKnownName="Message&lt;T&gt;"
               LastKnownLocation="IGOsat.uml" />
           </generalization>
         </generalsInternal>
@@ -2858,6 +2876,31 @@
           </generalization>
         </generalsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="32dbf67d-0996-460c-8863-b813e14bffcc"
+        name="unordered_map&lt;Socket&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5354cdc4-c245-4ed4-adcb-c17ec223a6c6"
+        name="unordered_map&lt;Module&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7ccac686-400f-49be-b169-201452fcb836"
+        name="unordered_map&lt;Message&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="eea110b1-485a-40ae-a520-93a02cf09d88"
+        name="queue&lt;Message&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="23d4a73e-973f-4cf1-96da-98284e91fc85"
+        name="Connexion*" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
