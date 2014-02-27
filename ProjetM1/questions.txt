@@ -1,5 +1,5 @@
 Natacha:
-	Doc en anglais ou français ? Code en anglais ou français ?
+X	Doc en anglais ou français ? Code en anglais ou français ? -> Plutôt FR
 	Dès que modèle objet prêt: rencontrer/communiquer avec les personnes chargées de chacun des composants, pour connaître les différentes commandes à implémenter.
 	
 Profs:
