@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="6da98633-7ca9-41aa-87d5-48678de8dfea"
   name="IGOsat" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1449,6 +1449,25 @@
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="a659cdd1-6997-48b4-b9ae-9a195e1d2f83"
+            name="parametresPhysiques"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="29815168-ca89-4238-9af9-a06a7bec3588"
+                LastKnownName="unordered_map&lt;int&gt;"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -2754,6 +2773,24 @@
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="d238ce63-cbfe-4718-b7d2-437a641436d2"
+            name="retroactions"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fed45861-9e5b-467d-8e68-f52edbad51b3"
+                LastKnownName="vector&lt;Retroaction&gt;"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -2901,6 +2938,352 @@
       <undefinedType
         Id="23d4a73e-973f-4cf1-96da-98284e91fc85"
         name="Connexion*" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="29815168-ca89-4238-9af9-a06a7bec3588"
+        name="unordered_map&lt;int&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4abbc750-9e7f-4435-9bc0-7055cdfda542"
+        name="InterfaceModule"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="da4cc441-34fa-46c6-b8b6-234748bc7dad"
+            isSubstitutable="false">
+            <classMoniker
+              Id="17b99966-8d99-4c9c-9f46-57522dff0ffe"
+              LastKnownName="Module"
+              LastKnownLocation="IGOsat.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="89da584b-6b46-4f61-960e-b7140bbad9df"
+            name="parameters"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16e0a647-11ab-4e3e-8e4e-17f2648c8279"
+                LastKnownName="unordered_map&lt;double&gt;"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="23a8ce6d-24f5-4d04-9d97-ae43926ea419"
+            name="getParamByName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2015805a-e9fc-4321-939f-e39b456232e5"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="974477d5-ae5c-4902-afa5-ac2ead80ec69"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dbf55caf-3a0c-4a6b-a695-dbaeb9444fd0"
+                      LastKnownName="double"
+                      LastKnownLocation="IGOsat.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="dda3ab8b-5af1-4776-a901-abab4b86ae0d"
+            name="setParamByName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5e1c1a98-23be-48a3-afa2-3b2d6b4c9025"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="40e69318-ce27-466b-9c2f-6896553bf0ac"
+        name="unordered_map&lt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="16e0a647-11ab-4e3e-8e4e-17f2648c8279"
+        name="unordered_map&lt;double&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="dbf55caf-3a0c-4a6b-a695-dbaeb9444fd0"
+        name="double" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2f6c7369-8007-42b4-ac41-30bdd9d6b7ab"
+        name="Retroaction"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="0c870417-b9ed-4bd7-a08f-5cdf97b15cd5"
+            isDerived="false"
+            sourceEndRoleName="Retroaction"
+            targetEndRoleName="Timer"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a727dbb8-0424-47f8-bf69-949f5c074d5a"
+              LastKnownName="Timer : Pattern Singleton"
+              LastKnownLocation="IGOsat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c26f4bc5-eb9e-428c-b8b7-2db9cedc8840"
+                  name="Retroaction"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4a00dd72-eb1a-48a1-9f09-1a8bd94dcaf1"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e6ee1608-3e22-4cf6-a301-e795bb9f22c1"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="230ee775-bd4f-4a1f-8f66-d9b549a6f565"
+                  name="Timer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="07ed9052-b90b-45ae-bc91-5861cafc3627"
+            name="module"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="abb8f8b0-c3e0-481b-bd5d-eccfc8b2f047"
+                LastKnownName="Module"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e9793231-b159-4456-9d95-cacee17c10b8"
+            name="clock"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fed45861-9e5b-467d-8e68-f52edbad51b3"
+        name="vector&lt;Retroaction&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9517db0b-1d73-4b94-b1ba-fc23933e0b0a"
+        name="Batterie"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="f059b103-cd44-49c2-bf49-e129588a9b23"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4abbc750-9e7f-4435-9bc0-7055cdfda542"
+              LastKnownName="InterfaceModule"
+              LastKnownLocation="IGOsat.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="2c9e732b-3eb1-4f26-9d6c-fd861d8566fc"
+            isDerived="false"
+            sourceEndRoleName="Batterie"
+            targetEndRoleName="ChargeDechargeBatterie"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="06bc9eff-aff3-4a88-90d1-50b8ccf1b9f7"
+              LastKnownName="ChargeDechargeBatterie"
+              LastKnownLocation="IGOsat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a01eb41-c4d9-46fb-ac75-4a4357d66632"
+                  name="Batterie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a344122a-228b-48ec-a897-84df43e5ecb4"
+                  name="ChargeDechargeBatterie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="b544b770-2d18-4f2b-b617-f9cc75026eb0"
+            name="parameters"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0174127a-a902-4dd5-a8cd-f8ed7c491bfe"
+                LastKnownName="{charge, voltage}"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="06bc9eff-aff3-4a88-90d1-50b8ccf1b9f7"
+        name="ChargeDechargeBatterie"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="9b84f000-b5f7-43c1-b3d0-732d29654c63"
+            isSubstitutable="false">
+            <classMoniker
+              Id="2f6c7369-8007-42b4-ac41-30bdd9d6b7ab"
+              LastKnownName="Retroaction"
+              LastKnownLocation="IGOsat.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="ea13a15f-3deb-45b9-b973-50c579439616"
+            name="module"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="9517db0b-1d73-4b94-b1ba-fc23933e0b0a"
+                LastKnownName="Batterie"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7a21b09e-f193-4b32-af72-9665ccdedb54"
+            name="Décharge batterie sauf si voltage fourni par panneau solaire alors charge"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0174127a-a902-4dd5-a8cd-f8ed7c491bfe"
+        name="{charge, voltage}" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

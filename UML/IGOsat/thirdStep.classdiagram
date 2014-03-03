@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="4298db90-4297-4044-ac82-933433ce2678" name="secondStep" linkedPackageId="1874f015-41f9-47f0-a2ff-da4f2c2256fd" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="4298db90-4297-4044-ac82-933433ce2678" name="secondStep" linkedPackageId="1874f015-41f9-47f0-a2ff-da4f2c2256fd" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="8eef423b-6a8c-408b-9dd7-280a6d971160" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="6442c60f-00d1-4318-8a1f-358122c55240" />
@@ -963,6 +963,12 @@
               <referencedTypeMoniker Id="07733701-727f-485c-ad1b-5459a323e186" LastKnownName="vector&lt;Module&gt;" />
             </type_NamedElement>
           </property>
+          <property Id="7f5c6142-f1e7-4f81-a1c5-2c87b5489841" name="retroactions" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d238ce63-cbfe-4718-b7d2-437a641436d2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7d34afe0-96ad-4b30-b4a4-c07e266f8f8b" LastKnownName="vector&lt;Retroaction&gt;" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="2ce825ee-af3a-4eb8-96ff-5090d0d76b12" name="start" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -1053,6 +1059,192 @@
     <packageHasNamedElement>
       <referencedType Id="f1455939-cf2c-4885-871e-40bb13496dab" name="unordered_map&lt;int&gt;" isAbstract="false" isLeaf="false" cachedFullName="unordered_map&lt;int&gt;">
         <elementDefinition Id="29815168-ca89-4238-9af9-a06a7bec3588" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ba1a6d26-de28-402e-84a7-df4d09ca33ba" name="InterfaceModule" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4abbc750-9e7f-4435-9bc0-7055cdfda542" />
+        <generalsInternal>
+          <generalization Id="c5bba53b-47f3-435a-bc8e-a4eb93d6fd30" isSubstitutable="false">
+            <classMoniker Id="23537e7c-2b57-446f-ba3e-dedcf7c22836" LastKnownName="Module" />
+            <elementDefinition Id="da4cc441-34fa-46c6-b8b6-234748bc7dad" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="a02ff700-6f6c-4489-9f75-5a4942ee076b" name="parameters" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="89da584b-6b46-4f61-960e-b7140bbad9df" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c6a4e3d6-d173-40bb-9295-1c5f69eea765" LastKnownName="unordered_map&lt;double&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="d94cc50d-21c9-4d3f-a6f5-9b9d1c5181c2" name="getParamByName" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="23a8ce6d-24f5-4d04-9d97-ae43926ea419" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="31155131-82e5-402e-8f3e-8e7abcb73e26" name="string name" direction="In" isUnique="false">
+                  <elementDefinition Id="2015805a-e9fc-4321-939f-e39b456232e5" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b6bf2d52-7be7-48a2-91ef-6868d1eac523" direction="Return" isUnique="false">
+                  <elementDefinition Id="974477d5-ae5c-4902-afa5-ac2ead80ec69" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f79bb279-6422-4ac6-a62c-42836013be8c" LastKnownName="double" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="2f1b4dde-2a72-41c0-8457-9ec35a37565b" name="setParamByName" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dda3ab8b-5af1-4776-a901-abab4b86ae0d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="709d2ede-f3c3-4406-8eee-597f60bc27c9" name="string name" direction="In" isUnique="false">
+                  <elementDefinition Id="5e1c1a98-23be-48a3-afa2-3b2d6b4c9025" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="c6a4e3d6-d173-40bb-9295-1c5f69eea765" name="unordered_map&lt;double&gt;" isAbstract="false" isLeaf="false" cachedFullName="unordered_map&lt;double&gt;">
+        <elementDefinition Id="16e0a647-11ab-4e3e-8e4e-17f2648c8279" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f79bb279-6422-4ac6-a62c-42836013be8c" name="double" isAbstract="false" isLeaf="false" cachedFullName="double">
+        <elementDefinition Id="dbf55caf-3a0c-4a6b-a695-dbaeb9444fd0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0e0062fa-e5c8-40f4-8450-cc29b77e416c" name="Retroaction" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2f6c7369-8007-42b4-ac41-30bdd9d6b7ab" />
+        <targetEnds>
+          <association Id="18842235-8ffa-4e1a-9afe-d3f853d117a4" isDerived="false" sourceEndRoleName="Retroaction" targetEndRoleName="Timer" isLeaf="false" isAbstract="false">
+            <classMoniker Id="82a3316e-b69e-4199-86c2-b45f031c3971" LastKnownName="Timer : Pattern Singleton" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c0295a73-98a0-48fd-9701-da3ef82a8974" name="Retroaction" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="e7fbaf26-9daa-4b49-82ab-5671f802d348" name="Lower" value="*">
+                      <elementDefinition Id="4a00dd72-eb1a-48a1-9f09-1a8bd94dcaf1" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4d261f86-6bc9-4dc0-b382-1480751c6134" name="Upper" value="*">
+                      <elementDefinition Id="e6ee1608-3e22-4cf6-a301-e795bb9f22c1" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c26f4bc5-eb9e-428c-b8b7-2db9cedc8840" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d8bdae2e-4244-42d9-ae77-505757138453" name="Timer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="230ee775-bd4f-4a1f-8f66-d9b549a6f565" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0c870417-b9ed-4bd7-a08f-5cdf97b15cd5" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="e0d8a47c-35c3-4797-b925-36cba0b1cf89" name="module" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="07ed9052-b90b-45ae-bc91-5861cafc3627" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7f119791-d366-4674-bd9f-44394f5b9fae" LastKnownName="Module" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="08428461-b392-4d4f-9734-445ce9832c35" name="clock" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e9793231-b159-4456-9d95-cacee17c10b8" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="7f119791-d366-4674-bd9f-44394f5b9fae" name="Module" isAbstract="false" isLeaf="false" cachedFullName="IGOsat::Module">
+        <elementDefinition Id="abb8f8b0-c3e0-481b-bd5d-eccfc8b2f047" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7d34afe0-96ad-4b30-b4a4-c07e266f8f8b" name="vector&lt;Retroaction&gt;" isAbstract="false" isLeaf="false" cachedFullName="vector&lt;Retroaction&gt;">
+        <elementDefinition Id="fed45861-9e5b-467d-8e68-f52edbad51b3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="99e5e888-27da-406a-bbbe-bf2df54c5db8" name="Batterie" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9517db0b-1d73-4b94-b1ba-fc23933e0b0a" />
+        <generalsInternal>
+          <generalization Id="cc9c4fa9-c9bf-4812-a09e-c7252bec6fb3" isSubstitutable="false">
+            <classMoniker Id="ba1a6d26-de28-402e-84a7-df4d09ca33ba" LastKnownName="InterfaceModule" />
+            <elementDefinition Id="f059b103-cd44-49c2-bf49-e129588a9b23" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="fc60acf1-f20c-40de-8a38-4939f5d866f7" isDerived="false" sourceEndRoleName="Batterie" targetEndRoleName="ChargeDechargeBatterie" isLeaf="false" isAbstract="false">
+            <classMoniker Id="51ba4614-64eb-416f-b275-b6f9c5635ab6" LastKnownName="ChargeDechargeBatterie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e6518864-bbbb-4c06-b2fb-0ec69135aed9" name="Batterie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3a01eb41-c4d9-46fb-ac75-4a4357d66632" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="02576069-80bd-4cf7-8b64-0d34bb01eef1" name="ChargeDechargeBatterie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a344122a-228b-48ec-a897-84df43e5ecb4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2c9e732b-3eb1-4f26-9d6c-fd861d8566fc" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="db8009be-7613-4813-8169-a5af40483e7c" name="parameters" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b544b770-2d18-4f2b-b617-f9cc75026eb0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="157f0e6a-f368-432c-86d5-01ccb2932f10" LastKnownName="{charge, voltage}" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="51ba4614-64eb-416f-b275-b6f9c5635ab6" name="ChargeDechargeBatterie" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="06bc9eff-aff3-4a88-90d1-50b8ccf1b9f7" />
+        <generalsInternal>
+          <generalization Id="93fcfa90-e06f-4cbe-b02d-85eda1209949" isSubstitutable="false">
+            <classMoniker Id="0e0062fa-e5c8-40f4-8450-cc29b77e416c" LastKnownName="Retroaction" />
+            <elementDefinition Id="9b84f000-b5f7-43c1-b3d0-732d29654c63" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="51d016ea-90fd-4218-ba3c-049be54d33fe" name="module" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ea13a15f-3deb-45b9-b973-50c579439616" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="238b4934-967a-4934-abbc-6fae7921e9ed" LastKnownName="Batterie" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="bd9096eb-92bd-45ce-a4fd-a1cece7e5cbc" name="Décharge batterie sauf si voltage fourni par panneau solaire alors charge" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7a21b09e-f193-4b32-af72-9665ccdedb54" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="157f0e6a-f368-432c-86d5-01ccb2932f10" name="{charge, voltage}" isAbstract="false" isLeaf="false" cachedFullName="{charge, voltage}">
+        <elementDefinition Id="0174127a-a902-4dd5-a8cd-f8ed7c491bfe" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="238b4934-967a-4934-abbc-6fae7921e9ed" name="Batterie" isAbstract="false" isLeaf="false" cachedFullName="IGOsat::Batterie">
+        <elementDefinition Id="9517db0b-1d73-4b94-b1ba-fc23933e0b0a" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
