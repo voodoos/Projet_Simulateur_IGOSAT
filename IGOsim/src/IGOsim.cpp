@@ -30,7 +30,7 @@ int main()
     b1.addMessage(m1, 5);
     b1.addMessage(m2, 5);
     b1.addMessage(m3, 5);
-    b1.addSocket(s1);
+    b1.addSocket(Socket("batteryIN"));
     
     Timer::getInstance().addModule(&b1);
     b1.getSocketByName("batteryIN").receive(m1);

@@ -1,5 +1,8 @@
 ﻿#include "Socket.h"
 
+//For convenience:
+using namespace std;
+
 
 Socket::Socket(std::string name) : name(name), timer(-1)
 {
@@ -32,7 +35,8 @@ void Socket::send(Message m){
 
 void Socket::clock(int time){
     if (this->timer > 0) {
-        --this->timer;
+        timer--;
+        cout << "decreasing" << timer << endl;
     }
 }
 

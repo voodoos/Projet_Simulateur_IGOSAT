@@ -124,13 +124,13 @@ bool Module::isMessageAllowed(Message m)
 
 void Module::getMessages() {
     //On parcourt tous les sockets:
-    for (auto kv : sockets) {
+    for (pair<string, Socket> kv: sockets) {
         //On regarde si la lecture est terminée:
         if (kv.second.getTimer() == 0) {
             //Si oui, on ajoute le message à la queue de traitement:
-            this->tasks.push(kv.second.getFirstMessage());
+            this->tasks.push(sockets[kv.first].getFirstMessage());
         } else {
-            kv.second.clock(0);
+            sockets[kv.first].clock(0);
         }
     }
 }
