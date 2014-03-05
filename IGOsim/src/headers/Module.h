@@ -35,7 +35,7 @@ typedef std::unordered_map<std::string, Socket> Sockets;
 * \typedef typedef std::unordered_map<std::string, Message> Messages
 * \brief Un raccourci pratique pour une hashtable de messages
 */
-typedef std::unordered_map<std::string, Message> Messages;
+typedef std::unordered_map<std::string, int> Messages;
 
 class Module
 {
@@ -43,9 +43,10 @@ protected:
     std::string name;                       /*!< Le nom du module */
     Memory<int> memory;                     /*!< La mémoire du module */
     Sockets sockets;                        /*!< Les connecteurs du module */
-    Messages messagesAllowed;               /*!< Les messages compris par le module */
+    Messages messagesAllowed;               /*!< Les messages compris par le module ET leurs temps d'éxecution */
     Params parameters;                      /*!< Les paramètres d'état du modules */
     std::queue<Message> tasks;              /*!< La file d'attente des messages à traiter */
+    int taskTimer;                          /*!< Le timer de la tâche courante */
 
 public:
     /*!
@@ -83,10 +84,10 @@ public:
     void addSocket(Socket);
 
     /*!
-    * \fn void addMessage(Message)
-    * \brief Fonction d'ajout d'un message au module.
+    * \fn void addMessage(Message msg, int processingTime)
+    * \brief Fonction d'ajout d'un message au module, et de son temps d'éxecution simulé.
     */
-    void addMessage(Message);
+    void addMessage(Message, int);
 
     /*!
     * \fn Socket *getSocketByName(std::string)
@@ -126,5 +127,5 @@ private:
     * Cette méthode, appellée par clock à chaque temps va poursuivre le traitement des tâches en file d'attente.
     *
     */
-    virtual void process() = 0;
+    virtual void process(Message) = 0;
 };

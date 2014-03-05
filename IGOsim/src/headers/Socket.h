@@ -17,9 +17,10 @@
 class Socket
 {
 private:
-    std::string name;   /*!< Nom du connecteur */
-    std::queue<Message> messageQueue;
-    Connexion *connexion;
+    std::string name;                   /*!< Nom du connecteur */
+    std::queue<Message> messageQueue;   /*!< Boîte de reception des messages */
+    Connexion *connexion;               /*!< Connexion associée à ce Socket */
+    int timer;                          /*!< First message reading time */
 
 public:
     /*!
@@ -39,6 +40,12 @@ public:
     void receive(Message m);
     void send(Message m);
     bool hasMessage();
-    Message getLastMessage();
+    Message getFirstMessage();
+    
+    /*!
+    * \fn  int getTimer() const
+    * \brief Renvoie la valeur de timer.
+    */
+    int getTimer() const;
 };
 
