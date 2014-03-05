@@ -128,6 +128,13 @@ void Module::getMessages() {
         if (kv.second.getTimer() == 0) {
             //Si oui, on ajoute le message à la queue de traitement:
             tasks.push(sockets[kv.first].getFirstMessage());
+            //Et on met règle le timer pour le message suivant, ou à zéro si c'est fini:
+            if (tasks.size() > 0) {
+                taskTimer = messagesAllowed[tasks.front().getName()];
+            }
+            else {
+                taskTimer = NOP;
+            }
         } else {
             sockets[kv.first].clock(0);
         }
