@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -96,12 +97,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:ae24b52eaeefed7575b6972805bc33f82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae24b52eaeefed7575b6972805bc33f82"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#ae24b52eaeefed7575b6972805bc33f82">Message</a> (std::string name)</td></tr>
-<tr class="memdesc:ae24b52eaeefed7575b6972805bc33f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur. <br/></td></tr>
+<tr class="memitem:ad34376a89dbca320ab351c6110cfb3cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad34376a89dbca320ab351c6110cfb3cb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#ad34376a89dbca320ab351c6110cfb3cb">Message</a> (std::string name=&quot;Default Name&quot;, std::string payload=&quot;&quot;)</td></tr>
+<tr class="memdesc:ad34376a89dbca320ab351c6110cfb3cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur. <br/></td></tr>
 <tr class="memitem:a3f7275462831f787a861271687bcad67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f7275462831f787a861271687bcad67"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#a3f7275462831f787a861271687bcad67">~Message</a> ()</td></tr>
 <tr class="memdesc:a3f7275462831f787a861271687bcad67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
+<tr class="memitem:ac03b02000572b0852c574498bf138e87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac03b02000572b0852c574498bf138e87"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#ac03b02000572b0852c574498bf138e87">getName</a> ()</td></tr>
+<tr class="memdesc:ac03b02000572b0852c574498bf138e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie le nom du message. <br/></td></tr>
+<tr class="memitem:ad4276fb8ec3b78e30b13cd13a242b163"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4276fb8ec3b78e30b13cd13a242b163"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#ad4276fb8ec3b78e30b13cd13a242b163">getPayload</a> ()</td></tr>
+<tr class="memdesc:ad4276fb8ec3b78e30b13cd13a242b163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la charge utile du message. <br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Classe abstraite de base pour les messages. </p>
@@ -113,7 +120,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Février 20 2014 16:50:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mars 5 2014 13:37:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

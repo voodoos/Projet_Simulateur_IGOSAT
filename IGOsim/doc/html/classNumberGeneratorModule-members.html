@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,16 +89,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <p>Liste complète des membres de <a class="el" href="classNumberGeneratorModule.html">NumberGeneratorModule</a>, y compris les membres hérités :</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>addMessage</b>(Message) (défini dans <a class="el" href="classModule.html">Module</a>)</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>addSocket</b>(Socket) (défini dans <a class="el" href="classModule.html">Module</a>)</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classModule.html#a5a240a8a9ab1813b17bcb810b24ceaea">Module</a>()</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Module</b>(Memory&lt; int &gt;) (défini dans <a class="el" href="classModule.html">Module</a>)</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classModule.html#ae8010c1b16b5342bd13955e15961853a">addMessage</a>(Message)</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classModule.html#aeb7302c667eb923a4dc25ae235c744dc">addSocket</a>(Socket)</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>getOutSocket</b>() (défini dans <a class="el" href="classNumberGeneratorModule.html">NumberGeneratorModule</a>)</td><td class="entry"><a class="el" href="classNumberGeneratorModule.html">NumberGeneratorModule</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getParamValueByName</b>(std::string) (défini dans <a class="el" href="classModule.html">Module</a>)</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classModule.html#a818c5fc693a7ea20db6a2245e94f6561">getSocketByName</a>(std::string)</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classModule.html#a48fa02fe55d33daffff725c615a63bb9">memory</a></td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classModule.html#a11e56ff752c1bd1d0b2e24ff762f2afb">messages</a></td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classModule.html#a3412148164f0668b2ae4cd1285c2790c">Module</a>(std::string=&quot;DefaultName&quot;, Params=Params())</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classModule.html#ae2ce24f11deec1453dfaba1f21a36f2c">Module</a>(std::string, Memory&lt; int &gt;, Params=Params())</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classModule.html#a794fbb44972c7c73cc197159093e66d1">name</a></td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>NumberGeneratorModule</b>() (défini dans <a class="el" href="classNumberGeneratorModule.html">NumberGeneratorModule</a>)</td><td class="entry"><a class="el" href="classNumberGeneratorModule.html">NumberGeneratorModule</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classModule.html#a7c9d9c096786d127590fdd8aa2b7d681">~Module</a>()</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classModule.html#a232443111a9d59c17724992ddf75fbad">parameters</a></td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classModule.html#af0415ddaab230958f91665c66b078085">sockets</a></td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>start</b>() (défini dans <a class="el" href="classNumberGeneratorModule.html">NumberGeneratorModule</a>)</td><td class="entry"><a class="el" href="classNumberGeneratorModule.html">NumberGeneratorModule</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classModule.html#a7c9d9c096786d127590fdd8aa2b7d681">~Module</a>()</td><td class="entry"><a class="el" href="classModule.html">Module</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Février 20 2014 16:50:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mars 5 2014 13:37:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

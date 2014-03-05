@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -82,7 +83,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Types publics</a> &#124;
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="classSocket-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
@@ -95,20 +95,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <p><code>#include &lt;<a class="el" href="Socket_8h_source.html">Socket.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
-Types publics</h2></td></tr>
-<tr class="memitem:a7c6592dd65756022f4f5143bf0ed9759"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>stype</b> { <b>IN</b>, 
-<b>OUT</b>
- }</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a008135f0646e48310061fe84b078dc81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a008135f0646e48310061fe84b078dc81"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a008135f0646e48310061fe84b078dc81">Socket</a> (std::string name, stype type)</td></tr>
-<tr class="memdesc:a008135f0646e48310061fe84b078dc81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur. <br/></td></tr>
+<tr class="memitem:a04302e4ac7ddb995c766de9078cd848c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04302e4ac7ddb995c766de9078cd848c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a04302e4ac7ddb995c766de9078cd848c">Socket</a> (std::string name=&quot;DefaultName&quot;)</td></tr>
+<tr class="memdesc:a04302e4ac7ddb995c766de9078cd848c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur. <br/></td></tr>
 <tr class="memitem:aeac4eb6379a543d38ed88977d3b6630a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeac4eb6379a543d38ed88977d3b6630a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#aeac4eb6379a543d38ed88977d3b6630a">~Socket</a> ()</td></tr>
 <tr class="memdesc:aeac4eb6379a543d38ed88977d3b6630a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
+<tr class="memitem:af59c7f08d2a170ec9b15bce6fd62f865"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af59c7f08d2a170ec9b15bce6fd62f865"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setConnexion</b> (<a class="el" href="classConnexion.html">Connexion</a> c)</td></tr>
+<tr class="memitem:aaefa10006cbf7a7a082e4adc606b3cea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaefa10006cbf7a7a082e4adc606b3cea"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
+<tr class="memitem:af137eda5415e1bd9aa6dd6467eb0d97d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af137eda5415e1bd9aa6dd6467eb0d97d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>receive</b> (<a class="el" href="classMessage.html">Message</a> m)</td></tr>
+<tr class="memitem:af7fb88a308724635a3ca3ed040b87b1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7fb88a308724635a3ca3ed040b87b1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (<a class="el" href="classMessage.html">Message</a> m)</td></tr>
+<tr class="memitem:afe7c9b2ef7fb3653b14f5f462293549a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe7c9b2ef7fb3653b14f5f462293549a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasMessage</b> ()</td></tr>
+<tr class="memitem:ad5c7a86e65e10d9c902ebcb0e2cfe824"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5c7a86e65e10d9c902ebcb0e2cfe824"></a>
+<a class="el" href="classMessage.html">Message</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getLastMessage</b> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Classe abstraite pour les connecteurs des modules. </p>
@@ -120,7 +126,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Février 20 2014 16:50:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mars 5 2014 13:37:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

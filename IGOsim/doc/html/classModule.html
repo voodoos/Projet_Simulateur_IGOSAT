@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,6 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pro-attribs">Attributs protégés</a> &#124;
 <a href="classModule-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe Module</div>  </div>
@@ -106,30 +108,171 @@ Graphe d'héritage de Module:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a5a240a8a9ab1813b17bcb810b24ceaea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a240a8a9ab1813b17bcb810b24ceaea"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a5a240a8a9ab1813b17bcb810b24ceaea">Module</a> ()</td></tr>
-<tr class="memdesc:a5a240a8a9ab1813b17bcb810b24ceaea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur. <br/></td></tr>
-<tr class="memitem:a891a2c8076ed8003609a62b02577d77f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a891a2c8076ed8003609a62b02577d77f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Module</b> (<a class="el" href="classMemory.html">Memory</a>&lt; int &gt;)</td></tr>
+<tr class="memitem:a3412148164f0668b2ae4cd1285c2790c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3412148164f0668b2ae4cd1285c2790c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a3412148164f0668b2ae4cd1285c2790c">Module</a> (std::string=&quot;DefaultName&quot;, Params=Params())</td></tr>
+<tr class="memdesc:a3412148164f0668b2ae4cd1285c2790c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défault, pour un module sans mémoire. <br/></td></tr>
+<tr class="memitem:ae2ce24f11deec1453dfaba1f21a36f2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2ce24f11deec1453dfaba1f21a36f2c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#ae2ce24f11deec1453dfaba1f21a36f2c">Module</a> (std::string, <a class="el" href="classMemory.html">Memory</a>&lt; int &gt;, Params=Params())</td></tr>
+<tr class="memdesc:ae2ce24f11deec1453dfaba1f21a36f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur avec mémoire. <br/></td></tr>
 <tr class="memitem:a7c9d9c096786d127590fdd8aa2b7d681"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c9d9c096786d127590fdd8aa2b7d681"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a7c9d9c096786d127590fdd8aa2b7d681">~Module</a> ()</td></tr>
 <tr class="memdesc:a7c9d9c096786d127590fdd8aa2b7d681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
 <tr class="memitem:aeb7302c667eb923a4dc25ae235c744dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb7302c667eb923a4dc25ae235c744dc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addSocket</b> (<a class="el" href="classSocket.html">Socket</a>)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#aeb7302c667eb923a4dc25ae235c744dc">addSocket</a> (<a class="el" href="classSocket.html">Socket</a>)</td></tr>
+<tr class="memdesc:aeb7302c667eb923a4dc25ae235c744dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction d'ajout d'un connecteur au module. <br/></td></tr>
 <tr class="memitem:ae8010c1b16b5342bd13955e15961853a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8010c1b16b5342bd13955e15961853a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addMessage</b> (<a class="el" href="classMessage.html">Message</a>)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#ae8010c1b16b5342bd13955e15961853a">addMessage</a> (<a class="el" href="classMessage.html">Message</a>)</td></tr>
+<tr class="memdesc:ae8010c1b16b5342bd13955e15961853a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction d'ajout d'un message au module. <br/></td></tr>
+<tr class="memitem:a818c5fc693a7ea20db6a2245e94f6561"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSocket.html">Socket</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a818c5fc693a7ea20db6a2245e94f6561">getSocketByName</a> (std::string)</td></tr>
+<tr class="memdesc:a818c5fc693a7ea20db6a2245e94f6561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère le bon connecteur, ou lève une exception.  <a href="#a818c5fc693a7ea20db6a2245e94f6561"></a><br/></td></tr>
+<tr class="memitem:a93e2ee84587751939c1fd31cb0802e41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93e2ee84587751939c1fd31cb0802e41"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getParamValueByName</b> (std::string)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Attributs protégés</h2></td></tr>
+<tr class="memitem:a794fbb44972c7c73cc197159093e66d1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a794fbb44972c7c73cc197159093e66d1">name</a></td></tr>
+<tr class="memitem:a48fa02fe55d33daffff725c615a63bb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMemory.html">Memory</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a48fa02fe55d33daffff725c615a63bb9">memory</a></td></tr>
+<tr class="memitem:af0415ddaab230958f91665c66b078085"><td class="memItemLeft" align="right" valign="top">Sockets&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#af0415ddaab230958f91665c66b078085">sockets</a></td></tr>
+<tr class="memitem:a11e56ff752c1bd1d0b2e24ff762f2afb"><td class="memItemLeft" align="right" valign="top">Messages&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a11e56ff752c1bd1d0b2e24ff762f2afb">messages</a></td></tr>
+<tr class="memitem:a232443111a9d59c17724992ddf75fbad"><td class="memItemLeft" align="right" valign="top">Params&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a232443111a9d59c17724992ddf75fbad">parameters</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Les briques de base du simulateur. </p>
 <p>Il s'agit de la classe centrale du simulateur, qui sera construit comme un assemblage de modules qui communiquent entre eux. Il s'agit d'une classe virtuelle. </p>
-</div><hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+</div><h2>Documentation des fonctions membres</h2>
+<a class="anchor" id="a818c5fc693a7ea20db6a2245e94f6561"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSocket.html">Socket</a> &amp; Module::getSocketByName </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Récupère le bon connecteur, ou lève une exception. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">A faire:</a></b></dt><dd>Créer et gérer l'exception </dd></dl>
+
+</div>
+</div>
+<h2>Documentation des données membres</h2>
+<a class="anchor" id="a48fa02fe55d33daffff725c615a63bb9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMemory.html">Memory</a>&lt;int&gt; Module::memory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>La mémoire du module </p>
+
+</div>
+</div>
+<a class="anchor" id="a11e56ff752c1bd1d0b2e24ff762f2afb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Messages Module::messages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Les messages compris par le module </p>
+
+</div>
+</div>
+<a class="anchor" id="a794fbb44972c7c73cc197159093e66d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Module::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Le nom du module </p>
+
+</div>
+</div>
+<a class="anchor" id="a232443111a9d59c17724992ddf75fbad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Params Module::parameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Les paramètres d'état du modules </p>
+
+</div>
+</div>
+<a class="anchor" id="af0415ddaab230958f91665c66b078085"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sockets Module::sockets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Les connecteurs du module </p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/headers/<a class="el" href="Module_8h_source.html">Module.h</a></li>
 <li>src/includes/Module.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Février 20 2014 16:50:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mars 5 2014 13:37:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,12 +92,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:ace32af3d7fab1f520972d58be0a7ee40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace32af3d7fab1f520972d58be0a7ee40"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnexion.html#ace32af3d7fab1f520972d58be0a7ee40">Connexion</a> (<a class="el" href="classSocket.html">Socket</a> &amp;in, <a class="el" href="classSocket.html">Socket</a> &amp;out)</td></tr>
-<tr class="memdesc:ace32af3d7fab1f520972d58be0a7ee40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur. <br/></td></tr>
+<tr class="memitem:a31fda5acfafb5ec2de7ae76cfce373a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31fda5acfafb5ec2de7ae76cfce373a7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnexion.html#a31fda5acfafb5ec2de7ae76cfce373a7">Connexion</a> (<a class="el" href="classSocket.html">Socket</a> *a, <a class="el" href="classSocket.html">Socket</a> *b)</td></tr>
+<tr class="memdesc:a31fda5acfafb5ec2de7ae76cfce373a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur. <br/></td></tr>
 <tr class="memitem:a6afee761c33e160c2be5e9e2713968e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6afee761c33e160c2be5e9e2713968e3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnexion.html#a6afee761c33e160c2be5e9e2713968e3">~Connexion</a> ()</td></tr>
 <tr class="memdesc:a6afee761c33e160c2be5e9e2713968e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrcuteur. <br/></td></tr>
+<tr class="memitem:ad2705670b0a7be05ff09ba1294f57200"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2705670b0a7be05ff09ba1294f57200"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dispatch</b> (<a class="el" href="classMessage.html">Message</a> m, <a class="el" href="classSocket.html">Socket</a> *s)</td></tr>
 </table>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/headers/<a class="el" href="Connexion_8h_source.html">Connexion.h</a></li>
@@ -105,7 +108,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Février 20 2014 16:50:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mars 5 2014 13:37:14 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

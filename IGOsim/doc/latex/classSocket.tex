@@ -10,22 +10,33 @@ Classe abstraite pour les connecteurs des modules.
 
 {\ttfamily \#include $<$Socket.\-h$>$}
 
-\subsection*{Types publics}
-\begin{DoxyCompactItemize}
-\item 
-enum {\bfseries stype} \{ {\bfseries I\-N}, 
-{\bfseries O\-U\-T}
- \}
-\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classSocket_a008135f0646e48310061fe84b078dc81}{\hyperlink{classSocket_a008135f0646e48310061fe84b078dc81}{Socket} (std\-::string name, stype type)}\label{classSocket_a008135f0646e48310061fe84b078dc81}
+\hypertarget{classSocket_a04302e4ac7ddb995c766de9078cd848c}{\hyperlink{classSocket_a04302e4ac7ddb995c766de9078cd848c}{Socket} (std\-::string name=\char`\"{}Default\-Name\char`\"{})}\label{classSocket_a04302e4ac7ddb995c766de9078cd848c}
 
 \begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
 \hypertarget{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{\hyperlink{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{$\sim$\-Socket} ()}\label{classSocket_aeac4eb6379a543d38ed88977d3b6630a}
 
-\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\hypertarget{classSocket_af59c7f08d2a170ec9b15bce6fd62f865}{void {\bfseries set\-Connexion} (\hyperlink{classConnexion}{Connexion} c)}\label{classSocket_af59c7f08d2a170ec9b15bce6fd62f865}
+
+\item 
+\hypertarget{classSocket_aaefa10006cbf7a7a082e4adc606b3cea}{std\-::string {\bfseries get\-Name} ()}\label{classSocket_aaefa10006cbf7a7a082e4adc606b3cea}
+
+\item 
+\hypertarget{classSocket_af137eda5415e1bd9aa6dd6467eb0d97d}{void {\bfseries receive} (\hyperlink{classMessage}{Message} m)}\label{classSocket_af137eda5415e1bd9aa6dd6467eb0d97d}
+
+\item 
+\hypertarget{classSocket_af7fb88a308724635a3ca3ed040b87b1a}{void {\bfseries send} (\hyperlink{classMessage}{Message} m)}\label{classSocket_af7fb88a308724635a3ca3ed040b87b1a}
+
+\item 
+\hypertarget{classSocket_afe7c9b2ef7fb3653b14f5f462293549a}{bool {\bfseries has\-Message} ()}\label{classSocket_afe7c9b2ef7fb3653b14f5f462293549a}
+
+\item 
+\hypertarget{classSocket_ad5c7a86e65e10d9c902ebcb0e2cfe824}{\hyperlink{classMessage}{Message} {\bfseries get\-Last\-Message} ()}\label{classSocket_ad5c7a86e65e10d9c902ebcb0e2cfe824}
+
+\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}

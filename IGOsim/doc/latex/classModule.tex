@@ -19,20 +19,38 @@ Graphe d'héritage de Module\-:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classModule_a5a240a8a9ab1813b17bcb810b24ceaea}{\hyperlink{classModule_a5a240a8a9ab1813b17bcb810b24ceaea}{Module} ()}\label{classModule_a5a240a8a9ab1813b17bcb810b24ceaea}
+\hypertarget{classModule_a3412148164f0668b2ae4cd1285c2790c}{\hyperlink{classModule_a3412148164f0668b2ae4cd1285c2790c}{Module} (std\-::string=\char`\"{}Default\-Name\char`\"{}, Params=Params())}\label{classModule_a3412148164f0668b2ae4cd1285c2790c}
 
-\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
-\hypertarget{classModule_a891a2c8076ed8003609a62b02577d77f}{{\bfseries Module} (\hyperlink{classMemory}{Memory}$<$ int $>$)}\label{classModule_a891a2c8076ed8003609a62b02577d77f}
+\begin{DoxyCompactList}\small\item\em Constructeur par défault, pour un module sans mémoire. \end{DoxyCompactList}\item 
+\hypertarget{classModule_ae2ce24f11deec1453dfaba1f21a36f2c}{\hyperlink{classModule_ae2ce24f11deec1453dfaba1f21a36f2c}{Module} (std\-::string, \hyperlink{classMemory}{Memory}$<$ int $>$, Params=Params())}\label{classModule_ae2ce24f11deec1453dfaba1f21a36f2c}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur avec mémoire. \end{DoxyCompactList}\item 
 \hypertarget{classModule_a7c9d9c096786d127590fdd8aa2b7d681}{virtual \hyperlink{classModule_a7c9d9c096786d127590fdd8aa2b7d681}{$\sim$\-Module} ()}\label{classModule_a7c9d9c096786d127590fdd8aa2b7d681}
 
 \begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
-\hypertarget{classModule_aeb7302c667eb923a4dc25ae235c744dc}{void {\bfseries add\-Socket} (\hyperlink{classSocket}{Socket})}\label{classModule_aeb7302c667eb923a4dc25ae235c744dc}
+\hypertarget{classModule_aeb7302c667eb923a4dc25ae235c744dc}{void \hyperlink{classModule_aeb7302c667eb923a4dc25ae235c744dc}{add\-Socket} (\hyperlink{classSocket}{Socket})}\label{classModule_aeb7302c667eb923a4dc25ae235c744dc}
 
+\begin{DoxyCompactList}\small\item\em Fonction d'ajout d'un connecteur au module. \end{DoxyCompactList}\item 
+\hypertarget{classModule_ae8010c1b16b5342bd13955e15961853a}{void \hyperlink{classModule_ae8010c1b16b5342bd13955e15961853a}{add\-Message} (\hyperlink{classMessage}{Message})}\label{classModule_ae8010c1b16b5342bd13955e15961853a}
+
+\begin{DoxyCompactList}\small\item\em Fonction d'ajout d'un message au module. \end{DoxyCompactList}\item 
+\hyperlink{classSocket}{Socket} \& \hyperlink{classModule_a818c5fc693a7ea20db6a2245e94f6561}{get\-Socket\-By\-Name} (std\-::string)
+\begin{DoxyCompactList}\small\item\em Récupère le bon connecteur, ou lève une exception. \end{DoxyCompactList}\item 
+\hypertarget{classModule_a93e2ee84587751939c1fd31cb0802e41}{double {\bfseries get\-Param\-Value\-By\-Name} (std\-::string)}\label{classModule_a93e2ee84587751939c1fd31cb0802e41}
+
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
 \item 
-\hypertarget{classModule_ae8010c1b16b5342bd13955e15961853a}{void {\bfseries add\-Message} (\hyperlink{classMessage}{Message})}\label{classModule_ae8010c1b16b5342bd13955e15961853a}
-
+std\-::string \hyperlink{classModule_a794fbb44972c7c73cc197159093e66d1}{name}
+\item 
+\hyperlink{classMemory}{Memory}$<$ int $>$ \hyperlink{classModule_a48fa02fe55d33daffff725c615a63bb9}{memory}
+\item 
+Sockets \hyperlink{classModule_af0415ddaab230958f91665c66b078085}{sockets}
+\item 
+Messages \hyperlink{classModule_a11e56ff752c1bd1d0b2e24ff762f2afb}{messages}
+\item 
+Params \hyperlink{classModule_a232443111a9d59c17724992ddf75fbad}{parameters}
 \end{DoxyCompactItemize}
 
 
@@ -40,6 +58,40 @@ Graphe d'héritage de Module\-:\begin{figure}[H]
 Les briques de base du simulateur. 
 
 Il s'agit de la classe centrale du simulateur, qui sera construit comme un assemblage de modules qui communiquent entre eux. Il s'agit d'une classe virtuelle. 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classModule_a818c5fc693a7ea20db6a2245e94f6561}{\index{Module@{Module}!get\-Socket\-By\-Name@{get\-Socket\-By\-Name}}
+\index{get\-Socket\-By\-Name@{get\-Socket\-By\-Name}!Module@{Module}}
+\subsubsection[{get\-Socket\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket} \& Module\-::get\-Socket\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{}
+\end{DoxyParamCaption}
+)}}\label{classModule_a818c5fc693a7ea20db6a2245e94f6561}
+
+
+Récupère le bon connecteur, ou lève une exception. 
+
+\begin{DoxyRefDesc}{A faire}
+\item[\hyperlink{todo__todo000001}{A faire}]Créer et gérer l'exception \end{DoxyRefDesc}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{classModule_a48fa02fe55d33daffff725c615a63bb9}{\index{Module@{Module}!memory@{memory}}
+\index{memory@{memory}!Module@{Module}}
+\subsubsection[{memory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory}$<$int$>$ Module\-::memory\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_a48fa02fe55d33daffff725c615a63bb9}
+La mémoire du module \hypertarget{classModule_a11e56ff752c1bd1d0b2e24ff762f2afb}{\index{Module@{Module}!messages@{messages}}
+\index{messages@{messages}!Module@{Module}}
+\subsubsection[{messages}]{\setlength{\rightskip}{0pt plus 5cm}Messages Module\-::messages\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_a11e56ff752c1bd1d0b2e24ff762f2afb}
+Les messages compris par le module \hypertarget{classModule_a794fbb44972c7c73cc197159093e66d1}{\index{Module@{Module}!name@{name}}
+\index{name@{name}!Module@{Module}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Module\-::name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_a794fbb44972c7c73cc197159093e66d1}
+Le nom du module \hypertarget{classModule_a232443111a9d59c17724992ddf75fbad}{\index{Module@{Module}!parameters@{parameters}}
+\index{parameters@{parameters}!Module@{Module}}
+\subsubsection[{parameters}]{\setlength{\rightskip}{0pt plus 5cm}Params Module\-::parameters\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_a232443111a9d59c17724992ddf75fbad}
+Les paramètres d'état du modules \hypertarget{classModule_af0415ddaab230958f91665c66b078085}{\index{Module@{Module}!sockets@{sockets}}
+\index{sockets@{sockets}!Module@{Module}}
+\subsubsection[{sockets}]{\setlength{\rightskip}{0pt plus 5cm}Sockets Module\-::sockets\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_af0415ddaab230958f91665c66b078085}
+Les connecteurs du module 
 
 La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
 \item 

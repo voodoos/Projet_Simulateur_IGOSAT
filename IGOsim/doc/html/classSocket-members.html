@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,15 +89,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <p>Liste complète des membres de <a class="el" href="classSocket.html">Socket</a>, y compris les membres hérités :</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>IN</b> valeur énumérée (défini dans <a class="el" href="classSocket.html">Socket</a>)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OUT</b> valeur énumérée (défini dans <a class="el" href="classSocket.html">Socket</a>)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classSocket.html#a008135f0646e48310061fe84b078dc81">Socket</a>(std::string name, stype type)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>stype</b> énumération (défini dans <a class="el" href="classSocket.html">Socket</a>)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classSocket.html#aeac4eb6379a543d38ed88977d3b6630a">~Socket</a>()</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>getLastMessage</b>() (défini dans <a class="el" href="classSocket.html">Socket</a>)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getName</b>() (défini dans <a class="el" href="classSocket.html">Socket</a>)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>hasMessage</b>() (défini dans <a class="el" href="classSocket.html">Socket</a>)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>receive</b>(Message m) (défini dans <a class="el" href="classSocket.html">Socket</a>)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>send</b>(Message m) (défini dans <a class="el" href="classSocket.html">Socket</a>)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setConnexion</b>(Connexion c) (défini dans <a class="el" href="classSocket.html">Socket</a>)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classSocket.html#a04302e4ac7ddb995c766de9078cd848c">Socket</a>(std::string name=&quot;DefaultName&quot;)</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classSocket.html#aeac4eb6379a543d38ed88977d3b6630a">~Socket</a>()</td><td class="entry"><a class="el" href="classSocket.html">Socket</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Février 20 2014 16:50:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mars 5 2014 13:37:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

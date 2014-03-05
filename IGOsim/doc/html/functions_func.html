@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="functions.html"><span>Tout</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Fonctions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -77,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,29 +90,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <div class="contents">
 &#160;<ul>
+<li>addMessage()
+: <a class="el" href="classModule.html#ae8010c1b16b5342bd13955e15961853a">Module</a>
+</li>
+<li>addSocket()
+: <a class="el" href="classModule.html#aeb7302c667eb923a4dc25ae235c744dc">Module</a>
+</li>
 <li>Connexion()
-: <a class="el" href="classConnexion.html#ace32af3d7fab1f520972d58be0a7ee40">Connexion</a>
+: <a class="el" href="classConnexion.html#a31fda5acfafb5ec2de7ae76cfce373a7">Connexion</a>
+</li>
+<li>getName()
+: <a class="el" href="classMessage.html#ac03b02000572b0852c574498bf138e87">Message</a>
+</li>
+<li>getPayload()
+: <a class="el" href="classMessage.html#ad4276fb8ec3b78e30b13cd13a242b163">Message</a>
 </li>
 <li>getSize()
 : <a class="el" href="classMemory.html#add46d3ed56cf1e88efee2ed59b38c995">Memory&lt; T &gt;</a>
 </li>
+<li>getSocketByName()
+: <a class="el" href="classModule.html#a818c5fc693a7ea20db6a2245e94f6561">Module</a>
+</li>
 <li>MacroModule()
-: <a class="el" href="classMacroModule.html#a9127bbdf48fc8088284daca146ec3143">MacroModule</a>
+: <a class="el" href="classMacroModule.html#aa7d592010b740d68028fee87e139ae9f">MacroModule</a>
 </li>
 <li>Memory()
 : <a class="el" href="classMemory.html#aa546b7c6e170e45a4e4f74492d8fe8bf">Memory&lt; T &gt;</a>
 </li>
 <li>Message()
-: <a class="el" href="classMessage.html#ae24b52eaeefed7575b6972805bc33f82">Message</a>
+: <a class="el" href="classMessage.html#ad34376a89dbca320ab351c6110cfb3cb">Message</a>
 </li>
 <li>Module()
-: <a class="el" href="classModule.html#a5a240a8a9ab1813b17bcb810b24ceaea">Module</a>
+: <a class="el" href="classModule.html#a3412148164f0668b2ae4cd1285c2790c">Module</a>
 </li>
 <li>setValueForKey()
 : <a class="el" href="classMemory.html#a3514e7594615bb1748ba5b57259c9eca">Memory&lt; T &gt;</a>
 </li>
 <li>Socket()
-: <a class="el" href="classSocket.html#a008135f0646e48310061fe84b078dc81">Socket</a>
+: <a class="el" href="classSocket.html#a04302e4ac7ddb995c766de9078cd848c">Socket</a>
 </li>
 <li>~Connexion()
 : <a class="el" href="classConnexion.html#a6afee761c33e160c2be5e9e2713968e3">Connexion</a>
@@ -134,7 +151,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Février 20 2014 16:50:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mars 5 2014 13:37:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
