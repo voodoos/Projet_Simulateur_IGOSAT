@@ -8,6 +8,7 @@
 #include "Memory.h"
 #include "Message.h"
 #include "Socket.h"
+#include "ISynchronized.h"
 #define NOP -1
 
 /*!
@@ -37,7 +38,7 @@ typedef std::unordered_map<std::string, Socket> Sockets;
 */
 typedef std::unordered_map<std::string, int> Messages;
 
-class Module
+class Module:public ISynchornized
 {
 protected:
     std::string name;                       /*!< Le nom du module */
@@ -75,7 +76,7 @@ public:
     * Cette méthode effectue trois actions, lire les messages arrivés, avancer dans un processus interne, envoyer un message.
     * Ces actions prennent tous du temps: elles peuvent durer plusieurs "ticks".
     */
-    void clock(int);
+    virtual void clock(int);
 
     /*!
     * \fn void addSocket(Socket)

@@ -21,7 +21,6 @@ Module::~Module()
     
 }
 
-
 void Module::clock(int time) {
 
     //On récupère un message pas socket:

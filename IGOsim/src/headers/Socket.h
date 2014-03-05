@@ -4,6 +4,7 @@
 #include <queue>
 #include "Message.h"
 #include "Connexion.h"
+#include "ISynchronized.h"
 
 /*!
 * \class Socket
@@ -14,7 +15,7 @@
 * Les connecteurs sont reliés entre-eux via les objets Connexion.
 */
 
-class Socket
+class Socket:public ISynchornized
 {
 private:
     std::string name;                   /*!< Nom du connecteur */
@@ -59,7 +60,7 @@ public:
      */
     void send(Message m);
     
-    void clock(int time);
+    virtual void clock(int time);
     bool hasMessage();
     Message getFirstMessage();
     
