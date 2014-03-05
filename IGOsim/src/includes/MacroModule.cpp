@@ -15,7 +15,7 @@ MacroModule::~MacroModule()
 {
 }
 
-void MacroModule::addSubModule(Module mod)
+void MacroModule::addSubModule(Module* mod)
 {
     this->modules.insert(this->modules.end(), mod);
 }

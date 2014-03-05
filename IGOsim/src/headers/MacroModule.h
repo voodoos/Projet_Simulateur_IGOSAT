@@ -12,7 +12,7 @@
 
 class MacroModule : public Module{
 private:
-    std::vector<Module>modules;         /*!< Les sous-modules de module */
+    std::vector<Module*>modules;         /*!< Les sous-modules de module */
     std::vector<Connexion>connexions;   /*!< Les connexions entre les sous-modules */
 
 public:
@@ -36,6 +36,6 @@ public:
     ~MacroModule();
     
     
-    void addSubModule(Module);
+    void addSubModule(Module*);
     void addConnexion(Connexion);
 };

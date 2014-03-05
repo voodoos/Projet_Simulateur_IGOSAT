@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+#include <queue>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -44,6 +45,8 @@ protected:
     Sockets sockets;                        /*!< Les connecteurs du module */
     Messages messagesAllowed;               /*!< Les messages compris par le module */
     Params parameters;                      /*!< Les paramètres d'état du modules */
+    std::queue<Message> tasks;              /*!< La file d'attente des messages à traiter */
+
 public:
     /*!
     * \fn Module(std::string = "DefaultName", Params = Params())
@@ -101,6 +104,27 @@ public:
     */
     double getParamValueByName(std::string);
 
-private:
+    /*!
+    * \fn bool isMessageAllowed(Message)
+    * \brief Vérifie si le message est un des messages compris par ce module.
+    */
+    bool isMessageAllowed(Message);
 
+private:
+    /*!
+    * \fn void getMessages()
+    * \brief Méthode qui à chaque clock entame ou poursuit la lecture des messages
+    * 
+    * Cette méthode parcours les sockets et rajoute à la file d'attente tasks ceux dont la lecture est terminée.
+    */
+    void getMessages();
+
+    /*!
+    * \fn virtual void process() = 0
+    * \brief La méthode virtuelle pure chargée d'effectuer les actions du module à chaque temps.
+    * 
+    * Cette méthode, appellée par clock à chaque temps va poursuivre le traitement des tâches en file d'attente.
+    *
+    */
+    virtual void process() = 0;
 };

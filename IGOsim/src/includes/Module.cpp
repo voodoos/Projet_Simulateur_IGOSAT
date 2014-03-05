@@ -24,7 +24,10 @@ Module::~Module()
 
 void Module::clock(int time) {
     //On récupère un message pas socket:
+    getMessages();
 
+    //On traite un peu:
+    process();
 }
 
 
@@ -60,4 +63,16 @@ double Module::getParamValueByName(string pname)
     catch (const out_of_range &e) {
         cout << "Out of range: " << e.what() << endl;
     }
+}
+
+bool Module::isMessageAllowed(Message m)
+{
+    try {
+        this->messagesAllowed.at(m.getName());
+    }
+    catch (const out_of_range &e) {
+        return false;
+    }
+
+    return true;
 }
