@@ -6,12 +6,12 @@ using namespace std;
 
 
 Module::Module(string name, Params params)
-: name(name), parameters(params), taskTimer(-1)
+: name(name), parameters(params), taskTimer(NOP)
 {
 }
 
 Module::Module(string name, Memory<int> mem, Params params)
-: name(name), memory(mem), parameters(params), taskTimer(-1)
+: name(name), memory(mem), parameters(params), taskTimer(NOP)
 {
 }
 
@@ -23,6 +23,11 @@ Module::~Module()
 
 
 void Module::clock(int time) {
+    
+    for (auto kv : sockets) {
+        kv.second.clock(time);
+    }
+    
     //On récupère un message pas socket:
     this->getMessages();
 
@@ -42,7 +47,7 @@ void Module::clock(int time) {
                 this->taskTimer = this->messagesAllowed[nextMsg.getName()];
             }
             else {
-                this->taskTimer = -1;
+                this->taskTimer = NOP;
             }
         }
         else{
@@ -52,7 +57,9 @@ void Module::clock(int time) {
     }
     else {
         //Sinon, on dort:
-        this->taskTimer--;
+        if(this->taskTimer != NOP){
+            this->taskTimer--;
+        }
     }
 }
 

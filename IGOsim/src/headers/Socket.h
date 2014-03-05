@@ -58,6 +58,8 @@ public:
      * \brief Envoye
      */
     void send(Message m);
+    
+    void clock(int time);
     bool hasMessage();
     Message getFirstMessage();
     

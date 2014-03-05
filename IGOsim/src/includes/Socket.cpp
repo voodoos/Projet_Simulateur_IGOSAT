@@ -30,6 +30,12 @@ void Socket::send(Message m){
     this->connexion->dispatch(m, this);
 }
 
+void Socket::clock(int time){
+    if (this->timer > 0) {
+        --this->timer;
+    }
+}
+
 std::string Socket::getName(){
     return this->name;
 }

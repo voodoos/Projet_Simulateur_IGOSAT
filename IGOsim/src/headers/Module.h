@@ -8,7 +8,7 @@
 #include "Memory.h"
 #include "Message.h"
 #include "Socket.h"
-
+#define NOP -1
 
 /*!
 * \class Module
