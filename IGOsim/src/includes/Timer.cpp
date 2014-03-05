@@ -2,7 +2,7 @@
 
 using namespace std;
 void Timer::addModule(Module *m){
-    this->synchronizedModules.push_back(m);
+    synchronizedModules.push_back(m);
 }
 
 void Timer::start(unsigned int c){

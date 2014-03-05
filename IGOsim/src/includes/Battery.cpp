@@ -14,6 +14,6 @@ void Battery::process(Message m){
 }
 
 Battery::Battery(std::string name, Params params){
-    this->name = name;
-    this->parameters = params;
+    name = name;
+    parameters = params;
 }
