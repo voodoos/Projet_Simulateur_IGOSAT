@@ -5,7 +5,7 @@
 #include "Socket.h"
 #include "Message.h"
 
-class NumberGeneratorModule:public Module{
+class NumberGeneratorModule : public Module{
 public:
     NumberGeneratorModule();
     void start();

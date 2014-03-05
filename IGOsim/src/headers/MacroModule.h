@@ -10,7 +10,7 @@
  * \brief
  */
 
-class MacroModule :public Module{
+class MacroModule : public Module{
 private:
     std::vector<Module>modules;         /*!< Les sous-modules de module */
     std::vector<Connexion>connexions;   /*!< Les connexions entre les sous-modules */
@@ -19,10 +19,15 @@ public:
     
     /*!
      * \fn MacroModule()
-     * \brief Constructeur
+     * \brief Constructeur par défaut
      */
-    MacroModule();
-    MacroModule(Memory<int>);
+    MacroModule(std::string = "DefaultName", Params = Params());
+
+    /*!
+    * \fn MacroModule(std::string, Memory<int>, Params = Params())
+    * \brief Constructeur avec mémoire
+    */
+    MacroModule(std::string, Memory<int>, Params = Params());
     
     /*!
      * \fn ~MacroModule()

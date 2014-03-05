@@ -20,13 +20,24 @@ public:
     * \fn Message(std::string)
     * \brief Constructeur
     */
-    Message(std::string name, std::string payload);
+    Message(std::string name = "Default Name", std::string payload = "");
 
     /*!
     * \fn ~Message()
     * \brief Destructeur
     */
     virtual ~Message();
+
+    /*!
+    * \fn std::string getName()
+    * \brief Renvoie le nom du message
+    */
+    std::string getName();
+
+    /*!
+    * \fn std::string getPayload()
+    * \brief Renvoie la charge utile du message
+    */
     std::string getPayload();
 };
 

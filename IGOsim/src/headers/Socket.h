@@ -26,7 +26,7 @@ public:
     * \fn Socket(std::string name, stype type)
     * \brief Constructeur
     */
-    Socket(std::string name);
+    Socket(std::string name = "DefaultName");
 
     /*!
     * \fn virtual ~Socket()

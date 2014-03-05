@@ -1,10 +1,13 @@
 #include "MacroModule.h"
 
-MacroModule::MacroModule()
+//For convenience:
+using namespace std;
+
+MacroModule::MacroModule(string name, Params params) : Module(name, params)
 {
 }
 
-MacroModule::MacroModule(Memory<int> mem):Module(mem)
+MacroModule::MacroModule(string name, Memory<int> mem, Params params) : Module(name, mem, params)
 {
 }
 

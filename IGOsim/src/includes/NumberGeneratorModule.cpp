@@ -1,11 +1,10 @@
 #include "NumberGeneratorModule.h"
-#include <unistd.h>
+
 
 NumberGeneratorModule::NumberGeneratorModule()
 {
     this->name = "Generator";
-    Socket *outSocket = new Socket("Generator Output");
-    this->addSocket(*outSocket);
+    this->addSocket(Socket("Generator Output"));
 }
 
 void NumberGeneratorModule::start()

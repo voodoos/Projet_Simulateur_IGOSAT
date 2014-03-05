@@ -1,14 +1,18 @@
 ﻿#include "Module.h"
 #include "Memory.cpp"
 
+//For convenience:
+using namespace std;
 
-Module::Module()
+
+Module::Module(string name, Params params)
+: name(name), parameters(params)
 {
 }
 
-Module::Module(Memory<int> mem)
+Module::Module(string name, Memory<int> mem, Params params)
+: name(name), memory(mem), parameters(params)
 {
-    this->memory = mem;
 }
 
 
@@ -17,24 +21,37 @@ Module::~Module()
     
 }
 
-Socket *Module::socketWithName(std::string sname)
-{
-    std::vector<Socket>::iterator it;
-    for(it = this->sockets.begin(); it != this->sockets.end(); ++it) {
-        if (sname == it->getName()) {
-            return &(*it);
-        }
-    }
-    return NULL;
-}
-
 
 void Module::addSocket(Socket soc)
 {
-    this->sockets.insert(this->sockets.end(), soc);
+    //On ajoute le socket dans la hash_table, avec pour clé le nom du socket
+    this->sockets[soc.getName()] = soc;
 }
 
 void Module::addMessage(Message msg)
 {
-    this->messages.insert(this->messages.end(), msg);
+    //On ajoute le socket dans la hash_table, avec pour clé le nom du message
+    this->messages[msg.getName()] = msg;
+}
+
+
+
+Socket& Module::getSocketByName(string sname)
+{
+    try {
+        return this->sockets.at(sname);
+    }
+    catch (const out_of_range &e) {
+        cout << "Out of range: " << e.what() << endl;
+    }
+}
+
+double Module::getParamValueByName(string pname)
+{
+    try {
+        return this->parameters.at(pname);
+    }
+    catch (const out_of_range &e) {
+        cout << "Out of range: " << e.what() << endl;
+    }
 }
