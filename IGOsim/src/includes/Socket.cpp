@@ -25,7 +25,7 @@ void Socket::receive(Message m){
     //Si la queue était vide:
     if (messageQueue.size() == 1) {
         //On règle le timer:
-        timer = m.getProcessingTime();
+        timer = m.getTransmissionTime();
     }
 }
 
@@ -57,7 +57,7 @@ Message Socket::getFirstMessage(){
 
         //Et on met règle le timer pour le message suivant, ou à zéro si c'est fini:
         if (messageQueue.size() > 0) {
-            timer = messageQueue.front().getProcessingTime();
+            timer = messageQueue.front().getTransmissionTime();
         }
         else {
             timer = -1;
