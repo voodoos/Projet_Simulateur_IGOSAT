@@ -36,7 +36,6 @@ void Socket::send(Message m){
 void Socket::clock(int time){
     if (this->timer > 0) {
         timer--;
-        cout << "decreasing" << timer << endl;
     }
 }
 
