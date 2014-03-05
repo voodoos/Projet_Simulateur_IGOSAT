@@ -23,11 +23,7 @@ Module::~Module()
 
 
 void Module::clock(int time) {
-    
-    for (auto kv : sockets) {
-        kv.second.clock(time);
-    }
-    
+
     //On récupère un message pas socket:
     this->getMessages();
 
@@ -133,6 +129,8 @@ void Module::getMessages() {
         if (kv.second.getTimer() == 0) {
             //Si oui, on ajoute le message à la queue de traitement:
             this->tasks.push(kv.second.getFirstMessage());
+        } else {
+            kv.second.clock(0);
         }
     }
 }
