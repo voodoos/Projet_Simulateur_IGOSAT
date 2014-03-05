@@ -1,7 +1,7 @@
 ﻿#include "Message.h"
 
 
-Message::Message(std::string name, std::string payload) : name(name), payload(payload)
+Message::Message(std::string name, std::string payload, int pt) : name(name), payload(payload), processingTime(pt)
 {
 }
 
@@ -16,4 +16,8 @@ std::string Message::getName(){
 
 std::string Message::getPayload(){
     return this->payload;
+}
+
+int Message::getProcessingTime(){
+    return this->processingTime;
 }

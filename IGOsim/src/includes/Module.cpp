@@ -22,6 +22,12 @@ Module::~Module()
 }
 
 
+void Module::clock(int time) {
+    //On récupère un message pas socket:
+
+}
+
+
 void Module::addSocket(Socket soc)
 {
     //On ajoute le socket dans la hash_table, avec pour clé le nom du socket
@@ -31,7 +37,7 @@ void Module::addSocket(Socket soc)
 void Module::addMessage(Message msg)
 {
     //On ajoute le socket dans la hash_table, avec pour clé le nom du message
-    this->messages[msg.getName()] = msg;
+    this->messagesAllowed[msg.getName()] = msg;
 }
 
 

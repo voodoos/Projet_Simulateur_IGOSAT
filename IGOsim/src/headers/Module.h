@@ -42,18 +42,18 @@ protected:
     std::string name;                       /*!< Le nom du module */
     Memory<int> memory;                     /*!< La mémoire du module */
     Sockets sockets;                        /*!< Les connecteurs du module */
-    Messages messages;                      /*!< Les messages compris par le module */
+    Messages messagesAllowed;               /*!< Les messages compris par le module */
     Params parameters;                      /*!< Les paramètres d'état du modules */
 public:
     /*!
     * \fn Module(std::string = "DefaultName", Params = Params())
-    * \brief Constructeur par défault, pour un module sans mémoire
+    * \brief Constructeur par défault, pour un module sans mémoire.
     */
     Module(std::string = "DefaultName", Params = Params());
 
     /*!
     * \fn Module(std::string, Memory<int>, Params = Params())
-    * \brief Constructeur avec mémoire
+    * \brief Constructeur avec mémoire.
     */
     Module(std::string, Memory<int>, Params = Params());
 
@@ -65,25 +65,29 @@ public:
     virtual ~Module();
     
     /*!
-    * \fn virtual ~Module()
-    * \brief Destructeur
+    * \fn void clock(int)
+    * \brief Méthode appellée à chaque pas de temps, commune à tous les modules.
+    *
+    * Cette méthode effectue trois actions, lire les messages arrivés, avancer dans un processus interne, envoyer un message.
+    * Ces actions prennent tous du temps: elles peuvent durer plusieurs "ticks".
     */
+    void clock(int);
 
     /*!
     * \fn void addSocket(Socket)
-    * \brief Fonction d'ajout d'un connecteur au module
+    * \brief Fonction d'ajout d'un connecteur au module.
     */
     void addSocket(Socket);
 
     /*!
     * \fn void addMessage(Message)
-    * \brief Fonction d'ajout d'un message au module
+    * \brief Fonction d'ajout d'un message au module.
     */
     void addMessage(Message);
 
     /*!
     * \fn Socket *getSocketByName(std::string)
-    * \brief Récupère le bon connecteur, ou lève une exception
+    * \brief Récupère le bon connecteur, ou lève une exception.
     *
     * \todo Créer et gérer l'exception
     */
@@ -91,9 +95,12 @@ public:
 
     /*!
     * \fn void getParameterByName(std::string)
-    * \brief Récupère la valueur du paramètre, lève une exception sinon
+    * \brief Récupère la valueur du paramètre, lève une exception sinon.
     *
     * \todo Créer et gérer l'exception
     */
     double getParamValueByName(std::string);
+
+private:
+
 };
