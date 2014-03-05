@@ -17,9 +17,9 @@ MacroModule::~MacroModule()
 
 void MacroModule::addSubModule(Module* mod)
 {
-    this->modules.insert(this->modules.end(), mod);
+    modules.insert(modules.end(), mod);
 }
 
 void MacroModule::addConnexion(Connexion con){
-    this->connexions.insert(this->connexions.end(), con);
+    connexions.insert(connexions.end(), con);
 }

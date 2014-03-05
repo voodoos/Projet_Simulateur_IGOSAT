@@ -11,13 +11,13 @@ Message::~Message()
 }
 
 std::string Message::getName(){
-    return this->name;
+    return name;
 }
 
 std::string Message::getPayload(){
-    return this->payload;
+    return payload;
 }
 
 int Message::getProcessingTime(){
-    return this->processingTime;
+    return processingTime;
 }

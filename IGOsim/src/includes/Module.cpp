@@ -25,25 +25,25 @@ Module::~Module()
 void Module::clock(int time) {
 
     //On récupère un message pas socket:
-    this->getMessages();
+    getMessages();
 
     //On traite un peu:
     //Si fin attente tâche suivante:
-    if (this->taskTimer == 0) {
-        Message nextMsg = this->tasks.front();
-        if (this->isMessageAllowed(nextMsg)){
+    if (taskTimer == 0) {
+        Message nextMsg = tasks.front();
+        if (isMessageAllowed(nextMsg)){
 
             //Process est virtuelle pure, dépend de chaque module !
-            this->process(nextMsg);
+            process(nextMsg);
 
-            this->tasks.pop();
+            tasks.pop();
 
             //On met à jour le timer:
-            if (this->tasks.size() > 0){
-                this->taskTimer = this->messagesAllowed[nextMsg.getName()];
+            if (tasks.size() > 0){
+                taskTimer = messagesAllowed[nextMsg.getName()];
             }
             else {
-                this->taskTimer = NOP;
+                taskTimer = NOP;
             }
         }
         else{
@@ -53,8 +53,8 @@ void Module::clock(int time) {
     }
     else {
         //Sinon, on dort:
-        if(this->taskTimer != NOP){
-            this->taskTimer--;
+        if(taskTimer != NOP){
+            taskTimer--;
         }
     }
 }
@@ -63,15 +63,15 @@ void Module::clock(int time) {
 void Module::addSocket(Socket soc)
 {
     //On ajoute le socket dans la hash_table, avec pour clé le nom du socket
-    this->sockets[soc.getName()] = soc;
+    sockets[soc.getName()] = soc;
 }
 
 void Module::addMessage(Message msg, int processingTime)
 {
     //Onvérifie l'absence de doublons:
-    if (!this->isMessageAllowed(msg)){
+    if (!isMessageAllowed(msg)){
         //On ajoute le message dans la hash_table, avec pour clé le nom du message
-        this->messagesAllowed[msg.getName()] = processingTime;
+        messagesAllowed[msg.getName()] = processingTime;
     }
 }
 
@@ -80,7 +80,7 @@ void Module::addMessage(Message msg, int processingTime)
 Socket& Module::getSocketByName(string sname)
 {
     try {
-        return this->sockets.at(sname);
+        return sockets.at(sname);
     }
     catch (const out_of_range &e) {
         cout << "Out of range: " << e.what() << endl;
@@ -94,7 +94,7 @@ Socket& Module::getSocketByName(string sname)
 double Module::getParamValueByName(string pname)
 {
     try {
-        return this->parameters.at(pname);
+        return parameters.at(pname);
     }
     catch (const out_of_range &e) {
         cout << "Out of range: " << e.what() << endl;
@@ -113,7 +113,7 @@ void Module::setParamValueByName(string pname, double value){
 bool Module::isMessageAllowed(Message m)
 {
     try {
-        this->messagesAllowed.at(m.getName());
+        messagesAllowed.at(m.getName());
     }
     catch (const out_of_range &e) {
         return false;
@@ -128,7 +128,7 @@ void Module::getMessages() {
         //On regarde si la lecture est terminée:
         if (kv.second.getTimer() == 0) {
             //Si oui, on ajoute le message à la queue de traitement:
-            this->tasks.push(sockets[kv.first].getFirstMessage());
+            tasks.push(sockets[kv.first].getFirstMessage());
         } else {
             sockets[kv.first].clock(0);
         }
