@@ -103,6 +103,13 @@ public:
     * \todo Créer et gérer l'exception
     */
     double getParamValueByName(std::string);
+    
+    /*!
+     * \fn void setParameterByName(std::string, double)
+     * \brief Affecter la valueur du paramètre, lève une exception sinon.
+     *
+     */
+    void setParamValueByName(std::string, double);
 
     /*!
     * \fn bool isMessageAllowed(Message)

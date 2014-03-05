@@ -16,10 +16,14 @@ public:
     Connexion(Socket *a, Socket *b);
     /*!
      * \fn ~Connexion()
-     * \brief Destrcuteur
+     * \brief Destructeur
      */
     ~Connexion();
     
+    /*!
+     * \fn dispatch(Message, Socket *)
+     * \brief Envoye un message m reçu de socket s vers le socket d'un autre côté
+     */
     void dispatch(Message m, Socket *s);
 private:
     Socket *socketA;

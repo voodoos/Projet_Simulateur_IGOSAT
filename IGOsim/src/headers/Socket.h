@@ -34,9 +34,28 @@ public:
     */
     ~Socket();
     
+    /*!
+     * \fn void setConnexion(Connexion c)
+     * \brief Branche le socket à la connexion c
+     */
     void setConnexion(Connexion c);
+    
+    /*!
+     * \fn std::string getName()
+     * \brief Retourne le nom de socket
+     */
     std::string getName();
+    
+    /*!
+     * \fn void receive(Message m)
+     * \brief Met le message m dans la file d'attente de socket
+     */
     void receive(Message m);
+    
+    /*!
+     * \fn void send(Message m);
+     * \brief Envoye
+     */
     void send(Message m);
     bool hasMessage();
     Message getLastMessage();

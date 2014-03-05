@@ -52,7 +52,11 @@ Socket& Module::getSocketByName(string sname)
     }
     catch (const out_of_range &e) {
         cout << "Out of range: " << e.what() << endl;
+        exit(EXIT_FAILURE);
     }
+    /*!
+    *\todo Faire le retour d'un objet
+    */
 }
 
 double Module::getParamValueByName(string pname)
@@ -61,6 +65,15 @@ double Module::getParamValueByName(string pname)
         return this->parameters.at(pname);
     }
     catch (const out_of_range &e) {
+        cout << "Out of range: " << e.what() << endl;
+    }
+    return 0;
+}
+
+void Module::setParamValueByName(string pname, double value){
+    try {
+        parameters.at(pname) = value;
+    } catch (const out_of_range &e) {
         cout << "Out of range: " << e.what() << endl;
     }
 }
