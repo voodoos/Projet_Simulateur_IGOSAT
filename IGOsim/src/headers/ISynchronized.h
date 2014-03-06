@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 
 /*!
 * \class ISynchronized
-* \brief Interface pour élément synchronisé
+* \brief Interface pour Ã©lÃ©ment synchronisÃ©
 *
-* Cette interface vise à homogénéiser la notion de temps (timer) pour les classes qui en dépendent.
+* Cette interface vise Ã  homogÃ©nÃ©iser la notion de temps (timer) pour les classes qui en dÃ©pendent.
 */
 
 class ISynchronized
