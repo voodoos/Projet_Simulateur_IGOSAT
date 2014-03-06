@@ -38,7 +38,7 @@ typedef std::unordered_map<std::string, Socket> Sockets;
 */
 typedef std::unordered_map<std::string, int> Messages;
 
-class Module:public ISynchornized
+class Module : public ISynchronized
 {
 protected:
     std::string name;                       /*!< Le nom du module */

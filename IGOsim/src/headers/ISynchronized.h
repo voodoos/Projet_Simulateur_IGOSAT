@@ -1,8 +1,15 @@
 #pragma once
 
-class ISynchornized
+/*!
+* \class ISynchronized
+* \brief Interface pour élément synchronisé
+*
+* Cette interface vise à homogénéiser la notion de temps (timer) pour les classes qui en dépendent.
+*/
+
+class ISynchronized
 {
 public:
-    virtual ~ISynchornized() {};
+    virtual ~ISynchronized() {};
     virtual void clock(int time) = 0;
 };
