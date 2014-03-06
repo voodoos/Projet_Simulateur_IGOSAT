@@ -13,9 +13,9 @@ Classe abstraite de base pour les messages.
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classMessage_ad34376a89dbca320ab351c6110cfb3cb}{\hyperlink{classMessage_ad34376a89dbca320ab351c6110cfb3cb}{Message} (std\-::string name=\char`\"{}Default Name\char`\"{}, std\-::string payload=\char`\"{}\char`\"{})}\label{classMessage_ad34376a89dbca320ab351c6110cfb3cb}
+\hypertarget{classMessage_ae88f77ba817eb27909016d48bd207023}{\hyperlink{classMessage_ae88f77ba817eb27909016d48bd207023}{Message} (std\-::string name=\char`\"{}Default Name\char`\"{}, std\-::string payload=\char`\"{}\char`\"{}, int=0)}\label{classMessage_ae88f77ba817eb27909016d48bd207023}
 
-\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
 \hypertarget{classMessage_a3f7275462831f787a861271687bcad67}{virtual \hyperlink{classMessage_a3f7275462831f787a861271687bcad67}{$\sim$\-Message} ()}\label{classMessage_a3f7275462831f787a861271687bcad67}
 
 \begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
@@ -24,13 +24,16 @@ Classe abstraite de base pour les messages.
 \begin{DoxyCompactList}\small\item\em Renvoie le nom du message. \end{DoxyCompactList}\item 
 \hypertarget{classMessage_ad4276fb8ec3b78e30b13cd13a242b163}{std\-::string \hyperlink{classMessage_ad4276fb8ec3b78e30b13cd13a242b163}{get\-Payload} ()}\label{classMessage_ad4276fb8ec3b78e30b13cd13a242b163}
 
-\begin{DoxyCompactList}\small\item\em Renvoie la charge utile du message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Renvoie la charge utile du message. \end{DoxyCompactList}\item 
+\hypertarget{classMessage_a37550fee6e64d7c83ead2628373f4db3}{int \hyperlink{classMessage_a37550fee6e64d7c83ead2628373f4db3}{get\-Transmission\-Time} ()}\label{classMessage_a37550fee6e64d7c83ead2628373f4db3}
+
+\begin{DoxyCompactList}\small\item\em Renvoie le temps de traitement du message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
 Classe abstraite de base pour les messages. 
 
-Les messages sont les différentes informations que peuvent se communiquer les modules. 
+Les messages sont les différentes informations que peuvent se communiquer les modules. Un message est composé de son nom, éventuellement d'une donnée (payload), et d'une indication temporelle concernant la durée de son envoi et de sa réception. 
 
 La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
 \item 
