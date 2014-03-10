@@ -34,7 +34,7 @@ void Socket::send(Message m){
 }
 
 void Socket::clock(int time){
-    if (timer > 0) {
+    if (timer >= 0) {
         timer--;
     }
 }

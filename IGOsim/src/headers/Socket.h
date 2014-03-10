@@ -6,6 +6,8 @@
 #include "Connexion.h"
 #include "ISynchronized.h"
 
+#define NOM -1 /*! NoMessage valeur de Timer*/
+
 /*!
 * \class Socket
 * \brief Classe abstraite pour les connecteurs des modules

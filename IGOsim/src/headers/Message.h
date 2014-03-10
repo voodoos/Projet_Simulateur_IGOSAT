@@ -16,7 +16,7 @@ class Message
 private:
     std::string name;       /*!< Nom du message*/
     std::string payload;    /*!< Charge utile du message*/
-    int transmissionTime;     /*!< Temps de traitement du message*/
+    unsigned int transmissionTime;     /*!< Temps de traitement du message*/
 
 public:
     /*!
@@ -47,6 +47,6 @@ public:
     * \fn int getTransmissionTime()
     * \brief Renvoie le temps de traitement du message
     */
-    int getTransmissionTime();
+    unsigned int getTransmissionTime();
 };
 
