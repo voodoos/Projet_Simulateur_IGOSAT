@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="classMacroModule.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMacroModule.html">MacroModule</a> : <span class="keyword">public</span> <a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a>{</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::vector&lt;Module&gt;modules;         </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::vector&lt;Module*&gt;modules;         </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::vector&lt;Connexion&gt;connexions;   </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
@@ -107,13 +107,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classMacroModule.html#a9790fb7c331d99dd03f624b1a5258519" title="Destructeur.">~MacroModule</a>();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> addSubModule(<a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> addSubModule(<a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a>*);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> addConnexion(<a class="code" href="classConnexion.html">Connexion</a>);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Mars 5 2014 13:37:14 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Mars 6 2014 11:26:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

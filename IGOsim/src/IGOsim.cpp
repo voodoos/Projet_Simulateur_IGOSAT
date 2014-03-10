@@ -9,12 +9,15 @@
 #include "Battery.h"
 #include "Timer.h"
 
+//For convenience:
+using namespace std;
+
 
 int main()
 {
-    std::cout << "Hello space!" << std::endl;;
+    cout << "Hello space!" << endl;;
     
-    std::unordered_map<std::string, double> p;
+    unordered_map<string, double> p;
 
     //Exemple de batterie:
     p["voltage"] = 12;
@@ -38,6 +41,8 @@ int main()
     b1.getSocketByName("batteryIN").receive(m3);
     
     Timer::getInstance().start(100);
+
+    cin.ignore();
 
 	return 0;
 }

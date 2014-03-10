@@ -94,6 +94,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <a href="classSocket.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Socket_8h_source.html">Socket.h</a>&gt;</code></p>
+<div class="dynheader">
+Graphe d'héritage de Socket:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classSocket.png" usemap="#Socket_map" alt=""/>
+  <map id="Socket_map" name="Socket_map">
+<area href="classISynchronized.html" title="Interface pour �l�ment synchronis�" alt="ISynchronized" shape="rect" coords="0,0,93,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
@@ -104,29 +113,54 @@ Fonctions membres publiques</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#aeac4eb6379a543d38ed88977d3b6630a">~Socket</a> ()</td></tr>
 <tr class="memdesc:aeac4eb6379a543d38ed88977d3b6630a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
 <tr class="memitem:af59c7f08d2a170ec9b15bce6fd62f865"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af59c7f08d2a170ec9b15bce6fd62f865"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setConnexion</b> (<a class="el" href="classConnexion.html">Connexion</a> c)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#af59c7f08d2a170ec9b15bce6fd62f865">setConnexion</a> (<a class="el" href="classConnexion.html">Connexion</a> c)</td></tr>
+<tr class="memdesc:af59c7f08d2a170ec9b15bce6fd62f865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Branche le socket à la connexion c. <br/></td></tr>
 <tr class="memitem:aaefa10006cbf7a7a082e4adc606b3cea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaefa10006cbf7a7a082e4adc606b3cea"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#aaefa10006cbf7a7a082e4adc606b3cea">getName</a> ()</td></tr>
+<tr class="memdesc:aaefa10006cbf7a7a082e4adc606b3cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nom de socket. <br/></td></tr>
 <tr class="memitem:af137eda5415e1bd9aa6dd6467eb0d97d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af137eda5415e1bd9aa6dd6467eb0d97d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>receive</b> (<a class="el" href="classMessage.html">Message</a> m)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#af137eda5415e1bd9aa6dd6467eb0d97d">receive</a> (<a class="el" href="classMessage.html">Message</a> m)</td></tr>
+<tr class="memdesc:af137eda5415e1bd9aa6dd6467eb0d97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Met le message m dans la file d'attente de socket. <br/></td></tr>
 <tr class="memitem:af7fb88a308724635a3ca3ed040b87b1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7fb88a308724635a3ca3ed040b87b1a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (<a class="el" href="classMessage.html">Message</a> m)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#af7fb88a308724635a3ca3ed040b87b1a">send</a> (<a class="el" href="classMessage.html">Message</a> m)</td></tr>
+<tr class="memdesc:af7fb88a308724635a3ca3ed040b87b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envoye. <br/></td></tr>
+<tr class="memitem:a6bd5bddfabd838a3388b445c21d3c41e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bd5bddfabd838a3388b445c21d3c41e"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>clock</b> (int time)</td></tr>
 <tr class="memitem:afe7c9b2ef7fb3653b14f5f462293549a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe7c9b2ef7fb3653b14f5f462293549a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasMessage</b> ()</td></tr>
-<tr class="memitem:ad5c7a86e65e10d9c902ebcb0e2cfe824"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5c7a86e65e10d9c902ebcb0e2cfe824"></a>
-<a class="el" href="classMessage.html">Message</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getLastMessage</b> ()</td></tr>
+<tr class="memitem:a11216b0cc55de06256500e7b67faa24d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMessage.html">Message</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a11216b0cc55de06256500e7b67faa24d">getFirstMessage</a> ()</td></tr>
+<tr class="memitem:aa890633022a29b56ed3844684d32e0fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa890633022a29b56ed3844684d32e0fc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#aa890633022a29b56ed3844684d32e0fc">getTimer</a> () const </td></tr>
+<tr class="memdesc:aa890633022a29b56ed3844684d32e0fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la valeur de timer. <br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Classe abstraite pour les connecteurs des modules. </p>
 <p>Les sockets modélisent les connections entre les modules. Un connecteur peut-être soit un connecteur d'entrée, <em>InSocket</em>, soit un connecteur de sortie, <em>OutSOcket</em>. Les connecteurs sont reliés entre-eux via les objets <a class="el" href="classConnexion.html">Connexion</a>. </p>
-</div><hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+</div><h2>Documentation des fonctions membres</h2>
+<a class="anchor" id="a11216b0cc55de06256500e7b67faa24d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMessage.html">Message</a> Socket::getFirstMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">A faire:</a></b></dt><dd>Lever une exception </dd></dl>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/headers/<a class="el" href="Socket_8h_source.html">Socket.h</a></li>
 <li>src/includes/Socket.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Mars 5 2014 13:37:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Mars 6 2014 11:26:19 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

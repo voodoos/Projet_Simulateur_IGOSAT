@@ -24,8 +24,8 @@
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 2 def
-/cols 2 def
+/rows 3 def
+/cols 3 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -174,6 +174,8 @@
 boxfont setfont
 1 boundaspect scale
 (Module) cw
+(ISynchronized) cw
+(Battery) cw
 (MacroModule) cw
 (NumberGeneratorModule) cw
 /boxwidth boxwidth marginwidth 2 mul add def
@@ -187,17 +189,25 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Module) 0.500000 1.000000 box
- (MacroModule) 0.000000 0.000000 box
- (NumberGeneratorModule) 1.000000 0.000000 box
+ (Module) 1.000000 1.000000 box
+ (ISynchronized) 1.000000 2.000000 box
+ (Battery) 0.000000 0.000000 box
+ (MacroModule) 1.000000 0.000000 box
+ (NumberGeneratorModule) 2.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 0.500000 0.250000 out
+0 1.000000 1.000000 out
 solid
-0.000000 1.000000 1.000000 conn
+1 1.000000 2.000000 in
+solid
+1 1.000000 0.250000 out
+solid
+0.000000 2.000000 1.000000 conn
 solid
 0 0.000000 0.750000 in
 solid
 0 1.000000 0.750000 in
+solid
+0 2.000000 0.750000 in

@@ -97,9 +97,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:ad34376a89dbca320ab351c6110cfb3cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad34376a89dbca320ab351c6110cfb3cb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#ad34376a89dbca320ab351c6110cfb3cb">Message</a> (std::string name=&quot;Default Name&quot;, std::string payload=&quot;&quot;)</td></tr>
-<tr class="memdesc:ad34376a89dbca320ab351c6110cfb3cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur. <br/></td></tr>
+<tr class="memitem:ae88f77ba817eb27909016d48bd207023"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae88f77ba817eb27909016d48bd207023"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#ae88f77ba817eb27909016d48bd207023">Message</a> (std::string name=&quot;Default Name&quot;, std::string payload=&quot;&quot;, int=0)</td></tr>
+<tr class="memdesc:ae88f77ba817eb27909016d48bd207023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut. <br/></td></tr>
 <tr class="memitem:a3f7275462831f787a861271687bcad67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f7275462831f787a861271687bcad67"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#a3f7275462831f787a861271687bcad67">~Message</a> ()</td></tr>
 <tr class="memdesc:a3f7275462831f787a861271687bcad67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
@@ -109,10 +109,13 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:ad4276fb8ec3b78e30b13cd13a242b163"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4276fb8ec3b78e30b13cd13a242b163"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#ad4276fb8ec3b78e30b13cd13a242b163">getPayload</a> ()</td></tr>
 <tr class="memdesc:ad4276fb8ec3b78e30b13cd13a242b163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la charge utile du message. <br/></td></tr>
+<tr class="memitem:a37550fee6e64d7c83ead2628373f4db3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37550fee6e64d7c83ead2628373f4db3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessage.html#a37550fee6e64d7c83ead2628373f4db3">getTransmissionTime</a> ()</td></tr>
+<tr class="memdesc:a37550fee6e64d7c83ead2628373f4db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie le temps de traitement du message. <br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Classe abstraite de base pour les messages. </p>
-<p>Les messages sont les différentes informations que peuvent se communiquer les modules. </p>
+<p>Les messages sont les différentes informations que peuvent se communiquer les modules. Un message est composé de son nom, éventuellement d'une donnée (payload), et d'une indication temporelle concernant la durée de son envoi et de sa réception. </p>
 </div><hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/headers/<a class="el" href="Message_8h_source.html">Message.h</a></li>
 <li>src/includes/Message.cpp</li>
@@ -120,7 +123,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Mars 5 2014 13:37:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Mars 6 2014 11:26:18 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

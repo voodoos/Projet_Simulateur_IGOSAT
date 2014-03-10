@@ -17,7 +17,7 @@
 * Les connecteurs sont reliés entre-eux via les objets Connexion.
 */
 
-class Socket:public ISynchornized
+class Socket:public ISynchronized
 {
 private:
     std::string name;                   /*!< Nom du connecteur */
