@@ -8,5 +8,5 @@ var searchData=
   ['getsize',['getSize',['../classMemory.html#add46d3ed56cf1e88efee2ed59b38c995',1,'Memory']]],
   ['getsocketbyname',['getSocketByName',['../classModule.html#a818c5fc693a7ea20db6a2245e94f6561',1,'Module']]],
   ['gettimer',['getTimer',['../classSocket.html#aa890633022a29b56ed3844684d32e0fc',1,'Socket']]],
-  ['gettransmissiontime',['getTransmissionTime',['../classMessage.html#a37550fee6e64d7c83ead2628373f4db3',1,'Message']]]
+  ['gettransmissiontime',['getTransmissionTime',['../classMessage.html#aceef88a46eac676eb977e48cf5c3e464',1,'Message']]]
 ];
