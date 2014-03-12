@@ -7,19 +7,19 @@ Memory<T>::Memory()
 }
 
 template<class T>
-Memory<T>::Memory(std::unordered_map<std::string, T> cells)
+Memory<T>::Memory(std::unordered_map<std::string, T> _cells)
 {
-    this->cells = cells;
+    cells = _cells;
 }
 
 template<class T>
 unsigned int Memory<T>::getSize(){
-    return this->cells.size;
+    return cells.size;
 }
 
 template <class T>
 int Memory<T>::setValueForKey(std::string key, T value){
-    this->cells[key] = value;
+    cells[key] = value;
 }
 
 template<class T>
