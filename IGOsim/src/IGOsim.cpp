@@ -9,6 +9,7 @@
 #include "Battery.h"
 #include "BatteryController.h"
 #include "BatteryModule.h"
+#include "BatteryPhysics.h"
 #include "Timer.h"
 
 //For convenience:
@@ -43,6 +44,11 @@ int main()
     b.addSocket(Socket("bSocket"));
     
     Timer::getInstance().addModule(&b);
+
+
+    BatteryPhysics bp = BatteryPhysics(&b);
+
+    Timer::getInstance().addPhysics(&bp);
     
     /*! Exemple de batterie controlleur: */
 
@@ -52,7 +58,7 @@ int main()
     p["charge"] = 100;
     
     BatteryController bc = BatteryController("BController", pbc);
-    
+
     bc.addMessage(Message("showTemperature1", "nothing", 5), 5);
     bc.addMessage(Message("showTemperature2", "nothing", 5), 5);
     bc.addMessage(Message("showTemperature3", "nothing", 5), 5);
@@ -61,6 +67,7 @@ int main()
     bc.addMessage(Message("showUptime", "nothing", 5), 5);
     bc.addMessage(Message("getTemperatures", "nothing", 5), 5);
     bc.addMessage(Message("getStatus", "nothing", 5), 5);
+    bc.addMessage(Message("showVoltage", "nothing", 5), 5);
     
     bc.addSocket(Socket("bcSocket"));
     
@@ -79,6 +86,11 @@ int main()
     bc.getSocketByName("bcSocket").receive(Message("getStatus", "nothing", 5));
     bc.getSocketByName("bcSocket").receive(Message("getTemperatures", "nothing", 5));
     
+    //For physic test:
+    b.getSocketByName("bSocket").receive(Message("showVoltage", "nothing", 5));
+    b.getSocketByName("bSocket").receive(Message("showVoltage", "nothing", 5));
+    b.getSocketByName("bSocket").receive(Message("showVoltage", "nothing", 20));
+
     Timer::getInstance().start(100);
 
     cin.ignore();

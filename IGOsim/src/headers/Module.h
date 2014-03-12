@@ -16,7 +16,7 @@
 * \brief Les briques de base du simulateur
 *
 * Il s'agit de la classe centrale du simulateur, qui sera construit comme un assemblage de modules qui communiquent entre eux.
-* Il s'agit d'une classe virtuelle.
+* Il s'agit d'une classe virtuelle. Nécessitant un contrôle de la part du timer, elle implémente l'interface ISynchronized
 */
 
 
@@ -37,6 +37,7 @@ typedef std::unordered_map<std::string, Socket> Sockets;
 * \brief Un raccourci pratique pour une hashtable de messages
 */
 typedef std::unordered_map<std::string, int> Messages;
+
 
 class Module : public ISynchronized
 {

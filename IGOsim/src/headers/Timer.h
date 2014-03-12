@@ -1,11 +1,26 @@
 #pragma once
 #include <iostream>
-#include "Module.h"
+#include "Physics.h"
 #include <vector>
 
+/*!
+* \class Timer
+* \brief Cette classe sert à la gestion du temps simulé
+*
+* C'est le timer (unique) qui a pour rôle de synchroniser l'ensemble du simulateur
+* et de donner les informations intéresantes sur le temps simulé.
+*
+*/
 
+class Module;
 class Timer
 {
+private:
+
+    std::vector<ISynchronized *> synchronizedModules; /*!< Les modules synchronisés avec Timer */
+    std::vector<ISynchronized *> synchronizedPhysics; /*!< Les modules physiques synchronisés */
+    unsigned int counter;                             /*!< Le temps actuel */
+
 public:
     /*!
      * \fn static Timer& getInstance()
@@ -22,6 +37,12 @@ public:
      * \brief Ajouter le pointeur au module dans le tableau des modules synchronisés
      */
     void addModule(Module *);
+
+    /*!
+    * \fn void addPhysics(Physics *m)
+    * \brief Ajouter le pointeur au module dans le tableau des modules synchronisés
+    */
+    void addPhysics(Physics *);
     
     /*!
      * \fn void start(unsigned int);
@@ -46,11 +67,8 @@ public:
      * \brief Mettre la valeur c dans le compteur
      */
     void setCounter(unsigned int);
-    
-private:
 
-    std::vector<Module *> synchronizedModules; /*!< Les modules synchronisés avec Timer */
-    unsigned int counter;
+private:
     Timer() {};
     Timer(Timer const&);              /*!< À ne pas implementer */
     void operator=(Timer const&);     /*!< À ne pas implementer */
