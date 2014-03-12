@@ -1,4 +1,4 @@
-#include "BatteryPhysics.h"
+﻿#include "BatteryPhysics.h"
 
 
 BatteryPhysics::BatteryPhysics(Battery *m) : Physics(m)

@@ -1,4 +1,4 @@
-#include "MacroModule.h"
+﻿#include "MacroModule.h"
 
 //For convenience:
 using namespace std;

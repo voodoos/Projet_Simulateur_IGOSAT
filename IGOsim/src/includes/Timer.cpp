@@ -1,4 +1,4 @@
-#include "Timer.h"
+﻿#include "Timer.h"
 
 using namespace std;
 void Timer::addModule(Module *m){

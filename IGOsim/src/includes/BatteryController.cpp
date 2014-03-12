@@ -1,4 +1,4 @@
-#include "BatteryController.h"
+﻿#include "BatteryController.h"
 
 
 BatteryController::BatteryController(std::string name, Params params):Module(name, params){

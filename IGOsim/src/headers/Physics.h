@@ -1,12 +1,12 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Module.h"
 
 /*!
 * \class Physics
-* \brief Classe abstraite pour décrire les différentes actions de l'environnement sur les modules
+* \brief Classe abstraite pour dÃ©crire les diffÃ©rentes actions de l'environnement sur les modules
 *
-* Prend en attribut un module dont elle à le droit de changer les paramètres.
+* Prend en attribut un module dont elle Ã  le droit de changer les paramÃ¨tres.
 *
 */
 
@@ -21,7 +21,7 @@ public:
 
     /*!
     * \fn void clock(int) = 0
-    * \brief Méthode appellée à chaque pas de temps
+    * \brief MÃ©thode appellÃ©e Ã  chaque pas de temps
     *
     */
     virtual void clock(int) = 0;

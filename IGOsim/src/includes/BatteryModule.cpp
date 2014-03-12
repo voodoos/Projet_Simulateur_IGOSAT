@@ -1,4 +1,4 @@
-#include "BatteryModule.h"
+﻿#include "BatteryModule.h"
 
 BatteryModule::BatteryModule(std::string name, Params params){
     
