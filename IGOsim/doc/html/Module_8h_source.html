@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.2 -->
+<!-- Généré par Doxygen 1.8.1.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -105,49 +105,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">typedef</span> std::unordered_map&lt;std::string, int&gt; Messages;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classModule.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a> : <span class="keyword">public</span> <a class="code" href="classISynchronized.html" title="Interface pour ÈlÈment synchronisÈ">ISynchronized</a></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classModule.html#a794fbb44972c7c73cc197159093e66d1">   44</a></span>&#160;    std::string <a class="code" href="classModule.html#a794fbb44972c7c73cc197159093e66d1">name</a>;                       </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classModule.html#a48fa02fe55d33daffff725c615a63bb9">   45</a></span>&#160;    <a class="code" href="classMemory.html">Memory&lt;int&gt;</a> <a class="code" href="classModule.html#a48fa02fe55d33daffff725c615a63bb9">memory</a>;                     </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classModule.html#af0415ddaab230958f91665c66b078085">   46</a></span>&#160;    Sockets <a class="code" href="classModule.html#af0415ddaab230958f91665c66b078085">sockets</a>;                        </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classModule.html#aaadd1f971bebf7bb5eae12fcc5689198">   47</a></span>&#160;    Messages <a class="code" href="classModule.html#aaadd1f971bebf7bb5eae12fcc5689198">messagesAllowed</a>;               </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classModule.html#a232443111a9d59c17724992ddf75fbad">   48</a></span>&#160;    Params <a class="code" href="classModule.html#a232443111a9d59c17724992ddf75fbad">parameters</a>;                      </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classModule.html#aeace7c2bfd88f9946a25fb06974ca522">   49</a></span>&#160;    std::queue&lt;Message&gt; <a class="code" href="classModule.html#aeace7c2bfd88f9946a25fb06974ca522">tasks</a>;              </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classModule.html#afc209c4f9120425219f7775c79cf4bea">   50</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classModule.html#afc209c4f9120425219f7775c79cf4bea">taskTimer</a>;                          </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classModule.html#a3412148164f0668b2ae4cd1285c2790c" title="Constructeur par défault, pour un module sans mémoire.">Module</a>(std::string = <span class="stringliteral">&quot;DefaultName&quot;</span>, Params = Params());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classModule.html#a3412148164f0668b2ae4cd1285c2790c" title="Constructeur par défault, pour un module sans mémoire.">Module</a>(std::string, <a class="code" href="classMemory.html">Memory&lt;int&gt;</a>, Params = Params());</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classModule.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a> : <span class="keyword">public</span> <a class="code" href="classISynchronized.html" title="Interface pour élément synchronisé">ISynchronized</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classModule.html#a794fbb44972c7c73cc197159093e66d1">   45</a></span>&#160;    std::string <a class="code" href="classModule.html#a794fbb44972c7c73cc197159093e66d1">name</a>;                       </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classModule.html#a48fa02fe55d33daffff725c615a63bb9">   46</a></span>&#160;    <a class="code" href="classMemory.html">Memory&lt;int&gt;</a> <a class="code" href="classModule.html#a48fa02fe55d33daffff725c615a63bb9">memory</a>;                     </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classModule.html#af0415ddaab230958f91665c66b078085">   47</a></span>&#160;    Sockets <a class="code" href="classModule.html#af0415ddaab230958f91665c66b078085">sockets</a>;                        </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classModule.html#aaadd1f971bebf7bb5eae12fcc5689198">   48</a></span>&#160;    Messages <a class="code" href="classModule.html#aaadd1f971bebf7bb5eae12fcc5689198">messagesAllowed</a>;               </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classModule.html#a232443111a9d59c17724992ddf75fbad">   49</a></span>&#160;    Params <a class="code" href="classModule.html#a232443111a9d59c17724992ddf75fbad">parameters</a>;                      </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classModule.html#aeace7c2bfd88f9946a25fb06974ca522">   50</a></span>&#160;    std::queue&lt;Message&gt; <a class="code" href="classModule.html#aeace7c2bfd88f9946a25fb06974ca522">tasks</a>;              </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classModule.html#afc209c4f9120425219f7775c79cf4bea">   51</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classModule.html#afc209c4f9120425219f7775c79cf4bea">taskTimer</a>;                          </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classModule.html#a3412148164f0668b2ae4cd1285c2790c" title="Constructeur par défault, pour un module sans mémoire.">Module</a>(std::string = <span class="stringliteral">&quot;DefaultName&quot;</span>, Params = Params());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classModule.html#a3412148164f0668b2ae4cd1285c2790c" title="Constructeur par défault, pour un module sans mémoire.">Module</a>(std::string, <a class="code" href="classMemory.html">Memory&lt;int&gt;</a>, Params = Params());</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classModule.html#a7c9d9c096786d127590fdd8aa2b7d681" title="Destructeur.">~Module</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classModule.html#ab7ea9648fa500696c85e93ebd0666390" title="Méthode appellée à chaque pas de temps, commune à tous les modules.">clock</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModule.html#aeb7302c667eb923a4dc25ae235c744dc" title="Fonction d&#39;ajout d&#39;un connecteur au module.">addSocket</a>(<a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModule.html#a7adde67e02dd73bbea1441f7833edc4b" title="Fonction d&#39;ajout d&#39;un message au module, et de son temps d&#39;éxecution simulé.">addMessage</a>(<a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a>&amp; <a class="code" href="classModule.html#a818c5fc693a7ea20db6a2245e94f6561" title="Récupère le bon connecteur, ou lève une exception.">getSocketByName</a>(std::string);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">double</span> getParamValueByName(std::string);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> setParamValueByName(std::string, <span class="keywordtype">double</span>);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classModule.html#ac37dde7b4cbe2ea7b319cd43282296ac" title="Vérifie si le message est un des messages compris par ce module.">isMessageAllowed</a>(<a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> getMessages();</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> process(<a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>) = 0;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classModule.html#a7c9d9c096786d127590fdd8aa2b7d681" title="Destructeur.">~Module</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classModule.html#ab7ea9648fa500696c85e93ebd0666390" title="Méthode appellée à chaque pas de temps, commune à tous les modules.">clock</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModule.html#aeb7302c667eb923a4dc25ae235c744dc" title="Fonction d&#39;ajout d&#39;un connecteur au module.">addSocket</a>(<a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModule.html#a7adde67e02dd73bbea1441f7833edc4b" title="Fonction d&#39;ajout d&#39;un message au module, et de son temps d&#39;éxecution simulé.">addMessage</a>(<a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a>&amp; <a class="code" href="classModule.html#a818c5fc693a7ea20db6a2245e94f6561" title="Récupère le bon connecteur, ou lève une exception.">getSocketByName</a>(std::string);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">double</span> getParamValueByName(std::string);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> setParamValueByName(std::string, <span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classModule.html#ac37dde7b4cbe2ea7b319cd43282296ac" title="Vérifie si le message est un des messages compris par ce module.">isMessageAllowed</a>(<a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> getMessages();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> process(<a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>) = 0;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Mars 12 2014 16:01:14 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mars 12 2014 23:25:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.2
+</a> 1.8.1.2
 </small></address>
 </body>
 </html>

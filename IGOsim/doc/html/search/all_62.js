@@ -2,5 +2,6 @@ var searchData=
 [
   ['battery',['Battery',['../classBattery.html',1,'']]],
   ['batterycontroller',['BatteryController',['../classBatteryController.html',1,'']]],
-  ['batterymodule',['BatteryModule',['../classBatteryModule.html',1,'']]]
+  ['batterymodule',['BatteryModule',['../classBatteryModule.html',1,'']]],
+  ['batteryphysics',['BatteryPhysics',['../classBatteryPhysics.html',1,'']]]
 ];
