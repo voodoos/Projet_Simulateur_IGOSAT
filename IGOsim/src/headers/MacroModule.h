@@ -4,13 +4,14 @@
 #include <vector>
 #include "Module.h"
 #include "Connexion.h"
+#include "ISynchronized.h"
 
 /*!
  * \class MacroModule
  * \brief
  */
 
-class MacroModule : public Module{
+class MacroModule : public Module {
 private:
     std::vector<Module*>modules;         /*!< Les sous-modules de module */
     std::vector<Connexion>connexions;   /*!< Les connexions entre les sous-modules */
@@ -38,4 +39,5 @@ public:
     
     void addSubModule(Module*);
     void addConnexion(Connexion);
+    
 };

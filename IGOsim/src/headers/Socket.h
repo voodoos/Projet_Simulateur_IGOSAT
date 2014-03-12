@@ -42,7 +42,7 @@ public:
      * \fn void setConnexion(Connexion c)
      * \brief Branche le socket à la connexion c
      */
-    void setConnexion(Connexion c);
+    void setConnexion(Connexion &c);
     
     /*!
      * \fn std::string getName()

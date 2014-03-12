@@ -14,7 +14,7 @@ Socket::~Socket()
 }
 
 
-void Socket::setConnexion(Connexion c){
+void Socket::setConnexion(Connexion &c){
     connexion = &c;
 }
 

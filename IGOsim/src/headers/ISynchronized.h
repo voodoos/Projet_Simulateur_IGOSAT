@@ -1,20 +1,20 @@
 #pragma once
+
 /*!
- * \interface ISynchronized
- * \brief Interface à réaliser pour les composantes synchrones
- *
- * Les sockets modélisent les connections entre les modules.
- * Un connecteur peut-être soit un connecteur d'entrée, \a InSocket, soit un connecteur de sortie, \a OutSOcket.
- * Les connecteurs sont reliés entre-eux via les objets Connexion.
- */
-class ISynchornized
+* \class ISynchronized
+* \brief Interface pour ÈlÈment synchronisÈ
+*
+* Cette interface vise ‡ homogÈnÈiser la notion de temps (timer) pour les classes qui en dÈpendent.
+*/
+
+class ISynchronized
 {
 public:
     /*!
      * \fn virtual ~ISynchornized()
      * \brief Destructeur
      */
-    virtual ~ISynchornized() {};
+    virtual ~ISynchronized(){};
     
     /*!
      * \fn virtual void clock(int time)
