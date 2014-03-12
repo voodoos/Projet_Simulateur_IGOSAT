@@ -9,7 +9,7 @@
 #include "Message.h"
 #include "Socket.h"
 #include "ISynchronized.h"
-#define NOP -1
+#define NOP -1 /*! NoOperation valeur de Timer*/
 
 /*!
 * \class Module

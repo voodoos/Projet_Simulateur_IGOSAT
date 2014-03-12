@@ -2,9 +2,9 @@
 #include "Socket.h"
 
 Connexion::Connexion(Socket *a, Socket *b){
-    this->socketA = a;
+    socketA = a;
     a->setConnexion(*this);
-    this->socketB = b;
+    socketB = b;
     b->setConnexion(*this);
 }
 

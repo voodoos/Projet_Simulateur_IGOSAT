@@ -28,7 +28,7 @@ public:
      */
     Memory(std::unordered_map<std::string, T>);
     
-    /*!
+    /*! 
      * \fn  unsigned int getSize();
      * \brief Retourne la taille courante de la mémoire
      */

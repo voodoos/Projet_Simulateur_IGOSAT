@@ -7,7 +7,8 @@ void Timer::addModule(Module *m){
 
 void Timer::start(unsigned int c){
     for (counter=0; counter<c; ++counter) {
-        for(vector<Module *>::iterator it = synchronizedModules.begin(); it != synchronizedModules.end(); ++it) {
+        cout<< counter << endl;
+        for(vector<ISynchronized *>::iterator it = synchronizedModules.begin(); it != synchronizedModules.end(); ++it) {
             (*it)->clock(counter);
         }
     }

@@ -6,6 +6,8 @@
 #include "Connexion.h"
 #include "ISynchronized.h"
 
+#define NOM -1 /*! NoMessage valeur de Timer*/
+
 /*!
 * \class Socket
 * \brief Classe abstraite pour les connecteurs des modules
@@ -40,7 +42,7 @@ public:
      * \fn void setConnexion(Connexion c)
      * \brief Branche le socket à la connexion c
      */
-    void setConnexion(Connexion c);
+    void setConnexion(Connexion &c);
     
     /*!
      * \fn std::string getName()

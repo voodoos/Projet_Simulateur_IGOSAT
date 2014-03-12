@@ -23,7 +23,7 @@ Module::~Module()
 
 void Module::clock(int time) {
 
-    //On récupère un message pas socket:
+    //On récupère un message par socket:
     getMessages();
 
     //On traite un peu:
@@ -125,7 +125,7 @@ void Module::getMessages() {
     //On parcourt tous les sockets:
     for (pair<string, Socket> kv: sockets) {
         //On regarde si la lecture est terminée:
-        if (kv.second.getTimer() == 0) {
+        if (kv.second.hasMessage() && kv.second.getTimer() == NOP) {
             //Si oui, on ajoute le message à la queue de traitement:
             tasks.push(sockets[kv.first].getFirstMessage());
             //Et on met règle le timer pour le message suivant, ou à zéro si c'est fini:

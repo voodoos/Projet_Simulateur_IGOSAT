@@ -3285,6 +3285,14 @@
         Id="0174127a-a902-4dd5-a8cd-f8ed7c491bfe"
         name="{charge, voltage}" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b69a1dc9-9fc6-461f-8766-acbe580ca054"
+        name="Satellite"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

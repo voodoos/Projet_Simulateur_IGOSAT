@@ -5,7 +5,6 @@ Message::Message(std::string name, std::string payload, int pt) : name(name), pa
 {
 }
 
-
 Message::~Message()
 {
 }
@@ -18,6 +17,6 @@ std::string Message::getPayload(){
     return payload;
 }
 
-int Message::getTransmissionTime(){
+unsigned int Message::getTransmissionTime(){
     return transmissionTime;
 }

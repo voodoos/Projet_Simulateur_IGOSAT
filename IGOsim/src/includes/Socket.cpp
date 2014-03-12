@@ -14,7 +14,7 @@ Socket::~Socket()
 }
 
 
-void Socket::setConnexion(Connexion c){
+void Socket::setConnexion(Connexion &c){
     connexion = &c;
 }
 
@@ -34,7 +34,7 @@ void Socket::send(Message m){
 }
 
 void Socket::clock(int time){
-    if (timer > 0) {
+    if (timer >= 0) {
         timer--;
     }
 }

@@ -10,6 +10,15 @@
 class ISynchronized
 {
 public:
-    virtual ~ISynchronized() {};
+    /*!
+     * \fn virtual ~ISynchornized()
+     * \brief Destructeur
+     */
+    virtual ~ISynchronized(){};
+    
+    /*!
+     * \fn virtual void clock(int time)
+     * \brief Methode appellé à chaque tick d'horloge liée
+     */
     virtual void clock(int time) = 0;
 };
