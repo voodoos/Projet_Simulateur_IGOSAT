@@ -1,5 +1,7 @@
-Projet Simulateur IGOSAT
+﻿Projet Simulateur IGOSAT
 ========================
+
+## Installation
 
 ## Génération de la documentation
 Le projet utilise [*doxygen*](http://www.stack.nl/~dimitri/doxygen/index.html) pour générer sa documentation. Un fichier de configuration est fourni, nommé *doxy.conf*.
