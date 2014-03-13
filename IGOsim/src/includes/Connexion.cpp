@@ -1,6 +1,7 @@
 #include "Connexion.h"
 #include "Socket.h"
 
+#include "CLI.h"
 using namespace std;
 
 Connexion::Connexion(Socket *a, Socket *b) : socketA(a), socketB(b){
@@ -24,6 +25,7 @@ Connexion::~Connexion(){
 void Connexion::dispatch(Message m, Socket *s){
     if (s->getName() == socketA->getName()) {
         socketB->receive(m);
+        CLI::getInstance().log(CLI::ERROR, "TOTO3");
         cout << "Socket " << socketB->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketA->getName() << endl;
     } else if(s->getName() == socketB->getName()) {
         socketA->receive(m);

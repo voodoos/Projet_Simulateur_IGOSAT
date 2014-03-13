@@ -3,13 +3,15 @@
 
 #include <iostream>
 
-#include "Module.h"
-#include "MacroModule.h"
-#include "Socket.h"
+#include "CLI.h"
 #include "Battery.h"
 #include "BatteryController.h"
 #include "BatteryModule.h"
 #include "BatteryPhysics.h"
+#include "HCI.h"
+#include "Module.h"
+#include "MacroModule.h"
+#include "Socket.h"
 #include "Timer.h"
 
 //For convenience:
@@ -23,6 +25,7 @@ int main()
 
     /* Exemple de batterie: */
     BatteryModule *bm = new BatteryModule("BModule");
+
     bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 5));
     bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 5));
     bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 10));
