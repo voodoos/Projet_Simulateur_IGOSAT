@@ -8,6 +8,7 @@ using namespace std;
 Module::Module(string name, Params params)
 : name(name), parameters(params), taskTimer(NOP)
 {
+    cout << "Initializing module with name " << name << endl;
 }
 
 Module::Module(string name, Memory<int> mem, Params params)
@@ -76,10 +77,10 @@ void Module::addMessage(Message msg, int processingTime)
 
 
 
-Socket& Module::getSocketByName(string sname)
+Socket* Module::getSocketByName(string sname)
 {
     try {
-        return sockets.at(sname);
+        return &sockets.at(sname);
     }
     catch (const out_of_range &e) {
         cout << "Out of range: " << e.what() << endl;
@@ -125,7 +126,7 @@ void Module::getMessages() {
     //On parcourt tous les sockets:
     for (pair<string, Socket> kv: sockets) {
         //On regarde si la lecture est terminée:
-        if (kv.second.hasMessage() && kv.second.getTimer() == NOP) {
+        if (kv.second.hasMessage() && sockets[kv.first].getTimer() == NOP) {
             //Si oui, on ajoute le message à la queue de traitement:
             tasks.push(sockets[kv.first].getFirstMessage());
             //Et on met règle le timer pour le message suivant, ou à zéro si c'est fini:

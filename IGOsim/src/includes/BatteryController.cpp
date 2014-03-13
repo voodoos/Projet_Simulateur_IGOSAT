@@ -1,30 +1,31 @@
 ﻿#include "BatteryController.h"
 
+using namespace std;
 
-BatteryController::BatteryController(std::string name, Params params):Module(name, params){
+
+BatteryController::BatteryController(Params params) : Module("Battery Controller", params){
+    //Les messages compris par le controlleur:
+    addMessage(Message("getStatus", "nothing", 5), 5);
+    addMessage(Message("actualVoltage", "nothing", 5), 5);
+
+    //Les connecteurs:
+    addSocket(Socket("toBattery"));
+    addSocket(Socket("toExt"));
 }
 
 void BatteryController::process(Message m){
     if (m.getName() == "getStatus") {
-        std::cout<< "Battery Status: OK "<< std::endl;
+        //On demande le voltage à la batterie et on attend sa réponse:
+        getSocketByName("toBattery")->send(Message("getVoltage", "nothing", 5));
     }
-    if (m.getName() == "getTemperatures") {
-        getSocketByName("bcSocket").send(Message("getTemp1", "nothing", 5));
-        getSocketByName("bcSocket").send(Message("getTemp2", "nothing", 5));
-        getSocketByName("bcSocket").send(Message("getTemp3", "nothing", 5));
-        getSocketByName("bcSocket").send(Message("getTemp4", "nothing", 5));
-    }
-    
-    if (m.getName() == "showTemperature1") {
-        std::cout<< "Temp1 = "<< m.getPayload() <<" C"<< std::endl;
-    }
-    if (m.getName() == "showTemperature2") {
-        std::cout<< "Temp2 = "<< m.getPayload() <<" C"<< std::endl;
-    }
-    if (m.getName() == "showTemperature3") {
-        std::cout<< "Temp3 = "<< m.getPayload() <<" C"<< std::endl;
-    }
-    if (m.getName() == "showTemperature4") {
-        std::cout<< "Temp4 = "<< m.getPayload() <<" C"<< std::endl;
+    if (m.getName() == "actualVoltage") {
+        //Reponse de la batterie:
+        if (atoi(m.getPayload().c_str()) > 10) {
+            //Si voltage suffisant:
+            cout << "Status OK" << endl;
+        }
+        else {
+            cout << "Status KO: Insufficient voltage" << endl;
+        }
     }
 }

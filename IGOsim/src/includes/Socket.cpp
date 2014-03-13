@@ -8,6 +8,15 @@ Socket::Socket(std::string name) : name(name), timer(-1)
 {
 }
 
+Socket::Socket(const Socket &s){
+    name = s.name;
+    messageQueue = s.messageQueue;
+    connexion = s.connexion;
+    timer = s.timer;
+
+    //cout << "copie" << s.name<< endl;
+}
+
 
 Socket::~Socket()
 {
@@ -30,6 +39,7 @@ void Socket::receive(Message m){
 }
 
 void Socket::send(Message m){
+    /*! \todo Et si connexion est null ? */
     connexion->dispatch(m, this);
 }
 

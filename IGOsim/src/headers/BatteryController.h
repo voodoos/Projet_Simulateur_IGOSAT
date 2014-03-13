@@ -5,7 +5,7 @@
 
 class BatteryController:public Module{
 public:
-    BatteryController(std::string = "DefaultName", Params = Params());
+    BatteryController(Params = Params());
 private:
     void process(Message m);
 };

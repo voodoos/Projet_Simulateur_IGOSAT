@@ -1,11 +1,21 @@
 #include "Connexion.h"
 #include "Socket.h"
 
-Connexion::Connexion(Socket *a, Socket *b){
-    socketA = a;
+using namespace std;
+
+Connexion::Connexion(Socket *a, Socket *b) : socketA(a), socketB(b){
     a->setConnexion(*this);
-    socketB = b;
     b->setConnexion(*this);
+}
+
+Connexion::Connexion(const Connexion& c) {
+    //cout << "Copie de connexion" << endl;
+    socketA = c.socketA;
+    socketB = c.socketB;
+
+    //On actualise la connexion !
+    socketA->setConnexion(*this);
+    socketB->setConnexion(*this);
 }
 
 Connexion::~Connexion(){
@@ -14,9 +24,11 @@ Connexion::~Connexion(){
 void Connexion::dispatch(Message m, Socket *s){
     if (s->getName() == socketA->getName()) {
         socketB->receive(m);
+        cout << "Socket " << socketB->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketA->getName() << endl;
     } else if(s->getName() == socketB->getName()) {
         socketA->receive(m);
+        cout << "Socket " << socketA->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketB->getName() << endl;
     } else {
-        std::cout << "Unrecognized sender" << std::endl;
+        cout << "Unrecognized sender" << endl;
     }
 }

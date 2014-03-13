@@ -21,7 +21,21 @@ int main()
     cout << "Hello space!" << endl;;
     
 
-    /*! Exemple de batterie: */
+    /* Exemple de batterie: */
+    BatteryModule *bm = new BatteryModule("BModule");
+    bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 5));
+    bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 5));
+    bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 10));
+
+    Timer::getInstance().addModule(bm);
+
+
+
+    Timer::getInstance().start(100);
+
+    delete(bm);
+
+    /*
     unordered_map<string, double> p;
 
     p["voltage"] = 12;
@@ -50,7 +64,7 @@ int main()
 
     Timer::getInstance().addPhysics(&bp);
     
-    /*! Exemple de batterie controlleur: */
+    /* Exemple de batterie controlleur: 
 
     unordered_map<string, double> pbc;
     
@@ -59,21 +73,13 @@ int main()
     
     BatteryController bc = BatteryController("BController", pbc);
 
-    bc.addMessage(Message("showTemperature1", "nothing", 5), 5);
-    bc.addMessage(Message("showTemperature2", "nothing", 5), 5);
-    bc.addMessage(Message("showTemperature3", "nothing", 5), 5);
-    bc.addMessage(Message("showTemperature4", "nothing", 5), 5);
-    bc.addMessage(Message("showCharge", "nothing", 5), 5);
-    bc.addMessage(Message("showUptime", "nothing", 5), 5);
-    bc.addMessage(Message("getTemperatures", "nothing", 5), 5);
-    bc.addMessage(Message("getStatus", "nothing", 5), 5);
-    bc.addMessage(Message("showVoltage", "nothing", 5), 5);
+
     
     bc.addSocket(Socket("bcSocket"));
     
     Timer::getInstance().addModule(&bc);
 
-    /*! Exemple de batterie module: */
+    /* Exemple de batterie module: 
 
     unordered_map<string, double> pbm;
     
@@ -92,7 +98,7 @@ int main()
     b.getSocketByName("bSocket").receive(Message("showVoltage", "nothing", 20));
 
     Timer::getInstance().start(100);
-
+    */
     cin.ignore();
 
 	return 0;

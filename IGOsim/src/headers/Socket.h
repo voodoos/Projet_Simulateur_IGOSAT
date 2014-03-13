@@ -17,6 +17,8 @@
 * Les connecteurs sont reliés entre-eux via les objets Connexion.
 */
 
+/*! \todo Setconnection in Socket must be private and friend with Connection only ! */
+
 class Socket:public ISynchronized
 {
 private:
@@ -31,6 +33,8 @@ public:
     * \brief Constructeur
     */
     Socket(std::string name = "DefaultName");
+
+    Socket(const Socket&);
 
     /*!
     * \fn virtual ~Socket()

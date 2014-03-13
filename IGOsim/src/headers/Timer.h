@@ -1,7 +1,11 @@
 #pragma once
 #include <iostream>
-#include "Physics.h"
 #include <vector>
+
+#include "ISynchronized.h"
+#include "Module.h"
+#include "Physics.h"
+
 
 /*!
 * \class Timer
@@ -12,7 +16,6 @@
 *
 */
 
-class Module;
 class Timer
 {
 private:

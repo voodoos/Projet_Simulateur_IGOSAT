@@ -5,6 +5,7 @@
 #include "Module.h"
 #include "Connexion.h"
 #include "ISynchronized.h"
+#include "Timer.h"
 
 /*!
  * \class MacroModule
@@ -34,10 +35,13 @@ public:
      * \fn ~MacroModule()
      * \brief Destructeur
      */
-    ~MacroModule();
+    virtual ~MacroModule();
     
-    
-    void addSubModule(Module*);
-    void addConnexion(Connexion);
+    /*!
+    * \fn void addSubModule(Module* mod, bool timer = true)
+    * \brief Ajoute un sous-module à la liste et branche le timer si timer = true.
+    */
+    void addSubModule(Module*, bool = true);
+    void addConnexion(Socket *, Socket *);
     
 };

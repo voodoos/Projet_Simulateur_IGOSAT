@@ -15,11 +15,18 @@ MacroModule::~MacroModule()
 {
 }
 
-void MacroModule::addSubModule(Module* mod)
+void MacroModule::addSubModule(Module* mod, bool timer)
 {
-    modules.insert(modules.end(), mod);
+    //On ajoute le module à la liste:
+    modules.push_back(mod);
+
+    //On branche le timer:
+    if (timer) {
+        Timer::getInstance().addModule(mod);
+    }
+
 }
 
-void MacroModule::addConnexion(Connexion con){
-    connexions.insert(connexions.end(), con);
+void MacroModule::addConnexion(Socket *A, Socket *B){
+    connexions.push_back(Connexion(A, B));
 }

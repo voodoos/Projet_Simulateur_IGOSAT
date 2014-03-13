@@ -5,10 +5,11 @@
 #include <unordered_map>
 #include <vector>
 
+#include "ISynchronized.h"
 #include "Memory.h"
 #include "Message.h"
 #include "Socket.h"
-#include "ISynchronized.h"
+
 #define NOP -1 /*! NoOperation valeur de Timer*/
 
 /*!
@@ -37,7 +38,6 @@ typedef std::unordered_map<std::string, Socket> Sockets;
 * \brief Un raccourci pratique pour une hashtable de messages
 */
 typedef std::unordered_map<std::string, int> Messages;
-
 
 class Module : public ISynchronized
 {
@@ -97,7 +97,7 @@ public:
     *
     * \todo Créer et gérer l'exception
     */
-    Socket& getSocketByName(std::string);
+    Socket* getSocketByName(std::string);
 
     /*!
     * \fn void getParameterByName(std::string)

@@ -1,6 +1,8 @@
+#pragma once
+
 #include <iostream>
 #include "Message.h"
-#pragma once
+
 /*!
  * \class Connexion
  * \brief
@@ -14,6 +16,9 @@ public:
      * \brief Constructeur
      */
     Connexion(Socket *a, Socket *b);
+
+    Connexion(const Connexion&);
+
     /*!
      * \fn ~Connexion()
      * \brief Destructeur
