@@ -11,7 +11,7 @@ void Timer::addPhysics(Physics *p){
 
 void Timer::start(unsigned int c){
     for (counter=0; counter<c; ++counter) {
-
+        cout << counter << endl;
         //On clock la physique:
         for (vector<ISynchronized *>::iterator it = synchronizedPhysics.begin(); it != synchronizedPhysics.end(); ++it) {
             (*it)->clock(counter);
