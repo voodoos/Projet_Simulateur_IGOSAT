@@ -67,7 +67,7 @@ int main()
 
     Timer::getInstance().addPhysics(&bp);
     
-    /* Exemple de batterie controlleur: 
+     Exemple de batterie controlleur:
 
     unordered_map<string, double> pbc;
     
@@ -82,7 +82,7 @@ int main()
     
     Timer::getInstance().addModule(&bc);
 
-    /* Exemple de batterie module: 
+    Exemple de batterie module: 
 
     unordered_map<string, double> pbm;
     
