@@ -1,5 +1,5 @@
 ﻿#include "Module.h"
-#include "Memory.cpp"
+#include "Memory.h"
 
 //For convenience:
 using namespace std;
