@@ -9,6 +9,6 @@ public:
     BatteryPhysics(Battery *);
     virtual ~BatteryPhysics();
 
-    void BatteryPhysics::clock(int t);
+    void clock(int t);
 };
 
