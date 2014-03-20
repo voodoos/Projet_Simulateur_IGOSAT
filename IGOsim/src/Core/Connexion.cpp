@@ -25,11 +25,20 @@ Connexion::~Connexion(){
 void Connexion::dispatch(Message m, Socket *s){
     if (s->getName() == socketA->getName()) {
         socketB->receive(m);
-        CLI::getInstance().log(CLI::ERROR, "TOTO3");
-        cout << "Socket " << socketB->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketA->getName() << endl;
+
+        //On log:
+        stringstream mess;
+        mess << "Socket " << socketB->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketA->getName() << endl;
+        CLI::getInstance().log(CLI::INFO, mess.str());
+
     } else if(s->getName() == socketB->getName()) {
         socketA->receive(m);
-        cout << "Socket " << socketA->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketB->getName() << endl;
+
+        //On log:
+        stringstream mess;
+        mess << "Socket " << socketA->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketB->getName() << endl;
+        CLI::getInstance().log(CLI::INFO, mess.str());
+
     } else {
         cout << "Unrecognized sender" << endl;
     }

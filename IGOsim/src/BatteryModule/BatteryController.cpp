@@ -22,10 +22,10 @@ void BatteryController::process(Message m){
         //Reponse de la batterie:
         if (atoi(m.getPayload().c_str()) > 10) {
             //Si voltage suffisant:
-            cout << "Status OK" << endl;
+            CLI::getInstance().log(CLI::INFO, "Status OK");
         }
         else {
-            cout << "Status KO: Insufficient voltage" << endl;
+            CLI::getInstance().log(CLI::INFO, "Status KO: Insufficient voltage");
         }
     }
 }
