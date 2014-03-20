@@ -30,7 +30,6 @@ int main()
     bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 5));
     bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 10));
 
-    Timer::getInstance().addModule(bm);
 
 
 

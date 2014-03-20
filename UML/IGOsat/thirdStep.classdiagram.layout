@@ -143,36 +143,13 @@
         <OperationElementListCompartment Id="8eae5e6e-de41-4b91-a790-ed2ec65c0673" absoluteBounds="17.515, 1.421484357615312, 2.0949999999999998, 0.20117186754941951" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6ab15f0e-4a25-412b-9129-75e6210fbc13" absoluteBounds="17.625, 2.25, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
-      <classMoniker Id="0437919d-75e6-4e1c-bc24-777b861b56a5" LastKnownName="GPSMessage" />
-      <nestedChildShapes>
-        <AttributeElementListCompartment Id="dbf8b0e6-fa2e-4176-bb76-2f16522630fe" isExpanded="false" absoluteBounds="17.64, 2.6399999999999997, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-        <OperationElementListCompartment Id="5ae7ed69-98e8-4142-8038-73039fb614fe" absoluteBounds="17.64, 2.8511718675494198, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <generalizationConnector edgePoints="[(18.375 : 2.25); (18.375 : 2.02265622516473); (18.5625 : 2.02265622516473); (18.5625 : 1.72265622516473)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
-      <generalizationMoniker Id="5861cd58-2bef-4ee5-9bb3-ac9d33c868e1" />
-      <relativeChildShapes />
-      <nodes>
-        <classShapeMoniker Id="6ab15f0e-4a25-412b-9129-75e6210fbc13" />
-        <classShapeMoniker Id="7a48374f-e757-4b4a-8453-8c0880649553" />
-      </nodes>
-    </generalizationConnector>
-    <classShape Id="f4da9fb7-7c24-461b-8111-6fbce1ab2f26" absoluteBounds="17.625, 3.5, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+    <classShape Id="f4da9fb7-7c24-461b-8111-6fbce1ab2f26" absoluteBounds="17.5, 2.5, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
       <classMoniker Id="be8a3b49-db4f-47eb-af46-4f3862fa71cd" LastKnownName="CoordsMess" />
       <nestedChildShapes>
-        <AttributeElementListCompartment Id="5ffc266b-214e-4f17-ba02-122905fbf751" absoluteBounds="17.64, 3.8900000000000006, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-        <OperationElementListCompartment Id="bdda28ce-ac25-4d17-b170-95f9e7073bbf" absoluteBounds="17.64, 4.10117186754942, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <AttributeElementListCompartment Id="5ffc266b-214e-4f17-ba02-122905fbf751" absoluteBounds="17.515, 2.8900000000000006, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="bdda28ce-ac25-4d17-b170-95f9e7073bbf" absoluteBounds="17.515, 3.1011718675494198, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <generalizationConnector edgePoints="[(18.1735465113803 : 3.5); (18.1735465113803 : 3.34434373509884); (18.375 : 3.34434373509884); (18.375 : 3.15234373509884)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
-      <generalizationMoniker Id="eeb2bcec-0d8c-498a-ac3c-b9dd12c0dcd0" />
-      <relativeChildShapes />
-      <nodes>
-        <classShapeMoniker Id="f4da9fb7-7c24-461b-8111-6fbce1ab2f26" />
-        <classShapeMoniker Id="6ab15f0e-4a25-412b-9129-75e6210fbc13" />
-      </nodes>
-    </generalizationConnector>
     <classShape Id="4f4b0847-2903-439b-b6ac-7a7c51951b41" absoluteBounds="9.5, 0.875, 2.75, 1.5429687152306237" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
       <classMoniker Id="82a3316e-b69e-4199-86c2-b45f031c3971" LastKnownName="Timer : Pattern Singleton" />
       <nestedChildShapes>

@@ -1,4 +1,7 @@
 #include "Connexion.h"
+
+#include <sstream>
+
 #include "Socket.h"
 
 #include "CLI.h"

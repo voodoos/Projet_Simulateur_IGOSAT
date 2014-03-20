@@ -15,15 +15,11 @@ MacroModule::~MacroModule()
 {
 }
 
-void MacroModule::addSubModule(Module* mod, bool timer)
+void MacroModule::addSubModule(Module* mod)
 {
     //On ajoute le module à la liste:
     modules.push_back(mod);
 
-    //On branche le timer:
-    if (timer) {
-        Timer::getInstance().addModule(mod);
-    }
 
 }
 

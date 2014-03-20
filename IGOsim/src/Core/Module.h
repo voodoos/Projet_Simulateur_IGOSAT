@@ -9,8 +9,10 @@
 #include "Memory.h"
 #include "Message.h"
 #include "Socket.h"
+#include "Timer.h"
 
-#define NOP -1 /*! NoOperation valeur de Timer*/
+#define NOP -1 /*! NoOperation valeur de Timer
+                        \todo déplacer dans TImer.h*/
 
 /*!
 * \class Module

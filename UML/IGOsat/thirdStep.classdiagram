@@ -927,25 +927,8 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
-      <class Id="0437919d-75e6-4e1c-bc24-777b861b56a5" name="GPSMessage" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="0c3fbaae-8bdb-4f65-a4b3-f65346a81233" />
-        <generalsInternal>
-          <generalization Id="5861cd58-2bef-4ee5-9bb3-ac9d33c868e1" isSubstitutable="false">
-            <classMoniker Id="67a8526a-1f2f-4ddd-8dc0-2f91c347adff" LastKnownName="Message&lt;T&gt;" />
-            <elementDefinition Id="6237fc44-0a55-4fa6-ad9e-78603e67afc6" />
-          </generalization>
-        </generalsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
       <class Id="be8a3b49-db4f-47eb-af46-4f3862fa71cd" name="CoordsMess" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="5c2152da-52ce-47e2-b7a6-6386f6fe2fc9" />
-        <generalsInternal>
-          <generalization Id="eeb2bcec-0d8c-498a-ac3c-b9dd12c0dcd0" isSubstitutable="false">
-            <classMoniker Id="0437919d-75e6-4e1c-bc24-777b861b56a5" LastKnownName="GPSMessage" />
-            <elementDefinition Id="7d6d64d9-e4e9-48ab-8db5-6264b4074a2b" />
-          </generalization>
-        </generalsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
