@@ -28,6 +28,7 @@ Prod
 #XCode
 *.xcodeproj
 
-
+#Mac OS files
+.DS_Store
 
 
