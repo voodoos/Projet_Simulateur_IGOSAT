@@ -23,7 +23,7 @@ class Socket:public ISynchronized
 {
 private:
     std::string name;                   /*!< Nom du connecteur */
-    std::queue<Message> messageQueue;   /*!< Boîte de reception des messages */
+    std::queue<Message *> messageQueue;   /*!< Boîte de reception des messages */
     Connexion *connexion;               /*!< Connexion associée à ce Socket */
     int timer;                          /*!< First message reading time */
 
@@ -55,20 +55,20 @@ public:
     std::string getName();
     
     /*!
-     * \fn void receive(Message m)
+     * \fn void receive(Message *m)
      * \brief Met le message m dans la file d'attente de socket
      */
-    void receive(Message m);
+    void receive(Message *m);
     
     /*!
      * \fn void send(Message m);
      * \brief Envoye
      */
-    void send(Message m);
+    void send(Message *m);
     
     virtual void clock(int time);
     bool hasMessage();
-    Message getFirstMessage();
+    Message *getFirstMessage();
     
     /*!
     * \fn  int getTimer() const

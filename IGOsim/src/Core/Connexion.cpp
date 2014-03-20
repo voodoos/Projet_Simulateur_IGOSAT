@@ -22,14 +22,18 @@ Connexion::Connexion(const Connexion& c) {
 Connexion::~Connexion(){
 }
 
-void Connexion::dispatch(Message m, Socket *s){
+void Connexion::dispatch(Message *m, Socket *s){
+    std::string msgReceived("");
     if (s->getName() == socketA->getName()) {
         socketB->receive(m);
-        CLI::getInstance().log(CLI::ERROR, "TOTO3");
-        cout << "Socket " << socketB->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketA->getName() << endl;
+        msgReceived = "Socket "+socketB->getName() + " received " + m->getName() + " sent by " + socketA->getName();
+        CLI::getInstance().log(CLI::INFO, msgReceived);
+        /*cout << "Socket " << socketB->getName() << " received " << m->getName() << " sent by " << socketA->getName() << endl;*/
     } else if(s->getName() == socketB->getName()) {
         socketA->receive(m);
-        cout << "Socket " << socketA->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketB->getName() << endl;
+        msgReceived = "Socket "+socketA->getName() + " received " + m->getName() + " sent by " + socketB->getName();
+        CLI::getInstance().log(CLI::INFO, msgReceived);
+        /*cout << "Socket " << socketA->getName() << " received " << m->getName() << " sent by " << socketB->getName() << endl;*/
     } else {
         cout << "Unrecognized sender" << endl;
     }

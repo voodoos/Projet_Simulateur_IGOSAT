@@ -19,7 +19,7 @@ protected:
     logLevel logLev;
 
 public:
-    HCI(logLevel = ERROR);
+    HCI(logLevel = INFO);
     virtual ~HCI();
 
     void setLogLevel(logLevel);

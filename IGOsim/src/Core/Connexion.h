@@ -26,10 +26,10 @@ public:
     ~Connexion();
     
     /*!
-     * \fn dispatch(Message, Socket *)
+     * \fn dispatch(Message *, Socket *)
      * \brief Envoye un message m reçu de socket s vers le socket d'un autre côté
      */
-    void dispatch(Message m, Socket *s);
+    void dispatch(Message *m, Socket *s);
 private:
     Socket *socketA;
     Socket *socketB;

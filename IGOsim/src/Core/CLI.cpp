@@ -10,5 +10,5 @@ CLI::~CLI()
 }
 
 void CLI::logv(string mess) const {
-    //cout << Timer::getInstance().getCounter() << ": " << mess << endl;
+    cout << Timer::getInstance().getCounter() << ": " << mess << endl;
 }

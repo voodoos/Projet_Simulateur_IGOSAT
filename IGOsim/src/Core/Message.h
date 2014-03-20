@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <string>
 
@@ -13,7 +13,7 @@
 
 class Message
 {
-private:
+protected:
     std::string name;       /*!< Nom du message*/
     std::string payload;    /*!< Charge utile du message*/
     unsigned int transmissionTime;     /*!< Temps de traitement du message*/
@@ -23,7 +23,7 @@ public:
     * \fn Message(std::string)
     * \brief Constructeur par défaut
     */
-    Message(std::string name = "Default Name", std::string payload = "", int = 0);
+    Message(std::string name = "Default Name", int = 0);
 
     /*!
     * \fn ~Message()
@@ -36,12 +36,12 @@ public:
     * \brief Renvoie le nom du message
     */
     std::string getName();
-
+    
     /*!
-    * \fn std::string getPayload()
-    * \brief Renvoie la charge utile du message
-    */
-    std::string getPayload();
+     * \fn std::ostream& operator<<(std::ostream &os)
+     * \brief Operateur de sortie surchargé
+     */
+    virtual std::ostream &operator<<(std::ostream &os);
     
     /*!
     * \fn int getTransmissionTime()
@@ -49,4 +49,5 @@ public:
     */
     unsigned int getTransmissionTime();
 };
+
 
