@@ -31,14 +31,14 @@ void Connexion::dispatch(Message *m, Socket *s){
     if (s->getName() == socketA->getName()) {
         socketB->receive(m);
         //On log:
-        mess << "Socket " << socketB->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketA->getName() << endl;
+        mess << "Socket " << socketB->getName() << " received " << m->getName() << "(" /*! \todo On peut pas faire ça c'est nul ! << m->getPayload()*/ << ") sent by " << socketA->getName() << endl;
         CLI::getInstance().log(CLI::INFO, mess.str());
 
     } else if(s->getName() == socketB->getName()) {
         socketA->receive(m);
 
         //On log:
-        mess << "Socket " << socketA->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketB->getName() << endl;
+        mess << "Socket " << socketA->getName() << " received " << m->getName() << "(" << ") sent by " << socketB->getName() << endl;
         CLI::getInstance().log(CLI::INFO, mess.str());
 
     } else {
