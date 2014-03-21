@@ -1,4 +1,4 @@
-﻿#include "Timer.h"
+#include "Timer.h"
 #include "CLI.h"
 
 #include "Physics.h"

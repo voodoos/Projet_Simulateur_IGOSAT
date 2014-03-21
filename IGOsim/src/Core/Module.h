@@ -13,6 +13,9 @@
 #include "IntMessage.h"
 #include "StringMessage.h"
 #include "FloatMessage.h"
+#include "StringMessage.h"
+#include "Socket.h"
+#include "Timer.h"
 
 #define NOP -1 /*! NoOperation valeur de Timer
                         \todo déplacer dans TImer.h*/
