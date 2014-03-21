@@ -5,6 +5,7 @@
 #include "Message.h"
 #include "Connexion.h"
 #include "ISynchronized.h"
+#include <memory>
 
 #define NOM -1 /*! NoMessage valeur de Timer*/
 
@@ -22,10 +23,10 @@
 class Socket:public ISynchronized
 {
 private:
-    std::string name;                   /*!< Nom du connecteur */
-    std::queue<Message *> messageQueue;   /*!< Boîte de reception des messages */
-    Connexion *connexion;               /*!< Connexion associée à ce Socket */
-    int timer;                          /*!< First message reading time */
+    std::string name;                                    /*!< Nom du connecteur */
+    std::queue<std::shared_ptr<Message>> messageQueue;   /*!< Boîte de reception des messages */
+    Connexion *connexion;                                /*!< Connexion associée à ce Socket */
+    int timer;                                           /*!< First message reading time */
 
 public:
     /*!
@@ -55,20 +56,20 @@ public:
     std::string getName();
     
     /*!
-     * \fn void receive(Message *m)
+     * \fn void receive(std::shared_ptr<Message>)
      * \brief Met le message m dans la file d'attente de socket
      */
-    void receive(Message *m);
+    void receive(std::shared_ptr<Message>);
     
     /*!
-     * \fn void send(Message m);
+     * \fn void send(std::shared_ptr<Message>);
      * \brief Envoye
      */
-    void send(Message *m);
+    void send(std::shared_ptr<Message>);
     
     virtual void clock(int time);
     bool hasMessage();
-    Message *getFirstMessage();
+    std::shared_ptr<Message> getFirstMessage();
     
     /*!
     * \fn  int getTimer() const

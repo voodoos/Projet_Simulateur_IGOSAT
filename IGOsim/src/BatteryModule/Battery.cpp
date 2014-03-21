@@ -14,11 +14,11 @@ Battery::Battery(Params params) : Module("Battery", params){
     
 }
 
-void Battery::process(Message *m){
+void Battery::process(std::shared_ptr<Message> m){
 
     if (m->getName() == "getVoltage") {
         //On renvoie le voltage au controlleur:
         /*! \todo Franhcement on aura plus souvent des double que des string comme payload de message non ? */
-        getSocketByName("toBatteryController")->send(new StringMessage("actualVoltage", to_string(getParamValueByName("voltage"))));
+        getSocketByName("toBatteryController")->send(Message::createMessage("actualVoltage", to_string(getParamValueByName("voltage"))));
     }
 }

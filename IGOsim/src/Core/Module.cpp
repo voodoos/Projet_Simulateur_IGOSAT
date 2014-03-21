@@ -30,7 +30,7 @@ void Module::clock(int time) {
     //On traite un peu:
     //Si fin attente tâche suivante:
     if (taskTimer == 0) {
-        Message *nextMsg = tasks.front();
+        std::shared_ptr<Message> nextMsg = tasks.front();
         if (isMessageAllowed(*nextMsg)){
 
             //Process est virtuelle pure, dépend de chaque module !

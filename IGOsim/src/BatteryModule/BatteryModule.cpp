@@ -47,5 +47,5 @@ BatteryModule::~BatteryModule() {
     delete(batteryPhysics);
 }
 
-void BatteryModule::process(Message *m){
+void BatteryModule::process(shared_ptr<Message>){
 }

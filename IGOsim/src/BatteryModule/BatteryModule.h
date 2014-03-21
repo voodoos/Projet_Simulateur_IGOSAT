@@ -25,5 +25,5 @@ public:
     virtual ~BatteryModule();
 
 private:
-    virtual void process(Message*);
+    virtual void process(std::shared_ptr<Message>);
 };

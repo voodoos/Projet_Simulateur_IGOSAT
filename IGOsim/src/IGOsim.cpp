@@ -26,9 +26,9 @@ int main()
     /* Exemple de batterie: */
     BatteryModule *bm = new BatteryModule("BModule");
 
-    bm->getSocketByName("fromExt")->send(new StringMessage("getStatus", "nothing", 5));
-    bm->getSocketByName("fromExt")->send(new StringMessage("getStatus", "nothing", 5));
-    bm->getSocketByName("fromExt")->send(new StringMessage("getStatus", "nothing", 10));
+    bm->getSocketByName("fromExt")->send(Message::createMessage("getStatus", "nothing", 5));
+    bm->getSocketByName("fromExt")->send(Message::createMessage("getStatus", "nothing", 5));
+    bm->getSocketByName("fromExt")->send(Message::createMessage("getStatus", "nothing", 10));
 
     Timer::getInstance().addModule(bm);
     

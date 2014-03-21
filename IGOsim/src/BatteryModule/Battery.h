@@ -5,7 +5,7 @@
 
 class Battery: public Module{
 private:
-    void process(Message*);
+    void process(std::shared_ptr<Message>);
 public:
     Battery(Params = Params());
 };

@@ -13,14 +13,13 @@ BatteryController::BatteryController(Params params) : Module("Battery Controller
     addSocket(Socket("toExt"));
 }
 
-void BatteryController::process(Message *m){
+void BatteryController::process(std::shared_ptr<Message> m){
     if (m->getName() == "getStatus") {
         //On demande le voltage à la batterie et on attend sa réponse:
-        getSocketByName("toBattery")->send(new StringMessage("getVoltage", "nothing", 5));
+        getSocketByName("toBattery")->send(Message::createMessage("getVoltage", "nothing", 5));
     }
     if (m->getName() == "actualVoltage") {
-        StringMessage *sm;
-        sm = dynamic_cast<StringMessage *>(m);
+        std::shared_ptr<StringMessage> sm = dynamic_pointer_cast<StringMessage>(m);
         //Reponse de la batterie:
         if (atoi(sm->getPayload().c_str()) > 10) {
             //Si voltage suffisant:

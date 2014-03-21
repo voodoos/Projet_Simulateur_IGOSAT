@@ -27,7 +27,7 @@ void Socket::setConnexion(Connexion &c){
     connexion = &c;
 }
 
-void Socket::receive(Message *m){
+void Socket::receive(std::shared_ptr<Message> m){
     //On ajoute le message à la queue:
     messageQueue.push(m);
 
@@ -38,7 +38,7 @@ void Socket::receive(Message *m){
     }
 }
 
-void Socket::send(Message *m){
+void Socket::send(std::shared_ptr<Message>m){
     /*! \todo Et si connexion est null ? */
     connexion->dispatch(m, this);
 }
@@ -57,13 +57,12 @@ bool Socket::hasMessage(){
     return !messageQueue.empty();
 }
 
-Message *Socket::getFirstMessage(){
+std::shared_ptr<Message> Socket::getFirstMessage(){
     //On vérifie qu'il y a effectivement des messages:
     if (messageQueue.size() > 0){
 
         //On récupère et supprime le premier message:
-        Message *m = messageQueue.front();
-        //Message m(*messageQueue.front());
+        std::shared_ptr<Message>m = messageQueue.front();
         messageQueue.pop();
 
         //Et on met règle le timer pour le message suivant, ou à zéro si c'est fini:

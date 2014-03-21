@@ -8,10 +8,11 @@
 
 #include "ISynchronized.h"
 #include "Memory.h"
-#include "IntMessage.h"
-#include "FloatMessage.h"
-#include "StringMessage.h"
 #include "Socket.h"
+#include "Message.h"
+#include "IntMessage.h"
+#include "StringMessage.h"
+#include "FloatMessage.h"
 
 #define NOP -1 /*! NoOperation valeur de Timer*/
 
@@ -45,13 +46,13 @@ typedef std::unordered_map<std::string, int> Messages;
 class Module : public ISynchronized
 {
 protected:
-    std::string name;                       /*!< Le nom du module */
-    Memory<int> memory;                     /*!< La mémoire du module */
-    Sockets sockets;                        /*!< Les connecteurs du module */
-    Messages messagesAllowed;               /*!< Les messages compris par le module ET leurs temps d'éxecution */
-    Params parameters;                      /*!< Les paramètres d'état du modules */
-    std::queue<Message*> tasks;              /*!< La file d'attente des messages à traiter */
-    int taskTimer;                          /*!< Le timer de la tâche courante */
+    std::string name;                           /*!< Le nom du module */
+    Memory<int> memory;                         /*!< La mémoire du module */
+    Sockets sockets;                            /*!< Les connecteurs du module */
+    Messages messagesAllowed;                   /*!< Les messages compris par le module ET leurs temps d'éxecution */
+    Params parameters;                          /*!< Les paramètres d'état du modules */
+    std::queue<std::shared_ptr<Message>> tasks; /*!< La file d'attente des messages à traiter */
+    int taskTimer;                              /*!< Le timer de la tâche courante */
 
 public:
     /*!
@@ -133,11 +134,11 @@ private:
     void getMessages();
 
     /*!
-    * \fn virtual void process() = 0
+    * \fn virtual void process(std::shared_ptr<Message>) = 0
     * \brief La méthode virtuelle pure chargée d'effectuer les actions du module à chaque temps.
     * 
     * Cette méthode, appellée par clock à chaque temps va poursuivre le traitement des tâches en file d'attente.
     *
     */
-    virtual void process(Message*) = 0;
+    virtual void process(std::shared_ptr<Message>) = 0;
 };
