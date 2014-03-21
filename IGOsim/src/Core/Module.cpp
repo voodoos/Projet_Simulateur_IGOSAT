@@ -32,8 +32,8 @@ void Module::clock(int time) {
     //On traite un peu:
     //Si fin attente tâche suivante:
     if (taskTimer == 0) {
-        Message nextMsg = tasks.front();
-        if (isMessageAllowed(nextMsg)){
+        Message *nextMsg = tasks.front();
+        if (isMessageAllowed(*nextMsg)){
 
             //Process est virtuelle pure, dépend de chaque module !
             process(nextMsg);
@@ -42,7 +42,7 @@ void Module::clock(int time) {
 
             //On met à jour le timer:
             if (tasks.size() > 0){
-                taskTimer = messagesAllowed[nextMsg.getName()];
+                taskTimer = messagesAllowed[nextMsg->getName()];
             }
             else {
                 taskTimer = NOP;
@@ -133,7 +133,7 @@ void Module::getMessages() {
             tasks.push(sockets[kv.first].getFirstMessage());
             //Et on met règle le timer pour le message suivant, ou à zéro si c'est fini:
             if (tasks.size() > 0) {
-                taskTimer = messagesAllowed[tasks.front().getName()];
+                taskTimer = messagesAllowed[tasks.front()->getName()];
             }
             else {
                 taskTimer = NOP;

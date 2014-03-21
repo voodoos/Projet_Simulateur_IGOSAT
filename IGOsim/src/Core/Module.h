@@ -1,13 +1,16 @@
-﻿#pragma once
+#pragma once
 
 #include <queue>
 #include <string>
 #include <unordered_map>
 #include <vector>
+#include <stdexcept>
 
 #include "ISynchronized.h"
 #include "Memory.h"
-#include "Message.h"
+#include "IntMessage.h"
+#include "FloatMessage.h"
+#include "StringMessage.h"
 #include "Socket.h"
 #include "Timer.h"
 
@@ -49,7 +52,7 @@ protected:
     Sockets sockets;                        /*!< Les connecteurs du module */
     Messages messagesAllowed;               /*!< Les messages compris par le module ET leurs temps d'éxecution */
     Params parameters;                      /*!< Les paramètres d'état du modules */
-    std::queue<Message> tasks;              /*!< La file d'attente des messages à traiter */
+    std::queue<Message*> tasks;              /*!< La file d'attente des messages à traiter */
     int taskTimer;                          /*!< Le timer de la tâche courante */
 
 public:
@@ -138,5 +141,5 @@ private:
     * Cette méthode, appellée par clock à chaque temps va poursuivre le traitement des tâches en file d'attente.
     *
     */
-    virtual void process(Message) = 0;
+    virtual void process(Message*) = 0;
 };

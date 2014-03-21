@@ -21,16 +21,14 @@ using namespace std;
 int main()
 {
     cout << "Hello space!" << endl;;
+    CLI::getInstance().setLogLevel(CLI::INFO);
     
-
     /* Exemple de batterie: */
     BatteryModule *bm = new BatteryModule("BModule");
 
-    bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 5));
-    bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 5));
-    bm->getSocketByName("fromExt")->send(Message("getStatus", "nothing", 10));
-
-
+    bm->getSocketByName("fromExt")->send(new StringMessage("getStatus", "nothing", 5));
+    bm->getSocketByName("fromExt")->send(new StringMessage("getStatus", "nothing", 5));
+    bm->getSocketByName("fromExt")->send(new StringMessage("getStatus", "nothing", 10));
 
 
     Timer::getInstance().start(100);

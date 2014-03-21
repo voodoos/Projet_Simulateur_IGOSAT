@@ -5,7 +5,7 @@
 
 class Battery: public Module{
 private:
-    void process(Message);
+    void process(Message*);
 public:
     Battery(Params = Params());
 };

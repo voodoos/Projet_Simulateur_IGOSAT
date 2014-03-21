@@ -1,4 +1,4 @@
-﻿#include "BatteryModule.h"
+#include "BatteryModule.h"
 
 using namespace std;
 
@@ -25,7 +25,7 @@ BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name
 
 
     //Les messages compris par le macromodule batterie:
-    addMessage(Message("getStatus", "nothing", 5), 5);
+    addMessage(StringMessage("getStatus", "nothing", 5), 5);
 
     //Les connecteurs du macromodule:
     addSocket(Socket("fromExt"));
@@ -43,5 +43,5 @@ BatteryModule::~BatteryModule() {
     delete(batteryPhysics);
 }
 
-void BatteryModule::process(Message m){
+void BatteryModule::process(Message *m){
 }

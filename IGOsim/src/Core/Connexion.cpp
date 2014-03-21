@@ -25,12 +25,12 @@ Connexion::Connexion(const Connexion& c) {
 Connexion::~Connexion(){
 }
 
-void Connexion::dispatch(Message m, Socket *s){
+void Connexion::dispatch(Message *m, Socket *s){
+    //Pour le log:
+    stringstream mess;
     if (s->getName() == socketA->getName()) {
         socketB->receive(m);
-
         //On log:
-        stringstream mess;
         mess << "Socket " << socketB->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketA->getName() << endl;
         CLI::getInstance().log(CLI::INFO, mess.str());
 
@@ -38,7 +38,6 @@ void Connexion::dispatch(Message m, Socket *s){
         socketA->receive(m);
 
         //On log:
-        stringstream mess;
         mess << "Socket " << socketA->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketB->getName() << endl;
         CLI::getInstance().log(CLI::INFO, mess.str());
 

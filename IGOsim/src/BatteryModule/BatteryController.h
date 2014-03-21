@@ -8,5 +8,5 @@ class BatteryController:public Module{
 public:
     BatteryController(Params = Params());
 private:
-    void process(Message m);
+    void process(Message *m);
 };

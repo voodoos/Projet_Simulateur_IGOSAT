@@ -26,5 +26,5 @@ public:
     virtual ~BatteryModule();
 
 private:
-    virtual void process(Message);
+    virtual void process(Message*);
 };

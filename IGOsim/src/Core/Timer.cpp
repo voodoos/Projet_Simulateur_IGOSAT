@@ -1,4 +1,5 @@
-﻿#include "Timer.h"
+#include "Timer.h"
+#include "CLI.h"
 
 #include "Physics.h"
 #include "Module.h"
@@ -33,5 +34,9 @@ void Timer::stop(){
 
 
 unsigned int Timer::getCounter() const {
+    return counter;
+}
+
+unsigned int Timer::getCounter() const{
     return counter;
 }
