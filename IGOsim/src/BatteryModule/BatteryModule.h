@@ -16,6 +16,7 @@
 
 class BatteryModule:public MacroModule{
 private:
+    /*! \todo UNIQUE_PTR POINTER reset(new toto) */
     Battery *battery;
     BatteryController *batteryController;
     BatteryPhysics *batteryPhysics;

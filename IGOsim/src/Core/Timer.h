@@ -3,8 +3,6 @@
 #include <vector>
 
 #include "ISynchronized.h"
-#include "Module.h"
-#include "Physics.h"
 
 
 /*!
@@ -16,12 +14,14 @@
 *
 */
 
+class Physics;
+class Module;
 class Timer
 {
 private:
 
-    std::vector<ISynchronized *> synchronizedModules; /*!< Les modules synchronisés avec Timer */
-    std::vector<ISynchronized *> synchronizedPhysics; /*!< Les modules physiques synchronisés */
+    std::vector<Module *> synchronizedModules; /*!< Les modules synchronisés avec Timer */
+    std::vector<Physics *> synchronizedPhysics; /*!< Les modules physiques synchronisés */
     unsigned int counter;                             /*!< Le temps actuel */
 
 public:
@@ -36,16 +36,16 @@ public:
     }
     
     /*!
-     * \fn void addModule(Module *m)
+     * \fn void add(Module *m)
      * \brief Ajouter le pointeur au module dans le tableau des modules synchronisés
      */
-    void addModule(Module *);
+    void add(Module *);
 
     /*!
-    * \fn void addPhysics(Physics *m)
+    * \fn void add(Physics *m)
     * \brief Ajouter le pointeur au module dans le tableau des modules synchronisés
     */
-    void addPhysics(Physics *);
+    void add(Physics *);
     
     /*!
      * \fn void start(unsigned int);

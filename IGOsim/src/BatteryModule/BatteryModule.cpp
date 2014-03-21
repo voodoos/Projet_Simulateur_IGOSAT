@@ -24,11 +24,6 @@ BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name
     batteryPhysics = new BatteryPhysics(battery);
 
 
-    //On branche l'horloge:
-    Timer::getInstance().addModule(battery);
-    Timer::getInstance().addModule(batteryController);
-    Timer::getInstance().addPhysics(batteryPhysics);
-
     //Les messages compris par le macromodule batterie:
     addMessage(StringMessage("getStatus", "nothing", 5), 5);
 
@@ -36,6 +31,7 @@ BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name
     addSocket(Socket("fromExt"));
 
     //Les connexions internes:
+    /*! \todo Surcharger [] pour getsocketbyname */
     addConnexion(battery->getSocketByName("toBatteryController"), batteryController->getSocketByName("toBattery"));
     addConnexion(getSocketByName("fromExt"), batteryController->getSocketByName("toExt"));
 }

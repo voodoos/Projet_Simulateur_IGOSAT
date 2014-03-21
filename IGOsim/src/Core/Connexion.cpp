@@ -1,4 +1,7 @@
 #include "Connexion.h"
+
+#include <sstream>
+
 #include "Socket.h"
 
 #include "CLI.h"
@@ -26,14 +29,17 @@ void Connexion::dispatch(std::shared_ptr<Message> m, Socket *s){
     std::string msgReceived("");
     if (s->getName() == socketA->getName()) {
         socketB->receive(m);
-        msgReceived = "Socket "+socketB->getName() + " received " + m->getName() + " sent by " + socketA->getName();
-        CLI::getInstance().log(CLI::INFO, msgReceived);
-        /*cout << "Socket " << socketB->getName() << " received " << m->getName() << " sent by " << socketA->getName() << endl;*/
+        //On log:
+        mess << "Socket " << socketB->getName() << " received " << m->getName() << "(" /*! \todo On peut pas faire ça c'est nul ! << m->getPayload()*/ << ") sent by " << socketA->getName() << endl;
+        CLI::getInstance().log(CLI::INFO, mess.str());
+
     } else if(s->getName() == socketB->getName()) {
         socketA->receive(m);
-        msgReceived = "Socket "+socketA->getName() + " received " + m->getName() + " sent by " + socketB->getName();
-        CLI::getInstance().log(CLI::INFO, msgReceived);
-        /*cout << "Socket " << socketA->getName() << " received " << m->getName() << " sent by " << socketB->getName() << endl;*/
+
+        //On log:
+        mess << "Socket " << socketA->getName() << " received " << m->getName() << "(" << ") sent by " << socketB->getName() << endl;
+        CLI::getInstance().log(CLI::INFO, mess.str());
+
     } else {
         cout << "Unrecognized sender" << endl;
     }

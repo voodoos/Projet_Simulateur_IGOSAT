@@ -8,12 +8,14 @@ using namespace std;
 Module::Module(string name, Params params)
 : name(name), parameters(params), taskTimer(NOP)
 {
+    Timer::getInstance().add(this);
     cout << "Initializing module with name " << name << endl;
 }
 
 Module::Module(string name, Memory<int> mem, Params params)
 : name(name), memory(mem), parameters(params), taskTimer(NOP)
 {
+    Timer::getInstance().add(this);
 }
 
 

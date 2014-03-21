@@ -22,7 +22,7 @@ int main()
 {
     cout << "Hello space!" << endl;;
     CLI::getInstance().setLogLevel(CLI::INFO);
-
+    
     /* Exemple de batterie: */
     BatteryModule *bm = new BatteryModule("BModule");
 
@@ -30,8 +30,7 @@ int main()
     bm->getSocketByName("fromExt")->send(Message::createMessage("getStatus", "nothing", 5));
     bm->getSocketByName("fromExt")->send(Message::createMessage("getStatus", "nothing", 10));
 
-    Timer::getInstance().addModule(bm);
-    
+
     Timer::getInstance().start(100);
 
     delete(bm);
@@ -40,5 +39,4 @@ int main()
 
 	return 0;
 }
-
 

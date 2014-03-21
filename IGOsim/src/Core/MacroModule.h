@@ -41,7 +41,7 @@ public:
     * \fn void addSubModule(Module* mod, bool timer = true)
     * \brief Ajoute un sous-module à la liste et branche le timer si timer = true.
     */
-    void addSubModule(Module*, bool = true);
+    void addSubModule(Module*);
     void addConnexion(Socket *, Socket *);
     
 };

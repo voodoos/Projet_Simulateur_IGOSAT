@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Module.h"
+#include "ISynchronized.h"
 
 /*!
 * \class Physics
@@ -9,7 +9,7 @@
 * Prend en attribut un module dont elle à le droit de changer les paramètres.
 *
 */
-
+class Module;
 class Physics : public ISynchronized
 {
 protected:

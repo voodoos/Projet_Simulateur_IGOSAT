@@ -7,6 +7,8 @@
 * Cette interface vise à homogénéiser la notion de temps (timer) pour les classes qui en dépendent.
 */
 
+/*! \todo Enventuellement factory de modules ? */
+
 class ISynchronized
 {
 public:
