@@ -7,7 +7,7 @@
 * \class XMLReader
 * \brief Classe utilitaire pour la lecture des fichiers d econfiguration
 *
-* Cette classe singleton fournit des méthodes statiques permettant par exemple de lire la configuration initiale d'un module
+* Cette classe statique fournit des méthodes statiques permettant par exemple de lire la configuration initiale d'un module
 */
 
 class Message;
@@ -16,16 +16,6 @@ class XMLReader
 private:
     static std::string basePath; /*! Le chemin vers le dossier de configuration */
 public:
-    /*!
-    * \fn static XMLReader& getInstance()
-    * \brief Retourne l'instance unique du reader
-    */
-    static XMLReader& getInstance()
-    {
-        static XMLReader instance;
-        return instance;
-    }
-
 
     /*!
     * \fn static std::unordered_map<std::string, double> readParams(std::string moduleName)
@@ -53,9 +43,4 @@ public:
     * \brief Destructeur
     */
     ~XMLReader();
-
-private:
-    XMLReader() {};
-    XMLReader(XMLReader const&);          /*!< À ne pas implementer */
-    void operator=(XMLReader const&);     /*!< À ne pas implementer */
 };
