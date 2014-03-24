@@ -15,7 +15,7 @@ public:
     }
     virtual ~CLI();
 
-    void logv(std::string) const;
+    void logv(std::string, bool withTime = true) const;
 
 
 private:

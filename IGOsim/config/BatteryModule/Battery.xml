@@ -3,23 +3,19 @@
     <name>Battery</name>
 
     <parameters>
-        <parameter>
-            <name>voltage</name>
+        <parameter name="voltage">
             <unit>V</unit>
             <value>40</value>
         </parameter>
-        <parameter>
-            <name>amperage</name>
+        <parameter name="amperage">
             <unit>A</unit>
             <value>0.2</value>
         </parameter>
-        <parameter>
-            <name>capacity</name>
+        <parameter name="capacity">
             <unit></unit>
             <value>40</value>
         </parameter>
-        <parameter>
-            <name>temp</name>
+        <parameter name="temp">
             <unit>k</unit>
             <value>40</value>
         </parameter>

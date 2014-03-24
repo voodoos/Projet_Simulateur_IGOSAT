@@ -26,6 +26,10 @@ Module::Module(string name, Params params, string cp)
         //Si fichier xml n'existe pas, on prend les valeurs du contructeur:
         parameters = params;
     }
+    catch (int i) {
+        //Si fichier xml invalide, on prend les valeurs du contructeur:
+        parameters = params;
+    }
 
     //On enregistre le module dans le timer:
     Timer::getInstance().add(this);
