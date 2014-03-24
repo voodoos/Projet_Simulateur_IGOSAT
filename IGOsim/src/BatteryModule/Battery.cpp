@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Battery::Battery(Params params) : Module("Battery", params){
+Battery::Battery(Params params) : Module("Battery", params, "BatteryModule/Battery.xml"){
     //Les messages compris par la batterie:
     addMessage("getVoltage", 5);
 

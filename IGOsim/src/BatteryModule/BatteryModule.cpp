@@ -5,7 +5,7 @@ using namespace std;
 BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name, params){
 
     //Paramètres:
-    unordered_map<string, double> p;
+    Params p;
 
     p["voltage"] = 40;
     p["amperage"] = 0.2;

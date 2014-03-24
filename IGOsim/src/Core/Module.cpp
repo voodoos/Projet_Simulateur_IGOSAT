@@ -1,15 +1,37 @@
 ﻿#include "Module.h"
+
+#include "CLI.h"
 #include "Memory.cpp"
+#include "XMLReader.h"
+
+#include "RapidXML\rapidxml.hpp"
 
 //For convenience:
 using namespace std;
 
 
-Module::Module(string name, Params params)
-: name(name), parameters(params), taskTimer(NOP)
+Module::Module(string name, Params params, string cp)
+: name(name), parameters(params), confPath(cp), taskTimer(NOP)
 {
+    //Chemin par défaut:
+    if (confPath.empty()) {
+        confPath = name;
+    }
+
+    //On charge les paramètres du module:
+    try {
+         parameters = XMLReader::readParams(confPath);
+    }
+    catch (const runtime_error& e) {
+        //Si fichier xml n'existe pas, on prend les valeurs du contructeur:
+        parameters = params;
+    }
+
+    //On enregistre le module dans le timer:
     Timer::getInstance().add(this);
-    cout << "Initializing module with name " << name << endl;
+
+    //Petit log:
+    CLI::getInstance().log(CLI::INFO, "Initializing module with name " + name);
 }
 
 Module::Module(string name, Memory<int> mem, Params params)
