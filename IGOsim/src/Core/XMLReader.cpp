@@ -36,7 +36,7 @@ unordered_map<string, double> XMLReader::readParams(string confPath) {
             //On parcours les paramètres:
             for (rapidxml::xml_node<> * param = root_node->first_node("parameter"); param; param = param->next_sibling())
             {
-                if (param->first_attribute("name") != 0 && param->first_node("va lue") != 0) {
+                if (param->first_attribute("name") != 0 && param->first_node("value") != 0) {
                     string name = param->first_attribute("name")->value();
                     double value = atof(param->first_node("value")->value());
                     ret[name] = value;
