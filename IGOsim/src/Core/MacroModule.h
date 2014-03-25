@@ -23,7 +23,7 @@ public:
      * \fn MacroModule()
      * \brief Constructeur par défaut
      */
-    MacroModule(std::string = "DefaultName", Params = Params());
+    MacroModule(std::string = "DefaultName", Params = Params(), std::string cp = std::string());
 
     /*!
     * \fn MacroModule(std::string, Memory<int>, Params = Params())

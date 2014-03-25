@@ -2,30 +2,15 @@
 
 using namespace std;
 
-BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name, params){
-
-    //Paramètres:
-    unordered_map<string, double> p;
-
-    p["voltage"] = 40;
-    p["amperage"] = 0.2;
-    p["capacity"] = 10000;
-    p["TEMP1"] = 30;
-    p["TEMP2"] = 35;
-    p["TEMP3"] = 40;
-    p["TEMP4"] = 45;
+BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name, params, "BatteryModule/BatteryModule.xml"){
 
 
     //Les modules:
-    battery = new Battery(p);
-    batteryController = new BatteryController(Params());
+    battery = new Battery();
+    batteryController = new BatteryController();
 
     //La physique:
     batteryPhysics = new BatteryPhysics(battery);
-
-
-    //Les messages compris par le macromodule batterie:
-    addMessage("getStatus", 5);
 
     //Les connecteurs du macromodule:
     addSocket(Socket("fromExt"));

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module name="BatteryController">
+    <parameters>
+    </parameters>
+
+    <messages>
+        <message name="actualVoltage">
+            <time>5</time>
+        </message>
+        <message name="getStatus">
+            <time>5</time>
+        </message>
+    </messages>
+</module>

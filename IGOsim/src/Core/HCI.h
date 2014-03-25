@@ -24,8 +24,8 @@ public:
 
     void setLogLevel(logLevel);
 
-    void log(logLevel, std::string) const;
+    void log(logLevel, std::string, bool withTime = true) const;
 
-    virtual void logv(std::string) const = 0;
+    virtual void logv(std::string, bool withTime) const = 0;
 };
 

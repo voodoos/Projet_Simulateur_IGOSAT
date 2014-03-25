@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module name="Battery">
+    <parameters>
+        <parameter name="voltage">
+            <unit>V</unit>
+            <value>40</value>
+        </parameter>
+        <parameter name="amperage">
+            <unit>A</unit>
+            <value>0.2</value>
+        </parameter>
+        <parameter name="capacity">
+            <unit></unit>
+            <value>40</value>
+        </parameter>
+        <parameter name="temp">
+            <unit>k</unit>
+            <value>40</value>
+        </parameter>
+    </parameters>
+
+    <messages>
+        <message name="getVoltage">
+            <time>5</time>
+        </message>
+    </messages>
+</module>
