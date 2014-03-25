@@ -1,12 +1,14 @@
 ﻿#pragma once
 #include "Physics.h"
-#include "Battery.h"
 
+#include <memory>
+
+class Battery;
 class BatteryPhysics :
     public Physics
 {
 public:
-    BatteryPhysics(Battery *);
+    BatteryPhysics(std::shared_ptr<Module>);
     virtual ~BatteryPhysics();
 
     void clock(int t);

@@ -157,6 +157,10 @@ bool Module::isMessageAllowed(string  m)
     return true;
 }
 
+string Module::getName() const {
+    return name;
+}
+
 void Module::getMessages() {
     //On parcourt tous les sockets:
     for (pair<string, Socket> kv: sockets) {
