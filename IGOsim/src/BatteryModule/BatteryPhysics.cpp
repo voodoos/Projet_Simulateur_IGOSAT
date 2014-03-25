@@ -1,7 +1,10 @@
 ﻿#include "BatteryPhysics.h"
+#include "Module.h"
+
+using namespace std;
 
 
-BatteryPhysics::BatteryPhysics(Battery *m) : Physics(m)
+BatteryPhysics::BatteryPhysics(shared_ptr<Module> m) : Physics(m)
 {
 }
 

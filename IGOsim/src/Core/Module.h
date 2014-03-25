@@ -53,7 +53,7 @@ class Module : public ISynchronized
 {
 protected:
     std::string name;                           /*!< Le nom du module */
-    std::string confPath;                /*!< Le chemin vers le fichier de configuration */
+    std::string confPath;                       /*!< Le chemin vers le fichier de configuration */
     Memory<int> memory;                         /*!< La mémoire du module */
     Sockets sockets;                            /*!< Les connecteurs du module */
     Messages messagesAllowed;                   /*!< Les messages compris par le module ET leurs temps d'éxecution */
@@ -130,6 +130,13 @@ public:
     * \brief Vérifie si le message est un des messages compris par ce module.
     */
     bool isMessageAllowed(std::string);
+
+
+    /*!
+    * \fn std::string getName() const;
+    * \brief Vérifie si le message est un des messages compris par ce module.
+    */
+    std::string getName() const;
 
 private:
     /*!

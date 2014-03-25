@@ -3,7 +3,9 @@
 #include "Physics.h"
 #include "Timer.h"
 
-Physics::Physics(Module *m) : module(m)
+using namespace std;
+
+Physics::Physics(shared_ptr<Module> m) : module(m)
 {
     Timer::getInstance().add(this);
 }
