@@ -5,8 +5,8 @@ using namespace std;
 
 BatteryController::BatteryController(Params params) : Module("Battery Controller", params){
     //Les messages compris par le controlleur:
-    addMessage(StringMessage("getStatus", "nothing", 5), 5);
-    addMessage(StringMessage("actualVoltage", "nothing", 5), 5);
+    addMessage("getStatus", 5);
+    addMessage("actualVoltage", 5);
 
     //Les connecteurs:
     addSocket(Socket("toBattery"));

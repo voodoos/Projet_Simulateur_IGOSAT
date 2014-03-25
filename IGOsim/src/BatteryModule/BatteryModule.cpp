@@ -25,7 +25,7 @@ BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name
 
 
     //Les messages compris par le macromodule batterie:
-    addMessage(StringMessage("getStatus", "nothing", 5), 5);
+    addMessage("getStatus", 5);
 
     //Les connecteurs du macromodule:
     addSocket(Socket("fromExt"));

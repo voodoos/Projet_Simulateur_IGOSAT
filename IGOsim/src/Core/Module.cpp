@@ -32,8 +32,8 @@ void Module::clock(int time) {
     //On traite un peu:
     //Si fin attente tâche suivante:
     if (taskTimer == 0) {
-        std::shared_ptr<Message> nextMsg = tasks.front();
-        if (isMessageAllowed(*nextMsg)){
+        shared_ptr<Message> nextMsg = tasks.front();
+        if (isMessageAllowed(nextMsg->getName())){
 
             //Process est virtuelle pure, dépend de chaque module !
             process(nextMsg);
@@ -68,12 +68,12 @@ void Module::addSocket(Socket soc)
     sockets[soc.getName()] = soc;
 }
 
-void Module::addMessage(Message msg, int processingTime)
+void Module::addMessage(string msg, int processingTime)
 {
     //Onvérifie l'absence de doublons:
     if (!isMessageAllowed(msg)){
         //On ajoute le message dans la hash_table, avec pour clé le nom du message
-        messagesAllowed[msg.getName()] = processingTime;
+        messagesAllowed[msg] = processingTime;
     }
 }
 
@@ -112,10 +112,10 @@ void Module::setParamValueByName(string pname, double value){
     }
 }
 
-bool Module::isMessageAllowed(Message m)
+bool Module::isMessageAllowed(string  m)
 {
     try {
-        messagesAllowed.at(m.getName());
+        messagesAllowed.at(m);
     }
     catch (const out_of_range &e) {
         return false;

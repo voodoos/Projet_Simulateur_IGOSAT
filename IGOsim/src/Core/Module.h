@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include <queue>
 #include <string>
 #include <unordered_map>
@@ -94,10 +95,10 @@ public:
     void addSocket(Socket);
 
     /*!
-    * \fn void addMessage(Message msg, int processingTime)
+    * \fn void addMessage(std::string msgName, int processingTime)
     * \brief Fonction d'ajout d'un message au module, et de son temps d'éxecution simulé.
     */
-    void addMessage(Message, int);
+    void addMessage(std::string, int);
 
     /*!
     * \fn Socket *getSocketByName(std::string)
@@ -123,10 +124,10 @@ public:
     void setParamValueByName(std::string, double);
 
     /*!
-    * \fn bool isMessageAllowed(Message)
+    * \fn bool isMessageAllowed(std::string msgName)
     * \brief Vérifie si le message est un des messages compris par ce module.
     */
-    bool isMessageAllowed(Message);
+    bool isMessageAllowed(std::string);
 
 private:
     /*!
