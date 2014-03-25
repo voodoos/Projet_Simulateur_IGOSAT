@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<module>
-    <name>Battery</name>
-
+<module name="Battery">
     <parameters>
         <parameter name="voltage">
             <unit>V</unit>
@@ -22,8 +20,7 @@
     </parameters>
 
     <messages>
-        <message>
-            <name>getVoltage</name>
+        <message name="getVoltage">
             <time>5</time>
         </message>
     </messages>

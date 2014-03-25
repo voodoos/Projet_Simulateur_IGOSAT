@@ -22,20 +22,27 @@ Module::Module(string name, Params params, string cp)
     try {
          parameters = XMLReader::readParams(confPath);
     }
-    catch (const runtime_error& e) {
+    catch (runtime_error) {
         //Si fichier xml n'existe pas, on prend les valeurs du contructeur:
         parameters = params;
     }
-    catch (int i) {
+    catch (int) {
         //Si fichier xml invalide, on prend les valeurs du contructeur:
         parameters = params;
     }
+
+    //On charge les messages du module:
+    try {
+        messagesAllowed = XMLReader::readMessages(confPath);
+    }
+    catch (runtime_error) {}
+    catch (int) {}
 
     //On enregistre le module dans le timer:
     Timer::getInstance().add(this);
 
     //Petit log:
-    CLI::getInstance().log(CLI::INFO, "Initializing module with name " + name);
+    CLI::getInstance().log(CLI::INFO, "Initializing module with name " + name, false);
 }
 
 Module::Module(string name, Memory<int> mem, Params params)

@@ -5,9 +5,9 @@
 
 /*!
 * \class XMLReader
-* \brief Classe utilitaire pour la lecture des fichiers d econfiguration
+* \brief Classe utilitaire pour la lecture des fichiers de configuration
 *
-* Cette classe statique fournit des méthodes statiques permettant par exemple de lire la configuration initiale d'un module
+* Cette classe statique fournit des méthodes statiques permettant par exemple de lire la configuration initiale du simulateur dans les fihciers xml
 */
 
 class Message;
@@ -21,9 +21,17 @@ public:
     * \fn static std::unordered_map<std::string, double> readParams(std::string moduleName)
     * \brief Lecture des paramètre du module protant ce nom.
     * Cette fonction recherche le fichier de configuration portant le nom du module, appelle le parser RapidXML puis créé le tableau de paramètres.
-    * \todo En cas d'échec, elle lève une exception.
+    * En cas d'échec, elle lève une exception.
     */
     static std::unordered_map<std::string, double> readParams(std::string);
+
+    /*!
+    * \fn static std::unordered_map<std::string, double> readMessages(std::string moduleName)
+    * \brief Lecture des méssages compris par le module protant ce nom.
+    * Cette fonction recherche le fichier de configuration portant le nom du module, appelle le parser RapidXML puis créé le tableau de messages.
+    * En cas d'échec, elle lève une exception.
+    */
+    static std::unordered_map<std::string, int> readMessages(std::string);
 
     /*!
     * \fn static std::string getPath() const
@@ -33,7 +41,7 @@ public:
 
 
     /*!
-    * \fn static void setPath(std::string)
+    * \fn static void setPath(std::string newPath)
     * \brief Setter statique du chemin vers le dossier de configuration
     */
     static void setPath(std::string);

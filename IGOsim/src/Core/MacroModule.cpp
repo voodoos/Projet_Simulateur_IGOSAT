@@ -3,7 +3,7 @@
 //For convenience:
 using namespace std;
 
-MacroModule::MacroModule(string name, Params params) : Module(name, params)
+MacroModule::MacroModule(string name, Params params, string cp) : Module(name, params, cp)
 {
 }
 
