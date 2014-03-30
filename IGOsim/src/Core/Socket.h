@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <string>
 #include <queue>
@@ -24,6 +24,7 @@ class Socket:public ISynchronized
 {
 private:
     std::string name;                                    /*!< Nom du connecteur */
+    std::string owner;                                   /*!< Nom du module qui possède ce socket */
     std::queue<std::shared_ptr<Message>> messageQueue;   /*!< Boîte de reception des messages */
     Connexion *connexion;                                /*!< Connexion associée à ce Socket */
     int timer;                                           /*!< First message reading time */
@@ -33,7 +34,7 @@ public:
     * \fn Socket(std::string name, stype type)
     * \brief Constructeur
     */
-    Socket(std::string name = "DefaultName");
+    Socket(std::string name = "SocketName", std::string owner = "SocketOwner");
 
     Socket(const Socket&);
 
@@ -54,6 +55,13 @@ public:
      * \brief Retourne le nom de socket
      */
     std::string getName();
+    
+    /*!
+     * \fn std::string getOwner()
+     * \brief Retourne le nom de module qui possede ce socket
+     */
+    std::string getOwner();
+    
     
     /*!
      * \fn void receive(std::shared_ptr<Message>)

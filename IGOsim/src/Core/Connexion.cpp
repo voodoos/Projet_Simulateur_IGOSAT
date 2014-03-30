@@ -29,14 +29,12 @@ void Connexion::dispatch(std::shared_ptr<Message> m, Socket *s){
     std::string msgReceived("");
     if (s->getName() == socketA->getName()) {
         socketB->receive(m);
-        msgReceived = "Socket "+socketB->getName() + " received " + m->getName() + " sent by " + socketA->getName();
+        msgReceived = "Socket "+socketB->getOwner()+"."+socketB->getName() + " received " + m->getName() + " sent by " + socketA->getOwner()+"."+socketA->getName();
         CLI::getInstance().log(CLI::INFO, msgReceived);
-        /*cout << "Socket " << socketB->getName() << " received " << m->getName() << " sent by " << socketA->getName() << endl;*/
     } else if(s->getName() == socketB->getName()) {
         socketA->receive(m);
-        msgReceived = "Socket "+socketA->getName() + " received " + m->getName() + " sent by " + socketB->getName();
+        msgReceived = "Socket "+socketA->getOwner()+"."+socketA->getName() + " received " + m->getName() + " sent by " + socketB->getOwner()+"."+socketB->getName();
         CLI::getInstance().log(CLI::INFO, msgReceived);
-        /*cout << "Socket " << socketA->getName() << " received " << m->getName() << " sent by " << socketB->getName() << endl;*/
     } else {
         cout << "Unrecognized sender" << endl;
     }

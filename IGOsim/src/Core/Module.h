@@ -128,6 +128,12 @@ public:
     * \brief Vérifie si le message est un des messages compris par ce module.
     */
     bool isMessageAllowed(std::string);
+    
+    /*!
+     * \fn &operator[](std::string)
+     * \brief Surcharge d'operateur [] pour acceder aux sockets du Module
+     */
+    Socket* operator[](std::string);
 
 private:
     /*!

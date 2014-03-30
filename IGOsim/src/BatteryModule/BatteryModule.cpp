@@ -28,12 +28,13 @@ BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name
     addMessage("getStatus", 5);
 
     //Les connecteurs du macromodule:
-    addSocket(Socket("fromExt"));
+    addSocket(Socket("fromExt", this->name));
 
     //Les connexions internes:
     /*! \todo Surcharger [] pour getsocketbyname */
-    addConnexion(battery->getSocketByName("toBatteryController"), batteryController->getSocketByName("toBattery"));
-    addConnexion(getSocketByName("fromExt"), batteryController->getSocketByName("toExt"));
+    ;
+    addConnexion((*battery)["toBatteryController"], (*batteryController)["toBattery"]);
+    addConnexion(getSocketByName("fromExt"), (*batteryController)["toExt"]);
 }
 
 BatteryModule::~BatteryModule() {
@@ -44,4 +45,5 @@ BatteryModule::~BatteryModule() {
 }
 
 void BatteryModule::process(shared_ptr<Message>){
+    
 }
