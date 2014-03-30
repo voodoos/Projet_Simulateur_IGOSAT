@@ -20,11 +20,10 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello space!" << endl;;
     CLI::getInstance().setLogLevel(CLI::INFO);
     
     /* Exemple de batterie: */
-    BatteryModule *bm = new BatteryModule("BModule");
+    BatteryModule *bm = new BatteryModule("BatteryModule");
 
     (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
     (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));

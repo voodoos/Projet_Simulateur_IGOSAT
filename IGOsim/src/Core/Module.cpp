@@ -1,15 +1,48 @@
 ﻿#include "Module.h"
+
+#include "CLI.h"
 #include "Memory.cpp"
+#include "XMLReader.h"
+
+#include "RapidXML\rapidxml.hpp"
 
 //For convenience:
 using namespace std;
 
 
-Module::Module(string name, Params params)
-: name(name), parameters(params), taskTimer(NOP)
+Module::Module(string name, Params params, string cp)
+: name(name), parameters(params), confPath(cp), taskTimer(NOP)
 {
+    //Chemin par défaut:
+    if (confPath.empty()) {
+        confPath = name;
+    }
+
+    //On charge les paramètres du module:
+    try {
+         parameters = XMLReader::readParams(confPath);
+    }
+    catch (runtime_error) {
+        //Si fichier xml n'existe pas, on prend les valeurs du contructeur:
+        parameters = params;
+    }
+    catch (int) {
+        //Si fichier xml invalide, on prend les valeurs du contructeur:
+        parameters = params;
+    }
+
+    //On charge les messages du module:
+    try {
+        messagesAllowed = XMLReader::readMessages(confPath);
+    }
+    catch (runtime_error) {}
+    catch (int) {}
+
+    //On enregistre le module dans le timer:
     Timer::getInstance().add(this);
-    cout << "Initializing module with name " << name << endl;
+
+    //Petit log:
+    CLI::getInstance().log(CLI::INFO, "Initializing module with name " + name, false);
 }
 
 Module::Module(string name, Memory<int> mem, Params params)
@@ -122,6 +155,10 @@ bool Module::isMessageAllowed(string  m)
     }
 
     return true;
+}
+
+string Module::getName() const {
+    return name;
 }
 
 void Module::getMessages() {

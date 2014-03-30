@@ -48,10 +48,12 @@ typedef std::unordered_map<std::string, Socket> Sockets;
 */
 typedef std::unordered_map<std::string, int> Messages;
 
+
 class Module : public ISynchronized
 {
 protected:
     std::string name;                           /*!< Le nom du module */
+    std::string confPath;                       /*!< Le chemin vers le fichier de configuration */
     Memory<int> memory;                         /*!< La mémoire du module */
     Sockets sockets;                            /*!< Les connecteurs du module */
     Messages messagesAllowed;                   /*!< Les messages compris par le module ET leurs temps d'éxecution */
@@ -61,10 +63,10 @@ protected:
 
 public:
     /*!
-    * \fn Module(std::string = "DefaultName", Params = Params())
+    * \fn Module(std::string = "DefaultName", Params = Params(), std::string cp = "")
     * \brief Constructeur par défault, pour un module sans mémoire.
     */
-    Module(std::string = "DefaultName", Params = Params());
+    Module(std::string = "DefaultName", Params = Params(), std::string cp = std::string());
 
     /*!
     * \fn Module(std::string, Memory<int>, Params = Params())
@@ -134,6 +136,13 @@ public:
      * \brief Surcharge d'operateur [] pour acceder aux sockets du Module
      */
     Socket* operator[](std::string);
+
+
+    /*!
+    * \fn std::string getName() const;
+    * \brief Vérifie si le message est un des messages compris par ce module.
+    */
+    std::string getName() const;
 
 private:
     /*!
