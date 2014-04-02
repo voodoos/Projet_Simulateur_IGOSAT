@@ -1,0 +1,59 @@
+\hypertarget{classXMLReader}{\section{Référence de la classe X\-M\-L\-Reader}
+\label{classXMLReader}\index{X\-M\-L\-Reader@{X\-M\-L\-Reader}}
+}
+
+
+Classe utilitaire pour la lecture des fichiers de configuration.  
+
+
+
+
+{\ttfamily \#include $<$X\-M\-L\-Reader.\-h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classXMLReader_a73065c7758f26ef69387e315c96d13ac}{\hyperlink{classXMLReader_a73065c7758f26ef69387e315c96d13ac}{$\sim$\-X\-M\-L\-Reader} ()}\label{classXMLReader_a73065c7758f26ef69387e315c96d13ac}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::unordered\-\_\-map\\*
+$<$ std\-::string, double $>$ \hyperlink{classXMLReader_a176f21253bd7ac73c00c0aa46e2e5724}{read\-Params} (std\-::string)
+\begin{DoxyCompactList}\small\item\em Lecture des paramètre du module protant ce nom. Cette fonction recherche le fichier de configuration portant le nom du module, appelle le parser Rapid\-X\-M\-L puis créé le tableau de paramètres. En cas d'échec, elle lève une exception. \end{DoxyCompactList}\item 
+\hypertarget{classXMLReader_aa21f5dcd9d009e635c6acad97beb240a}{static std\-::unordered\-\_\-map\\*
+$<$ std\-::string, int $>$ \hyperlink{classXMLReader_aa21f5dcd9d009e635c6acad97beb240a}{read\-Messages} (std\-::string)}\label{classXMLReader_aa21f5dcd9d009e635c6acad97beb240a}
+
+\begin{DoxyCompactList}\small\item\em Lecture des méssages compris par le module protant ce nom. Cette fonction recherche le fichier de configuration portant le nom du module, appelle le parser Rapid\-X\-M\-L puis créé le tableau de messages. En cas d'échec, elle lève une exception. \end{DoxyCompactList}\item 
+\hypertarget{classXMLReader_a5147abbb0cacd3fbcc396a23cc63456b}{static std\-::string \hyperlink{classXMLReader_a5147abbb0cacd3fbcc396a23cc63456b}{get\-Path} ()}\label{classXMLReader_a5147abbb0cacd3fbcc396a23cc63456b}
+
+\begin{DoxyCompactList}\small\item\em Getter statique du chemin vers le dossier de configuration. \end{DoxyCompactList}\item 
+\hypertarget{classXMLReader_ae8d2d4fd99c45bc46b939d9dc3548340}{static void \hyperlink{classXMLReader_ae8d2d4fd99c45bc46b939d9dc3548340}{set\-Path} (std\-::string)}\label{classXMLReader_ae8d2d4fd99c45bc46b939d9dc3548340}
+
+\begin{DoxyCompactList}\small\item\em Setter statique du chemin vers le dossier de configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe utilitaire pour la lecture des fichiers de configuration. 
+
+Cette classe statique fournit des méthodes statiques permettant par exemple de lire la configuration initiale du simulateur dans les fihciers xml 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classXMLReader_a176f21253bd7ac73c00c0aa46e2e5724}{\index{X\-M\-L\-Reader@{X\-M\-L\-Reader}!read\-Params@{read\-Params}}
+\index{read\-Params@{read\-Params}!XMLReader@{X\-M\-L\-Reader}}
+\subsubsection[{read\-Params}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::unordered\-\_\-map$<$ std\-::string, double $>$ X\-M\-L\-Reader\-::read\-Params (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{module\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classXMLReader_a176f21253bd7ac73c00c0aa46e2e5724}
+
+
+Lecture des paramètre du module protant ce nom. Cette fonction recherche le fichier de configuration portant le nom du module, appelle le parser Rapid\-X\-M\-L puis créé le tableau de paramètres. En cas d'échec, elle lève une exception. 
+
+Le chemin vers le dossier de configuration 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
+\item 
+src/\-Core/X\-M\-L\-Reader.\-h\item 
+src/\-Core/X\-M\-L\-Reader.\-cpp\end{DoxyCompactItemize}

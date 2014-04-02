@@ -29,6 +29,7 @@ void MacroModule::addConnexion(Connexion* c){
 }
 
 shared_ptr<Module> MacroModule::getModuleByName(string n) {
+    //On tente de récupérer le module:
     try {
         shared_ptr<Module> tmp = modules[n];
         if (tmp == nullptr) {

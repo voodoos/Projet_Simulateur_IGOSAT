@@ -10,10 +10,16 @@ Classe abstraite de base pour les messages.
 
 {\ttfamily \#include $<$Message.\-h$>$}
 
+Graphe d'héritage de Message\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMessage}
+\end{center}
+\end{figure}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classMessage_ae88f77ba817eb27909016d48bd207023}{\hyperlink{classMessage_ae88f77ba817eb27909016d48bd207023}{Message} (std\-::string name=\char`\"{}Default Name\char`\"{}, std\-::string payload=\char`\"{}\char`\"{}, int=0)}\label{classMessage_ae88f77ba817eb27909016d48bd207023}
+\hypertarget{classMessage_a154809183fa5ec6b5182c487db1167dd}{\hyperlink{classMessage_a154809183fa5ec6b5182c487db1167dd}{Message} (std\-::string \hyperlink{classMessage_ac7adddb666acdc47c48f684bd6810a51}{name}=\char`\"{}Default Name\char`\"{}, int=0)}\label{classMessage_a154809183fa5ec6b5182c487db1167dd}
 
 \begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
 \hypertarget{classMessage_a3f7275462831f787a861271687bcad67}{virtual \hyperlink{classMessage_a3f7275462831f787a861271687bcad67}{$\sim$\-Message} ()}\label{classMessage_a3f7275462831f787a861271687bcad67}
@@ -22,12 +28,31 @@ Classe abstraite de base pour les messages.
 \hypertarget{classMessage_ac03b02000572b0852c574498bf138e87}{std\-::string \hyperlink{classMessage_ac03b02000572b0852c574498bf138e87}{get\-Name} ()}\label{classMessage_ac03b02000572b0852c574498bf138e87}
 
 \begin{DoxyCompactList}\small\item\em Renvoie le nom du message. \end{DoxyCompactList}\item 
-\hypertarget{classMessage_ad4276fb8ec3b78e30b13cd13a242b163}{std\-::string \hyperlink{classMessage_ad4276fb8ec3b78e30b13cd13a242b163}{get\-Payload} ()}\label{classMessage_ad4276fb8ec3b78e30b13cd13a242b163}
+\hypertarget{classMessage_acbdab136245666bce3752fa311150672}{virtual std\-::ostream \& \hyperlink{classMessage_acbdab136245666bce3752fa311150672}{operator$<$$<$} (std\-::ostream \&os)=0}\label{classMessage_acbdab136245666bce3752fa311150672}
 
-\begin{DoxyCompactList}\small\item\em Renvoie la charge utile du message. \end{DoxyCompactList}\item 
-\hypertarget{classMessage_aceef88a46eac676eb977e48cf5c3e464}{unsigned int \hyperlink{classMessage_aceef88a46eac676eb977e48cf5c3e464}{get\-Transmission\-Time} ()}\label{classMessage_aceef88a46eac676eb977e48cf5c3e464}
+\begin{DoxyCompactList}\small\item\em Operateur de sortie surchargé \end{DoxyCompactList}\item 
+\hypertarget{classMessage_a37550fee6e64d7c83ead2628373f4db3}{unsigned int \hyperlink{classMessage_a37550fee6e64d7c83ead2628373f4db3}{get\-Transmission\-Time} ()}\label{classMessage_a37550fee6e64d7c83ead2628373f4db3}
 
 \begin{DoxyCompactList}\small\item\em Renvoie le temps de traitement du message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMessage_a18fddc1357914aa65d4a12eeabbf7bfa}{static std\-::shared\-\_\-ptr$<$ \hyperlink{classMessage}{Message} $>$ {\bfseries create\-Message} (std\-::string, int=0, unsigned int=0)}\label{classMessage_a18fddc1357914aa65d4a12eeabbf7bfa}
+
+\item 
+\hypertarget{classMessage_a9510bbfbcde96a857eb40b8222fe90a8}{static std\-::shared\-\_\-ptr$<$ \hyperlink{classMessage}{Message} $>$ {\bfseries create\-Message} (std\-::string, std\-::string=\char`\"{}\char`\"{}, unsigned int=0)}\label{classMessage_a9510bbfbcde96a857eb40b8222fe90a8}
+
+\item 
+\hypertarget{classMessage_a275c24aa740943af5872d874eeca0173}{static std\-::shared\-\_\-ptr$<$ \hyperlink{classMessage}{Message} $>$ \hyperlink{classMessage_a275c24aa740943af5872d874eeca0173}{create\-Message} (std\-::string, float=0, unsigned=0)}\label{classMessage_a275c24aa740943af5872d874eeca0173}
+
+\begin{DoxyCompactList}\small\item\em Crée et retourne le pointeur partagé au nouveau \hyperlink{classFloatMessage}{Float\-Message}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classMessage_ac7adddb666acdc47c48f684bd6810a51}{name}
+\item 
+unsigned int \hyperlink{classMessage_a9f2d70860e0ec546c8e00cd69a3555ee}{transmission\-Time}
+\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
@@ -35,7 +60,16 @@ Classe abstraite de base pour les messages.
 
 Les messages sont les différentes informations que peuvent se communiquer les modules. Un message est composé de son nom, éventuellement d'une donnée (payload), et d'une indication temporelle concernant la durée de son envoi et de sa réception. 
 
+\subsection{Documentation des données membres}
+\hypertarget{classMessage_ac7adddb666acdc47c48f684bd6810a51}{\index{Message@{Message}!name@{name}}
+\index{name@{name}!Message@{Message}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Message\-::name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMessage_ac7adddb666acdc47c48f684bd6810a51}
+Nom du message \hypertarget{classMessage_a9f2d70860e0ec546c8e00cd69a3555ee}{\index{Message@{Message}!transmission\-Time@{transmission\-Time}}
+\index{transmission\-Time@{transmission\-Time}!Message@{Message}}
+\subsubsection[{transmission\-Time}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Message\-::transmission\-Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMessage_a9f2d70860e0ec546c8e00cd69a3555ee}
+Temps de traitement du message 
+
 La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
 \item 
-src/headers/Message.\-h\item 
-src/includes/Message.\-cpp\end{DoxyCompactItemize}
+src/\-Core/Message.\-h\item 
+src/\-Core/Message.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,3 @@
+/*! \page example Example
+\This is an example user manual page...
+*/

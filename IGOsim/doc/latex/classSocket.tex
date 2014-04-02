@@ -19,9 +19,12 @@ Graphe d'héritage de Socket\-:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classSocket_a04302e4ac7ddb995c766de9078cd848c}{\hyperlink{classSocket_a04302e4ac7ddb995c766de9078cd848c}{Socket} (std\-::string name=\char`\"{}Default\-Name\char`\"{})}\label{classSocket_a04302e4ac7ddb995c766de9078cd848c}
+\hypertarget{classSocket_a04302e4ac7ddb995c766de9078cd848c}{{\bfseries Socket} (std\-::string name=\char`\"{}Default\-Name\char`\"{})}\label{classSocket_a04302e4ac7ddb995c766de9078cd848c}
 
-\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\item 
+\hypertarget{classSocket_a0dd97f1387c3bd8008cb7de47583a985}{{\bfseries Socket} (const \hyperlink{classSocket}{Socket} \&)}\label{classSocket_a0dd97f1387c3bd8008cb7de47583a985}
+
+\item 
 \hypertarget{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{\hyperlink{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{$\sim$\-Socket} ()}\label{classSocket_aeac4eb6379a543d38ed88977d3b6630a}
 
 \begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
@@ -31,11 +34,10 @@ Graphe d'héritage de Socket\-:\begin{figure}[H]
 \hypertarget{classSocket_aaefa10006cbf7a7a082e4adc606b3cea}{std\-::string \hyperlink{classSocket_aaefa10006cbf7a7a082e4adc606b3cea}{get\-Name} ()}\label{classSocket_aaefa10006cbf7a7a082e4adc606b3cea}
 
 \begin{DoxyCompactList}\small\item\em Retourne le nom de socket. \end{DoxyCompactList}\item 
-\hypertarget{classSocket_af137eda5415e1bd9aa6dd6467eb0d97d}{void \hyperlink{classSocket_af137eda5415e1bd9aa6dd6467eb0d97d}{receive} (\hyperlink{classMessage}{Message} m)}\label{classSocket_af137eda5415e1bd9aa6dd6467eb0d97d}
+\hypertarget{classSocket_a9adf799b90c455f3a1f4151adb031fd0}{void \hyperlink{classSocket_a9adf799b90c455f3a1f4151adb031fd0}{receive} (std\-::shared\-\_\-ptr$<$ \hyperlink{classMessage}{Message} $>$)}\label{classSocket_a9adf799b90c455f3a1f4151adb031fd0}
 
 \begin{DoxyCompactList}\small\item\em Met le message m dans la file d'attente de socket. \end{DoxyCompactList}\item 
-\hypertarget{classSocket_af7fb88a308724635a3ca3ed040b87b1a}{void \hyperlink{classSocket_af7fb88a308724635a3ca3ed040b87b1a}{send} (\hyperlink{classMessage}{Message} m)}\label{classSocket_af7fb88a308724635a3ca3ed040b87b1a}
-
+void \hyperlink{classSocket_a06b687baf9b01f3e399a5ee040ca04e4}{send} (std\-::shared\-\_\-ptr$<$ \hyperlink{classMessage}{Message} $>$)
 \begin{DoxyCompactList}\small\item\em Envoye. \end{DoxyCompactList}\item 
 \hypertarget{classSocket_a6bd5bddfabd838a3388b445c21d3c41e}{virtual void \hyperlink{classSocket_a6bd5bddfabd838a3388b445c21d3c41e}{clock} (int time)}\label{classSocket_a6bd5bddfabd838a3388b445c21d3c41e}
 
@@ -43,7 +45,7 @@ Graphe d'héritage de Socket\-:\begin{figure}[H]
 \hypertarget{classSocket_afe7c9b2ef7fb3653b14f5f462293549a}{bool {\bfseries has\-Message} ()}\label{classSocket_afe7c9b2ef7fb3653b14f5f462293549a}
 
 \item 
-\hyperlink{classMessage}{Message} \hyperlink{classSocket_a11216b0cc55de06256500e7b67faa24d}{get\-First\-Message} ()
+std\-::shared\-\_\-ptr$<$ \hyperlink{classMessage}{Message} $>$ \hyperlink{classSocket_a71e162a0ca00b1a46fe23eaccb09f76d}{get\-First\-Message} ()
 \item 
 \hypertarget{classSocket_aa890633022a29b56ed3844684d32e0fc}{int \hyperlink{classSocket_aa890633022a29b56ed3844684d32e0fc}{get\-Timer} () const }\label{classSocket_aa890633022a29b56ed3844684d32e0fc}
 
@@ -53,21 +55,38 @@ Graphe d'héritage de Socket\-:\begin{figure}[H]
 \subsection{Description détaillée}
 Classe abstraite pour les connecteurs des modules. 
 
+\begin{DoxyRefDesc}{A faire}
+\item[\hyperlink{todo__todo000011}{A faire}]Setconnection in \hyperlink{classSocket}{Socket} must be private and friend with Connection only ! \end{DoxyRefDesc}
+
+
 Les sockets modélisent les connections entre les modules. Un connecteur peut-\/être soit un connecteur d'entrée, {\itshape In\-Socket}, soit un connecteur de sortie, {\itshape Out\-S\-Ocket}. Les connecteurs sont reliés entre-\/eux via les objets \hyperlink{classConnexion}{Connexion}. 
 
 \subsection{Documentation des fonctions membres}
-\hypertarget{classSocket_a11216b0cc55de06256500e7b67faa24d}{\index{Socket@{Socket}!get\-First\-Message@{get\-First\-Message}}
+\hypertarget{classSocket_a71e162a0ca00b1a46fe23eaccb09f76d}{\index{Socket@{Socket}!get\-First\-Message@{get\-First\-Message}}
 \index{get\-First\-Message@{get\-First\-Message}!Socket@{Socket}}
-\subsubsection[{get\-First\-Message}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} Socket\-::get\-First\-Message (
+\subsubsection[{get\-First\-Message}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf Message} $>$ Socket\-::get\-First\-Message (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSocket_a11216b0cc55de06256500e7b67faa24d}
+)}}\label{classSocket_a71e162a0ca00b1a46fe23eaccb09f76d}
 \begin{DoxyRefDesc}{A faire}
-\item[\hyperlink{todo__todo000005}{A faire}]Lever une exception \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000010}{A faire}]Lever une exception \end{DoxyRefDesc}
+\hypertarget{classSocket_a06b687baf9b01f3e399a5ee040ca04e4}{\index{Socket@{Socket}!send@{send}}
+\index{send@{send}!Socket@{Socket}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-::send (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ {\bf Message} $>$}]{m}
+\end{DoxyParamCaption}
+)}}\label{classSocket_a06b687baf9b01f3e399a5ee040ca04e4}
+
+
+Envoye. 
+
+\begin{DoxyRefDesc}{A faire}
+\item[\hyperlink{todo__todo000009}{A faire}]Et si connexion est null ? \end{DoxyRefDesc}
 
 
 La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
 \item 
-src/headers/Socket.\-h\item 
-src/includes/Socket.\-cpp\end{DoxyCompactItemize}
+src/\-Core/Socket.\-h\item 
+src/\-Core/Socket.\-cpp\end{DoxyCompactItemize}
