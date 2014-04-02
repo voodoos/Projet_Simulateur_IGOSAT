@@ -3,14 +3,10 @@
 using namespace std;
 
 
-BatteryController::BatteryController(Params params) : Module("BatteryController", params){
-    //Les messages compris par le controlleur:
-    addMessage("getStatus", 5);
-    addMessage("actualVoltage", 5);
-
+BatteryController::BatteryController(Params params) : Module("BatteryController", params, "BatteryModule/BatteryController.xml"){
     //Les connecteurs:
-    addSocket(Socket("toBattery", this->name));
-    addSocket(Socket("toExt", this->name));
+    addSocket(Socket("toBattery"));
+    addSocket(Socket("toExt"));
 }
 
 void BatteryController::process(std::shared_ptr<Message> m){

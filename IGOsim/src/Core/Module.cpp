@@ -4,7 +4,7 @@
 #include "Memory.cpp"
 #include "XMLReader.h"
 
-#include "RapidXML\rapidxml.hpp"
+#include "rapidxml.hpp"
 
 //For convenience:
 using namespace std;
