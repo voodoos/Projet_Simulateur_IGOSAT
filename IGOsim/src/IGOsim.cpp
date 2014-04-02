@@ -13,6 +13,7 @@
 #include "MacroModule.h"
 #include "Socket.h"
 #include "Timer.h"
+#include "XMLReader.h"
 
 //For convenience:
 using namespace std;
@@ -20,14 +21,15 @@ using namespace std;
 
 int main()
 {
+    XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
     CLI::getInstance().setLogLevel(CLI::INFO);
     
     /* Exemple de batterie: */
     BatteryModule *bm = new BatteryModule("BatteryModule");
 
-    bm->getSocketByName("fromExt")->send(Message::createMessage("getStatus", "nothing", 5));
-    bm->getSocketByName("fromExt")->send(Message::createMessage("getStatus", "nothing", 5));
-    bm->getSocketByName("fromExt")->send(Message::createMessage("getStatus", "nothing", 10));
+    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
+    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
+    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 10));
 
 
     Timer::getInstance().start(100);

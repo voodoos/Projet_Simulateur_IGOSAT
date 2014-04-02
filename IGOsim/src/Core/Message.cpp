@@ -9,6 +9,7 @@ Message::Message(std::string name, int pt) : name(name), transmissionTime(pt)
 
 Message::~Message()
 {
+    //std::cout << "Message " << name << " est detruit" << std::endl;
 }
 
 std::string Message::getName(){

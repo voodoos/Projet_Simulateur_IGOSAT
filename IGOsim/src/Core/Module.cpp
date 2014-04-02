@@ -4,7 +4,7 @@
 #include "Memory.cpp"
 #include "XMLReader.h"
 
-#include "RapidXML\rapidxml.hpp"
+#include "rapidxml.hpp"
 
 //For convenience:
 using namespace std;
@@ -103,7 +103,7 @@ void Module::addSocket(Socket soc)
 
 void Module::addMessage(string msg, int processingTime)
 {
-    //Onvérifie l'absence de doublons:
+    //On vérifie l'absence de doublons:
     if (!isMessageAllowed(msg)){
         //On ajoute le message dans la hash_table, avec pour clé le nom du message
         messagesAllowed[msg] = processingTime;
@@ -179,4 +179,8 @@ void Module::getMessages() {
             sockets[kv.first].clock(0);
         }
     }
+}
+
+Socket* Module::operator[](std::string sname){
+    return getSocketByName(sname);
 }

@@ -4,8 +4,8 @@
 
 #include "CLI.h"
 
-#include "RapidXML\rapidxml.hpp"
-#include "RapidXML\rapidxml_utils.hpp"
+#include "rapidxml.hpp"
+#include "rapidxml_utils.hpp"
 
 using namespace std;
 
@@ -21,7 +21,7 @@ unordered_map<string, double> XMLReader::readParams(string confPath) {
 
     //On tente d'ouvrir le fichier:
 
-    try {
+    try { 
         unordered_map<string, double> ret;
         rapidxml::xml_document<> doc;
 

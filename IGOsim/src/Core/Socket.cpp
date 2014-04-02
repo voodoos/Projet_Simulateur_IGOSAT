@@ -1,10 +1,10 @@
-﻿#include "Socket.h"
+#include "Socket.h"
 
 //For convenience:
 using namespace std;
 
 
-Socket::Socket(std::string name) : name(name), timer(-1)
+Socket::Socket(string name, string owner) : name(name),owner(owner),timer(NOM)
 {
 }
 
@@ -51,6 +51,10 @@ void Socket::clock(int time){
 
 std::string Socket::getName(){
     return name;
+}
+
+std::string Socket::getOwner(){
+    return owner;
 }
 
 bool Socket::hasMessage(){
