@@ -21,7 +21,7 @@ using namespace std;
 
 int main()
 {
-    XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
+    //XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
     CLI::getInstance().setLogLevel(CLI::INFO);
     
     /* Exemple de batterie: */
