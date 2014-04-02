@@ -1,0 +1,12 @@
+\hypertarget{index_intro_sec}{}\section{Introduction}\label{index_intro_sec}
+Dévelloppé dans le cadre d'un projet de master, ce programme pose les bases d'un simulateur de système complexe, basé sur des modules abstraits synchronisés via une horloge.\hypertarget{index_install_sec}{}\section{Installation}\label{index_install_sec}
+Pas de surprise, l'installation ne nécessite qu'un minimum de configuration.\hypertarget{index_tools_subsec}{}\subsection{Récupération des sources}\label{index_tools_subsec}
+La méthode la plus simple pour récupérer les sources du projet est de cloner le dépôt depuis Git\-Hub\-: \begin{DoxyVerb}git clone https://github.com/VooDooS/Projet_Simulateur_IGOSAT.git
+\end{DoxyVerb}
+\hypertarget{index_tools_cofig}{}\subsection{Configuration}\label{index_tools_cofig}
+Par défaut, le simulateur va aller chercher des fichiers de configuration dans le dossier {\itshape config/}, si ce n'est pas votre cas, pensez à modifier la ligne correspondante dans I\-G\-O\-Sim.\-cpp, avant de compiler. Un / doit impérativement conclure le lien. \begin{DoxyVerb}XMLReader::setPath("Path/to/config/");
+\end{DoxyVerb}
+\hypertarget{index_tools_compil}{}\subsection{Compilation des sources}\label{index_tools_compil}
+Un makefile est fourni, pour compiler, placez vous dans le dossier src, et écecutez la commande Make\-: \begin{DoxyVerb} cd IGOSim/src/
+ make\end{DoxyVerb}
+ 

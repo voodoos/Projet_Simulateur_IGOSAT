@@ -1,0 +1,10 @@
+\section*{Creation d'un nouveau classe}
+
+Pour créer un nouveau module, il faut hériter un nouveau classe de classe \hyperlink{classModule}{Module} qui va représenter votre nouveau module. Exemple de création de \hyperlink{classModule}{Module} {\bfseries \hyperlink{classBatteryController}{Battery\-Controller}}
+
+{\ttfamily class \hyperlink{classBatteryController}{Battery\-Controller}\-:public \hyperlink{classModule}{Module}\{\};}
+
+Il faut au moins redéfinir deux methodes
+\begin{DoxyItemize}
+\item Constructeur(Params = Params()) Declarez le constructeur de votre module dans le fichier Module\-Name.\-h Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe \hyperlink{classModule}{Module}\-: `\-Battery\-Controller\-::\-Battery\-Controller(\-Params params) \-: \hyperlink{classModule}{Module}(\char`\"{}\-Battery\-Controller\char`\"{}, params, \char`\"{}\-Battery\-Module/\-Battery\-Controller.\-xml\char`\"{})\{ /$\ast$ ce qu'il faut faire pendant la création d'un module 
+\end{DoxyItemize}

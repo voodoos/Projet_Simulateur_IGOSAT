@@ -14,7 +14,7 @@
             <value>40</value>
         </parameter>
         <parameter name="temp">
-            <unit>k</unit>
+            <unit>K</unit>
             <value>40</value>
         </parameter>
     </parameters>

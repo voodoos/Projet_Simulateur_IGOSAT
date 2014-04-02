@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>IGOsat Simulator: Page principale</title>
+<title>IGOsat Simulator: Simulateur IGOSat</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,13 +75,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">IGOsat Simulator Documentation</div>  </div>
+<div class="title">Simulateur IGOSat </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
+Introduction</h1>
+<p>Dévelloppé dans le cadre d'un projet de master, ce programme pose les bases d'un simulateur de système complexe, basé sur des modules abstraits synchronisés via une horloge.</p>
+<h1><a class="anchor" id="install_sec"></a>
+Installation</h1>
+<p>Pas de surprise, l'installation ne nécessite qu'un minimum de configuration.</p>
+<h2><a class="anchor" id="tools_subsec"></a>
+Récupération des sources</h2>
+<p>La méthode la plus simple pour récupérer les sources du projet est de cloner le dépôt depuis GitHub: </p>
+<pre class="fragment">git clone https://github.com/VooDooS/Projet_Simulateur_IGOSAT.git
+</pre><h2><a class="anchor" id="tools_cofig"></a>
+Configuration</h2>
+<p>Par défaut, le simulateur va aller chercher des fichiers de configuration dans le dossier <em>config/</em>, si ce n'est pas votre cas, pensez à modifier la ligne correspondante dans IGOSim.cpp, avant de compiler. Un / doit impérativement conclure le lien. </p>
+<pre class="fragment">XMLReader::setPath("Path/to/config/");
+</pre><h2><a class="anchor" id="tools_compil"></a>
+Compilation des sources</h2>
+<p>Un makefile est fourni, pour compiler, placez vous dans le dossier src, et écecutez la commande Make: </p>
+<pre class="fragment"> cd IGOSim/src/
+ make</pre> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Avril 2 2014 16:42:09 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Avril 2 2014 17:52:06 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

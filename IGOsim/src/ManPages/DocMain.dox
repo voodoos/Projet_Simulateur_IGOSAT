@@ -1,0 +1,28 @@
+﻿/*! \mainpage Simulateur IGOSat
+ *
+ * \section intro_sec Introduction
+ *
+ * Dévelloppé dans le cadre d'un projet de master, ce programme pose les bases d'un simulateur de système complexe, basé sur des modules abstraits synchronisés via une horloge.
+ * 
+ *
+ * \section install_sec Installation
+ * Pas de surprise, l'installation ne nécessite qu'un minimum de configuration. 
+ *
+ * \subsection tools_subsec Récupération des sources
+ * La méthode la plus simple pour récupérer les sources du projet est de cloner le dépôt depuis GitHub:
+ *
+ *     git clone https://github.com/VooDooS/Projet_Simulateur_IGOSAT.git
+ *
+ * \subsection tools_cofig Configuration
+ * Par défaut, le simulateur va aller chercher des fichiers de configuration dans le dossier *config/*, si ce n'est pas votre cas, pensez à modifier la ligne correspondante dans IGOSim.cpp, avant de compiler.
+ * Un / doit impérativement conclure le lien.
+ *
+ *     XMLReader::setPath("Path/to/config/");
+ *
+ * \subsection tools_compil Compilation des sources
+ * Un makefile est fourni, pour compiler, placez vous dans le dossier src, et écecutez la commande Make:
+ *
+ *      cd IGOSim/src/
+ *      make
+ *
+ */
