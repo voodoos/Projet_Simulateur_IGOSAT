@@ -2,7 +2,6 @@
 //
 
 #include <iostream>
-
 #include "CLI.h"
 #include "Battery.h"
 #include "BatteryController.h"
@@ -19,24 +18,62 @@
 using namespace std;
 
 
-int main()
+int main(int argc, char *argv[])
 {
+    /* BASIC CONFIGURATION */
     //XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
     CLI::getInstance().setLogLevel(CLI::INFO);
     
-    /* Exemple de batterie: */
-    BatteryModule *bm = new BatteryModule("BatteryModule");
+    //On analyse la ligne de commande:
+    /* 
+    *  Mode:
+    *  0: normal
+    *  1: generateur de module (-g)
+    */
+    int mode = 0; 
 
-    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
-    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
-    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 10));
+    while ((argc > 1) && (argv[1][0] == '-'))
+    {
+        switch (argv[1][1])
+        {
+            case 'g':
+                mode = 1;
+                break;
+        }
+
+        ++argv;
+        --argc;
+    }
+
+    if (mode == 1) {
+        //A déplacer ailleurs plus tard:
+        bool isMacro = false;
+        string isMacros = "";
+        string nomModule = "";
+
+        cout << "**GENERATION DE MODULE**" << endl;
+        cout << "Macromodule ? (O/n)" << endl;
+        cin >> isMacro;
+        if (isMacros == "O") isMacro = true;
+        
+        cout << "Nom du module: ";
+        cin >> nomModule;
+    }
+    else {
+        /* Exemple de batterie: */
+        /*BatteryModule *bm = new BatteryModule("BatteryModule");
+
+        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
+        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
+        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 10));
 
 
-    Timer::getInstance().start(100);
+        Timer::getInstance().start(100);
 
-    delete(bm);
-
-    cin.ignore();
+        delete(bm);
+        */
+        cin.ignore();
+    }
 
 	return 0;
 }
