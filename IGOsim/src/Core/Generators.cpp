@@ -1,8 +1,15 @@
 #include "Generators.h"
 
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <vector>
+
+#include <direct.h>
+
+#include "rapidxml.hpp"
+#include "rapidxml_print.hpp"
+#include "rapidxml_utils.hpp"
 
 using namespace std;
 
@@ -73,7 +80,44 @@ void Generators::genModule() {
         mods.push_back(modi);
     }
 
+    //If macro:
+    if (isMacro) {
+        nomModule = nomModule + "Module";
+    }
 
+    //On génère le code:
+    genModuleFiles(isMacro, nomModule, params, messs, mods);
+}
+
+void Generators::genModuleFiles(bool macro, string nom,
+    vector<pair<string, double>> params,
+    vector<pair<string, double>> mess,
+    vector<string> connexions){
+
+    //Un fichier xml à générer, et deux fichiers source:
+    _mkdir("GenCode");
+
+    genModXmlFile(nom, params, mess, connexions);
+}
+
+void Generators::genModXmlFile(string nom,
+    vector<pair<string, double>> params,
+    vector<pair<string, double>> mess,
+    vector<string> connexions) {
+
+    //Creating xml doc:
+    rapidxml::xml_document<> doc;
+    rapidxml::xml_node<> *node = doc.allocate_node(rapidxml::node_element, "a", "Google");
+    doc.append_node(node);
+    rapidxml::xml_attribute<> *attr = doc.allocate_attribute("href", "google.com");
+    node->append_attribute(attr);
+
+    //Writing to file:
+    ofstream file_stored("GenCode/"+nom+".xml");
+    file_stored << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << endl;
+    file_stored << doc;
+    file_stored.close();
+    doc.clear();
 }
 
 Generators::~Generators()
