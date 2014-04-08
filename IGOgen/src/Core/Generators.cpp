@@ -98,6 +98,7 @@ void Generators::genModuleFiles(bool macro, string nom,
     _mkdir("GenCode");
 
     genModXmlFile(nom, params, mess, connexions);
+    //genModCPPFile
 }
 
 void Generators::genModXmlFile(string nom,
@@ -107,9 +108,11 @@ void Generators::genModXmlFile(string nom,
 
     //Creating xml doc:
     rapidxml::xml_document<> doc;
-    rapidxml::xml_node<> *node = doc.allocate_node(rapidxml::node_element, "a", "Google");
+
+    //Noeud principal:
+    rapidxml::xml_node<> *node = doc.allocate_node(rapidxml::node_element, "module", "");
     doc.append_node(node);
-    rapidxml::xml_attribute<> *attr = doc.allocate_attribute("href", "google.com");
+    rapidxml::xml_attribute<> *attr = doc.allocate_attribute("name", nom.c_str());
     node->append_attribute(attr);
 
     //Writing to file:
