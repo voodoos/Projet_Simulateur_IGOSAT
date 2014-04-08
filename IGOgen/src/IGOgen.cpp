@@ -2,7 +2,6 @@
 //
 
 #include <iostream>
-#include "CLI.h"
 #include "Generators.h"
 
 //For convenience:
@@ -11,6 +10,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+    Generators::genModule();
 	return 0;
 }
 
