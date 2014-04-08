@@ -15,5 +15,6 @@ private:
     static bool getAnswer(std::string);
     static std::string getString(std::string);
     static double getDouble(std::string);
+    static int getInt(std::string);
 };
 
