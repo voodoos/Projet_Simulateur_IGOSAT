@@ -15,13 +15,19 @@
 #include "Timer.h"
 #include "XMLReader.h"
 
+#ifdef __APPLE__
+    #define setXMLpath XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
+#elif
+    #define setXMLpath  std::cout<<std::endl;
+#endif
+
 //For convenience:
 using namespace std;
 
 
 int main()
 {
-    //XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
+    setXMLpath
     CLI::getInstance().setLogLevel(CLI::INFO);
     
     /* Exemple de batterie: */
