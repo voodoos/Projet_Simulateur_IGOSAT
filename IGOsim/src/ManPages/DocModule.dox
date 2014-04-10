@@ -1,6 +1,6 @@
 /*! \page Référence Création Module
 
-# Creation d'un nouveau classe #
+\section classCreation Creation d'un nouveau classe
 
 Pour créer un nouveau module, il faut hériter un nouveau classe de classe Module qui va représenter votre nouveau module. 
 Exemple de création de Module **BatteryController**
@@ -11,19 +11,23 @@ Il faut au moins redéfinir deux methodes
 - Constructeur(Params = Params())
 Declarez le constructeur de votre module dans le fichier ModuleName.h
 Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe Module:
-`BatteryController::BatteryController(Params params) : Module("BatteryController", params, "BatteryModule/BatteryController.xml"){
+
+\code{.cpp}
+    BatteryController::BatteryController(Params params) : Module("BatteryController", params, "BatteryModule/BatteryController.xml"){
 	/* ce qu'il faut faire pendant la création d'un module */
-}`
+    }
+\endcode
+
 Dans cet constructeur de base:
-+BatteryController – nom de votre module. Pour simplification 
-+params – un objet de type `std::unordered_map<std::string, double>` avec des parametrès d'un module
-+"BatteryModule/BatteryController.xml" – le chemin vers un fichier `.xml` qui contient la descripton des parametres d'un module et la description des messages qui peuvent être traités par ce module. 
+    -# BatteryController – nom de votre module.
+    -# params – un objet de type `std::unordered_map<std::string, double>` avec des parametrès d'un module.
+    -# "BatteryModule/BatteryController.xml" – le chemin vers un fichier `.xml` qui contient la descripton des parametres d'un module et la description des messages qui peuvent être traités par ce module.
 
-– process(std::shared_ptr<Message>)
+- process(std::shared_ptr<Message>)
 
-C'est une méthode qui traite des messages qui peuvent être traités par ce module. La sélection d'un message peut être réalisé par déclaration `if` qui verifié le nom d'un message en utilisant la methode `getName()` d'un objet Message. Par exemple, le traitement des messages "getStatus" et "actualVoltage" de Module "BatteryController" peut être implementé d'une telle manière: 
+    C'est une méthode qui traite des messages qui peuvent être traités par ce module. La sélection d'un message peut être réalisé par déclaration `if` qui verifié le nom d'un message en utilisant la methode `getName()` d'un objet Message. Par exemple, le traitement des messages "getStatus" et "actualVoltage" de Module "BatteryController" peut être implementé d'une telle manière:
 
-`
+\code{.cpp}
 void BatteryController::process(std::shared_ptr<Message> m){
     if (m->getName() == "getStatus") {
     	//ce qu'il faut faire au reçu d'un message "getStatus"
@@ -33,18 +37,59 @@ void BatteryController::process(std::shared_ptr<Message> m){
        	//ce qu'il faut faire au reçu d'un message "actualVoltage"
     }
 }
-`
+\endcode
 
-# Propriétés d'un Module #
 
-## Mémoire ##
-En train de reflichir...
-## Paramètres ##
+\section properties Propriétés d'un Module
 
-## Sockets ##
+\subsection memory Mémoire
 
-## Messages ##
+\subsection parameters Paramètres
 
-## Traitement des tâches ##
+Le parametre de module est une valeur quelconque de type float avec le nom correspondant. Il existe deux façons d'ajout de parametres au Module
+- Par fichier .xml (regardez la section correspondante)
+- Par parametre de construction d'un Module
+
+\code{.cpp}
+    //Paramètres:
+    unordered_map<string, double> p;
+
+    p["voltage"] = 40;
+    p["amperage"] = 0.2;
+    p["capacity"] = 10000;
+    p["TEMP1"] = 30;
+    p["TEMP2"] = 35;
+    p["TEMP3"] = 40;
+    p["TEMP4"] = 45;
+
+    battery = new Battery(p);
+\endcode
+
+\subsection sockets Sockets
+
+Le Socket est un point de communication qui permet de connecter des modules differents et effectuer l'echangement de messages entre eux. Il existe deux façons d'ajout de sockets au Module
+\li Par fichier .xml (regardez la section correspondante)
+\li Par utilisation de méthode addSocket dans le constructeur de classe:
+\code{.cpp}
+    BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name, params){
+        //Les connecteurs du macromodule:
+        addSocket(Socket("fromExt"));
+        addSocket(Socket("toScao"));
+    }
+\endcode
+
+
+\subsection messages Messages
+Le Message est l'unité d'information qui peut être transferé entre des modules. Le Message peut être de type int, float ou string. Chaque message a son propre nom. Le Module distingue des messages par leurs noms. Il faut definir préalablement definir une liste des messages qui peuvent être traités par un module. Il existe deux façons de le faire:
+\li Par fichier .xml (regardez la section correspondante)
+\li Par utilisation de méthode `addMessage (std::string, int)` dans le constructeur de classe Module:
+
+\code{.cpp}
+BatteryController::BatteryController(Params params) : Module("Battery Controller", params){
+    //Les messages compris par le controlleur:
+    addMessage("getStatus", 5);
+    addMessage("getStatus", 5);
+}
+\endcode
 
 */
