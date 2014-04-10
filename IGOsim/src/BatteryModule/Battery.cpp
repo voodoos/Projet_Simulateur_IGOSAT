@@ -3,9 +3,6 @@
 using namespace std;
 
 Battery::Battery(Params params) : Module("Battery", params, "BatteryModule/Battery.xml"){
-    //Les connecteurs:
-    addSocket(Socket("toBatteryController", this->name));
-
     //Les paramètres:
     unordered_map<string, double> p;
     

@@ -4,9 +4,6 @@ using namespace std;
 
 
 BatteryController::BatteryController(Params params) : Module("BatteryController", params, "BatteryModule/BatteryController.xml"){
-    //Les connecteurs:
-    addSocket(Socket("toBattery"));
-    addSocket(Socket("toExt"));
 }
 
 void BatteryController::process(std::shared_ptr<Message> m){

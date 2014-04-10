@@ -12,9 +12,6 @@ BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name
     //La physique:
     batteryPhysics = new BatteryPhysics(getModuleByName("Battery"));
 
-    //Les connecteurs du macromodule:
-    addSocket(Socket("fromExt", this->name));
-
     //Les connexions internes:
     /*! \todo Surcharger [] pour getsocketbyname */
     ;

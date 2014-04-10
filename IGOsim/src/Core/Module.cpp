@@ -1,4 +1,4 @@
-﻿#include "Module.h"
+#include "Module.h"
 
 #include "CLI.h"
 #include "Memory.cpp"
@@ -34,6 +34,16 @@ Module::Module(string name, Params params, string cp)
     //On charge les messages du module:
     try {
         messagesAllowed = XMLReader::readMessages(confPath);
+    }
+    catch (runtime_error) {}
+    catch (int) {}
+    
+    //On charge les sockets du module:
+    try{
+        vector<std::string>socketNames = XMLReader::readSockets(confPath);
+        for (vector<string>::iterator it = socketNames.begin(); it != socketNames.end(); ++it) {
+            addSocket(Socket(*it, this->name));
+        }
     }
     catch (runtime_error) {}
     catch (int) {}

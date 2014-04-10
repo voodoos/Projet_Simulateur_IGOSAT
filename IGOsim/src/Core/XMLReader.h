@@ -2,6 +2,7 @@
 
 #include <string>
 #include <unordered_map>
+#include <vector>
 
 /*!
 * \class XMLReader
@@ -32,6 +33,15 @@ public:
     * En cas d'échec, elle lève une exception.
     */
     static std::unordered_map<std::string, int> readMessages(std::string);
+    
+    /*!
+     * \fn std::vector<std::string> readSockets(std::string moduleName)
+     * \brief Lecture des sockets de modile portant ce nom.
+     * Cette fonction recherche le fichier de configuration portant le nom du module, appelle le parser RapidXML puis créé le tableau de noms de sockets.
+     * En cas d'échec, elle lève une exception.
+     */
+    static std::vector<std::string> readSockets(std::string);
+
 
     /*!
     * \fn static std::string getPath() const
