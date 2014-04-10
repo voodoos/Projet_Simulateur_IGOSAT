@@ -104,7 +104,7 @@ void Generators::genModXmlFile(string nom,
     vector<pair<string, double>> mess,
     vector<string> connexions) {
 
-    cout << "Génération du XML." < endl;
+    cout << "Génération du XML." << endl;
 
     //Writing to file:
     ofstream file("GenCode/" + nom + ".xml");
@@ -113,7 +113,7 @@ void Generators::genModXmlFile(string nom,
     
     //Paramètres:
     file << "\t<parameters>" << endl;
-    for (int i = 0; i < params.size(); i++) {
+    for (unsigned int i = 0; i < params.size(); i++) {
         file << "\t\t<parameter name=\"" << params[i].first << "\">" << endl;
         file << "\t\t\t<value>" << params[i].second << "</value>" << endl;
         file << "\t\t\t<unit></unit>" << endl;
@@ -123,7 +123,7 @@ void Generators::genModXmlFile(string nom,
 
     //Messages:
     file << "\t<messages>" << endl;
-    for (int i = 0; i < mess.size(); i++) {
+    for (unsigned int i = 0; i < mess.size(); i++) {
         file << "\t\t<message name=\"" << mess[i].first << "\">" << endl;
         file << "\t\t\t<time>" << mess[i].second << "</time>" << endl;
         file << "\t\t</message>" << endl;
@@ -132,7 +132,7 @@ void Generators::genModXmlFile(string nom,
 
     //Sockets:
     file << "\t<sockets>" << endl;
-    for (int i = 0; i < connexions.size(); i++) {
+    for (unsigned int i = 0; i < connexions.size(); i++) {
         file << "\t\t<socket name=\"to" << connexions[i] << "\"></socket>" << endl;
     }
     file << "\t</sockets>" << endl;
