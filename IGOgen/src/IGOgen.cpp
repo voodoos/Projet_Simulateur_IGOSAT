@@ -11,6 +11,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     Generators::genModule();
+    cin.ignore();
 	return 0;
 }
 

@@ -7,10 +7,6 @@
 
 #include <direct.h>
 
-#include "rapidxml.hpp"
-#include "rapidxml_print.hpp"
-#include "rapidxml_utils.hpp"
-
 using namespace std;
 
 
@@ -63,7 +59,7 @@ void Generators::genModule() {
         if (messi.empty()) break;
 
         //Sinon on ajoute à la liste avec le temps qui va bien:
-        messs.push_back(make_pair(modi, getInt("Temps de transmission (int) (0 = instant)")));
+        messs.push_back(make_pair(messi, getInt("Temps de transmission (int) (0 = instant)")));
     }
 
     //Modules connectés:
@@ -99,6 +95,8 @@ void Generators::genModuleFiles(bool macro, string nom,
 
     genModXmlFile(nom, params, mess, connexions);
     //genModCPPFile
+
+    cout << "Génération terminée !" << endl;
 }
 
 void Generators::genModXmlFile(string nom,
@@ -106,21 +104,42 @@ void Generators::genModXmlFile(string nom,
     vector<pair<string, double>> mess,
     vector<string> connexions) {
 
-    //Creating xml doc:
-    rapidxml::xml_document<> doc;
-
-    //Noeud principal:
-    rapidxml::xml_node<> *node = doc.allocate_node(rapidxml::node_element, "module", "");
-    doc.append_node(node);
-    rapidxml::xml_attribute<> *attr = doc.allocate_attribute("name", nom.c_str());
-    node->append_attribute(attr);
+    cout << "Génération du XML." < endl;
 
     //Writing to file:
-    ofstream file_stored("GenCode/"+nom+".xml");
-    file_stored << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << endl;
-    file_stored << doc;
-    file_stored.close();
-    doc.clear();
+    ofstream file("GenCode/" + nom + ".xml");
+    file << "<?xml version=\"1.0\" encoding=\"utf-8\"?>" << endl;
+    file << "<module name=\"" << nom << "\">" << endl;
+    
+    //Paramètres:
+    file << "\t<parameters>" << endl;
+    for (int i = 0; i < params.size(); i++) {
+        file << "\t\t<parameter name=\"" << params[i].first << "\">" << endl;
+        file << "\t\t\t<value>" << params[i].second << "</value>" << endl;
+        file << "\t\t\t<unit></unit>" << endl;
+        file << "\t\t</parameter>" << endl;
+    }
+    file << "\t</parameters>" << endl;
+
+    //Messages:
+    file << "\t<messages>" << endl;
+    for (int i = 0; i < mess.size(); i++) {
+        file << "\t\t<message name=\"" << mess[i].first << "\">" << endl;
+        file << "\t\t\t<time>" << mess[i].second << "</time>" << endl;
+        file << "\t\t</message>" << endl;
+    }
+    file << "\t</messages>" << endl;
+
+    //Sockets:
+    file << "\t<sockets>" << endl;
+    for (int i = 0; i < connexions.size(); i++) {
+        file << "\t\t<socket name=\"to" << connexions[i] << "\"></socket>" << endl;
+    }
+    file << "\t</sockets>" << endl;
+
+    file << "</module>" << endl;
+
+    file.close();
 }
 
 Generators::~Generators()
