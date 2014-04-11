@@ -8,17 +8,18 @@ Exemple de création de Module **BatteryController**
 `class BatteryController:public Module{};`
 
 Il faut au moins redéfinir deux methodes
-- Constructeur(Params = Params())
-Declarez le constructeur de votre module dans le fichier ModuleName.h
-Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe Module:
+- `Constructeur(Params = Params())`
 
-\code{.cpp}
-    BatteryController::BatteryController(Params params) : Module("BatteryController", params, "BatteryModule/BatteryController.xml"){
-	/* ce qu'il faut faire pendant la création d'un module */
-    }
-\endcode
+    Declarez le constructeur de votre module dans le fichier ModuleName.h
+    Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe Module:
 
-Dans cet constructeur de base:
+    \code{.cpp}
+        BatteryController::BatteryController(Params params) : Module("BatteryController", params, "BatteryModule/BatteryController.xml"){
+	   /* ce qu'il faut faire pendant la création d'un module */
+        }
+    \endcode
+
+    Dans cet constructeur de base:
     -# BatteryController – nom de votre module.
     -# params – un objet de type `std::unordered_map<std::string, double>` avec des parametrès d'un module.
     -# "BatteryModule/BatteryController.xml" – le chemin vers un fichier `.xml` qui contient la descripton des parametres d'un module et la description des messages qui peuvent être traités par ce module.
@@ -27,17 +28,17 @@ Dans cet constructeur de base:
 
     C'est une méthode qui traite des messages qui peuvent être traités par ce module. La sélection d'un message peut être réalisé par déclaration `if` qui verifié le nom d'un message en utilisant la methode `getName()` d'un objet Message. Par exemple, le traitement des messages "getStatus" et "actualVoltage" de Module "BatteryController" peut être implementé d'une telle manière:
 
-\code{.cpp}
-void BatteryController::process(std::shared_ptr<Message> m){
-    if (m->getName() == "getStatus") {
-    	//ce qu'il faut faire au reçu d'un message "getStatus"
-    }
+    \code{.cpp}
+    void BatteryController::process(std::shared_ptr<Message> m){
+        if (m->getName() == "getStatus") {
+    	   //ce qu'il faut faire au reçu d'un message "getStatus"
+        }
 
-    if (m->getName() == "actualVoltage") {
-       	//ce qu'il faut faire au reçu d'un message "actualVoltage"
+        if (m->getName() == "actualVoltage") {
+       	    //ce qu'il faut faire au reçu d'un message "actualVoltage"
+        }
     }
-}
-\endcode
+    \endcode
 
 
 \section properties Propriétés d'un Module
