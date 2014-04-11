@@ -11,4 +11,9 @@
             <time>5</time>
         </message>
     </messages>
+    
+    <sockets>
+        <socket name="toBattery"></socket>
+        <socket name="toExt"></socket>
+    </sockets>
 </module>

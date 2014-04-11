@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.1.2 -->
+<!-- Généré par Doxygen 1.8.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -91,31 +91,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span><a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="classXMLReader.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classXMLReader.html" title="Classe utilitaire pour la lecture des fichiers de configuration.">XMLReader</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">static</span> std::string basePath; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">static</span> std::unordered_map&lt;std::string, double&gt; <a class="code" href="classXMLReader.html#a176f21253bd7ac73c00c0aa46e2e5724" title="Lecture des paramètre du module protant ce nom. Cette fonction recherche le fichier de configuration ...">readParams</a>(std::string);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">static</span> std::unordered_map&lt;std::string, int&gt; <a class="code" href="classXMLReader.html#aa21f5dcd9d009e635c6acad97beb240a" title="Lecture des méssages compris par le module protant ce nom. Cette fonction recherche le fichier de con...">readMessages</a>(std::string);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="classXMLReader.html#a5147abbb0cacd3fbcc396a23cc63456b" title="Getter statique du chemin vers le dossier de configuration.">getPath</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classXMLReader.html#ae8d2d4fd99c45bc46b939d9dc3548340" title="Setter statique du chemin vers le dossier de configuration.">setPath</a>(std::string);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classXMLReader.html#a73065c7758f26ef69387e315c96d13ac" title="Destructeur.">~XMLReader</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="classXMLReader.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classXMLReader.html" title="Classe utilitaire pour la lecture des fichiers de configuration.">XMLReader</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">static</span> std::string basePath; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">static</span> std::unordered_map&lt;std::string, double&gt; <a class="code" href="classXMLReader.html#a176f21253bd7ac73c00c0aa46e2e5724" title="Lecture des paramètre du module protant ce nom. Cette fonction recherche le fichier de configuration ...">readParams</a>(std::string);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> std::unordered_map&lt;std::string, int&gt; <a class="code" href="classXMLReader.html#aa21f5dcd9d009e635c6acad97beb240a" title="Lecture des méssages compris par le module protant ce nom. Cette fonction recherche le fichier de con...">readMessages</a>(std::string);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">static</span> std::vector&lt;std::string&gt; <a class="code" href="classXMLReader.html#af23225be3e3a4db017f1e22d1b21f7eb" title="Lecture des sockets de modile portant ce nom. Cette fonction recherche le fichier de configuration po...">readSockets</a>(std::string);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="classXMLReader.html#a5147abbb0cacd3fbcc396a23cc63456b" title="Getter statique du chemin vers le dossier de configuration.">getPath</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classXMLReader.html#ae8d2d4fd99c45bc46b939d9dc3548340" title="Setter statique du chemin vers le dossier de configuration.">setPath</a>(std::string);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classXMLReader.html#a73065c7758f26ef69387e315c96d13ac" title="Destructeur.">~XMLReader</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Avril 2 2014 17:52:04 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi Avril 11 2014 14:47:28 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.2
 </small></address>
 </body>
 </html>

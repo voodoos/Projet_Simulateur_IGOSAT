@@ -24,4 +24,8 @@
             <time>5</time>
         </message>
     </messages>
+    
+    <sockets>
+        <socket name="toBatteryController"></socket>
+    </sockets>
 </module>

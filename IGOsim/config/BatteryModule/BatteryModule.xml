@@ -8,4 +8,8 @@
             <time>5</time>
         </message>
     </messages>
+    
+    <sockets>
+        <socket name="fromExt"></socket>
+    </sockets>
 </module>

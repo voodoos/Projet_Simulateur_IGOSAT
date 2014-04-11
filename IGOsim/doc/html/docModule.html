@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>IGOsat Simulator: Création Macro-Module</title>
+<title>IGOsat Simulator: Référence Création Module</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,47 +75,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Création Macro-Module </div>  </div>
+<div class="title">Référence Création <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="classCreation"></a>
-Creation d'un nouveau classe</h1>
-<p>Pour créer un nouveau macro-module, il faut hériter une nouvelle classe de classe <a class="el" href="classMacroModule.html">MacroModule</a> qui va représenter votre nouveau macro-module. La classe <a class="el" href="classMacroModule.html">MacroModule</a> est héritée de classe <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a>. Exemple de création du <a class="el" href="classMacroModule.html">MacroModule</a> <b><a class="el" href="classBatteryModule.html" title="Un exemple de batterie.">BatteryModule</a></b></p>
-<p><code>class <a class="el" href="classBatteryController.html">BatteryController</a>:public <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a>{};</code></p>
-<p>Il faut au moins redéfinir deux methodes</p>
-<ul>
-<li><p class="startli"><code>Constructeur(Params = Params())</code></p>
-<p class="startli">Declarez le constructeur de votre macro-module dans le fichier MacroModuleName.h où MacroModuleName est le nom de classe de votre macro-module. Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe <a class="el" href="classMacroModule.html">MacroModule</a>:</p>
-<div class="fragment"><div class="line"><a class="code" href="classBatteryModule.html#a2fb494ef5f124c38c0fdf9ccfb31918f">BatteryModule::BatteryModule</a>(std::string name, Params params) : <a class="code" href="classMacroModule.html">MacroModule</a>(name, params, <span class="stringliteral">&quot;BatteryModule/BatteryModule.xml&quot;</span>){</div>
-<div class="line">    <span class="comment">/* ce qu&#39;il faut faire pendant la création d&#39;un module */</span></div>
-<div class="line">}</div>
-</div><!-- fragment --><p class="startli">Dans cet constructeur de base:</p>
-<ol type="1">
-<li><a class="el" href="classBatteryModule.html" title="Un exemple de batterie.">BatteryModule</a> – nom de votre macro-module.</li>
-<li>params – un objet de type <code>std::unordered_map&lt;std::string, double&gt;</code> avec des parametrès d'un macro-module.</li>
-<li>"BatteryModule/BatteryModule.xml" – le chemin vers un fichier <code>.xml</code> qui contient la descripton des parametres d'un macro-module et la description des messages qui peuvent être traités par ce macro-module.</li>
-</ol>
-</li>
-</ul>
-<h1><a class="anchor" id="properties"></a>
-Propriétés d'un Module</h1>
-<h2><a class="anchor" id="submodules"></a>
-Sous-modules</h2>
-<p>La difference principale entre <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> et <a class="el" href="classMacroModule.html">MacroModule</a> est la possibilité d'ajouter sous-modules dans <a class="el" href="classMacroModule.html">MacroModule</a> et établir les liens entre eux. </p>
-<h3><a class="anchor" id="addsubmodule"></a>
-Ajout d'un sous-module</h3>
-<p>Ajout d'um module à macro-module peut être effectué par methode <code>addSubModule(Module)</code>. Il faut le faire dans constructeur de macro-module. Exemple de constructeur <a class="el" href="classBatteryModule.html" title="Un exemple de batterie.">BatteryModule</a> avec ajout des sous-modules <a class="el" href="classBattery.html">Battery</a> et <a class="el" href="classBatteryController.html">BatteryController</a>: </p>
-<div class="fragment"><div class="line"><a class="code" href="classBatteryModule.html#a2fb494ef5f124c38c0fdf9ccfb31918f">BatteryModule::BatteryModule</a>(std::string name, Params params) : <a class="code" href="classMacroModule.html">MacroModule</a>(name, params, <span class="stringliteral">&quot;BatteryModule/BatteryModule.xml&quot;</span>){</div>
-<div class="line">    <span class="comment">//Les modules:</span></div>
-<div class="line">    addSubModule(<span class="keyword">new</span> <a class="code" href="classBattery.html">Battery</a>());</div>
-<div class="line">    addSubModule(<span class="keyword">new</span> <a class="code" href="classBatteryController.html">BatteryController</a>());        }</div>
-</div><!-- fragment --><h3><a class="anchor" id="connectSubModules"></a>
-Etablissement des connections entre sous-modules</h3>
-<p>Etablissement de connections entre sous-modules peut-être effectué par méthode <code>addConnexion(Connexion *)</code>. Exemple de constructeur <a class="el" href="classBatteryModule.html" title="Un exemple de batterie.">BatteryModule</a> avec etablissement des connections entre sous-modules <a class="el" href="classBatteryController.html">BatteryController</a> (en utilisant socket "toBatteryController") et <a class="el" href="classBattery.html">Battery</a> (en utilisant socket "toBattery"): </p>
-<div class="fragment"><div class="line"><a class="code" href="classBatteryModule.html#a2fb494ef5f124c38c0fdf9ccfb31918f">BatteryModule::BatteryModule</a>(std::string name, Params params) : <a class="code" href="classMacroModule.html">MacroModule</a>(name, params, <span class="stringliteral">&quot;BatteryModule/BatteryModule.xml&quot;</span>){</div>
-<div class="line">     addConnexion(<span class="keyword">new</span> <a class="code" href="classConnexion.html">Connexion</a>(getModuleByName(<span class="stringliteral">&quot;Battery&quot;</span>)-&gt;getSocketByName(<span class="stringliteral">&quot;toBatteryController&quot;</span>), getModuleByName(<span class="stringliteral">&quot;BatteryController&quot;</span>)-&gt;getSocketByName(<span class="stringliteral">&quot;toBattery&quot;</span>)));</div>
-<div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="classCreation"></a>
 Creation d'un nouveau classe</h1>
 <p>Pour créer un nouveau module, il faut hériter un nouveau classe de classe <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> qui va représenter votre nouveau module. Exemple de création de <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> <b><a class="el" href="classBatteryController.html">BatteryController</a></b></p>
 <p><code>class <a class="el" href="classBatteryController.html">BatteryController</a>:public <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a>{};</code></p>
@@ -198,7 +161,7 @@ Messages</h2>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 11 2014 14:45:26 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi Avril 11 2014 14:47:28 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

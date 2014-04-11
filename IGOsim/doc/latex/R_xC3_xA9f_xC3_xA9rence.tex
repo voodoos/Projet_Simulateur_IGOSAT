@@ -1,10 +1,146 @@
-\section*{Creation d'un nouveau classe}
+\hypertarget{R_xC3_xA9f_xC3_xA9rence_classCreation}{}\section{Creation d'un nouveau classe}\label{R_xC3_xA9f_xC3_xA9rence_classCreation}
+Pour créer un nouveau macro-\/module, il faut hériter une nouvelle classe de classe \hyperlink{classMacroModule}{Macro\-Module} qui va représenter votre nouveau macro-\/module. La classe \hyperlink{classMacroModule}{Macro\-Module} est héritée de classe \hyperlink{classModule}{Module}. Exemple de création du \hyperlink{classMacroModule}{Macro\-Module} {\bfseries \hyperlink{classBatteryModule}{Battery\-Module}}
 
+{\ttfamily class \hyperlink{classBatteryController}{Battery\-Controller}\-:public \hyperlink{classModule}{Module}\{\};}
+
+Il faut au moins redéfinir deux methodes
+\begin{DoxyItemize}
+\item {\ttfamily Constructeur(Params = Params())}
+
+Declarez le constructeur de votre macro-\/module dans le fichier Macro\-Module\-Name.\-h où Macro\-Module\-Name est le nom de classe de votre macro-\/module. Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe \hyperlink{classMacroModule}{Macro\-Module}\-:
+
+
+\begin{DoxyCode}
+\hyperlink{classBatteryModule_a2fb494ef5f124c38c0fdf9ccfb31918f}{BatteryModule::BatteryModule}(std::string name, 
+      Params params) : \hyperlink{classMacroModule}{MacroModule}(name, params, \textcolor{stringliteral}{"
+      BatteryModule/BatteryModule.xml"})\{
+    \textcolor{comment}{/* ce qu'il faut faire pendant la création d'un module */}
+\}
+\end{DoxyCode}
+
+
+Dans cet constructeur de base\-:
+\begin{DoxyEnumerate}
+\item \hyperlink{classBatteryModule}{Battery\-Module} – nom de votre macro-\/module.
+\item params – un objet de type {\ttfamily std\-::unordered\-\_\-map$<$std\-::string, double$>$} avec des parametrès d'un macro-\/module.
+\item \char`\"{}\-Battery\-Module/\-Battery\-Module.\-xml\char`\"{} – le chemin vers un fichier {\ttfamily .xml} qui contient la descripton des parametres d'un macro-\/module et la description des messages qui peuvent être traités par ce macro-\/module.
+\end{DoxyEnumerate}
+\end{DoxyItemize}\hypertarget{R_xC3_xA9f_xC3_xA9rence_properties}{}\section{Propriétés d'un Module}\label{R_xC3_xA9f_xC3_xA9rence_properties}
+\hypertarget{R_xC3_xA9f_xC3_xA9rence_submodules}{}\subsection{Sous-\/modules}\label{R_xC3_xA9f_xC3_xA9rence_submodules}
+La difference principale entre \hyperlink{classModule}{Module} et \hyperlink{classMacroModule}{Macro\-Module} est la possibilité d'ajouter sous-\/modules dans \hyperlink{classMacroModule}{Macro\-Module} et établir les liens entre eux. \hypertarget{R_xC3_xA9f_xC3_xA9rence_addsubmodule}{}\subsubsection{Ajout d'un sous-\/module}\label{R_xC3_xA9f_xC3_xA9rence_addsubmodule}
+Ajout d'um module à macro-\/module peut être effectué par methode {\ttfamily add\-Sub\-Module(\-Module)}. Il faut le faire dans constructeur de macro-\/module. Exemple de constructeur \hyperlink{classBatteryModule}{Battery\-Module} avec ajout des sous-\/modules \hyperlink{classBattery}{Battery} et \hyperlink{classBatteryController}{Battery\-Controller}\-: 
+\begin{DoxyCode}
+\hyperlink{classBatteryModule_a2fb494ef5f124c38c0fdf9ccfb31918f}{BatteryModule::BatteryModule}(std::string name, 
+      Params params) : \hyperlink{classMacroModule}{MacroModule}(name, params, \textcolor{stringliteral}{"
+      BatteryModule/BatteryModule.xml"})\{
+    \textcolor{comment}{//Les modules:}
+    addSubModule(\textcolor{keyword}{new} \hyperlink{classBattery}{Battery}());
+    addSubModule(\textcolor{keyword}{new} \hyperlink{classBatteryController}{BatteryController}());        \}
+\end{DoxyCode}
+\hypertarget{R_xC3_xA9f_xC3_xA9rence_connectSubModules}{}\subsubsection{Etablissement des connections entre sous-\/modules}\label{R_xC3_xA9f_xC3_xA9rence_connectSubModules}
+Etablissement de connections entre sous-\/modules peut-\/être effectué par méthode {\ttfamily add\-Connexion(\-Connexion $\ast$)}. Exemple de constructeur \hyperlink{classBatteryModule}{Battery\-Module} avec etablissement des connections entre sous-\/modules \hyperlink{classBatteryController}{Battery\-Controller} (en utilisant socket \char`\"{}to\-Battery\-Controller\char`\"{}) et \hyperlink{classBattery}{Battery} (en utilisant socket \char`\"{}to\-Battery\char`\"{})\-: 
+\begin{DoxyCode}
+\hyperlink{classBatteryModule_a2fb494ef5f124c38c0fdf9ccfb31918f}{BatteryModule::BatteryModule}(std::string name, 
+      Params params) : \hyperlink{classMacroModule}{MacroModule}(name, params, \textcolor{stringliteral}{"
+      BatteryModule/BatteryModule.xml"})\{
+     addConnexion(\textcolor{keyword}{new} \hyperlink{classConnexion}{Connexion}(getModuleByName(\textcolor{stringliteral}{"Battery"})->
+      getSocketByName(\textcolor{stringliteral}{"toBatteryController"}), getModuleByName(\textcolor{stringliteral}{"BatteryController"})->
+      getSocketByName(\textcolor{stringliteral}{"toBattery"})));
+\}
+\end{DoxyCode}
+\hypertarget{R_xC3_xA9f_xC3_xA9rence_classCreation}{}\section{Creation d'un nouveau classe}\label{R_xC3_xA9f_xC3_xA9rence_classCreation}
 Pour créer un nouveau module, il faut hériter un nouveau classe de classe \hyperlink{classModule}{Module} qui va représenter votre nouveau module. Exemple de création de \hyperlink{classModule}{Module} {\bfseries \hyperlink{classBatteryController}{Battery\-Controller}}
 
 {\ttfamily class \hyperlink{classBatteryController}{Battery\-Controller}\-:public \hyperlink{classModule}{Module}\{\};}
 
 Il faut au moins redéfinir deux methodes
 \begin{DoxyItemize}
-\item Constructeur(Params = Params()) Declarez le constructeur de votre module dans le fichier Module\-Name.\-h Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe \hyperlink{classModule}{Module}\-: `\-Battery\-Controller\-::\-Battery\-Controller(\-Params params) \-: \hyperlink{classModule}{Module}(\char`\"{}\-Battery\-Controller\char`\"{}, params, \char`\"{}\-Battery\-Module/\-Battery\-Controller.\-xml\char`\"{})\{ /$\ast$ ce qu'il faut faire pendant la création d'un module 
+\item {\ttfamily Constructeur(Params = Params())}
+
+Declarez le constructeur de votre module dans le fichier Module\-Name.\-h Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe \hyperlink{classModule}{Module}\-:
+
+
+\begin{DoxyCode}
+BatteryController::BatteryController(Params params) : \hyperlink{classModule}{Module}(\textcolor{stringliteral}{"
+      BatteryController"}, params, \textcolor{stringliteral}{"BatteryModule/BatteryController.xml"})\{
+   \textcolor{comment}{/* ce qu'il faut faire pendant la création d'un module */}
+\}
+\end{DoxyCode}
+
+
+Dans cet constructeur de base\-:
+\begin{DoxyEnumerate}
+\item \hyperlink{classBatteryController}{Battery\-Controller} – nom de votre module.
+\item params – un objet de type {\ttfamily std\-::unordered\-\_\-map$<$std\-::string, double$>$} avec des parametrès d'un module.
+\item \char`\"{}\-Battery\-Module/\-Battery\-Controller.\-xml\char`\"{} – le chemin vers un fichier {\ttfamily .xml} qui contient la descripton des parametres d'un module et la description des messages qui peuvent être traités par ce module.
+\end{DoxyEnumerate}
 \end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item process(std\-::shared\-\_\-ptr$<$\-Message$>$)
+
+C'est une méthode qui traite des messages qui peuvent être traités par ce module. La sélection d'un message peut être réalisé par déclaration {\ttfamily if} qui verifié le nom d'un message en utilisant la methode {\ttfamily get\-Name()} d'un objet \hyperlink{classMessage}{Message}. Par exemple, le traitement des messages \char`\"{}get\-Status\char`\"{} et \char`\"{}actual\-Voltage\char`\"{} de \hyperlink{classModule}{Module} \char`\"{}\-Battery\-Controller\char`\"{} peut être implementé d'une telle manière\-:
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} BatteryController::process(std::shared\_ptr<Message> m)\{
+    \textcolor{keywordflow}{if} (m->getName() == \textcolor{stringliteral}{"getStatus"}) \{
+       \textcolor{comment}{//ce qu'il faut faire au reçu d'un message "getStatus"}
+    \}
+
+    \textcolor{keywordflow}{if} (m->getName() == \textcolor{stringliteral}{"actualVoltage"}) \{
+        \textcolor{comment}{//ce qu'il faut faire au reçu d'un message "actualVoltage"}
+    \}
+\}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{R_xC3_xA9f_xC3_xA9rence_properties}{}\section{Propriétés d'un Module}\label{R_xC3_xA9f_xC3_xA9rence_properties}
+\hypertarget{R_xC3_xA9f_xC3_xA9rence_memory}{}\subsection{Mémoire}\label{R_xC3_xA9f_xC3_xA9rence_memory}
+\hypertarget{R_xC3_xA9f_xC3_xA9rence_parameters}{}\subsection{Paramètres}\label{R_xC3_xA9f_xC3_xA9rence_parameters}
+Le parametre de module est une valeur quelconque de type float avec le nom correspondant. Il existe deux façons d'ajout de parametres au \hyperlink{classModule}{Module}
+\begin{DoxyItemize}
+\item Par fichier .xml (regardez la section correspondante)
+\item Par parametre de construction d'un \hyperlink{classModule}{Module}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+\textcolor{comment}{//Paramètres:}
+unordered\_map<string, double> p;
+
+p[\textcolor{stringliteral}{"voltage"}] = 40;
+p[\textcolor{stringliteral}{"amperage"}] = 0.2;
+p[\textcolor{stringliteral}{"capacity"}] = 10000;
+p[\textcolor{stringliteral}{"TEMP1"}] = 30;
+p[\textcolor{stringliteral}{"TEMP2"}] = 35;
+p[\textcolor{stringliteral}{"TEMP3"}] = 40;
+p[\textcolor{stringliteral}{"TEMP4"}] = 45;
+
+battery = \textcolor{keyword}{new} \hyperlink{classBattery}{Battery}(p);
+\end{DoxyCode}
+\hypertarget{R_xC3_xA9f_xC3_xA9rence_sockets}{}\subsection{Sockets}\label{R_xC3_xA9f_xC3_xA9rence_sockets}
+Le \hyperlink{classSocket}{Socket} est un point de communication qui permet de connecter des modules differents et effectuer l'echangement de messages entre eux. Il existe deux façons d'ajout de sockets au \hyperlink{classModule}{Module} \begin{DoxyItemize}
+\item Par fichier .xml (regardez la section correspondante) \item Par utilisation de méthode add\-Socket dans le constructeur de classe\-: 
+\begin{DoxyCode}
+\hyperlink{classBatteryModule_a2fb494ef5f124c38c0fdf9ccfb31918f}{BatteryModule::BatteryModule}(std::string name, 
+      Params params) : \hyperlink{classMacroModule}{MacroModule}(name, params)\{
+    \textcolor{comment}{//Les connecteurs du macromodule:}
+    addSocket(\hyperlink{classSocket}{Socket}(\textcolor{stringliteral}{"fromExt"}));
+    addSocket(\hyperlink{classSocket}{Socket}(\textcolor{stringliteral}{"toScao"}));
+\}
+\end{DoxyCode}
+\end{DoxyItemize}
+\hypertarget{R_xC3_xA9f_xC3_xA9rence_messages}{}\subsection{Messages}\label{R_xC3_xA9f_xC3_xA9rence_messages}
+Le \hyperlink{classMessage}{Message} est l'unité d'information qui peut être transferé entre des modules. Le \hyperlink{classMessage}{Message} peut être de type int, float ou string. Chaque message a son propre nom. Le \hyperlink{classModule}{Module} distingue des messages par leurs noms. Il faut definir préalablement definir une liste des messages qui peuvent être traités par un module. Il existe deux façons de le faire\-: \begin{DoxyItemize}
+\item Par fichier .xml (regardez la section correspondante) \item Par utilisation de méthode {\ttfamily add\-Message (std\-::string, int)} dans le constructeur de classe \hyperlink{classModule}{Module}\-:\end{DoxyItemize}
+
+\begin{DoxyCode}
+BatteryController::BatteryController(Params params) : \hyperlink{classModule}{Module}(\textcolor{stringliteral}{"Battery
+       Controller"}, params)\{
+    \textcolor{comment}{//Les messages compris par le controlleur:}
+    addMessage(\textcolor{stringliteral}{"getStatus"}, 5);
+    addMessage(\textcolor{stringliteral}{"getStatus"}, 5);
+\}
+\end{DoxyCode}
+ 
