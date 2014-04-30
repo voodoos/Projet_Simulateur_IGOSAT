@@ -34,3 +34,5 @@ Prod
 
 *.aps
 *.swp
+/IGOsim/GenCode
+/IGOgen/GenCode

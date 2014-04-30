@@ -2,7 +2,6 @@
 //
 
 #include <iostream>
-
 #include "CLI.h"
 #include "Battery.h"
 #include "BatteryController.h"
@@ -25,24 +24,26 @@
 using namespace std;
 
 
-int main()
+int main(int argc, char *argv[])
 {
-    setXMLpath
+    /* BASIC CONFIGURATION */
+    //XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
+
     CLI::getInstance().setLogLevel(CLI::INFO);
-    
-    /* Exemple de batterie: */
-    BatteryModule *bm = new BatteryModule("BatteryModule");
 
-    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
-    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
-    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 10));
+        /* Exemple de batterie: */
+        BatteryModule *bm = new BatteryModule("BatteryModule");
+
+        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
+        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
+        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 10));
 
 
-    Timer::getInstance().start(100);
+        Timer::getInstance().start(100);
 
-    delete(bm);
-
-    cin.ignore();
+        delete(bm);
+        
+        cin.ignore();
 
 	return 0;
 }
