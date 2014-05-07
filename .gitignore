@@ -30,6 +30,7 @@ Prod
 
 #Mac OS files
 .DS_Store
+*.1
 
 
 *.aps
