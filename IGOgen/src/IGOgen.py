@@ -102,6 +102,7 @@ def generateCPP():
 		implementationFile.write(moduleName+"::"+moduleName+"(std::string name, Params params) : Module(name, params, \""+xmlPath+"\"){\n")
 
 	implementationFile.write("\n")
+	implementationFile.write("}\n")
 	implementationFile.write(moduleName+"::~"+moduleName+"() {\n")
 	implementationFile.write("\n")
 	implementationFile.write("}\n")
@@ -112,17 +113,17 @@ def generateCPP():
 
 	implementationFile.close()
 	
-def generateHPP():
-	headerFile = open(moduleName+".hpp", "w")
+def generateH():
+	headerFile = open(moduleName+".h", "w")
 
 	#Creation of class declaration
 	headerFile.write("#pragma once\n")
 	headerFile.write("#include <iostream>\n")
 
 	if isMacro:	
-		headerFile.write("include \"MacroModule.h\"\n")
+		headerFile.write("#include \"MacroModule.h\"\n")
 	else:
-		headerFile.write("include \"Module.h\"\n")
+		headerFile.write("#include \"Module.h\"\n")
 
 	headerFile.write("/*!\n")
 	headerFile.write("* \class "+moduleName+"\n")
@@ -145,7 +146,7 @@ def generateHPP():
 	headerFile.close()
 
 def generateClass():
-	generateHPP()
+	generateH()
 	generateCPP()
 	
 
@@ -180,7 +181,7 @@ def main():
 		print "[1] : Ajouter un message"
 		print "[2] : Ajouter un socket"
 		print "[3] : Ajouter un parametre"
-		print "[4] : Generer les .cpp + .hpp"
+		print "[4] : Generer les .cpp + .h"
 		print "[5] : Generer .xml"
 		print "[6] : Sortie"
 		while choix not in ["1","2","3","4","5","6"]:
