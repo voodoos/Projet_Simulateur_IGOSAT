@@ -1,6 +1,9 @@
 ﻿Projet Simulateur IGOSAT
 ========================
 
+## Documentation
+http://voodoos.github.io/Projet_Simulateur_IGOSAT/IGOsim/doc/html/index.html
+
 ## Installation
 Commencez par cloner le dépôt dans le dossier de votre choix via l'application github ou la commande:
 ```git clone https://github.com/VooDooS/Projet_Simulateur_IGOSAT.git```
