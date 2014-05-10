@@ -2,34 +2,34 @@
 
 \section classCreation Creation d'un nouveau classe
 
-Pour créer un nouveau macro-module, il faut hériter une nouvelle classe de classe MacroModule qui va représenter votre nouveau macro-module. La classe MacroModule est héritée de classe Module. 
-Exemple de création du MacroModule **BatteryModule**
+Pour créer un nouveau macro-module, il faut hériter une nouvelle classe de la classe MacroModule. *Remarque: la classe MacroModule est héritée de Module, un macro-module est donc un module.* 
 
-`class BatteryController:public Module{};`
+Par exemple pour créer le macro-module **BatteryModule**:
+`class BatteryModule:public MacroModule{};`
 
-Il faut au moins redéfinir deux methodes
-- `Constructeur(Params = Params())`
+Il faut également au moins redéfinir deux methodes:
+-# le constructeur MacroModule::MacroModule
+-# MacroModule::process (qui est héritée de Module::process)
 
-    Declarez le constructeur de votre macro-module dans le fichier MacroModuleName.h où MacroModuleName est le nom de classe de votre macro-module.
-    Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe MacroModule:
+Notez que le constructeur de votre nouveau module doit appeller le constructeur de base de la classe MacroModule:
 
-    \code{.cpp}
-        BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name, params, "BatteryModule/BatteryModule.xml"){
-            /* ce qu'il faut faire pendant la création d'un module */
-        }
-    \endcode
+\code{.cpp}
+    BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name, params, "BatteryModule/BatteryModule.xml"){
+        /* ce qu'il faut faire pendant la création d'un module */
+    }
+\endcode
 
-    Dans cet constructeur de base:
-    -# BatteryModule – nom de votre macro-module.
-    -# params – un objet de type `std::unordered_map<std::string, double>` avec des parametrès d'un macro-module.
-    -# "BatteryModule/BatteryModule.xml" – le chemin vers un fichier `.xml` qui contient la descripton des parametres d'un macro-module et la description des messages qui peuvent être traités par ce macro-module.
+Les arguments de ce constructeur de base sont les suivants:
+-# name : le nom de votre macro-module.
+-# params : un objet de type `std::unordered_map<std::string, double>` avec des paramètres d'un macro-module.
+-# "BatteryModule/BatteryModule.xml" – le chemin vers le fichier `.xml` qui contient la configuration du module.
 
 \section properties Propriétés d'un Module
 
 \subsection submodules Sous-modules
-La difference principale entre Module et MacroModule est la possibilité d'ajouter sous-modules dans MacroModule et établir les liens entre eux.
+La difference principale entre Module et MacroModule est la possibilité d'ajouter des sous-modules dans MacroModule et d'établir des liens entre eux.
 \subsubsection addsubmodule Ajout d'un sous-module
-Ajout d'um module à macro-module peut être effectué par methode `addSubModule(Module)`. Il faut le faire dans constructeur de macro-module. Exemple de constructeur BatteryModule avec ajout des sous-modules Battery et BatteryController:
+L'ajout d'un module à un macro-module est effectué par la méthode MacroModule::ddSubModule. Il faut le faire dans le constructeur du macro-module. Exemple du constructeur BatteryModule avec ajout des sous-modules Battery et BatteryController:
     \code{.cpp}
         BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name, params, "BatteryModule/BatteryModule.xml"){
             //Les modules:
@@ -39,8 +39,8 @@ Ajout d'um module à macro-module peut être effectué par methode `addSubModule
 
 \subsubsection connectSubModules Etablissement des connections entre sous-modules
 
-Etablissement de connections entre sous-modules peut-être effectué par méthode  `addConnexion(Connexion *)`.
-Exemple de constructeur BatteryModule avec etablissement des connections entre sous-modules BatteryController (en utilisant socket "toBatteryController") et Battery (en utilisant socket "toBattery"):
+La création de connections entre sous-modules se fait par la méthode  MacroModule::addConnexion.
+Exemple de constructeur BatteryModule avec établissement des connections entre sous-modules BatteryController (en utilisant le Socket "toBatteryController") et Battery (en utilisant le Socket "toBattery"):
     \code{.cpp}
         BatteryModule::BatteryModule(std::string name, Params params) : MacroModule(name, params, "BatteryModule/BatteryModule.xml"){
              addConnexion(new Connexion(getModuleByName("Battery")->getSocketByName("toBatteryController"), getModuleByName("BatteryController")->getSocketByName("toBattery")));

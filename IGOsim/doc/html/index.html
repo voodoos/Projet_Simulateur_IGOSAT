@@ -80,25 +80,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
 Introduction</h1>
-<p>Dévelloppé dans le cadre d'un projet de master, ce programme pose les bases d'un simulateur de système complexe, basé sur des modules abstraits synchronisés via une horloge.</p>
+<p>Dévelloppé dans le cadre d'un projet de master, ce programme pose les bases d'un simulateur de système complexe écrit en C++, basé sur des modules abstraits synchronisés via une horloge.</p>
 <h1><a class="anchor" id="general"></a>
 Principe général de la simulation</h1>
-<p>L'idée du simulateur est de représenter le satellite comme un ensemble de modules ordonnés hiérarchiquement. Trois briques de base sont disponible: les <a class="el" href="docMacroModule.html">modules</a>, les macromodules et les modules physique. Les modules sont des éléments finaux, qui n'en contiennent pas d'autres. Les macromodules sont des modules qui peuvent contenir d'autres modules et des connexions entre ces modules. Enfin les modules physiques sont un peu à part, il serviront à modéliser, et à synchroniser avec les modules du satellite, les différents phénomènes physiques impliqués dans la simulation.</p>
+<p>L'idée du simulateur est de représenter le satellite comme un ensemble de modules ordonnés hiérarchiquement. Trois briques de base sont disponible: les <a class="el" href="docModule.html">modules</a>, les <a class="el" href="docMacroModule.html">macromodules</a> et les modules physique. Les modules sont des éléments finaux, qui n'en contiennent pas d'autres. Les macromodules sont des modules qui peuvent contenir d'autres modules et des connexions entre ces modules. Enfin les modules physiques sont un peu à part, il serviront à modéliser, et à synchroniser avec les modules du satellite, les différents phénomènes physiques impliqués dans la simulation.</p>
 <p>Des modules connectés au sein d'un macromodules peuvent communiquer entre-eux en s'envoyant des messages. Il est nécessaire de définir pour chaque module la liste des messages qu'ils est capable de comprendre ainsi que les traitements associés à la réception de chacun de ces messages.</p>
 <p>Tous ces modules agissent de façon synchrone. Une classe <a class="el" href="classTimer.html" title="Cette classe sert à la gestion du temps simulé">Timer</a> se charge d'appeller la méthode <a class="el" href="classModule.html#ab7ea9648fa500696c85e93ebd0666390" title="Méthode appellée à chaque pas de temps, commune à tous les modules.">Module::clock</a> de chaque module à chaque pas de temps. Tous les modules sont automatiquement inscris dans le timer lors de leur construction. Il est également possible de désynchroniser certains modules, afin qu'ils tournent à une fréquence plus ou moins élevée.</p>
 <p>Les modules peuvent êtres en partie configurés via les <a class="el" href="xmlRef.html">fichiers xml</a> qui leur sont associés, cependant cette foncitonnalité n'est pas encore complète, et le générateur associé ne peut pour le moment éditer un XML déjà créé.</p>
 <h1><a class="anchor" id="struc"></a>
 Structure du dépôt</h1>
-<pre class="fragment">IGOgen                         Générateur de code
-IGOsim                         Simulateur
-   | config                    Fichiers de configuration XML
-   | doc                       Documentation générée par Doxygen
-   | src                       Sources du simulateur
-       | Core                  Sources génériques du simulateur
-       | Satellite                 Sources spécifiques à IGOsat
+<pre class="fragment">IGOgen/                        Générateur de code
+IGOsim/                        Simulateur
+   | config/                   Fichiers de configuration XML
+   | doc/                      Documentation générée par Doxygen
+   | src/                      Sources du simulateur
+       | Core/                 Sources génériques du simulateur
+       | Satellite/            Sources spécifiques à IGOsat
    | doxy.conf                 Fichier de configuration de Doxygen
-ProjetM1                       Divers pour suivi du projet
-UML                            Modélisation du simulateur
+ProjetM1/                      Divers pour suivi du projet
+UML/                           Modélisation du simulateur
 README.md                      Readme basique, affiché sur accueil du dépôt
 CHANGELOG.md                   Changelog
 </pre><h1><a class="anchor" id="install_sec"></a>
@@ -124,7 +124,7 @@ Comment participer ?</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Mai 9 2014 22:40:21 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Mai 10 2014 02:46:48 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

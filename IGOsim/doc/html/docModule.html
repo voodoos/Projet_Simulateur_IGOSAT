@@ -79,48 +79,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="classCreation"></a>
-Creation d'un nouveau classe</h1>
-<p>Pour créer un nouveau module, il faut hériter un nouveau classe de classe <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> qui va représenter votre nouveau module. Exemple de création de <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> <b><a class="el" href="classBatteryController.html">BatteryController</a></b></p>
+Création d'une nouvelle classe</h1>
+<p>Pour créer un nouveau module, il faut hériter un nouvel objet de <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a>.</p>
+<p>Exemple de la création du <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> <b><a class="el" href="classBatteryController.html">BatteryController</a></b></p>
 <p><code>class <a class="el" href="classBatteryController.html">BatteryController</a>:public <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a>{};</code></p>
-<p>Il faut au moins redéfinir deux methodes</p>
-<ul>
-<li><p class="startli"><code>Constructeur(Params = Params())</code></p>
-<p class="startli">Declarez le constructeur de votre module dans le fichier ModuleName.h Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a>:</p>
-<div class="fragment"><div class="line">BatteryController::BatteryController(Params params) : <a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a>(<span class="stringliteral">&quot;BatteryController&quot;</span>, params, <span class="stringliteral">&quot;BatteryModule/BatteryController.xml&quot;</span>){</div>
-<div class="line">   <span class="comment">/* ce qu&#39;il faut faire pendant la création d&#39;un module */</span></div>
-<div class="line">}</div>
-</div><!-- fragment --><p class="startli">Dans cet constructeur de base:</p>
+<p>Il faut également au moins redéfinir deux methodes:</p>
 <ol type="1">
-<li><a class="el" href="classBatteryController.html">BatteryController</a> – nom de votre module.</li>
-<li>params – un objet de type <code>std::unordered_map&lt;std::string, double&gt;</code> avec des parametrès d'un module.</li>
-<li>"BatteryModule/BatteryController.xml" – le chemin vers un fichier <code>.xml</code> qui contient la descripton des parametres d'un module et la description des messages qui peuvent être traités par ce module.</li>
+<li>le constructeur <a class="el" href="classModule.html#abcdd948c7444d3420f04be1bd332fbae" title="Constructeur par défault, pour un module sans mémoire.">Module::Module</a></li>
+<li>Module::proces</li>
 </ol>
-</li>
-</ul>
-<ul>
-<li><p class="startli">process(std::shared_ptr&lt;Message&gt;)</p>
-<p class="startli">C'est une méthode qui traite des messages qui peuvent être traités par ce module. La sélection d'un message peut être réalisé par déclaration <code>if</code> qui verifié le nom d'un message en utilisant la methode <code>getName()</code> d'un objet <a class="el" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>. Par exemple, le traitement des messages "getStatus" et "actualVoltage" de <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> "BatteryController" peut être implementé d'une telle manière:</p>
+<p>Le constructeur d'un nouveau module doit utiliser le constructeur de base de classe <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a>:</p>
+<div class="fragment"><div class="line">BatteryController::BatteryController(Params params) : <a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a>(<span class="stringliteral">&quot;BatteryController&quot;</span>, params, <span class="stringliteral">&quot;BatteryModule/BatteryController.xml&quot;</span>){</div>
+<div class="line">    <span class="comment">/* ce qu&#39;il faut faire pendant la création d&#39;un module */</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Les arguments de ce constructeur de base sont les suivants:</p>
+<ol type="1">
+<li>name: le nom de votre module.</li>
+<li>params: un objet de type <code>std::unordered_map&lt;std::string, double&gt;</code> avec des paramètres d'un module.</li>
+<li>"BatteryModule/BatteryController.xml": le chemin vers un fichier <code>.xml</code> qui contient la descripton des paramètres d'un module et la description des messages qui peuvent être traités par ce module.</li>
+</ol>
+<p>D'autre part, process est la méthode qui traite des messages compris par ce module. La sélection d'un message peut être réalisée à l'aide d'un classique <code>if then else</code> qui verifie le nom d'un message en utilisant la methode <a class="el" href="classMessage.html#ac03b02000572b0852c574498bf138e87" title="Renvoie le nom du message.">Message::getName()</a>. Par exemple, le traitement des messages "getStatus" et "actualVoltage" du <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> "BatteryController" peut être implementé de la façon suivante:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> BatteryController::process(std::shared_ptr&lt;Message&gt; m){</div>
 <div class="line">    <span class="keywordflow">if</span> (m-&gt;getName() == <span class="stringliteral">&quot;getStatus&quot;</span>) {</div>
-<div class="line">       <span class="comment">//ce qu&#39;il faut faire au reçu d&#39;un message &quot;getStatus&quot;</span></div>
+<div class="line">        <span class="comment">//ce qu&#39;il faut faire à la réception d&#39;un message &quot;getStatus&quot;</span></div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">if</span> (m-&gt;getName() == <span class="stringliteral">&quot;actualVoltage&quot;</span>) {</div>
-<div class="line">        <span class="comment">//ce qu&#39;il faut faire au reçu d&#39;un message &quot;actualVoltage&quot;</span></div>
+<div class="line">        <span class="comment">//ce qu&#39;il faut faire à la réception d&#39;un message &quot;actualVoltage&quot;</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --></li>
-</ul>
-<h1><a class="anchor" id="properties"></a>
+</div><!-- fragment --><h1><a class="anchor" id="properties"></a>
 Propriétés d'un Module</h1>
 <h2><a class="anchor" id="memory"></a>
 Mémoire</h2>
 <h2><a class="anchor" id="parameters"></a>
 Paramètres</h2>
-<p>Le parametre de module est une valeur quelconque de type float avec le nom correspondant. Il existe deux façons d'ajout de parametres au <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a></p>
+<p>Le parametre de module est une valeur quelconque de type float avec le nom correspondant. Il existe deux façons d'ajouter des paramètres au <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a>:</p>
 <ul>
-<li>Par fichier .xml (regardez la section correspondante)</li>
-<li>Par parametre de construction d'un <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a></li>
+<li>Par fichier .xml (regardez la <a class="el" href="xmlRef.html">section correspondante</a>)</li>
+<li>Par paramètre de construction d'un <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a></li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">//Paramètres:</span></div>
 <div class="line">unordered_map&lt;string, double&gt; p;</div>
@@ -136,10 +133,10 @@ Paramètres</h2>
 <div class="line">battery = <span class="keyword">new</span> <a class="code" href="classBattery.html">Battery</a>(p);</div>
 </div><!-- fragment --><h2><a class="anchor" id="sockets"></a>
 Sockets</h2>
-<p>Le <a class="el" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a> est un point de communication qui permet de connecter des modules differents et effectuer l'echangement de messages entre eux. Il existe deux façons d'ajout de sockets au <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> </p>
+<p>Les <a class="el" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a> sont des points de branchement qui permettent de connecter des modules différents et d'effectuer l'échange de messages entre eux. Il existe deux façons d'ajouter des sockets à un module:</p>
 <ul>
-<li>Par fichier .xml (regardez la section correspondante) </li>
-<li>Par utilisation de méthode addSocket dans le constructeur de classe: <div class="fragment"><div class="line"><a class="code" href="classBatteryModule.html#a2fb494ef5f124c38c0fdf9ccfb31918f">BatteryModule::BatteryModule</a>(std::string name, Params params) : <a class="code" href="classMacroModule.html">MacroModule</a>(name, params){</div>
+<li>Par fichier.xml(voir la <a class="el" href="xmlRef.html">section correspondante</a>)</li>
+<li>Par utilisation de la méthode <a class="el" href="classModule.html#aeb7302c667eb923a4dc25ae235c744dc" title="Fonction d&#39;ajout d&#39;un connecteur au module.">Module::addSocket</a> dans le constructeur de classe: <div class="fragment"><div class="line"><a class="code" href="classBatteryModule.html#a2fb494ef5f124c38c0fdf9ccfb31918f">BatteryModule::BatteryModule</a>(std::string name, Params params) : <a class="code" href="classMacroModule.html">MacroModule</a>(name, params){</div>
 <div class="line">    <span class="comment">//Les connecteurs du macromodule:</span></div>
 <div class="line">    addSocket(<a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a>(<span class="stringliteral">&quot;fromExt&quot;</span>));</div>
 <div class="line">    addSocket(<a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a>(<span class="stringliteral">&quot;toScao&quot;</span>));</div>
@@ -148,10 +145,10 @@ Sockets</h2>
 </ul>
 <h2><a class="anchor" id="messages"></a>
 Messages</h2>
-<p>Le <a class="el" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a> est l'unité d'information qui peut être transferé entre des modules. Le <a class="el" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a> peut être de type int, float ou string. Chaque message a son propre nom. Le <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> distingue des messages par leurs noms. Il faut definir préalablement definir une liste des messages qui peuvent être traités par un module. Il existe deux façons de le faire: </p>
+<p>Le <a class="el" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a> est l'unité d'information qui peut être transferée entre deux modules. Un message peut être de type int, float ou string. Chaque message a son propre nom. Le <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> distingue les messages par leurs noms. Il faut donc définir préalablement une liste des messages qui peuvent être traités par un module. Il existe deux façons de le faire:</p>
 <ul>
-<li>Par fichier .xml (regardez la section correspondante) </li>
-<li>Par utilisation de méthode <code>addMessage (std::string, int)</code> dans le constructeur de classe <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a>:</li>
+<li>Par fichier.xml(regardez la <a class="el" href="xmlRef.html">section correspondante</a>)</li>
+<li>Par utilisation de la méthode <a class="el" href="classModule.html#a146f454fded03cda14359e419086afa5" title="Fonction d&#39;ajout d&#39;un message au module, et de son temps d&#39;éxecution simulé.">Module::addMessage</a> dans le constructeur du module:</li>
 </ul>
 <div class="fragment"><div class="line">BatteryController::BatteryController(Params params) : <a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a>(<span class="stringliteral">&quot;Battery Controller&quot;</span>, params){</div>
 <div class="line">    <span class="comment">//Les messages compris par le controlleur:</span></div>
@@ -161,7 +158,7 @@ Messages</h2>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Mai 9 2014 22:40:19 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Mai 10 2014 02:46:46 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

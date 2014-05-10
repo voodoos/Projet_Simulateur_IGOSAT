@@ -4,7 +4,7 @@
  Dévelloppé dans le cadre d'un projet de master, ce programme pose les bases d'un simulateur de système complexe écrit en C++, basé sur des modules abstraits synchronisés via une horloge.
  
  \section general Principe général de la simulation
- L'idée du simulateur est de représenter le satellite comme un ensemble de modules ordonnés hiérarchiquement. Trois briques de base sont disponible: les \ref docMacroModule "modules", les macromodules et les modules physique.
+ L'idée du simulateur est de représenter le satellite comme un ensemble de modules ordonnés hiérarchiquement. Trois briques de base sont disponible: les \ref docModule "modules", les \ref docMacroModule "macromodules" et les modules physique.
  Les modules sont des éléments finaux, qui n'en contiennent pas d'autres. Les macromodules sont des modules qui peuvent contenir d'autres modules et des connexions entre ces modules. Enfin les modules physiques sont un peu à part, il serviront à modéliser, et à synchroniser avec les modules du satellite, les différents phénomènes physiques impliqués dans la simulation.
 
  Des modules connectés au sein d'un macromodules peuvent communiquer entre-eux en s'envoyant des messages. Il est nécessaire de définir pour chaque module la liste des messages qu'ils est capable de comprendre ainsi que les traitements associés à la réception de chacun de ces messages.
@@ -16,16 +16,16 @@
  
  \section struc Structure du dépôt
 
-     IGOgen                         Générateur de code
-     IGOsim                         Simulateur
-        | config                    Fichiers de configuration XML
-        | doc                       Documentation générée par Doxygen
-        | src                       Sources du simulateur
-            | Core                  Sources génériques du simulateur
-            | Satellite             Sources spécifiques à IGOsat
+     IGOgen/                        Générateur de code
+     IGOsim/                        Simulateur
+        | config/                   Fichiers de configuration XML
+        | doc/                      Documentation générée par Doxygen
+        | src/                      Sources du simulateur
+            | Core/                 Sources génériques du simulateur
+            | Satellite/            Sources spécifiques à IGOsat
         | doxy.conf                 Fichier de configuration de Doxygen
-     ProjetM1                       Divers pour suivi du projet
-     UML                            Modélisation du simulateur
+     ProjetM1/                      Divers pour suivi du projet
+     UML/                           Modélisation du simulateur
      README.md                      Readme basique, affiché sur accueil du dépôt
      CHANGELOG.md                   Changelog
 
