@@ -25,7 +25,7 @@ Connexion::Connexion(const Connexion& c) {
 Connexion::~Connexion(){
 }
 
-void Connexion::dispatch(std::shared_ptr<Message> m, Socket *s){
+void Connexion::dispatch(std::shared_ptr<Message> m, Socket *s) const{
     std::string msgReceived("");
     if (s->getName() == socketA->getName()) {
         socketB->receive(m);

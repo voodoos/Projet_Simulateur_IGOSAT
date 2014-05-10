@@ -54,7 +54,7 @@ public:
 
     /*!
     * \fn void logv(std::string mess, bool) const
-    * \brief Affiche le message mess avec ou sans la valeur du timer actuel.
+    * \brief Affiche le message mess avec ou sans la valeur du timer actuel. Cette méthode est virtuelle pure, elle doit être définie dans les classes filles.
     */
     virtual void logv(std::string, bool withTime) const = 0;
 };
