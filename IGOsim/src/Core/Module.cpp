@@ -136,7 +136,7 @@ Socket* Module::getSocketByName(string sname)
     */
 }
 
-double Module::getParamValueByName(string pname)
+double Module::getParamValueByName(string pname) const
 {
     try {
         return parameters.at(pname);
@@ -155,7 +155,7 @@ void Module::setParamValueByName(string pname, double value){
     }
 }
 
-bool Module::isMessageAllowed(string  m)
+bool Module::isMessageAllowed(string  m) const
 {
     try {
         messagesAllowed.at(m);

@@ -36,6 +36,10 @@ public:
     */
     Socket(std::string name = "SocketName", std::string owner = "SocketOwner");
 
+    /*!
+    * \fn Socket(const Socket&)
+    * \brief Constructeur par copie
+    */
     Socket(const Socket&);
 
     /*!
@@ -45,22 +49,22 @@ public:
     ~Socket();
     
     /*!
-     * \fn void setConnexion(Connexion c)
+     * \fn void setConnexion(Connexion& c)
      * \brief Branche le socket à la connexion c
      */
     void setConnexion(Connexion &c);
     
     /*!
-     * \fn std::string getName()
+     * \fn std::string getName() const
      * \brief Retourne le nom de socket
      */
-    std::string getName();
+    std::string getName() const;
     
     /*!
-     * \fn std::string getOwner()
+     * \fn std::string getOwner() const
      * \brief Retourne le nom de module qui possede ce socket
      */
-    std::string getOwner();
+    std::string getOwner() const;
     
     
     /*!
@@ -74,9 +78,23 @@ public:
      * \brief Envoye
      */
     void send(std::shared_ptr<Message>);
-    
+
+    /*!
+    * \fn virtual void clock(int time);
+    * \brief Traite un message pendans un temps. Si timer est non nul, on attend (timer--) et on ne fait rien. Sinon on transmet le message.
+    */
     virtual void clock(int time);
-    bool hasMessage();
+
+    /*!
+    * \fn bool hasMessage() const
+    * \brief Dit si oui ou non il y a des messages en attente
+    */
+    bool hasMessage() const;
+
+    /*!
+    * \fn std::shared_ptr<Message> getFirstMessage()
+    * \brief Renvoie le premier message en attente
+    */
     std::shared_ptr<Message> getFirstMessage();
     
     /*!

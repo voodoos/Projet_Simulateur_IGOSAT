@@ -29,14 +29,14 @@ public:
     Memory(std::unordered_map<std::string, T>);
     
     /*! 
-     * \fn  unsigned int getSize();
+     * \fn  unsigned int getSize() const
      * \brief Retourne la taille courante de la mémoire
      */
-    unsigned int getSize();
+    unsigned int getSize() const;
     
     /*!
      * \fn  int setValueForKey(std::string key, T value);;
-     * \brief écrit une valeur "value" dans la case mémoire avec un nom "key"
+     * \brief Ecrit une valeur "value" dans la case mémoire avec un nom "key"
      */
     int setValueForKey(std::string, T);
 

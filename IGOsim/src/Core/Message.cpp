@@ -12,11 +12,11 @@ Message::~Message()
     //std::cout << "Message " << name << " est detruit" << std::endl;
 }
 
-std::string Message::getName(){
+std::string Message::getName() const{
     return name;
 }
 
-unsigned int Message::getTransmissionTime(){
+unsigned int Message::getTransmissionTime() const{
     return transmissionTime;
 }
 
