@@ -63,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,7 +85,7 @@ Création d'une nouvelle classe</h1>
 <p>Il faut également au moins redéfinir deux methodes:</p>
 <ol type="1">
 <li>le constructeur MacroModule::MacroModule</li>
-<li>MacroModule::process (qui est héritée de Module::process)</li>
+<li>MacroModule::process (cf Module::process documenté <a class="el" href="docModule.html">ici</a>)</li>
 </ol>
 <p>Notez que le constructeur de votre nouveau module doit appeller le constructeur de base de la classe <a class="el" href="classMacroModule.html">MacroModule</a>:</p>
 <div class="fragment"><div class="line"><a class="code" href="classBatteryModule.html#a2fb494ef5f124c38c0fdf9ccfb31918f">BatteryModule::BatteryModule</a>(std::string name, Params params) : <a class="code" href="classMacroModule.html">MacroModule</a>(name, params, <span class="stringliteral">&quot;BatteryModule/BatteryModule.xml&quot;</span>){</div>
@@ -113,12 +113,12 @@ Ajout d'un sous-module</h3>
 Etablissement des connections entre sous-modules</h3>
 <p>La création de connections entre sous-modules se fait par la méthode <a class="el" href="classMacroModule.html#a6ad4d6abd8bb4b742b800f6fa3c98296" title="Ajoute une connexion � la liste.">MacroModule::addConnexion</a>. Exemple de constructeur <a class="el" href="classBatteryModule.html" title="Un exemple de batterie.">BatteryModule</a> avec établissement des connections entre sous-modules <a class="el" href="classBatteryController.html">BatteryController</a> (en utilisant le <a class="el" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a> "toBatteryController") et <a class="el" href="classBattery.html">Battery</a> (en utilisant le <a class="el" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a> "toBattery"): </p>
 <div class="fragment"><div class="line"><a class="code" href="classBatteryModule.html#a2fb494ef5f124c38c0fdf9ccfb31918f">BatteryModule::BatteryModule</a>(std::string name, Params params) : <a class="code" href="classMacroModule.html">MacroModule</a>(name, params, <span class="stringliteral">&quot;BatteryModule/BatteryModule.xml&quot;</span>){</div>
-<div class="line">     addConnexion(<span class="keyword">new</span> <a class="code" href="classConnexion.html">Connexion</a>(getModuleByName(<span class="stringliteral">&quot;Battery&quot;</span>)-&gt;getSocketByName(<span class="stringliteral">&quot;toBatteryController&quot;</span>), getModuleByName(<span class="stringliteral">&quot;BatteryController&quot;</span>)-&gt;getSocketByName(<span class="stringliteral">&quot;toBattery&quot;</span>)));</div>
+<div class="line">     addConnexion(<span class="keyword">new</span> <a class="code" href="classConnexion.html" title="Cette classe représente les tuyaux qui relient les Socket.">Connexion</a>(getModuleByName(<span class="stringliteral">&quot;Battery&quot;</span>)-&gt;getSocketByName(<span class="stringliteral">&quot;toBatteryController&quot;</span>), getModuleByName(<span class="stringliteral">&quot;BatteryController&quot;</span>)-&gt;getSocketByName(<span class="stringliteral">&quot;toBattery&quot;</span>)));</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Mai 10 2014 02:46:46 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Mai 10 2014 18:35:52 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

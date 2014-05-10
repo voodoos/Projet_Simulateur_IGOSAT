@@ -1,6 +1,15 @@
 \hypertarget{classCLI}{\section{Référence de la classe C\-L\-I}
 \label{classCLI}\index{C\-L\-I@{C\-L\-I}}
 }
+
+
+Implémentation de l'interface en ligne de commande (Command Line Interface) Sorties et entrées via la ligne de commande. Une seule instance possible de celle-\/ci, le pattern singleton a été utilisé.  
+
+
+
+
+{\ttfamily \#include $<$C\-L\-I.\-h$>$}
+
 Graphe d'héritage de C\-L\-I\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,9 +19,12 @@ Graphe d'héritage de C\-L\-I\-:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCLI_a43ec846cf90e311e7867d4315d4e559c}{void {\bfseries logv} (std\-::string, bool with\-Time=true) const }\label{classCLI_a43ec846cf90e311e7867d4315d4e559c}
+\hypertarget{classCLI_a9f59d57abf434f7161fcf3f61b725752}{virtual \hyperlink{classCLI_a9f59d57abf434f7161fcf3f61b725752}{$\sim$\-C\-L\-I} ()}\label{classCLI_a9f59d57abf434f7161fcf3f61b725752}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\hypertarget{classCLI_a844e89b9d79ecf64b1a52cc80fb42663}{void \hyperlink{classCLI_a844e89b9d79ecf64b1a52cc80fb42663}{logv} (std\-::string, bool=true) const }\label{classCLI_a844e89b9d79ecf64b1a52cc80fb42663}
+
+\begin{DoxyCompactList}\small\item\em Affiche le message mess dans la ligne de commande avec ou sans la valeur du timer actuel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques statiques}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,6 +33,9 @@ Graphe d'héritage de C\-L\-I\-:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em Retourne l'instance unique de \hyperlink{classCLI}{C\-L\-I}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Description détaillée}
+Implémentation de l'interface en ligne de commande (Command Line Interface) Sorties et entrées via la ligne de commande. Une seule instance possible de celle-\/ci, le pattern singleton a été utilisé. 
 
 La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
 \item 

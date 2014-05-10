@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,58 +90,74 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">Référence de la classe CLI</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implémentation de l'interface en ligne de commande (Command Line Interface) Sorties et entrées via la ligne de commande. Une seule instance possible de celle-ci, le pattern singleton a été utilisé.  
+ <a href="classCLI.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="CLI_8h_source.html">CLI.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de CLI:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classCLI.png" usemap="#CLI_map" alt=""/>
   <map id="CLI_map" name="CLI_map">
-<area href="classHCI.html" alt="HCI" shape="rect" coords="0,0,33,24"/>
+<area href="classHCI.html" title="Classe d&#39;abstraction pour l&#39;interface utilisateur (Human Computer Interface) Cette interface vise abs..." alt="HCI" shape="rect" coords="0,0,33,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a43ec846cf90e311e7867d4315d4e559c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43ec846cf90e311e7867d4315d4e559c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>logv</b> (std::string, bool withTime=true) const </td></tr>
+<tr class="memitem:a9f59d57abf434f7161fcf3f61b725752"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f59d57abf434f7161fcf3f61b725752"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCLI.html#a9f59d57abf434f7161fcf3f61b725752">~CLI</a> ()</td></tr>
+<tr class="memdesc:a9f59d57abf434f7161fcf3f61b725752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
+<tr class="memitem:a844e89b9d79ecf64b1a52cc80fb42663"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a844e89b9d79ecf64b1a52cc80fb42663"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCLI.html#a844e89b9d79ecf64b1a52cc80fb42663">logv</a> (std::string, bool=true) const </td></tr>
+<tr class="memdesc:a844e89b9d79ecf64b1a52cc80fb42663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le message mess dans la ligne de commande avec ou sans la valeur du timer actuel. <br/></td></tr>
 <tr class="inherit_header pub_methods_classHCI"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classHCI')"><img src="closed.png" alt="-"/>&nbsp;Fonctions membres publiques inherited from <a class="el" href="classHCI.html">HCI</a></td></tr>
 <tr class="memitem:a3cac51013396bb8a130298a04b966856 inherit pub_methods_classHCI"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cac51013396bb8a130298a04b966856"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HCI</b> (logLevel=INFO)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCI.html#a3cac51013396bb8a130298a04b966856">HCI</a> (<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a>=<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2">INFO</a>)</td></tr>
+<tr class="memdesc:a3cac51013396bb8a130298a04b966856 inherit pub_methods_classHCI"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut, le log affiche tout. <br/></td></tr>
+<tr class="memitem:a755b329144a4144f838962bebc752452 inherit pub_methods_classHCI"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a755b329144a4144f838962bebc752452"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCI.html#a755b329144a4144f838962bebc752452">~HCI</a> ()</td></tr>
+<tr class="memdesc:a755b329144a4144f838962bebc752452 inherit pub_methods_classHCI"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur à redéfinir. <br/></td></tr>
 <tr class="memitem:ab30b1bd8e7b5ddb8764128e9da1b3062 inherit pub_methods_classHCI"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab30b1bd8e7b5ddb8764128e9da1b3062"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLogLevel</b> (logLevel)</td></tr>
-<tr class="memitem:a3ba0116597c8a43a7ceac9639150e6c1 inherit pub_methods_classHCI"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ba0116597c8a43a7ceac9639150e6c1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> (logLevel, std::string, bool withTime=true) const </td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCI.html#ab30b1bd8e7b5ddb8764128e9da1b3062">setLogLevel</a> (<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a>)</td></tr>
+<tr class="memdesc:ab30b1bd8e7b5ddb8764128e9da1b3062 inherit pub_methods_classHCI"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change le niveau de log pour ll. <br/></td></tr>
+<tr class="memitem:a23d45789a6c59b9a14a1fdd95c970c30 inherit pub_methods_classHCI"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23d45789a6c59b9a14a1fdd95c970c30"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCI.html#a23d45789a6c59b9a14a1fdd95c970c30">log</a> (<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a>, std::string, bool=true) const </td></tr>
+<tr class="memdesc:a23d45789a6c59b9a14a1fdd95c970c30 inherit pub_methods_classHCI"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demande l'affichagedu message mess, de niveau ll avec ou sans la valeur du timer actuel. <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Fonctions membres publiques statiques</h2></td></tr>
 <tr class="memitem:afb0099de9473ff74480fa40cec78a3ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb0099de9473ff74480fa40cec78a3ac"></a>
 static <a class="el" href="classCLI.html">CLI</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCLI.html#afb0099de9473ff74480fa40cec78a3ac">getInstance</a> ()</td></tr>
-<tr class="memdesc:afb0099de9473ff74480fa40cec78a3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne l'instance unique de <a class="el" href="classCLI.html">CLI</a>. <br/></td></tr>
+<tr class="memdesc:afb0099de9473ff74480fa40cec78a3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne l'instance unique de <a class="el" href="classCLI.html" title="Implémentation de l&#39;interface en ligne de commande (Command Line Interface) Sorties et entrées via la...">CLI</a>. <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classHCI"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classHCI')"><img src="closed.png" alt="-"/>&nbsp;Types publics inherited from <a class="el" href="classHCI.html">HCI</a></td></tr>
-<tr class="memitem:a395f0ab7958108f23c34c7a04b56c4b0 inherit pub_types_classHCI"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>logLevel</b> { <br/>
-&#160;&#160;<b>NOTHING</b> =  -1, 
-<b>ERROR</b> =  0, 
-<b>WARNING</b> =  1, 
-<b>CRITINFO</b> =  2, 
+<tr class="memitem:a395f0ab7958108f23c34c7a04b56c4b0 inherit pub_types_classHCI"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a> { <br/>
+&#160;&#160;<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0aa3b8d1d7f0361b9e659377b2aa6795b3">NOTHING</a> =  -1, 
+<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0acc4f9b9cc095c392851928025f83dbc6">ERROR</a> =  0, 
+<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0ac168191728df302afd8cb6564e8d1a6d">WARNING</a> =  1, 
+<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0a1748594a322cb093ed9324ad91fe2f0f">CRITINFO</a> =  2, 
 <br/>
-&#160;&#160;<b>INFO</b> =  3
+&#160;&#160;<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2">INFO</a> =  3
 <br/>
  }</td></tr>
 <tr class="inherit_header pro_attribs_classHCI"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classHCI')"><img src="closed.png" alt="-"/>&nbsp;Attributs protégés inherited from <a class="el" href="classHCI.html">HCI</a></td></tr>
-<tr class="memitem:ac344060f03fa9aa1809cfecb507a83f9 inherit pro_attribs_classHCI"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac344060f03fa9aa1809cfecb507a83f9"></a>
-logLevel&#160;</td><td class="memItemRight" valign="bottom"><b>logLev</b></td></tr>
+<tr class="memitem:ac344060f03fa9aa1809cfecb507a83f9 inherit pro_attribs_classHCI"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCI.html#ac344060f03fa9aa1809cfecb507a83f9">logLev</a></td></tr>
 </table>
-<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Implémentation de l'interface en ligne de commande (Command Line Interface) Sorties et entrées via la ligne de commande. Une seule instance possible de celle-ci, le pattern singleton a été utilisé. </p>
+</div><hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/Core/<a class="el" href="CLI_8h_source.html">CLI.h</a></li>
 <li>src/Core/CLI.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Mai 10 2014 02:46:47 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Mai 10 2014 18:35:54 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

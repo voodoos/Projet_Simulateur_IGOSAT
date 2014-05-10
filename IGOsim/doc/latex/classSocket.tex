@@ -22,19 +22,19 @@ Graphe d'héritage de Socket\-:\begin{figure}[H]
 \hypertarget{classSocket_a0365662f7a20fa1cc6ef54fd2a659cfc}{{\bfseries Socket} (std\-::string name=\char`\"{}Socket\-Name\char`\"{}, std\-::string owner=\char`\"{}Socket\-Owner\char`\"{})}\label{classSocket_a0365662f7a20fa1cc6ef54fd2a659cfc}
 
 \item 
-\hypertarget{classSocket_a0dd97f1387c3bd8008cb7de47583a985}{{\bfseries Socket} (const \hyperlink{classSocket}{Socket} \&)}\label{classSocket_a0dd97f1387c3bd8008cb7de47583a985}
+\hypertarget{classSocket_a0dd97f1387c3bd8008cb7de47583a985}{\hyperlink{classSocket_a0dd97f1387c3bd8008cb7de47583a985}{Socket} (const \hyperlink{classSocket}{Socket} \&)}\label{classSocket_a0dd97f1387c3bd8008cb7de47583a985}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur par copie. \end{DoxyCompactList}\item 
 \hypertarget{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{\hyperlink{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{$\sim$\-Socket} ()}\label{classSocket_aeac4eb6379a543d38ed88977d3b6630a}
 
 \begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
 \hypertarget{classSocket_a96d104e32d5f376796fb411874954e7d}{void \hyperlink{classSocket_a96d104e32d5f376796fb411874954e7d}{set\-Connexion} (\hyperlink{classConnexion}{Connexion} \&c)}\label{classSocket_a96d104e32d5f376796fb411874954e7d}
 
 \begin{DoxyCompactList}\small\item\em Branche le socket à la connexion c. \end{DoxyCompactList}\item 
-\hypertarget{classSocket_aaefa10006cbf7a7a082e4adc606b3cea}{std\-::string \hyperlink{classSocket_aaefa10006cbf7a7a082e4adc606b3cea}{get\-Name} ()}\label{classSocket_aaefa10006cbf7a7a082e4adc606b3cea}
+\hypertarget{classSocket_ab6f399ca94b2b6a916d7fd812e40e16b}{std\-::string \hyperlink{classSocket_ab6f399ca94b2b6a916d7fd812e40e16b}{get\-Name} () const }\label{classSocket_ab6f399ca94b2b6a916d7fd812e40e16b}
 
 \begin{DoxyCompactList}\small\item\em Retourne le nom de socket. \end{DoxyCompactList}\item 
-\hypertarget{classSocket_a6421574ae64f7b40e7c3f7bbb5cc3cee}{std\-::string \hyperlink{classSocket_a6421574ae64f7b40e7c3f7bbb5cc3cee}{get\-Owner} ()}\label{classSocket_a6421574ae64f7b40e7c3f7bbb5cc3cee}
+\hypertarget{classSocket_a46fb0e8171c4797922081ee03b1a6b38}{std\-::string \hyperlink{classSocket_a46fb0e8171c4797922081ee03b1a6b38}{get\-Owner} () const }\label{classSocket_a46fb0e8171c4797922081ee03b1a6b38}
 
 \begin{DoxyCompactList}\small\item\em Retourne le nom de module qui possede ce socket. \end{DoxyCompactList}\item 
 \hypertarget{classSocket_a9adf799b90c455f3a1f4151adb031fd0}{void \hyperlink{classSocket_a9adf799b90c455f3a1f4151adb031fd0}{receive} (std\-::shared\-\_\-ptr$<$ \hyperlink{classMessage}{Message} $>$)}\label{classSocket_a9adf799b90c455f3a1f4151adb031fd0}
@@ -44,12 +44,12 @@ void \hyperlink{classSocket_a06b687baf9b01f3e399a5ee040ca04e4}{send} (std\-::sha
 \begin{DoxyCompactList}\small\item\em Envoye. \end{DoxyCompactList}\item 
 \hypertarget{classSocket_a6bd5bddfabd838a3388b445c21d3c41e}{virtual void \hyperlink{classSocket_a6bd5bddfabd838a3388b445c21d3c41e}{clock} (int time)}\label{classSocket_a6bd5bddfabd838a3388b445c21d3c41e}
 
-\begin{DoxyCompactList}\small\item\em Methode appellé à chaque tick d'horloge liée. \end{DoxyCompactList}\item 
-\hypertarget{classSocket_afe7c9b2ef7fb3653b14f5f462293549a}{bool {\bfseries has\-Message} ()}\label{classSocket_afe7c9b2ef7fb3653b14f5f462293549a}
+\begin{DoxyCompactList}\small\item\em Traite un message pendans un temps. Si timer est non nul, on attend (timer--) et on ne fait rien. Sinon on transmet le message. \end{DoxyCompactList}\item 
+\hypertarget{classSocket_a2f8e56f35ae03fa8dd0593814d2f1fa4}{bool \hyperlink{classSocket_a2f8e56f35ae03fa8dd0593814d2f1fa4}{has\-Message} () const }\label{classSocket_a2f8e56f35ae03fa8dd0593814d2f1fa4}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Dit si oui ou non il y a des messages en attente. \end{DoxyCompactList}\item 
 std\-::shared\-\_\-ptr$<$ \hyperlink{classMessage}{Message} $>$ \hyperlink{classSocket_a71e162a0ca00b1a46fe23eaccb09f76d}{get\-First\-Message} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Renvoie le premier message en attente. \end{DoxyCompactList}\item 
 \hypertarget{classSocket_aa890633022a29b56ed3844684d32e0fc}{int \hyperlink{classSocket_aa890633022a29b56ed3844684d32e0fc}{get\-Timer} () const }\label{classSocket_aa890633022a29b56ed3844684d32e0fc}
 
 \begin{DoxyCompactList}\small\item\em Renvoie la valeur de timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -72,6 +72,10 @@ Les sockets modélisent les connections entre les modules. Un connecteur peut-\/
 {}
 \end{DoxyParamCaption}
 )}}\label{classSocket_a71e162a0ca00b1a46fe23eaccb09f76d}
+
+
+Renvoie le premier message en attente. 
+
 \begin{DoxyRefDesc}{A faire}
 \item[\hyperlink{todo__todo000010}{A faire}]Lever une exception \end{DoxyRefDesc}
 \hypertarget{classSocket_a06b687baf9b01f3e399a5ee040ca04e4}{\index{Socket@{Socket}!send@{send}}

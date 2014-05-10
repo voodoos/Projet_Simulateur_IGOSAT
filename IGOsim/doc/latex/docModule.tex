@@ -29,7 +29,7 @@ Les arguments de ce constructeur de base sont les suivants\-:
 \item \char`\"{}\-Battery\-Module/\-Battery\-Controller.\-xml\char`\"{}\-: le chemin vers un fichier {\ttfamily .xml} qui contient la descripton des paramètres d'un module et la description des messages qui peuvent être traités par ce module.
 \end{DoxyEnumerate}
 
-D'autre part, process est la méthode qui traite des messages compris par ce module. La sélection d'un message peut être réalisée à l'aide d'un classique {\ttfamily if then else} qui verifie le nom d'un message en utilisant la methode \hyperlink{classMessage_ac03b02000572b0852c574498bf138e87}{Message\-::get\-Name()}. Par exemple, le traitement des messages \char`\"{}get\-Status\char`\"{} et \char`\"{}actual\-Voltage\char`\"{} du \hyperlink{classModule}{Module} \char`\"{}\-Battery\-Controller\char`\"{} peut être implementé de la façon suivante\-:
+D'autre part, process est la méthode qui traite des messages compris par ce module. La sélection d'un message peut être réalisée à l'aide d'un classique {\ttfamily if then else} qui verifie le nom d'un message en utilisant la methode \hyperlink{classMessage_a9134dbb49e75c4a4b8862afca70a78b9}{Message\-::get\-Name()}. Par exemple, le traitement des messages \char`\"{}get\-Status\char`\"{} et \char`\"{}actual\-Voltage\char`\"{} du \hyperlink{classModule}{Module} \char`\"{}\-Battery\-Controller\char`\"{} peut être implementé de la façon suivante\-:
 
 
 \begin{DoxyCode}

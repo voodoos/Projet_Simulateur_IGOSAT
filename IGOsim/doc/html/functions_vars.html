@@ -71,6 +71,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="functions.html"><span>Tout</span></a></li>
       <li><a href="functions_func.html"><span>Fonctions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Énumérations</span></a></li>
+      <li><a href="functions_eval.html"><span>Valeurs&#160;énumérées</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -79,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,11 +95,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>confPath
 : <a class="el" href="classModule.html#a5c7481c5ac746e01b225b6782e915dac">Module</a>
 </li>
+<li>logLev
+: <a class="el" href="classHCI.html#ac344060f03fa9aa1809cfecb507a83f9">HCI</a>
+</li>
 <li>memory
 : <a class="el" href="classModule.html#a48fa02fe55d33daffff725c615a63bb9">Module</a>
 </li>
 <li>messagesAllowed
 : <a class="el" href="classModule.html#aaadd1f971bebf7bb5eae12fcc5689198">Module</a>
+</li>
+<li>module
+: <a class="el" href="classPhysics.html#a059d7b72c91f5964fc3e3f3d5a189e9d">Physics</a>
 </li>
 <li>name
 : <a class="el" href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">Message</a>
@@ -122,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Mai 10 2014 02:46:48 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Mai 10 2014 18:35:56 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

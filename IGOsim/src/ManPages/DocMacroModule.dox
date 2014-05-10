@@ -9,7 +9,7 @@ Par exemple pour créer le macro-module **BatteryModule**:
 
 Il faut également au moins redéfinir deux methodes:
 -# le constructeur MacroModule::MacroModule
--# MacroModule::process (qui est héritée de Module::process)
+-# MacroModule::process (cf Module::process documenté \ref docModule "ici")
 
 Notez que le constructeur de votre nouveau module doit appeller le constructeur de base de la classe MacroModule:
 
