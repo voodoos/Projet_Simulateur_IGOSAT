@@ -1,5 +1,12 @@
 ﻿#pragma once
 #include "HCI.h"
+
+
+/*!
+* \class CLI
+* \brief Implémentation de l'interface en ligne de commande (Command Line Interface)
+* Sorties et entrées via la ligne de commande. Une seule instance possible de celle-ci, le pattern singleton a été utilisé.
+*/
 class CLI :
     public HCI
 {
@@ -13,14 +20,23 @@ public:
         static CLI instance;
         return instance;
     }
+
+    /*!
+    * \fn virtual ~CLI()
+    * \brief Destructeur
+    */
     virtual ~CLI();
 
-    void logv(std::string, bool withTime = true) const;
+    /*!
+    * \fn logv(std::string mess, bool withTime = true) const
+    * \brief Affiche le message mess dans la ligne de commande avec ou sans la valeur du timer actuel.
+    */
+    void logv(std::string, bool = true) const;
 
 
 private:
     CLI(logLevel ll = INFO) {};
-    CLI(CLI const&);              /*!< À ne pas implementer */
-    void operator=(CLI const&);     /*!< À ne pas implementer */
+    CLI(CLI const&);                /*!< À ne pas implémenter, nécessaire au pattern singleton */
+    void operator=(CLI const&);     /*!< À ne pas implémenter, nécessaire au pattern singleton */
 };
 
