@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>IGOsat Simulator:  Fichier source de src/Core/Timer.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.1.2 -->
+<!-- Généré par Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -94,9 +95,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;ISynchronized.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span><a class="code" href="classPhysics.html" title="Classe abstraite pour décrire les différentes actions de l&#39;environnement sur les modules.">Physics</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span><a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classTimer.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTimer.html" title="Cette classe sert à la gestion du temps simulé">Timer</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span><a class="code" href="classPhysics.html">Physics</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span><a class="code" href="classModule.html">Module</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classTimer.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTimer.html">Timer</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
@@ -104,35 +105,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::vector&lt;Physics *&gt; synchronizedPhysics; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> counter;                             </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classTimer.html#a8357f90f20707f9693fc713319de923a">   32</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classTimer.html" title="Cette classe sert à la gestion du temps simulé">Timer</a>&amp; <a class="code" href="classTimer.html#a8357f90f20707f9693fc713319de923a" title="Retourne l&#39;instance unique de Timer.">getInstance</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classTimer.html#a8357f90f20707f9693fc713319de923a">   32</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classTimer.html">Timer</a>&amp; <a class="code" href="classTimer.html#a8357f90f20707f9693fc713319de923a">getInstance</a>()</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">static</span> <a class="code" href="classTimer.html" title="Cette classe sert à la gestion du temps simulé">Timer</a> instance;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">static</span> <a class="code" href="classTimer.html">Timer</a> instance;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> instance;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#aeae0c417d77a86462b51da0615eab8b4" title="Ajouter le pointeur au module dans le tableau des modules synchronisés.">add</a>(<a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a> *);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#aeae0c417d77a86462b51da0615eab8b4">add</a>(<a class="code" href="classModule.html">Module</a> *);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#aeae0c417d77a86462b51da0615eab8b4" title="Ajouter le pointeur au module dans le tableau des modules synchronisés.">add</a>(<a class="code" href="classPhysics.html" title="Classe abstraite pour décrire les différentes actions de l&#39;environnement sur les modules.">Physics</a> *);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#aeae0c417d77a86462b51da0615eab8b4">add</a>(<a class="code" href="classPhysics.html">Physics</a> *);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#a62869fa83e1b76a9ebfe9cca7e56733d" title="Lancer le Timer.">start</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> c = 100);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#a62869fa83e1b76a9ebfe9cca7e56733d">start</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> c = 100);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#a63f0eb44b27402196590a03781515dba" title="Arreter le Timer.">stop</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#a63f0eb44b27402196590a03781515dba">stop</a>();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classTimer.html#a03ffd75bbb89ff1644839523af9fda03" title="Retourne la valeur de compteur.">getCounter</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classTimer.html#a03ffd75bbb89ff1644839523af9fda03">getCounter</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#a7394d4c4edb4d951dbe2c7e1ab2fb7ae" title="Mettre la valeur c dans le compteur.">setCounter</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#a7394d4c4edb4d951dbe2c7e1ab2fb7ae">setCounter</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classTimer.html" title="Cette classe sert à la gestion du temps simulé">Timer</a>() {};</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classTimer.html" title="Cette classe sert à la gestion du temps simulé">Timer</a>(<a class="code" href="classTimer.html" title="Cette classe sert à la gestion du temps simulé">Timer</a> <span class="keyword">const</span>&amp;);              </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> operator=(<a class="code" href="classTimer.html" title="Cette classe sert à la gestion du temps simulé">Timer</a> <span class="keyword">const</span>&amp;);     </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classTimer.html">Timer</a>() {};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classTimer.html">Timer</a>(<a class="code" href="classTimer.html">Timer</a> <span class="keyword">const</span>&amp;);              </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> operator=(<a class="code" href="classTimer.html">Timer</a> <span class="keyword">const</span>&amp;);     </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="ttc" id="classPhysics_html"><div class="ttname"><a href="classPhysics.html">Physics</a></div><div class="ttdoc">Classe abstraite pour décrire les différentes actions de l&#39;environnement sur les modules. </div><div class="ttdef"><b>Definition:</b> Physics.h:15</div></div>
+<div class="ttc" id="classModule_html"><div class="ttname"><a href="classModule.html">Module</a></div><div class="ttdoc">Les briques de base du simulateur. </div><div class="ttdef"><b>Definition:</b> Module.h:52</div></div>
+<div class="ttc" id="classTimer_html_a7394d4c4edb4d951dbe2c7e1ab2fb7ae"><div class="ttname"><a href="classTimer.html#a7394d4c4edb4d951dbe2c7e1ab2fb7ae">Timer::setCounter</a></div><div class="ttdeci">void setCounter(unsigned int)</div><div class="ttdoc">Mettre la valeur c dans le compteur. </div></div>
+<div class="ttc" id="classTimer_html_a8357f90f20707f9693fc713319de923a"><div class="ttname"><a href="classTimer.html#a8357f90f20707f9693fc713319de923a">Timer::getInstance</a></div><div class="ttdeci">static Timer &amp; getInstance()</div><div class="ttdoc">Retourne l&#39;instance unique de Timer. </div><div class="ttdef"><b>Definition:</b> Timer.h:32</div></div>
+<div class="ttc" id="classTimer_html"><div class="ttname"><a href="classTimer.html">Timer</a></div><div class="ttdoc">Cette classe sert à la gestion du temps simulé </div><div class="ttdef"><b>Definition:</b> Timer.h:19</div></div>
+<div class="ttc" id="classTimer_html_a03ffd75bbb89ff1644839523af9fda03"><div class="ttname"><a href="classTimer.html#a03ffd75bbb89ff1644839523af9fda03">Timer::getCounter</a></div><div class="ttdeci">unsigned int getCounter() const </div><div class="ttdoc">Retourne la valeur de compteur. </div><div class="ttdef"><b>Definition:</b> Timer.cpp:36</div></div>
+<div class="ttc" id="classTimer_html_a63f0eb44b27402196590a03781515dba"><div class="ttname"><a href="classTimer.html#a63f0eb44b27402196590a03781515dba">Timer::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Arreter le Timer. </div><div class="ttdef"><b>Definition:</b> Timer.cpp:31</div></div>
+<div class="ttc" id="classTimer_html_a62869fa83e1b76a9ebfe9cca7e56733d"><div class="ttname"><a href="classTimer.html#a62869fa83e1b76a9ebfe9cca7e56733d">Timer::start</a></div><div class="ttdeci">void start(unsigned int c=100)</div><div class="ttdoc">Lancer le Timer. </div><div class="ttdef"><b>Definition:</b> Timer.cpp:16</div></div>
+<div class="ttc" id="classTimer_html_aeae0c417d77a86462b51da0615eab8b4"><div class="ttname"><a href="classTimer.html#aeae0c417d77a86462b51da0615eab8b4">Timer::add</a></div><div class="ttdeci">void add(Module *)</div><div class="ttdoc">Ajouter le pointeur au module dans le tableau des modules synchronisés. </div><div class="ttdef"><b>Definition:</b> Timer.cpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Mai 10 2014 02:46:46 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche 11 Mai 2014 03:12:37 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.6
 </small></address>
 </body>
 </html>

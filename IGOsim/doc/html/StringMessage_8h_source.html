@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>IGOsat Simulator:  Fichier source de src/Core/Messages/StringMessage.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.1.2 -->
+<!-- Généré par Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -92,22 +93,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Message.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="classStringMessage.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStringMessage.html" title="Classe de messages contenant une suite des caractères comme le payload.">StringMessage</a>: <span class="keyword">public</span> <a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classStringMessage.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStringMessage.html">StringMessage</a>: <span class="keyword">public</span> <a class="code" href="classMessage.html">Message</a>{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    std::string payload;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classStringMessage.html" title="Classe de messages contenant une suite des caractères comme le payload.">StringMessage</a>(std::string <a class="code" href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">name</a>, std::string payload, <span class="keywordtype">int</span> time=0);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classStringMessage.html">StringMessage</a>(std::string <a class="code" href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">name</a>, std::string payload, <span class="keywordtype">int</span> time=0);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::string <a class="code" href="classStringMessage.html#a5c8be5fb2d2d9e78be4e1fc303624610" title="Renvoie la charge utile du message.">getPayload</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::string <a class="code" href="classStringMessage.html#a5c8be5fb2d2d9e78be4e1fc303624610">getPayload</a>();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::ostream&amp; <a class="code" href="classStringMessage.html#a0071398acab934eb263ca6892ea76a4c" title="Operateur de sortie surchargé">operator&lt;&lt;</a>(std::ostream &amp;os);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::ostream&amp; <a class="code" href="classStringMessage.html#a0071398acab934eb263ca6892ea76a4c">operator&lt;&lt;</a>(std::ostream &amp;os);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="ttc" id="classStringMessage_html_a0071398acab934eb263ca6892ea76a4c"><div class="ttname"><a href="classStringMessage.html#a0071398acab934eb263ca6892ea76a4c">StringMessage::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os)</div><div class="ttdoc">Operateur de sortie surchargé </div><div class="ttdef"><b>Definition:</b> StringMessage.cpp:12</div></div>
+<div class="ttc" id="classMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">Classe abstraite de base pour les messages. </div><div class="ttdef"><b>Definition:</b> Message.h:15</div></div>
+<div class="ttc" id="classStringMessage_html"><div class="ttname"><a href="classStringMessage.html">StringMessage</a></div><div class="ttdoc">Classe de messages contenant une suite des caractères comme le payload. </div><div class="ttdef"><b>Definition:</b> StringMessage.h:10</div></div>
+<div class="ttc" id="classMessage_html_ac7adddb666acdc47c48f684bd6810a51"><div class="ttname"><a href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">Message::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> Message.h:18</div></div>
+<div class="ttc" id="classStringMessage_html_a5c8be5fb2d2d9e78be4e1fc303624610"><div class="ttname"><a href="classStringMessage.html#a5c8be5fb2d2d9e78be4e1fc303624610">StringMessage::getPayload</a></div><div class="ttdeci">std::string getPayload()</div><div class="ttdoc">Renvoie la charge utile du message. </div><div class="ttdef"><b>Definition:</b> StringMessage.cpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Mai 10 2014 02:46:46 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche 11 Mai 2014 03:12:37 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.6
 </small></address>
 </body>
 </html>

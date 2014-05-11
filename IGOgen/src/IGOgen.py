@@ -37,8 +37,14 @@ def addMessage():
 	messages.append(m);
 
 def generateXML():
+	dir = os.path.dirname("./"+xmlPath)
+	print dir
+	try:
+		os.stat(dir)
+	except:
+		os.makedirs(dir)
 
-	xmlFile = open(xmlPath, "w")
+	xmlFile = open("./"+xmlPath, "w")
 
 	#Creation XML
 

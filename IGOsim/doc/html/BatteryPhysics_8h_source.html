@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>IGOsat Simulator:  Fichier source de src/BatteryModule/BatteryPhysics.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.1.2 -->
+<!-- Généré par Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -87,28 +88,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">BatteryPhysics.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿#pragma once</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Physics.h&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;Physics.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="classBattery.html">Battery</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="classBatteryPhysics.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBatteryPhysics.html">BatteryPhysics</a> :</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span> <a class="code" href="classPhysics.html" title="Classe abstraite pour décrire les différentes actions de l&#39;environnement sur les modules.">Physics</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classBatteryPhysics.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBatteryPhysics.html">BatteryPhysics</a> :</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span> <a class="code" href="classPhysics.html">Physics</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classBatteryPhysics.html">BatteryPhysics</a>(std::shared_ptr&lt;Module&gt;);</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classBatteryPhysics.html">BatteryPhysics</a>();</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBatteryPhysics.html#a3651cc1fbb0d314a03d25af655804acc" title="Méthode appellée à chaque pas de temps.">clock</a>(<span class="keywordtype">int</span> t);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBatteryPhysics.html#a3651cc1fbb0d314a03d25af655804acc">clock</a>(<span class="keywordtype">int</span> t);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="ttc" id="classBatteryPhysics_html_a3651cc1fbb0d314a03d25af655804acc"><div class="ttname"><a href="classBatteryPhysics.html#a3651cc1fbb0d314a03d25af655804acc">BatteryPhysics::clock</a></div><div class="ttdeci">void clock(int t)</div><div class="ttdoc">Méthode appellée à chaque pas de temps. </div><div class="ttdef"><b>Definition:</b> BatteryPhysics.cpp:17</div></div>
+<div class="ttc" id="classBatteryPhysics_html"><div class="ttname"><a href="classBatteryPhysics.html">BatteryPhysics</a></div><div class="ttdef"><b>Definition:</b> BatteryPhysics.h:7</div></div>
+<div class="ttc" id="classPhysics_html"><div class="ttname"><a href="classPhysics.html">Physics</a></div><div class="ttdoc">Classe abstraite pour décrire les différentes actions de l&#39;environnement sur les modules. </div><div class="ttdef"><b>Definition:</b> Physics.h:15</div></div>
+<div class="ttc" id="classBattery_html"><div class="ttname"><a href="classBattery.html">Battery</a></div><div class="ttdef"><b>Definition:</b> Battery.h:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Mai 10 2014 02:46:46 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche 11 Mai 2014 03:12:37 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.6
 </small></address>
 </body>
 </html>

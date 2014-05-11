@@ -15,8 +15,8 @@ Le constructeur d'un nouveau module doit utiliser le constructeur de base de cla
 
 
 \begin{DoxyCode}
-BatteryController::BatteryController(Params params) : \hyperlink{classModule}{Module}(\textcolor{stringliteral}{"
-      BatteryController"}, params, \textcolor{stringliteral}{"BatteryModule/BatteryController.xml"})\{
+BatteryController::BatteryController(Params params) : \hyperlink{classModule}{Module}(\textcolor{stringliteral}{"BatteryController"}, params, \textcolor{stringliteral}{"
+      BatteryModule/BatteryController.xml"})\{
     \textcolor{comment}{/* ce qu'il faut faire pendant la création d'un module */}
 \}
 \end{DoxyCode}
@@ -73,8 +73,8 @@ Les \hyperlink{classSocket}{Socket} sont des points de branchement qui permetten
 \item Par fichier.\-xml(voir la \hyperlink{xmlRef}{section correspondante})
 \item Par utilisation de la méthode \hyperlink{classModule_aeb7302c667eb923a4dc25ae235c744dc}{Module\-::add\-Socket} dans le constructeur de classe\-: 
 \begin{DoxyCode}
-\hyperlink{classBatteryModule_a2fb494ef5f124c38c0fdf9ccfb31918f}{BatteryModule::BatteryModule}(std::string name, 
-      Params params) : \hyperlink{classMacroModule}{MacroModule}(name, params)\{
+\hyperlink{classBatteryModule_a2fb494ef5f124c38c0fdf9ccfb31918f}{BatteryModule::BatteryModule}(std::string name, Params params) : 
+      \hyperlink{classMacroModule}{MacroModule}(name, params)\{
     \textcolor{comment}{//Les connecteurs du macromodule:}
     addSocket(\hyperlink{classSocket}{Socket}(\textcolor{stringliteral}{"fromExt"}));
     addSocket(\hyperlink{classSocket}{Socket}(\textcolor{stringliteral}{"toScao"}));
@@ -90,8 +90,7 @@ Le \hyperlink{classMessage}{Message} est l'unité d'information qui peut être t
 
 
 \begin{DoxyCode}
-BatteryController::BatteryController(Params params) : \hyperlink{classModule}{Module}(\textcolor{stringliteral}{"Battery
-       Controller"}, params)\{
+BatteryController::BatteryController(Params params) : \hyperlink{classModule}{Module}(\textcolor{stringliteral}{"Battery Controller"}, params)\{
     \textcolor{comment}{//Les messages compris par le controlleur:}
     addMessage(\textcolor{stringliteral}{"getStatus"}, 5);
     addMessage(\textcolor{stringliteral}{"getStatus"}, 5);
