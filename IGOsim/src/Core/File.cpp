@@ -1,4 +1,4 @@
-#include "File.h"
+ï»¿#include "File.h"
 #include "Timer.h"
 
 #include <sstream>
@@ -34,7 +34,7 @@ void File::logv(string mess, bool withTime) const {
 
 
 void File::addData(double data, int i) {
-    //On ajoute la donnée dans le tableau:
+    //On ajoute la donnÃ©e dans le tableau:
     dataBuff.resize(i+1, nan("NaN"));
     dataBuff[i] = data;
 
@@ -45,14 +45,14 @@ void File::clock(int t) {
         stringstream ss;
         ss << Timer::getInstance().getCounter() << " ";
         //On parcours le vecteur pour construire la ligne
-        // TODO: Sûrement une exception à gérer...
+        // TODO: SÃ»rement une exception Ã  gÃ©rer...
         for (int i = 0; i < dataBuff.size(); i++) {
             if (!isnan(dataBuff[i]))
                 ss << dataBuff[i] << " ";
             else ss << "NaN ";
         }
 
-        //On écrit la ligne:
+        //On Ã©crit la ligne:
         printStr(ss.str());
 
         //On efface le buffer:

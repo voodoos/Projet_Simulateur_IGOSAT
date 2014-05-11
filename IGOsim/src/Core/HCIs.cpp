@@ -1,4 +1,4 @@
-#include "HCIs.h"
+ï»¿#include "HCIs.h"
 
 #include "CLI.h"
 #include "File.h"
@@ -22,7 +22,7 @@ void HCIs::setLog(string file, HCI::logLevel ll)
 }
 
 void HCIs::log(HCI::logLevel ll, std::string mess, bool withTime) {
-    //Si aucun logger configuré, ligne de commande par défaut:
+    //Si aucun logger configurÃ©, ligne de commande par dÃ©faut:
     if (!loggerSet) setLog();
 
     //On log:
