@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,25 +83,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Memory&lt; T &gt; Liste des membres</div>  </div>
+<div class="title">HCIs Liste des membres</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Liste complète des membres de <a class="el" href="classMemory.html">Memory&lt; T &gt;</a>, y compris les membres hérités :</p>
+<p>Liste complète des membres de <a class="el" href="classHCIs.html">HCIs</a>, y compris les membres hérités :</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classMemory.html#add46d3ed56cf1e88efee2ed59b38c995">getSize</a>()</td><td class="entry"><a class="el" href="classMemory.html">Memory&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMemory.html#aa546b7c6e170e45a4e4f74492d8fe8bf">Memory</a>()</td><td class="entry"><a class="el" href="classMemory.html">Memory&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMemory.html#af1e6452dbe3bb1650604140814710b95">Memory</a>(std::unordered_map&lt; std::string, T &gt;)</td><td class="entry"><a class="el" href="classMemory.html">Memory&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMemory.html#a3514e7594615bb1748ba5b57259c9eca">setValueForKey</a>(std::string, T)</td><td class="entry"><a class="el" href="classMemory.html">Memory&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMemory.html#a2d153fdede89954dc0875ab6c8d804c3">~Memory</a>()</td><td class="entry"><a class="el" href="classMemory.html">Memory&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classHCIs.html#afeb0ee7efd2c14dfded566aacb9dc615">addDataOutput</a>(std::string, std::string)</td><td class="entry"><a class="el" href="classHCIs.html">HCIs</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classHCIs.html#a15b2703edaaf748e452e9d4df4262465">getDataOutput</a>(std::string)</td><td class="entry"><a class="el" href="classHCIs.html">HCIs</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classHCIs.html#ae18a8eafd21d1490bf59e395a278a0c6">getInstance</a>()</td><td class="entry"><a class="el" href="classHCIs.html">HCIs</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classHCIs.html#a29a701816f31e573013052410beb6a82">log</a>(HCI::logLevel, std::string, bool withTime=true)</td><td class="entry"><a class="el" href="classHCIs.html">HCIs</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>setLog</b>(HCI::logLevel=HCI::INFO) (défini dans <a class="el" href="classHCIs.html">HCIs</a>)</td><td class="entry"><a class="el" href="classHCIs.html">HCIs</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setLog</b>(std::string, HCI::logLevel=HCI::INFO) (défini dans <a class="el" href="classHCIs.html">HCIs</a>)</td><td class="entry"><a class="el" href="classHCIs.html">HCIs</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classHCIs.html#a63d976a06cf358efc31a2692b54a2d45">~HCIs</a>()</td><td class="entry"><a class="el" href="classHCIs.html">HCIs</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-<<<<<<< HEAD
-Généré le Jeudi Mai 15 2014 15:39:26 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
-=======
 Généré le Dimanche Mai 11 2014 20:22:45 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
->>>>>>> 2f52cb5... To UTF8 and beyond again !
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
