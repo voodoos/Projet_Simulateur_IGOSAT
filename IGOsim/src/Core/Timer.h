@@ -14,6 +14,7 @@
 *
 */
 
+class File;
 class Physics;
 class Module;
 class Timer
@@ -22,6 +23,7 @@ private:
 
     std::vector<Module *> synchronizedModules; /*!< Les modules synchronisés avec Timer */
     std::vector<Physics *> synchronizedPhysics; /*!< Les modules physiques synchronisés */
+    std::vector<File *> synchronizedFiles; /*!< Les fichiers synchronisés */
     unsigned int counter;                             /*!< Le temps actuel */
 
 public:
@@ -37,15 +39,21 @@ public:
     
     /*!
      * \fn void add(Module *m)
-     * \brief Ajouter le pointeur au module dans le tableau des modules synchronisés
+     * \brief Ajouter le pointeur du module dans le tableau des modules synchronisés
      */
     void add(Module *);
 
     /*!
     * \fn void add(Physics *m)
-    * \brief Ajouter le pointeur au module dans le tableau des modules synchronisés
+    * \brief Ajouter le pointeur du module physique dans le tableau des modules synchronisés
     */
     void add(Physics *);
+
+    /*!
+    * \fn void add(File *m)
+    * \brief Ajouter un fichier synchronisé
+    */
+    void add(File *f);
     
     /*!
      * \fn void start(unsigned int);
