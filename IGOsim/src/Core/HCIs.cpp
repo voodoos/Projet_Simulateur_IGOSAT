@@ -29,6 +29,14 @@ void HCIs::log(HCI::logLevel ll, std::string mess, bool withTime) {
     logger->log(ll, mess, withTime);
 }
 
+void HCIs::addDataOutput(string name, string file) {
+    dataOutputs[name] = new File(file);
+}
+
+File* HCIs::getDataOutput(string name) {
+    return dataOutputs[name];
+}
+
 HCIs::~HCIs()
 {
     delete(logger);

@@ -16,11 +16,11 @@ class HCIs
 private:
     bool loggerSet;                     /*!< Logger configuré ou non */
     HCI* logger;                        /*!< Logger a utiliser */
-    std::unordered_map<std::string, File*> files;    /*!< Fichiers de données */
+    std::unordered_map<std::string, File*> dataOutputs;    /*!< Fichiers de données */
 public:
     /*!
-    * \fn static Timer& getInstance()
-    * \brief Retourne l'instance unique de Timer
+    * \fn static HCIs& getInstance()
+    * \brief Retourne l'instance unique de HCIs
     */
     static HCIs& getInstance()
     {
@@ -45,6 +45,20 @@ public:
     * \brief Utilise le logger configuré pour logger le message. Si aucun logger n'est configuré, command line par défaut.
     */
     void log(HCI::logLevel, std::string, bool withTime = true);
+
+    /*!
+    * \fn void addDataOutput(std::string, std::string)
+    * \brief Ajout une nouvelle sortie de données (pour le moment que des fichiers).
+    * \todo Abstraire et prévoir d'autres sorties que dans fichiers ?
+    */
+    void addDataOutput(std::string, std::string);
+
+    /*!
+    * \fn File* HCIs::getDataOutput(std::string)
+    * \brief Donne un pointeur vers la sortie de données demandée.
+    * \todo Exception....
+    */
+    File* getDataOutput(std::string);
 
     /*!
     * \fn ~HCIs()

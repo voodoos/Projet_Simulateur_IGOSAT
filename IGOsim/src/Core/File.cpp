@@ -35,7 +35,9 @@ void File::logv(string mess, bool withTime) const {
 
 void File::addData(double data, int i) {
     //On ajoute la donnée dans le tableau:
+    dataBuff.resize(i+1, nan("NaN"));
     dataBuff[i] = data;
+
 }
 
 void File::clock(int t) {
@@ -45,11 +47,16 @@ void File::clock(int t) {
         //On parcours le vecteur pour construire la ligne
         // TODO: Sûrement une exception à gérer...
         for (int i = 0; i < dataBuff.size(); i++) {
-            ss << dataBuff[i] << " ";
+            if (!isnan(dataBuff[i]))
+                ss << dataBuff[i] << " ";
+            else ss << "NaN ";
         }
 
         //On écrit la ligne:
         printStr(ss.str());
+
+        //On efface le buffer:
+        dataBuff.clear();
     }
 }
 
