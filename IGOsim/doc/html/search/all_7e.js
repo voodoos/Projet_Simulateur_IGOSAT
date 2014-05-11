@@ -3,6 +3,7 @@ var searchData=
   ['_7ecli',['~CLI',['../classCLI.html#a9f59d57abf434f7161fcf3f61b725752',1,'CLI']]],
   ['_7econnexion',['~Connexion',['../classConnexion.html#a6afee761c33e160c2be5e9e2713968e3',1,'Connexion']]],
   ['_7ehci',['~HCI',['../classHCI.html#a755b329144a4144f838962bebc752452',1,'HCI']]],
+  ['_7ehcis',['~HCIs',['../classHCIs.html#a63d976a06cf358efc31a2692b54a2d45',1,'HCIs']]],
   ['_7emacromodule',['~MacroModule',['../classMacroModule.html#a9790fb7c331d99dd03f624b1a5258519',1,'MacroModule']]],
   ['_7ememory',['~Memory',['../classMemory.html#a2d153fdede89954dc0875ab6c8d804c3',1,'Memory']]],
   ['_7emessage',['~Message',['../classMessage.html#a3f7275462831f787a861271687bcad67',1,'Message']]],

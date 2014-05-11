@@ -1,0 +1,45 @@
+\hypertarget{classFile}{\section{RÃ©fÃ©rence de la classe File}
+\label{classFile}\index{File@{File}}
+}
+
+
+Implémentation de l'interface via fichier Sorties et entrées dans un fichier.  
+
+
+
+
+{\ttfamily \#include $<$File.\-h$>$}
+
+Graphe d'hÃ©ritage de File\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFile}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classFile_a85a14bb04d115aaa8e9b8be4069d98ee}{\hyperlink{classFile_a85a14bb04d115aaa8e9b8be4069d98ee}{File} (std\-::string path, \hyperlink{classHCI_a395f0ab7958108f23c34c7a04b56c4b0}{log\-Level}=\hyperlink{classHCI_a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2}{I\-N\-F\-O})}\label{classFile_a85a14bb04d115aaa8e9b8be4069d98ee}
+
+\begin{DoxyCompactList}\small\item\em Ouvre le fichier indiqué, le créé si nécessaire. L'option loglevel ne sert qu'en cas de fichier de log et non de données. \end{DoxyCompactList}\item 
+\hypertarget{classFile_a72baa06dce43c7cbd82d25d357e4fa39}{void \hyperlink{classFile_a72baa06dce43c7cbd82d25d357e4fa39}{logv} (std\-::string, bool=true) const }\label{classFile_a72baa06dce43c7cbd82d25d357e4fa39}
+
+\begin{DoxyCompactList}\small\item\em Affiche le message mess dans le fichier avec ou sans la valeur du timer actuel. \end{DoxyCompactList}\item 
+\hypertarget{classFile_af80e9bf2fc24cd658b1849f0436f116c}{void \hyperlink{classFile_af80e9bf2fc24cd658b1849f0436f116c}{add\-Data} (double, int)}\label{classFile_af80e9bf2fc24cd658b1849f0436f116c}
+
+\begin{DoxyCompactList}\small\item\em Ajout une valeur à la ligne, dans la colonne indiquée par le deuxième argument. \end{DoxyCompactList}\item 
+\hypertarget{classFile_a0d228ae6ae9649a792092cf48625ccdf}{virtual void \hyperlink{classFile_a0d228ae6ae9649a792092cf48625ccdf}{clock} (int)}\label{classFile_a0d228ae6ae9649a792092cf48625ccdf}
+
+\begin{DoxyCompactList}\small\item\em Méthode appellée à chaque pas de temps pour écrire dans le fichier les données placées dans le buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Description dÃ©taillÃ©e}
+Implémentation de l'interface via fichier Sorties et entrées dans un fichier. 
+
+Les fichiers sont synchronisés avec le timer pour sortir les données à la fin de chaque tick. Ce mécanisme permet d'afficher plusieurs colonnes de données dans un même fichier provenant de différents modules. 
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \-:\begin{DoxyCompactItemize}
+\item 
+src/\-Core/File.\-h\item 
+src/\-Core/File.\-cpp\end{DoxyCompactItemize}

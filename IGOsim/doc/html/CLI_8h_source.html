@@ -95,27 +95,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span> <a class="code" href="classHCI.html" title="Classe d&#39;abstraction pour l&#39;interface utilisateur (Human Computer Interface) Cette interface vise abs...">HCI</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classCLI.html#afb0099de9473ff74480fa40cec78a3ac">   18</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classCLI.html" title="Implémentation de l&#39;interface en ligne de commande (Command Line Interface) Sorties et entrées via la...">CLI</a>&amp; <a class="code" href="classCLI.html#afb0099de9473ff74480fa40cec78a3ac" title="Retourne l&#39;instance unique de CLI.">getInstance</a>()</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">static</span> <a class="code" href="classCLI.html" title="Implémentation de l&#39;interface en ligne de commande (Command Line Interface) Sorties et entrées via la...">CLI</a> instance;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> instance;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classCLI.html#a9f59d57abf434f7161fcf3f61b725752" title="Destructeur.">~CLI</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCLI.html#a844e89b9d79ecf64b1a52cc80fb42663" title="Affiche le message mess dans la ligne de commande avec ou sans la valeur du timer actuel...">logv</a>(std::string, <span class="keywordtype">bool</span> = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classCLI.html" title="Implémentation de l&#39;interface en ligne de commande (Command Line Interface) Sorties et entrées via la...">CLI</a>(<a class="code" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a> ll = <a class="code" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2">INFO</a>) {};</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classCLI.html" title="Implémentation de l&#39;interface en ligne de commande (Command Line Interface) Sorties et entrées via la...">CLI</a>(<a class="code" href="classCLI.html" title="Implémentation de l&#39;interface en ligne de commande (Command Line Interface) Sorties et entrées via la...">CLI</a> <span class="keyword">const</span>&amp;);                </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> operator=(<a class="code" href="classCLI.html" title="Implémentation de l&#39;interface en ligne de commande (Command Line Interface) Sorties et entrées via la...">CLI</a> <span class="keyword">const</span>&amp;);     </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classCLI.html#ab29c9ac6d7c2e6b25eeacf0c5fc144a9" title="Le constructeur qui définit le log level.">CLI</a>(<a class="code" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a> = <a class="code" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2">INFO</a>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classCLI.html#a9f59d57abf434f7161fcf3f61b725752" title="Destructeur.">~CLI</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCLI.html#a844e89b9d79ecf64b1a52cc80fb42663" title="Affiche le message mess dans la ligne de commande avec ou sans la valeur du timer actuel...">logv</a>(std::string, <span class="keywordtype">bool</span> = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Mai 10 2014 18:35:52 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 11 2014 20:15:52 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
