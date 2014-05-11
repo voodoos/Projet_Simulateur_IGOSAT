@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "HCI.h"
 
@@ -6,17 +6,17 @@
 
 /*!
 * \class HCIs
-* \brief Factory pour les différentes interfaces
-* Cette classe singleton utilitaire permet de gérer les différentes interfaces utilisées par le simulateur.
+* \brief Factory pour les diffÃ©rentes interfaces.
+* Cette classe singleton utilitaire permet de gÃ©rer les diffÃ©rentes interfaces utilisÃ©es par le simulateur.
 * 
 */
 class File;
 class HCIs
 {
 private:
-    bool loggerSet;                     /*!< Logger configuré ou non */
+    bool loggerSet;                     /*!< Logger configurÃ© ou non */
     HCI* logger;                        /*!< Logger a utiliser */
-    std::unordered_map<std::string, File*> dataOutputs;    /*!< Fichiers de données */
+    std::unordered_map<std::string, File*> dataOutputs;    /*!< Fichiers de donnÃ©es */
 public:
     /*!
     * \fn static HCIs& getInstance()
@@ -42,20 +42,20 @@ public:
 
     /*!
     * \fn void log(HCI::logLevel, std::string, bool)
-    * \brief Utilise le logger configuré pour logger le message. Si aucun logger n'est configuré, command line par défaut.
+    * \brief Utilise le logger configurÃ© pour logger le message. Si aucun logger n'est configurÃ©, command line par dÃ©faut.
     */
     void log(HCI::logLevel, std::string, bool withTime = true);
 
     /*!
     * \fn void addDataOutput(std::string, std::string)
-    * \brief Ajout une nouvelle sortie de données (pour le moment que des fichiers).
-    * \todo Abstraire et prévoir d'autres sorties que dans fichiers ?
+    * \brief Ajout une nouvelle sortie de donnÃ©es (pour le moment que des fichiers).
+    * \todo Abstraire et prÃ©voir d'autres sorties que dans fichiers ?
     */
     void addDataOutput(std::string, std::string);
 
     /*!
     * \fn File* HCIs::getDataOutput(std::string)
-    * \brief Donne un pointeur vers la sortie de données demandée.
+    * \brief Donne un pointeur vers la sortie de donnÃ©es demandÃ©e.
     * \todo Exception....
     */
     File* getDataOutput(std::string);
@@ -69,7 +69,7 @@ public:
 
 private:
     HCIs():loggerSet(false) {};
-    HCIs(HCIs const&);                /*!< À ne pas implémenter, nécessaire au pattern singleton */
-    void operator=(HCIs const&);     /*!< À ne pas implémenter, nécessaire au pattern singleton */
+    HCIs(HCIs const&);                /*!< Ã€ ne pas implÃ©menter, nÃ©cessaire au pattern singleton */
+    void operator=(HCIs const&);     /*!< Ã€ ne pas implÃ©menter, nÃ©cessaire au pattern singleton */
 };
 
