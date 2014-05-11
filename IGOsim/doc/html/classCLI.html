@@ -84,14 +84,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
-<a href="#pub-static-methods">Fonctions membres publiques statiques</a> &#124;
 <a href="classCLI-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe CLI</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Implémentation de l'interface en ligne de commande (Command Line Interface) Sorties et entrées via la ligne de commande. Une seule instance possible de celle-ci, le pattern singleton a été utilisé.  
+<p>Implémentation de l'interface en ligne de commande (Command Line Interface) Sorties et entrées via la ligne de commande.  
  <a href="classCLI.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="CLI_8h_source.html">CLI.h</a>&gt;</code></p>
@@ -107,6 +106,8 @@ Graphe d'héritage de CLI:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:ab29c9ac6d7c2e6b25eeacf0c5fc144a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCLI.html#ab29c9ac6d7c2e6b25eeacf0c5fc144a9">CLI</a> (<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a>=<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2">INFO</a>)</td></tr>
+<tr class="memdesc:ab29c9ac6d7c2e6b25eeacf0c5fc144a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le constructeur qui définit le log level.  <a href="#ab29c9ac6d7c2e6b25eeacf0c5fc144a9"></a><br/></td></tr>
 <tr class="memitem:a9f59d57abf434f7161fcf3f61b725752"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f59d57abf434f7161fcf3f61b725752"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCLI.html#a9f59d57abf434f7161fcf3f61b725752">~CLI</a> ()</td></tr>
 <tr class="memdesc:a9f59d57abf434f7161fcf3f61b725752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
@@ -127,12 +128,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCI.html#a23d45789a6c59b9a14a1fdd95c970c30">log</a> (<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a>, std::string, bool=true) const </td></tr>
 <tr class="memdesc:a23d45789a6c59b9a14a1fdd95c970c30 inherit pub_methods_classHCI"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demande l'affichagedu message mess, de niveau ll avec ou sans la valeur du timer actuel. <br/></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
-Fonctions membres publiques statiques</h2></td></tr>
-<tr class="memitem:afb0099de9473ff74480fa40cec78a3ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb0099de9473ff74480fa40cec78a3ac"></a>
-static <a class="el" href="classCLI.html">CLI</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCLI.html#afb0099de9473ff74480fa40cec78a3ac">getInstance</a> ()</td></tr>
-<tr class="memdesc:afb0099de9473ff74480fa40cec78a3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne l'instance unique de <a class="el" href="classCLI.html" title="Implémentation de l&#39;interface en ligne de commande (Command Line Interface) Sorties et entrées via la...">CLI</a>. <br/></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classHCI"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classHCI')"><img src="closed.png" alt="-"/>&nbsp;Types publics inherited from <a class="el" href="classHCI.html">HCI</a></td></tr>
@@ -149,15 +144,35 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ac344060f03fa9aa1809cfecb507a83f9 inherit pro_attribs_classHCI"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCI.html#ac344060f03fa9aa1809cfecb507a83f9">logLev</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Description détaillée</h2>
-<div class="textblock"><p>Implémentation de l'interface en ligne de commande (Command Line Interface) Sorties et entrées via la ligne de commande. Une seule instance possible de celle-ci, le pattern singleton a été utilisé. </p>
-</div><hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<div class="textblock"><p>Implémentation de l'interface en ligne de commande (Command Line Interface) Sorties et entrées via la ligne de commande. </p>
+</div><h2>Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="ab29c9ac6d7c2e6b25eeacf0c5fc144a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLI::CLI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a>&#160;</td>
+          <td class="paramname"><em>ll</em> = <code><a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2">INFO</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le constructeur qui définit le log level. </p>
+<p><a class="el" href="classCLI.html#ab29c9ac6d7c2e6b25eeacf0c5fc144a9" title="Le constructeur qui définit le log level.">CLI(logLevel)</a> </p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/Core/<a class="el" href="CLI_8h_source.html">CLI.h</a></li>
 <li>src/Core/CLI.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Mai 10 2014 18:35:54 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 11 2014 20:15:54 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

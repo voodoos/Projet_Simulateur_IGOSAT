@@ -1,6 +1,7 @@
 #include "Module.h"
 
-#include "CLI.h"
+#include "HCI.h"
+#include "HCIs.h"
 #include "Memory.cpp"
 #include "XMLReader.h"
 
@@ -52,7 +53,7 @@ Module::Module(string name, Params params, string cp)
     Timer::getInstance().add(this);
 
     //Petit log:
-    CLI::getInstance().log(CLI::INFO, "Initializing module with name " + name, false);
+    HCIs::getInstance().log(HCI::INFO, "Initializing module with name " + name, false);
 }
 
 Module::Module(string name, Memory<int> mem, Params params)
