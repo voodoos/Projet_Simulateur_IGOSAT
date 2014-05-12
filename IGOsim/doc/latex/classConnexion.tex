@@ -1,22 +1,48 @@
 \hypertarget{classConnexion}{\section{Référence de la classe Connexion}
 \label{classConnexion}\index{Connexion@{Connexion}}
 }
+
+
+Cette classe représente les tuyaux qui relient les \hyperlink{classSocket}{Socket}.  
+
+
+
+
+{\ttfamily \#include $<$Connexion.\-h$>$}
+
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classConnexion_a31fda5acfafb5ec2de7ae76cfce373a7}{\hyperlink{classConnexion_a31fda5acfafb5ec2de7ae76cfce373a7}{Connexion} (\hyperlink{classSocket}{Socket} $\ast$a, \hyperlink{classSocket}{Socket} $\ast$b)}\label{classConnexion_a31fda5acfafb5ec2de7ae76cfce373a7}
-
-\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{classConnexion_a31fda5acfafb5ec2de7ae76cfce373a7}{Connexion} (\hyperlink{classSocket}{Socket} $\ast$a, \hyperlink{classSocket}{Socket} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Constructeur, on créé une nouvelle connexion entre deux sockets en les informant mutuellement de leur compagnon (d'infortune ?). \end{DoxyCompactList}\item 
 \hypertarget{classConnexion_a72dc9b8799eed7b02b7e75e8bccb601c}{{\bfseries Connexion} (const \hyperlink{classConnexion}{Connexion} \&)}\label{classConnexion_a72dc9b8799eed7b02b7e75e8bccb601c}
 
 \item 
 \hypertarget{classConnexion_a6afee761c33e160c2be5e9e2713968e3}{\hyperlink{classConnexion_a6afee761c33e160c2be5e9e2713968e3}{$\sim$\-Connexion} ()}\label{classConnexion_a6afee761c33e160c2be5e9e2713968e3}
 
 \begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
-\hypertarget{classConnexion_a0f7bc822c79457f13d411e946948959c}{void \hyperlink{classConnexion_a0f7bc822c79457f13d411e946948959c}{dispatch} (std\-::shared\-\_\-ptr$<$ \hyperlink{classMessage}{Message} $>$, \hyperlink{classSocket}{Socket} $\ast$)}\label{classConnexion_a0f7bc822c79457f13d411e946948959c}
+\hypertarget{classConnexion_ad39eca0322a2a8a49de21fdd910ea0db}{void \hyperlink{classConnexion_ad39eca0322a2a8a49de21fdd910ea0db}{dispatch} (std\-::shared\-\_\-ptr$<$ \hyperlink{classMessage}{Message} $>$, \hyperlink{classSocket}{Socket} $\ast$) const }\label{classConnexion_ad39eca0322a2a8a49de21fdd910ea0db}
 
-\begin{DoxyCompactList}\small\item\em Envoye un message m reçu de socket s vers le socket d'un autre côté \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Envoie un message m d'un socket s vers son destinataire. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Description détaillée}
+Cette classe représente les tuyaux qui relient les \hyperlink{classSocket}{Socket}. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classConnexion_a31fda5acfafb5ec2de7ae76cfce373a7}{\index{Connexion@{Connexion}!Connexion@{Connexion}}
+\index{Connexion@{Connexion}!Connexion@{Connexion}}
+\subsubsection[{Connexion}]{\setlength{\rightskip}{0pt plus 5cm}Connexion\-::\-Connexion (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket} $\ast$}]{a, }
+\item[{{\bf Socket} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{classConnexion_a31fda5acfafb5ec2de7ae76cfce373a7}
+
+
+Constructeur, on créé une nouvelle connexion entre deux sockets en les informant mutuellement de leur compagnon (d'infortune ?). 
+
+Constructeurpar copie. 
 
 La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
 \item 

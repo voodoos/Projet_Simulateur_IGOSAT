@@ -1,6 +1,15 @@
 \hypertarget{classCLI}{\section{Référence de la classe C\-L\-I}
 \label{classCLI}\index{C\-L\-I@{C\-L\-I}}
 }
+
+
+Implémentation de l'interface en ligne de commande (Command Line Interface) Sorties et entrées via la ligne de commande.  
+
+
+
+
+{\ttfamily \#include $<$C\-L\-I.\-h$>$}
+
 Graphe d'héritage de C\-L\-I\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,17 +19,33 @@ Graphe d'héritage de C\-L\-I\-:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCLI_a43ec846cf90e311e7867d4315d4e559c}{void {\bfseries logv} (std\-::string, bool with\-Time=true) const }\label{classCLI_a43ec846cf90e311e7867d4315d4e559c}
+\hyperlink{classCLI_ab29c9ac6d7c2e6b25eeacf0c5fc144a9}{C\-L\-I} (\hyperlink{classHCI_a395f0ab7958108f23c34c7a04b56c4b0}{log\-Level}=\hyperlink{classHCI_a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2}{I\-N\-F\-O})
+\begin{DoxyCompactList}\small\item\em Le constructeur qui définit le log level. \end{DoxyCompactList}\item 
+\hypertarget{classCLI_a9f59d57abf434f7161fcf3f61b725752}{virtual \hyperlink{classCLI_a9f59d57abf434f7161fcf3f61b725752}{$\sim$\-C\-L\-I} ()}\label{classCLI_a9f59d57abf434f7161fcf3f61b725752}
 
-\end{DoxyCompactItemize}
-\subsection*{Fonctions membres publiques statiques}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{classCLI_afb0099de9473ff74480fa40cec78a3ac}{static \hyperlink{classCLI}{C\-L\-I} \& \hyperlink{classCLI_afb0099de9473ff74480fa40cec78a3ac}{get\-Instance} ()}\label{classCLI_afb0099de9473ff74480fa40cec78a3ac}
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\hypertarget{classCLI_a844e89b9d79ecf64b1a52cc80fb42663}{void \hyperlink{classCLI_a844e89b9d79ecf64b1a52cc80fb42663}{logv} (std\-::string, bool=true) const }\label{classCLI_a844e89b9d79ecf64b1a52cc80fb42663}
 
-\begin{DoxyCompactList}\small\item\em Retourne l'instance unique de \hyperlink{classCLI}{C\-L\-I}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Affiche le message mess dans la ligne de commande avec ou sans la valeur du timer actuel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Description détaillée}
+Implémentation de l'interface en ligne de commande (Command Line Interface) Sorties et entrées via la ligne de commande. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classCLI_ab29c9ac6d7c2e6b25eeacf0c5fc144a9}{\index{C\-L\-I@{C\-L\-I}!C\-L\-I@{C\-L\-I}}
+\index{C\-L\-I@{C\-L\-I}!CLI@{C\-L\-I}}
+\subsubsection[{C\-L\-I}]{\setlength{\rightskip}{0pt plus 5cm}C\-L\-I\-::\-C\-L\-I (
+\begin{DoxyParamCaption}
+\item[{{\bf log\-Level}}]{ll = {\ttfamily {\bf I\-N\-F\-O}}}
+\end{DoxyParamCaption}
+)}}\label{classCLI_ab29c9ac6d7c2e6b25eeacf0c5fc144a9}
+
+
+Le constructeur qui définit le log level. 
+
+\hyperlink{classCLI_ab29c9ac6d7c2e6b25eeacf0c5fc144a9}{C\-L\-I(log\-Level)} 
 
 La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
 \item 

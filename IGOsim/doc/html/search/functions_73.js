@@ -3,8 +3,10 @@ var searchData=
   ['send',['send',['../classSocket.html#a06b687baf9b01f3e399a5ee040ca04e4',1,'Socket']]],
   ['setconnexion',['setConnexion',['../classSocket.html#a96d104e32d5f376796fb411874954e7d',1,'Socket']]],
   ['setcounter',['setCounter',['../classTimer.html#a7394d4c4edb4d951dbe2c7e1ab2fb7ae',1,'Timer']]],
+  ['setloglevel',['setLogLevel',['../classHCI.html#ab30b1bd8e7b5ddb8764128e9da1b3062',1,'HCI']]],
   ['setpath',['setPath',['../classXMLReader.html#ae8d2d4fd99c45bc46b939d9dc3548340',1,'XMLReader']]],
   ['setvalueforkey',['setValueForKey',['../classMemory.html#a3514e7594615bb1748ba5b57259c9eca',1,'Memory']]],
+  ['socket',['Socket',['../classSocket.html#a0dd97f1387c3bd8008cb7de47583a985',1,'Socket']]],
   ['start',['start',['../classTimer.html#a62869fa83e1b76a9ebfe9cca7e56733d',1,'Timer']]],
   ['stop',['stop',['../classTimer.html#a63f0eb44b27402196590a03781515dba',1,'Timer']]]
 ];
