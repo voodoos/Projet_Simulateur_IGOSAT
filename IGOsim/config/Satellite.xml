@@ -5,7 +5,7 @@
         <parameter name="poids">
             <unit>kg</unit>
             <value>3</value>
-    </parameter>
+        </parameter>
         <parameter name="altitude">
             <unit>km</unit>
             <value>650</value>
