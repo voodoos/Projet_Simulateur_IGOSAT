@@ -10,6 +10,10 @@
             <unit>km</unit>
             <value>650</value>
         </parameter>
+        <parameter name="temp">
+            <unit>C</unit>
+            <value>0</value>
+        </parameter>
     </parameters>
     <messages>
     </messages>
