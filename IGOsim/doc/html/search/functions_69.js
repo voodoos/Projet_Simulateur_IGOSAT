@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ismessageallowed',['isMessageAllowed',['../classModule.html#a6e425394cec58009568822cc7a09c8c1',1,'Module']]]
+  ['ismessageallowed',['isMessageAllowed',['../classModule.html#a3919f2388fc70b4686a9ad63af9f06aa',1,'Module']]]
 ];

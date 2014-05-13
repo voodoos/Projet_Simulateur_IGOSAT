@@ -15,7 +15,7 @@
 /*!
 * \typedef typedef std::unordered_map<std::string, std::shared_ptr<Module>> Modules
 * \brief Un raccourci pratique pour la hashtable des sous-modules.
-* On utilise un shared_ptr pour s'assurer de la délétion des modules lors de la destruction du macromodule
+*  On utilise un shared_ptr pour s'assurer de la délétion des modules lors de la destruction du macromodule
 */
 typedef std::unordered_map<std::string, std::shared_ptr<Module>> SubModules;
 
@@ -28,7 +28,7 @@ typedef  std::vector<std::shared_ptr<Connexion>> Connexions;
 
 class MacroModule : public Module {
 private:
-    SubModules modules;         /*!< Les sous-modules de module */
+    SubModules modules;       /*!< Les sous-modules de module */
     Connexions connexions;    /*!< Les connexions entre les sous-modules */
 
 public:

@@ -1,5 +1,7 @@
 #include "BatteryController.h"
 
+#include "HCI.h"
+#include "HCIs.h"
 using namespace std;
 
 
@@ -16,10 +18,10 @@ void BatteryController::process(std::shared_ptr<Message> m){
         //Reponse de la batterie:
         if (atoi(sm->getPayload().c_str()) > 10) {
             //Si voltage suffisant:
-            CLI::getInstance().log(CLI::INFO, "Status OK");
+            HCIs::getInstance().log(HCI::INFO, "Status OK");
         }
         else {
-            CLI::getInstance().log(CLI::INFO, "Status KO: Insufficient voltage");
+            HCIs::getInstance().log(HCI::INFO, "Status KO: Insufficient voltage");
         }
     }
 }
