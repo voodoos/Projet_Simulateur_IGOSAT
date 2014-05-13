@@ -1,7 +1,6 @@
 ﻿#include "MacroModule.h"
 
-#include "HCI.h"
-#include "HCIs.h"
+#include "CLI.h"
 
 //For convenience:
 using namespace std;
@@ -40,7 +39,7 @@ shared_ptr<Module> MacroModule::getModuleByName(string n) {
         return tmp;
     }
     catch (int) {
-        HCIs::getInstance().log(HCI::ERROR, "Le module " + n + " n'existe pas dans " + name, false);
+        CLI::getInstance().log(CLI::ERROR, "Le module " + n + " n'existe pas dans " + name, false);
         exit(EXIT_FAILURE);
     }
 }

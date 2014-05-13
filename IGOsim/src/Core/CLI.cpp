@@ -3,7 +3,7 @@
 
 using namespace std;
 
-CLI::CLI(logLevel ll) : HCI(ll) {}
+
 
 CLI::~CLI()
 {

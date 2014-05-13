@@ -13,7 +13,7 @@ Memory<T>::Memory(std::unordered_map<std::string, T> _cells)
 }
 
 template<class T>
-unsigned int Memory<T>::getSize() const{
+unsigned int Memory<T>::getSize(){
     return cells.size;
 }
 

@@ -38,13 +38,13 @@ virtual void \hyperlink{classModule_ab7ea9648fa500696c85e93ebd0666390}{clock} (i
 \begin{DoxyCompactList}\small\item\em Fonction d'ajout d'un message au module, et de son temps d'éxecution simulé. \end{DoxyCompactList}\item 
 \hyperlink{classSocket}{Socket} $\ast$ \hyperlink{classModule_aed844ffed911793d3895c5a2bc4f9d43}{get\-Socket\-By\-Name} (std\-::string)
 \begin{DoxyCompactList}\small\item\em Récupère le bon connecteur, ou lève une exception. \end{DoxyCompactList}\item 
-\hypertarget{classModule_a095495cee28654973ddc13a836e37141}{double {\bfseries get\-Param\-Value\-By\-Name} (std\-::string) const }\label{classModule_a095495cee28654973ddc13a836e37141}
+\hypertarget{classModule_a93e2ee84587751939c1fd31cb0802e41}{double {\bfseries get\-Param\-Value\-By\-Name} (std\-::string)}\label{classModule_a93e2ee84587751939c1fd31cb0802e41}
 
 \item 
 \hypertarget{classModule_ace0e4299e1a6f9b46aa9fd316483895d}{void {\bfseries set\-Param\-Value\-By\-Name} (std\-::string, double)}\label{classModule_ace0e4299e1a6f9b46aa9fd316483895d}
 
 \item 
-\hypertarget{classModule_a3919f2388fc70b4686a9ad63af9f06aa}{bool \hyperlink{classModule_a3919f2388fc70b4686a9ad63af9f06aa}{is\-Message\-Allowed} (std\-::string) const }\label{classModule_a3919f2388fc70b4686a9ad63af9f06aa}
+\hypertarget{classModule_a6e425394cec58009568822cc7a09c8c1}{bool \hyperlink{classModule_a6e425394cec58009568822cc7a09c8c1}{is\-Message\-Allowed} (std\-::string)}\label{classModule_a6e425394cec58009568822cc7a09c8c1}
 
 \begin{DoxyCompactList}\small\item\em Vérifie si le message est un des messages compris par ce module. \end{DoxyCompactList}\item 
 \hypertarget{classModule_a2752ad2f437a772d02b474383b5a214f}{\hyperlink{classSocket}{Socket} $\ast$ \hyperlink{classModule_a2752ad2f437a772d02b474383b5a214f}{operator\mbox{[}$\,$\mbox{]}} (std\-::string)}\label{classModule_a2752ad2f437a772d02b474383b5a214f}
@@ -93,7 +93,7 @@ Il s'agit de la classe centrale du simulateur, qui sera construit comme un assem
 Méthode appellée à chaque pas de temps, commune à tous les modules. 
 
 Cette méthode effectue trois actions, lire les messages arrivés, avancer dans un processus interne, envoyer un message. Ces actions prennent tous du temps\-: elles peuvent durer plusieurs \char`\"{}ticks\char`\"{}. \begin{DoxyRefDesc}{A faire}
-\item[\hyperlink{todo__todo000007}{A faire}]Lever une exception \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000005}{A faire}]Lever une exception \end{DoxyRefDesc}
 
 
 Implémente \hyperlink{classISynchronized_af7155c662758d6c70f381bb9b11afcd6}{I\-Synchronized}.
@@ -110,9 +110,9 @@ Implémente \hyperlink{classISynchronized_af7155c662758d6c70f381bb9b11afcd6}{I\-
 Récupère le bon connecteur, ou lève une exception. 
 
 \begin{DoxyRefDesc}{A faire}
-\item[\hyperlink{todo__todo000009}{A faire}]Créer et gérer l'exception \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000007}{A faire}]Créer et gérer l'exception \end{DoxyRefDesc}
 \begin{DoxyRefDesc}{A faire}
-\item[\hyperlink{todo__todo000008}{A faire}]Faire le retour d'un objet \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000006}{A faire}]Faire le retour d'un objet \end{DoxyRefDesc}
 
 
 \subsection{Documentation des données membres}

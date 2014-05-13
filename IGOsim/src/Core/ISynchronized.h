@@ -20,7 +20,7 @@ public:
     
     /*!
      * \fn virtual void clock(int time)
-     * \brief Methode appellée à chaque tick de l'horloge
+     * \brief Methode appellé à chaque tick d'horloge liée
      */
     virtual void clock(int time) = 0;
 };

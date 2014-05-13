@@ -1,7 +1,6 @@
 #include "Module.h"
 
-#include "HCI.h"
-#include "HCIs.h"
+#include "CLI.h"
 #include "Memory.cpp"
 #include "XMLReader.h"
 
@@ -53,7 +52,7 @@ Module::Module(string name, Params params, string cp)
     Timer::getInstance().add(this);
 
     //Petit log:
-    HCIs::getInstance().log(HCI::INFO, "Initializing module with name " + name, false);
+    CLI::getInstance().log(CLI::INFO, "Initializing module with name " + name, false);
 }
 
 Module::Module(string name, Memory<int> mem, Params params)
@@ -137,7 +136,7 @@ Socket* Module::getSocketByName(string sname)
     */
 }
 
-double Module::getParamValueByName(string pname) const
+double Module::getParamValueByName(string pname)
 {
     try {
         return parameters.at(pname);
@@ -156,7 +155,7 @@ void Module::setParamValueByName(string pname, double value){
     }
 }
 
-bool Module::isMessageAllowed(string  m) const
+bool Module::isMessageAllowed(string  m)
 {
     try {
         messagesAllowed.at(m);

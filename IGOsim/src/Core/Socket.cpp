@@ -49,15 +49,15 @@ void Socket::clock(int time){
     }
 }
 
-std::string Socket::getName() const{
+std::string Socket::getName(){
     return name;
 }
 
-std::string Socket::getOwner() const{
+std::string Socket::getOwner(){
     return owner;
 }
 
-bool Socket::hasMessage() const{
+bool Socket::hasMessage(){
     return !messageQueue.empty();
 }
 

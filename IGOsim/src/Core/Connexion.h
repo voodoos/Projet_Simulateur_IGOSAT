@@ -6,7 +6,7 @@
 
 /*!
  * \class Connexion
- * \brief Cette classe représente les tuyaux qui relient les Socket
+ * \brief
  */
 
 class Socket;
@@ -14,14 +14,10 @@ class Connexion{
 public:
     /*!
      * \fn Connexion(Socket *, Socket *)
-     * \brief Constructeur, on créé une nouvelle connexion entre deux sockets en les informant mutuellement de leur compagnon (d'infortune ?). 
+     * \brief Constructeur
      */
     Connexion(Socket *a, Socket *b);
 
-    /*!
-    * \fn Connexion(Socket *, Socket *)
-    * \brief Constructeurpar copie.
-    */
     Connexion(const Connexion&);
 
     /*!
@@ -32,11 +28,10 @@ public:
     
     /*!
      * \fn dispatch(std::shared_ptr<Message>, Socket *)
-     * \brief Envoie un message m d'un socket s vers son destinataire
+     * \brief Envoye un message m reçu de socket s vers le socket d'un autre côté
      */
-    void dispatch(std::shared_ptr<Message>, Socket*) const;
-
+    void dispatch(std::shared_ptr<Message>, Socket*);
 private:
-    Socket *socketA; /*!< Premier socket de la connexion */
-    Socket *socketB; /*!< Deuxième socket de la connexion */
+    Socket *socketA;
+    Socket *socketB;
 };
