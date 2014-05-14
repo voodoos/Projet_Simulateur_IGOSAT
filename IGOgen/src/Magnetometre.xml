@@ -1,0 +1,35 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<module name="Magnetometre">
+    <parameters>
+        <parameter name="tension_min">
+            <unit>V</unit>
+            <value>6</value>
+        </parameter>
+        <parameter name="tension_max">
+            <unit>V</unit>
+            <value>15</value>
+        </parameter>
+        <parameter name="intensité">
+            <unit>mA</unit>
+            <value>20</value>
+        </parameter>
+        <parameter name="puissance">
+            <unit>W</unit>
+            <value>0.3</value>
+        </parameter>
+        <parameter name="température_min">
+            <unit>C</unit>
+            <value>-50</value>
+        </parameter>
+        <parameter name="température_max">
+            <unit>C</unit>
+            <value>85</value>
+        </parameter>
+    </parameters>
+    <messages>
+    </messages>
+    <sockets>
+    </socket>
+</module>
+

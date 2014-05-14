@@ -1,0 +1,35 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<module name="ODB">
+    <parameters>
+    		<parameter name="tension">
+	   			<unit>V</unit>
+	   			<value>3.3</value>
+    		</parameter>
+    		<parameter name="intensité">
+	   			<unit>mA</unit>
+	   			<value>120</value>
+    		</parameter>
+    		<parameter name="puissance">
+	   			<unit>W</unit>
+	   			<value>0.4</value>
+    		</parameter>
+    		<parameter name="énergie">
+	   			<unit>Wh</unit>
+	   			<value>0.6</value>
+    		</parameter>
+    		<parameter name="température">
+	   			<unit>C</unit>
+	   			<value>-20</value>
+    		</parameter>
+    		<parameter name="température_max">
+	   			<unit>C</unit>
+	   			<value>60</value>
+    		</parameter>
+    </parameters>
+    <messages>
+    </messages>
+    <sockets>
+    </socket>
+</module>
+

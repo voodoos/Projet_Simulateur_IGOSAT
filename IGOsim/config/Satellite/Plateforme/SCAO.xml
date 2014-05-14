@@ -1,0 +1,15 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<module name="SCAO">
+    <parameters>
+        <parameter name="energie">
+            <unit>Wh</unit>
+            <value>0.009</value>
+        </parameter>
+    </parameters>
+    <messages>
+    </messages>
+    <sockets>
+    </socket>
+</module>
+

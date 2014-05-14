@@ -1,0 +1,27 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<module name="Magnétocoupleurs">
+    <parameters>
+    		<parameter name="tension">
+	   			<unit>V</unit>
+	   			<value>2.5</value>
+    		</parameter>
+    		<parameter name="puissance">
+	   			<unit>W</unit>
+	   			<value>0.209</value>
+    		</parameter>
+    		<parameter name="température_min">
+	   			<unit>C</unit>
+	   			<value>-35</value>
+    		</parameter>
+    		<parameter name="température_max">
+	   			<unit>C</unit>
+	   			<value>75</value>
+    		</parameter>
+    </parameters>
+    <messages>
+    </messages>
+    <sockets>
+    </socket>
+</module>
+
