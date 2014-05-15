@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>IGOsat Simulator: Référence Génerateur des classes</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">IGOsat Simulator
+   </div>
+   <div id="projectbrief">Simulateur fonctionnel d&#39;IGOsat.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Référence Génerateur des classes </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="objectif"></a>
+Les objectifs</h1>
+<p>Pour faciliter la création des nouveaux modules, le script de générateur des modules est proposé. Il permet de créer une classe de base d'un Module/MacroModule et un fichier XML avec la configuration de ce <a class="el" href="classModule.html" title="Les briques de base du simulateur. ">Module</a>. Ce script est écrit en langage Python, il faut donc avoir l'interprète de Python installé sur votre ordinateur.</p>
+<h1><a class="anchor" id="manuel"></a>
+Manuel de création d'un module</h1>
+<p>Le script de génération des modules se trouve dans le répertoire Projet_Simulateur_IGOSAT/IGOgen/src/. Pour le lancer, saisissez "python IGOgen.py" dans la console en se trouvant dans un bon repertoire. Vous allez voir des options intuitives:</p>
+<p>&gt;Choisissez une composante à créer: &gt;[1] : <a class="el" href="classModule.html" title="Les briques de base du simulateur. ">Module</a> &gt;[2] : Macromodule</p>
+<p>Alors, vous choisissez ce que vous voulez créer. Au niveau de génération, la seule difference entre <a class="el" href="classModule.html" title="Les briques de base du simulateur. ">Module</a> et <a class="el" href="classMacroModule.html">MacroModule</a>, c'est une classe qui sera generée. Puis, le script vous demande de tapez le nom d'un module. Soyez attentif au choix de ce nom, vu que ce sera le nom de classe. En accord avec la convention, on donne un nom simple au Macromodule (par exemple <a class="el" href="classBattery.html">Battery</a>, Antenne, GPS) et un nom composé avec *Module à la fin (par exemple AntenneRecepteurModule) pour les modules atomiques. (vous pouvez toujours changer cette convention si celui-ci ne vous convient pas).</p>
+<p>Puis, le script vous demande de tapez le chemin vers un fichier .XML. Si vous voulez que votre fichier module1.xml se trouve dans un repertoire config/Module1 de simulateur, tapez "Module1/module1.xml".</p>
+<p>Puis, il vous sera proposé d'ajouter des composantes. Vous pouvez ajouter au module un message, un socket ou un paramètre. Suivez les instructions. Après chaque ajoute d'un composante vous serez retourné au menu principal d'ajoute des composantes.</p>
+<p>Une fois que vous avez fini, choississez les options 4 et 5 pour générer un fichier .XML et des fichiers de classe .cpp et .h. Après avoir fait tout ça, quittez le script.</p>
+<h1><a class="anchor" id="resultat"></a>
+Le resultat de génération</h1>
+<p>Après avoir un script executé, vous allez trouver dans le repertoire "Projet_Simulateur_IGOSAT/IGOgen/src/" les fichiers .cpp et .h de classe d'un nouveau module et soit un nouveau repertoire que vouz avez indiqué comme le repertoire contenant fichier .XML, soit un fichier .XML tout seul si vous n'avez indiqué qu'un nom de fichier.</p>
+<h1><a class="anchor" id="apres"></a>
+Qu'est-ce que je fais après?</h1>
+<p>Mettez le fichier de classe dans un bon repertoire de votre projet. Soyez vigilant avec la structure de votre projet pour ne pas la rendre décharge. Puis, il vous faut bien placer un fichier .XML. Si le repertoire que vous avez choisi existe déjà dans le repertoire "config/", juste remplacer un fichier .XML dans un bon repertoire là-bas. Sinon, remplacez le repertoire entier à "config/". Pour tester le résultat, créez votre nouveau <a class="el" href="classModule.html" title="Les briques de base du simulateur. ">Module</a> quelque part dans le projet et essayez de le compiler. Si le projet compile bien et vous n'avez pas des warnings dans la console à cause de fichier .XML introuvable, alors vous avez tout bien fait. Maintenant, il est le temps de remplir ce nouveau module par fonctionnalité non-générique. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Jeudi 15 Mai 2014 14:52:18 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
