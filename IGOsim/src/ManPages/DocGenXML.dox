@@ -1,4 +1,4 @@
-﻿/*! \page docGenereateur Référence Génerateur des classes
+/*! \page docGenereateur Référence Génerateur des classes
 
 \section objectif Les objectifs
 Pour faciliter la création des nouveaux modules, le script de générateur des modules est proposé. Il permet de créer une classe de base d'un Module/MacroModule et un fichier XML avec la configuration de ce Module. Ce script est écrit en langage Python, il faut donc avoir l'interprète de Python installé sur votre ordinateur.
@@ -28,3 +28,4 @@ Après avoir un script executé, vous allez trouver dans le repertoire "Projet_S
 Mettez le fichier de classe dans un bon repertoire de votre projet. Soyez vigilant avec la structure de votre projet pour ne pas la rendre décharge. 
 Puis, il vous faut bien placer un fichier .XML. Si le repertoire que vous avez choisi existe déjà dans le repertoire "config/", juste remplacer un fichier .XML dans un bon repertoire là-bas. Sinon, remplacez le repertoire entier à "config/".
 Pour tester le résultat, créez votre nouveau Module quelque part dans le projet et essayez de le compiler. Si le projet compile bien et vous n'avez pas des warnings dans la console à cause de fichier .XML introuvable, alors vous avez tout bien fait. Maintenant, il est le temps de remplir ce nouveau module par fonctionnalité non-générique.
+*/
