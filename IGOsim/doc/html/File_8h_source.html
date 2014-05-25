@@ -68,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -96,13 +96,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classFile.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFile.html" title="Implémentation de l&#39;interface via fichier Sorties et entrées dans un fichier.">File</a> :</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span> <a class="code" href="classHCI.html" title="Classe d&#39;abstraction pour l&#39;interface utilisateur (Human Computer Interface) Cette interface vise abs...">HCI</a>, <a class="code" href="classISynchronized.html" title="Interface pour élément synchronisé">ISynchronized</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span> <a class="code" href="classHCI.html">HCI</a>, <a class="code" href="classISynchronized.html" title="Interface pour élément synchronisé">ISynchronized</a></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">mutable</span> std::ofstream file; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::vector&lt;double&gt; dataBuff; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classFile.html#a85a14bb04d115aaa8e9b8be4069d98ee" title="Ouvre le fichier indiqué, le créé si nécessaire. L&#39;option loglevel ne sert qu&#39;en cas de fichier de lo...">File</a>(std::string path, <a class="code" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">logLevel</a> = <a class="code" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2">INFO</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classFile.html#a85a14bb04d115aaa8e9b8be4069d98ee" title="Ouvre le fichier indiqué, le créé si nécessaire. L&#39;option loglevel ne sert qu&#39;en cas de fichier de lo...">File</a>(std::string path, logLevel = INFO);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ~<a class="code" href="classFile.html" title="Implémentation de l&#39;interface via fichier Sorties et entrées dans un fichier.">File</a>();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFile.html#a72baa06dce43c7cbd82d25d357e4fa39" title="Affiche le message mess dans le fichier avec ou sans la valeur du timer actuel.">logv</a>(std::string, <span class="keywordtype">bool</span> = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
@@ -119,7 +119,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche Mai 11 2014 20:22:44 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 25 2014 14:11:42 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
