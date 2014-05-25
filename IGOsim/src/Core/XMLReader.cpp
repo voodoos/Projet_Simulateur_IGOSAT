@@ -2,7 +2,8 @@
 
 #include <iostream>
 
-#include "CLI.h"
+#include "HCIs.h"
+#include "HCI.h"
 
 #include "rapidxml.hpp"
 #include "rapidxml_utils.hpp"
@@ -56,12 +57,12 @@ unordered_map<string, double> XMLReader::readParams(string confPath) {
     }
     catch (const runtime_error &error){
         //Erreur à l'ouverture du fichier:
-        CLI::getInstance().log(CLI::WARNING, "Impossible de lire le fichier de configuration "+basePath+confPath+"\n"+error.what(), false);
+        HCIs::getInstance().log(HCI::WARNING, "Impossible de lire le fichier de configuration "+basePath+confPath+"\n"+error.what(), false);
         throw;
     }
     catch (rapidxml::parse_error &e) {
         //Erreur de parsing:
-        CLI::getInstance().log(CLI::ERROR, "Erreur de syntaxe dans le fichier de configuration " + basePath + confPath + ":\n " + e.what(), false);
+        HCIs::getInstance().log(HCI::ERROR, "Erreur de syntaxe dans le fichier de configuration " + basePath + confPath + ":\n " + e.what(), false);
         //Erreur bidon
         throw 0;
     }
@@ -106,12 +107,12 @@ unordered_map<string, int> XMLReader::readMessages(string confPath) {
     }
     catch (const runtime_error &error){
         //Erreur à l'ouverture du fichier:
-        CLI::getInstance().log(CLI::WARNING, "Impossible de lire le fichier de configuration " + basePath + confPath + "\n" + error.what(), false);
+        HCIs::getInstance().log(HCI::WARNING, "Impossible de lire le fichier de configuration " + basePath + confPath + "\n" + error.what(), false);
         throw;
     }
     catch (rapidxml::parse_error &e) {
         //Erreur de parsing:
-        CLI::getInstance().log(CLI::ERROR, "Erreur de syntaxe dans le fichier de configuration " + basePath + confPath + ":\n " + e.what(), false);
+        HCIs::getInstance().log(HCI::ERROR, "Erreur de syntaxe dans le fichier de configuration " + basePath + confPath + ":\n " + e.what(), false);
         //Erreur bidon
         throw 0;
     }
@@ -154,12 +155,12 @@ vector<string> XMLReader::readSockets(string confPath){
     }
     catch (const runtime_error &error){
         //Erreur à l'ouverture du fichier:
-        CLI::getInstance().log(CLI::WARNING, "Impossible de lire le fichier de configuration " + basePath + confPath + "\n" + error.what(), false);
+        HCIs::getInstance().log(HCI::WARNING, "Impossible de lire le fichier de configuration " + basePath + confPath + "\n" + error.what(), false);
         throw;
     }
     catch (rapidxml::parse_error &e) {
         //Erreur de parsing:
-        CLI::getInstance().log(CLI::ERROR, "Erreur de syntaxe dans le fichier de configuration " + basePath + confPath + ":\n " + e.what(), false);
+        HCIs::getInstance().log(HCI::ERROR, "Erreur de syntaxe dans le fichier de configuration " + basePath + confPath + ":\n " + e.what(), false);
         //Erreur bidon
         throw 0;
     }
