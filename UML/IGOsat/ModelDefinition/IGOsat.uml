@@ -1147,8 +1147,8 @@
         <ownedAttributesInternal>
           <property
             Id="4aaf3627-bd1f-4438-9908-8d59d52993b4"
-            name="mem"
-            visibility="Private"
+            name="memory"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1215,16 +1215,16 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="46a743a1-f055-4ffd-9f1a-0e368f4a30b5"
-                LastKnownName="Memory"
+              <undefinedTypeMoniker
+                Id="8f4df835-85c5-4a7a-823c-d7c0e679fd46"
+                LastKnownName="IGOsat::Memory&lt;int&gt;"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="de9104b9-0fd2-4a0b-85fb-b1a1ff7f2359"
             name="sockets"
-            visibility="Private"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1300,7 +1300,7 @@
           <property
             Id="0bbbcf0d-05f6-42ad-b020-a1dd96ff85dc"
             name="name"
-            visibility="Private"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1376,7 +1376,7 @@
           <property
             Id="60f3c6f8-0c10-4b67-a150-f4a8dae5ddfb"
             name="messages"
-            visibility="Private"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1444,15 +1444,15 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="7ccac686-400f-49be-b169-201452fcb836"
-                LastKnownName="unordered_map&lt;Message&gt;"
+                Id="37a8e397-b653-464a-9734-5c6ba1569ec0"
+                LastKnownName="unordered_map&lt;string, int&gt;"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="a659cdd1-6997-48b4-b9ae-9a195e1d2f83"
-            name="parametresPhysiques"
-            visibility="Private"
+            name="parameters"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1463,110 +1463,54 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="29815168-ca89-4238-9af9-a06a7bec3588"
-                LastKnownName="unordered_map&lt;int&gt;"
+                Id="c9215ff7-a8b9-4bcd-8b5c-9c7829a30bce"
+                LastKnownName="unordered_map&lt;string,int&gt;"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bc4a5e53-c550-4337-b4c7-f9e6de347d2d"
+            name="confPath"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a08bbadc-ebac-4894-9010-de38cfb43e06"
+                LastKnownName="string"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e8945419-04b4-470d-92db-d027cd8e945c"
+            name="taskTimer"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="5624f5d4-9b80-4e82-89c4-dcb0693a093e"
+                LastKnownName="int"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="d3c6af0d-bdd3-48ff-a840-934488756103"
-            name="input"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="1d0e570f-65f6-49b5-8364-df4c43f22ed6"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="46f30a43-2617-44e6-92cf-4de8f8223d49">
-                    <propertyInstance
-                      Id="f1031b1e-ad84-42f8-8aed-a878309ea689"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="505526e7-35f9-4494-8b2a-a9f6c19b97f2">
-                    <propertyInstance
-                      Id="f0d3a94e-d120-4b01-933d-c2be444836c6"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="05c11e6b-e312-43b8-9633-ae1b29758c36">
-                    <propertyInstance
-                      Id="48a077a7-d2fb-4342-a6fa-108e62776449"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="75299217-48ee-4ae4-a43c-80b99e6cae1c">
-                    <propertyInstance
-                      Id="e609b87f-12a0-4931-a058-56f4e2c86a7b"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="4dd1cb56-9714-49b1-88fb-2cc184dd5529">
-                    <propertyInstance
-                      Id="abc121c5-f938-4096-8316-5202f447fec4"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="db78afe2-f303-4160-8d02-9ef432baee55">
-                    <propertyInstance
-                      Id="5b1ff909-f916-46e8-b70c-41582725eee2"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="39414f2c-8e16-4e7f-b75d-8b08e75eab67"
-                  name="adress"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2d3984aa-4692-46cc-9a9a-cf99c8f30338"
-                  name="data"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ee157672-ed24-45af-8835-5e97258f0b94"
-                  name="Command"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="845aae86-884a-4e2b-888b-7a5ffed84fa7"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
-                      LastKnownLocation="IGOsat.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="a0ab34c8-c8fb-46fa-82cf-ae81bb8fbb1a"
-            name="output"
+            name="clock"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1625,43 +1569,17 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="74fca06f-4121-4b20-bb71-5415652d96b0"
-                  name="adress"
+                  Id="bdc40128-f17a-4f40-aaee-5804fae156c3"
+                  name="int"
                   direction="In"
                   isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="54c3009c-d138-473a-873f-2d4d7d021eb1"
-                  name="data"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="936e1a7b-81b6-4abf-8249-62c25f5bfd07"
-                  name="Command"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2e718187-325e-4bfb-b981-31aad89dbd04"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
-                      LastKnownLocation="IGOsat.uml" />
-                  </type_NamedElement>
-                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
             Id="969b789b-ce31-4543-aea9-3ad2884725d0"
             name="process"
-            visibility="Protected"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="true"
@@ -1720,29 +1638,169 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c86fc217-9236-41e7-aa59-6524744ced5a"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
-                      LastKnownLocation="IGOsat.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="dee0381a-2933-4ad6-a4bd-0044d592fc83"
-                  name="?"
+                  Id="681c9bbc-9fe2-4179-91b8-5125d6e16ee2"
+                  name="Message"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
-            Id="3c952d0f-9036-4ba7-8641-35f72049ea51"
-            name="clock"
+            Id="c2595e26-9889-4763-a840-3006883f99f5"
+            name="addSocket"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7ee0f5b8-c19f-4b39-9b8f-b837db968c34"
+                  name="Socket"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9aadedc1-3216-4165-a71e-7fd8c81b92f3"
+            name="addMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8f0bb6b6-e6eb-4455-bac3-f8a757d6b950"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="821a9aab-1fab-47ae-9e35-74b3c3e59c8d"
+            name="getSocketByName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="706a60b2-3882-417d-a35a-2cf5107e35d6"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6816c760-8974-4bbb-8a9c-8965234b19a6"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="752a2c43-fa9f-4d84-b1bb-69b2b75508df"
+                      LastKnownName="Socket*"
+                      LastKnownLocation="IGOsat.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2bbcd282-7ddf-4c81-8d6a-8a0bb1700ccd"
+            name="getParamValueByName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="82643905-fd05-43e5-8338-d211032fcd2a"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="64dac4c6-2f17-463a-b958-8e3185879b19"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dbf55caf-3a0c-4a6b-a695-dbaeb9444fd0"
+                      LastKnownName="double"
+                      LastKnownLocation="IGOsat.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="895756b1-ab7d-4355-976a-807ac942b6cf"
+            name="setParamValueByName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b48e86de-a7c5-436e-905b-65f057157fcb"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="31bc1133-543a-4fd7-8af9-09a57c028c08"
+                  name="double"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a7a90d6b-911f-4c2a-8764-e2c0d0a148be"
+            name="isMessageAllowed"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3ecd9b5f-a914-490f-b33a-f6466cb7d37e"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fe236270-54af-4692-8ed5-e9fdf0c03f93"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dbf55caf-3a0c-4a6b-a695-dbaeb9444fd0"
+                      LastKnownName="double"
+                      LastKnownLocation="IGOsat.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5cb50401-4e0b-4f65-9b76-d514754d78ed"
+            name="getMessages"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2212,8 +2270,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="5354cdc4-c245-4ed4-adcb-c17ec223a6c6"
-                LastKnownName="unordered_map&lt;Module&gt;"
+                Id="f5357abb-a8d7-4e45-9eb0-cc0edca1d942"
+                LastKnownName="unordered_map&lt;string, Module*&gt;"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
@@ -2231,12 +2289,81 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="dfcfee88-2cc0-49e3-8bb1-7a7cdc42f9d9"
-                LastKnownName="vector&lt;Connexions&gt;"
+                Id="45d63f87-16e7-45c4-ad7c-bb1e4908c840"
+                LastKnownName="vector&lt;Connexion&gt;"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="fc5d0983-bff5-40f3-8248-53aa2457f74b"
+            name="addSubModule"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da5efde6-8d91-4f09-90b8-b6d537f41f59"
+                  name="Module*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fb3b38d2-b776-4f3f-bb18-9c85ea602ea8"
+            name="addConnexion"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="89463f5f-4e9f-4fc5-b0bf-1c5175839153"
+                  name="Connexion*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="316c263a-c52c-453b-bdff-3d9b1d60dd64"
+            name="getModuleByName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1c0d30fd-ac5f-40a0-b52c-eaf0b6292c98"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0de4502c-9432-4e2b-8ab7-a004f3ffd19f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="7bacf113-9ade-4a23-8661-62c6c4f88dec"
+                      LastKnownName="Module*"
+                      LastKnownLocation="IGOsat.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -2414,8 +2541,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="eea110b1-485a-40ae-a520-93a02cf09d88"
-                LastKnownName="queue&lt;Message&gt;"
+                Id="f58a21ab-32db-4aa7-8a34-f238ba623470"
+                LastKnownName="queue&lt;Message*&gt;"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
@@ -2438,6 +2565,44 @@
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="91e9d136-7c6b-4aa4-bb6c-38845dad8dcb"
+            name="owner"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a08bbadc-ebac-4894-9010-de38cfb43e06"
+                LastKnownName="string"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="490ea1ab-c384-4b77-8fa4-ef4fcc2219f1"
+            name="timer"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="5624f5d4-9b80-4e82-89c4-dcb0693a093e"
+                LastKnownName="int"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -2447,7 +2612,17 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4e0c6c26-1f20-4ab4-8a7f-fb2b325ce667"
+                  name="Message*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="7d5cb93b-176e-4234-a07a-ef8447ef945b"
             name="receive"
@@ -2455,7 +2630,101 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="87ac9ce9-4634-4099-8eec-9710fc63069c"
+                  name="Message*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="46d8912e-b9ce-44f3-ae2a-41c973569197"
+            name="setConnexion"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1569111e-94ec-430e-8fc5-ceec33747e61"
+                  name="Connexion &amp;c"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1e856243-e50c-414d-bd01-d28883796fae"
+            name="clock"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ae88a53-a974-462c-91dc-11996a02aff4"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b5f647f0-836f-4732-9417-78b531cd7949"
+            name="hasMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d3923e02-28e8-4518-8dab-1af859279b61"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="375cbb2f-2172-47f4-bd70-2563381db911"
+                      LastKnownName="bool"
+                      LastKnownLocation="IGOsat.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e1f52249-f139-45f0-8076-47dbb51ba727"
+            name="getFirstMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="53676a0c-dd3f-4856-9964-43bac759094c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="7d648730-c7a1-466e-9b90-260be51bb44f"
+                      LastKnownName="Message*"
+                      LastKnownLocation="IGOsat.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -2595,6 +2864,33 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b97856b8-9be6-4596-b423-e7cb409cf544"
+            name="dispatch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="87c7f2a1-5b2e-49d2-b4b8-abb695023b7a"
+                  name="Message*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f963ec98-e5a9-4f65-935c-a5474013d250"
+                  name="Socket*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -2758,6 +3054,7 @@
           <property
             Id="6183cc05-9cac-430d-8b97-0abb5f41d8cd"
             name="modules"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2775,7 +3072,8 @@
           </property>
           <property
             Id="d238ce63-cbfe-4718-b7d2-437a641436d2"
-            name="retroactions"
+            name="physiques"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2786,8 +3084,27 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="fed45861-9e5b-467d-8e68-f52edbad51b3"
-                LastKnownName="vector&lt;Retroaction&gt;"
+                Id="8e61ead2-04e1-4a6c-9f55-29a3ba7c9da3"
+                LastKnownName="vector&lt;Physics&gt;"
+                LastKnownLocation="IGOsat.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="59c64f6b-8a1b-4265-8d24-a5cda8d100dc"
+            name="counter"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="5624f5d4-9b80-4e82-89c4-dcb0693a093e"
+                LastKnownName="int"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
@@ -2800,7 +3117,17 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="37cbe1ec-031c-46ef-8e1a-57b8672de635"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="a24292ea-6db0-4274-86a5-c912ae03f1dc"
             name="stop"
@@ -2809,6 +3136,84 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="4d179e4d-107a-4774-854f-15b0273ae34f"
+            name="add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f7bec33e-a3e0-45ea-8763-0e0a0be67392"
+                  name="Physics*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0031a2ed-5097-4649-97db-f90204f9a153"
+            name="add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="62b5d3cb-cfa2-4322-bd49-eb4f631752f6"
+                  name="Module*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e2f77d3d-d403-44f6-9496-69a0ac7e0aed"
+            name="getCounter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="37801a85-549e-431f-980e-9787d530063a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="5624f5d4-9b80-4e82-89c4-dcb0693a093e"
+                      LastKnownName="int"
+                      LastKnownLocation="IGOsat.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a5289c72-454d-490c-9377-2ee840fce899"
+            name="setCounter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="794403bd-c8e6-4561-8bbd-ed93dd2d2708"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -3053,7 +3458,7 @@
     <packageHasNamedElement>
       <class
         Id="2f6c7369-8007-42b4-ac41-30bdd9d6b7ab"
-        name="Retroaction"
+        name="Physics"
         isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
@@ -3125,9 +3530,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <classMoniker
-                Id="abb8f8b0-c3e0-481b-bd5d-eccfc8b2f047"
-                LastKnownName="Module"
+              <undefinedTypeMoniker
+                Id="be4542a4-2462-4380-b889-fb5f331fa558"
+                LastKnownName="IGOsat::Module*"
                 LastKnownLocation="IGOsat.uml" />
             </type_NamedElement>
           </property>
@@ -3140,7 +3545,17 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c13f88b8-a817-4f7e-91c8-d4811825ac38"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -3243,7 +3658,7 @@
             isSubstitutable="false">
             <classMoniker
               Id="2f6c7369-8007-42b4-ac41-30bdd9d6b7ab"
-              LastKnownName="Retroaction"
+              LastKnownName="Physics"
               LastKnownLocation="IGOsat.uml" />
           </generalization>
         </generalsInternal>
@@ -3292,6 +3707,71 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8e61ead2-04e1-4a6c-9f55-29a3ba7c9da3"
+        name="vector&lt;Physics&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c9215ff7-a8b9-4bcd-8b5c-9c7829a30bce"
+        name="unordered_map&lt;string,int&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="752a2c43-fa9f-4d84-b1bb-69b2b75508df"
+        name="Socket*" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8f4df835-85c5-4a7a-823c-d7c0e679fd46"
+        name="IGOsat::Memory&lt;int&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="37a8e397-b653-464a-9734-5c6ba1569ec0"
+        name="unordered_map&lt;string, int&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="45d63f87-16e7-45c4-ad7c-bb1e4908c840"
+        name="vector&lt;Connexion&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="55fb65a3-9354-4ea2-8ae7-5b998b773bb0"
+        name="unordered_map&lt;string, Module&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7bacf113-9ade-4a23-8661-62c6c4f88dec"
+        name="Module*" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f5357abb-a8d7-4e45-9eb0-cc0edca1d942"
+        name="unordered_map&lt;string, Module*&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f58a21ab-32db-4aa7-8a34-f238ba623470"
+        name="queue&lt;Message*&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="375cbb2f-2172-47f4-bd70-2563381db911"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7d648730-c7a1-466e-9b90-260be51bb44f"
+        name="Message*" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="be4542a4-2462-4380-b889-fb5f331fa558"
+        name="IGOsat::Module*" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

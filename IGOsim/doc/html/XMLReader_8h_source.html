@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
 <title>IGOsat Simulator:  Fichier source de src/Core/XMLReader.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.1.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -88,47 +87,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">XMLReader.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿#pragma once</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="classMessage.html">Message</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classXMLReader.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classXMLReader.html">XMLReader</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="classXMLReader.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classXMLReader.html" title="Classe utilitaire pour la lecture des fichiers de configuration.">XMLReader</a></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">static</span> std::string basePath; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">static</span> std::unordered_map&lt;std::string, double&gt; <a class="code" href="classXMLReader.html#a176f21253bd7ac73c00c0aa46e2e5724">readParams</a>(std::string);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">static</span> std::unordered_map&lt;std::string, double&gt; <a class="code" href="classXMLReader.html#a176f21253bd7ac73c00c0aa46e2e5724" title="Lecture des paramètre du module protant ce nom. Cette fonction recherche le fichier de configuration ...">readParams</a>(std::string);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> std::unordered_map&lt;std::string, int&gt; <a class="code" href="classXMLReader.html#aa21f5dcd9d009e635c6acad97beb240a">readMessages</a>(std::string);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> std::unordered_map&lt;std::string, int&gt; <a class="code" href="classXMLReader.html#aa21f5dcd9d009e635c6acad97beb240a" title="Lecture des méssages compris par le module protant ce nom. Cette fonction recherche le fichier de con...">readMessages</a>(std::string);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">static</span> std::vector&lt;std::string&gt; <a class="code" href="classXMLReader.html#af23225be3e3a4db017f1e22d1b21f7eb">readSockets</a>(std::string);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">static</span> std::vector&lt;std::string&gt; <a class="code" href="classXMLReader.html#af23225be3e3a4db017f1e22d1b21f7eb" title="Lecture des sockets de modile portant ce nom. Cette fonction recherche le fichier de configuration po...">readSockets</a>(std::string);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="classXMLReader.html#a5147abbb0cacd3fbcc396a23cc63456b">getPath</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="classXMLReader.html#a5147abbb0cacd3fbcc396a23cc63456b" title="Getter statique du chemin vers le dossier de configuration.">getPath</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classXMLReader.html#ae8d2d4fd99c45bc46b939d9dc3548340">setPath</a>(std::string);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classXMLReader.html#ae8d2d4fd99c45bc46b939d9dc3548340" title="Setter statique du chemin vers le dossier de configuration.">setPath</a>(std::string);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classXMLReader.html#a73065c7758f26ef69387e315c96d13ac">~XMLReader</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classXMLReader.html#a73065c7758f26ef69387e315c96d13ac" title="Destructeur.">~XMLReader</a>();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="ttc" id="classXMLReader_html_a5147abbb0cacd3fbcc396a23cc63456b"><div class="ttname"><a href="classXMLReader.html#a5147abbb0cacd3fbcc396a23cc63456b">XMLReader::getPath</a></div><div class="ttdeci">static std::string getPath()</div><div class="ttdoc">Getter statique du chemin vers le dossier de configuration. </div><div class="ttdef"><b>Definition:</b> XMLReader.cpp:172</div></div>
-<div class="ttc" id="classMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">Classe abstraite de base pour les messages. </div><div class="ttdef"><b>Definition:</b> Message.h:15</div></div>
-<div class="ttc" id="classXMLReader_html_a176f21253bd7ac73c00c0aa46e2e5724"><div class="ttname"><a href="classXMLReader.html#a176f21253bd7ac73c00c0aa46e2e5724">XMLReader::readParams</a></div><div class="ttdeci">static std::unordered_map&lt; std::string, double &gt; readParams(std::string)</div><div class="ttdoc">Lecture des paramètre du module protant ce nom. Cette fonction recherche le fichier de configuration ...</div><div class="ttdef"><b>Definition:</b> XMLReader.cpp:20</div></div>
-<div class="ttc" id="classXMLReader_html_af23225be3e3a4db017f1e22d1b21f7eb"><div class="ttname"><a href="classXMLReader.html#af23225be3e3a4db017f1e22d1b21f7eb">XMLReader::readSockets</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; readSockets(std::string)</div><div class="ttdoc">Lecture des sockets de modile portant ce nom. Cette fonction recherche le fichier de configuration po...</div><div class="ttdef"><b>Definition:</b> XMLReader.cpp:120</div></div>
-<div class="ttc" id="classXMLReader_html"><div class="ttname"><a href="classXMLReader.html">XMLReader</a></div><div class="ttdoc">Classe utilitaire pour la lecture des fichiers de configuration. </div><div class="ttdef"><b>Definition:</b> XMLReader.h:15</div></div>
-<div class="ttc" id="classXMLReader_html_aa21f5dcd9d009e635c6acad97beb240a"><div class="ttname"><a href="classXMLReader.html#aa21f5dcd9d009e635c6acad97beb240a">XMLReader::readMessages</a></div><div class="ttdeci">static std::unordered_map&lt; std::string, int &gt; readMessages(std::string)</div><div class="ttdoc">Lecture des méssages compris par le module protant ce nom. Cette fonction recherche le fichier de con...</div><div class="ttdef"><b>Definition:</b> XMLReader.cpp:70</div></div>
-<div class="ttc" id="classXMLReader_html_ae8d2d4fd99c45bc46b939d9dc3548340"><div class="ttname"><a href="classXMLReader.html#ae8d2d4fd99c45bc46b939d9dc3548340">XMLReader::setPath</a></div><div class="ttdeci">static void setPath(std::string)</div><div class="ttdoc">Setter statique du chemin vers le dossier de configuration. </div><div class="ttdef"><b>Definition:</b> XMLReader.cpp:168</div></div>
-<div class="ttc" id="classXMLReader_html_a73065c7758f26ef69387e315c96d13ac"><div class="ttname"><a href="classXMLReader.html#a73065c7758f26ef69387e315c96d13ac">XMLReader::~XMLReader</a></div><div class="ttdeci">~XMLReader()</div><div class="ttdoc">Destructeur. </div><div class="ttdef"><b>Definition:</b> XMLReader.cpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 15 Mai 2014 14:52:18 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Mai 15 2014 15:39:24 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.1.2
 </small></address>
 </body>
 </html>

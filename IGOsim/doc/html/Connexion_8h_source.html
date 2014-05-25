@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
 <title>IGOsat Simulator:  Fichier source de src/Core/Connexion.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.1.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -94,31 +93,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Message.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="classSocket.html">Socket</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classConnexion.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classConnexion.html">Connexion</a>{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="classConnexion.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classConnexion.html">Connexion</a>{</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classConnexion.html#a31fda5acfafb5ec2de7ae76cfce373a7">Connexion</a>(<a class="code" href="classSocket.html">Socket</a> *a, <a class="code" href="classSocket.html">Socket</a> *b);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classConnexion.html#a31fda5acfafb5ec2de7ae76cfce373a7" title="Constructeur.">Connexion</a>(<a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a> *a, <a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a> *b);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classConnexion.html#a31fda5acfafb5ec2de7ae76cfce373a7">Connexion</a>(<span class="keyword">const</span> <a class="code" href="classConnexion.html">Connexion</a>&amp;);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classConnexion.html#a31fda5acfafb5ec2de7ae76cfce373a7" title="Constructeur.">Connexion</a>(<span class="keyword">const</span> <a class="code" href="classConnexion.html">Connexion</a>&amp;);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classConnexion.html#a6afee761c33e160c2be5e9e2713968e3">~Connexion</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classConnexion.html#a6afee761c33e160c2be5e9e2713968e3" title="Destructeur.">~Connexion</a>();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classConnexion.html#a0f7bc822c79457f13d411e946948959c">dispatch</a>(std::shared_ptr&lt;Message&gt;, <a class="code" href="classSocket.html">Socket</a>*);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classConnexion.html#a0f7bc822c79457f13d411e946948959c" title="Envoye un message m reçu de socket s vers le socket d&#39;un autre côté">dispatch</a>(std::shared_ptr&lt;Message&gt;, <a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a>*);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classSocket.html">Socket</a> *socketA;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classSocket.html">Socket</a> *socketB;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a> *socketA;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classSocket.html" title="Classe abstraite pour les connecteurs des modules.">Socket</a> *socketB;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
-<div class="ttc" id="classSocket_html"><div class="ttname"><a href="classSocket.html">Socket</a></div><div class="ttdoc">Classe abstraite pour les connecteurs des modules. </div><div class="ttdef"><b>Definition:</b> Socket.h:23</div></div>
-<div class="ttc" id="classConnexion_html"><div class="ttname"><a href="classConnexion.html">Connexion</a></div><div class="ttdef"><b>Definition:</b> Connexion.h:13</div></div>
-<div class="ttc" id="classConnexion_html_a0f7bc822c79457f13d411e946948959c"><div class="ttname"><a href="classConnexion.html#a0f7bc822c79457f13d411e946948959c">Connexion::dispatch</a></div><div class="ttdeci">void dispatch(std::shared_ptr&lt; Message &gt;, Socket *)</div><div class="ttdoc">Envoye un message m reçu de socket s vers le socket d&#39;un autre côté </div><div class="ttdef"><b>Definition:</b> Connexion.cpp:28</div></div>
-<div class="ttc" id="classConnexion_html_a6afee761c33e160c2be5e9e2713968e3"><div class="ttname"><a href="classConnexion.html#a6afee761c33e160c2be5e9e2713968e3">Connexion::~Connexion</a></div><div class="ttdeci">~Connexion()</div><div class="ttdoc">Destructeur. </div><div class="ttdef"><b>Definition:</b> Connexion.cpp:25</div></div>
-<div class="ttc" id="classConnexion_html_a31fda5acfafb5ec2de7ae76cfce373a7"><div class="ttname"><a href="classConnexion.html#a31fda5acfafb5ec2de7ae76cfce373a7">Connexion::Connexion</a></div><div class="ttdeci">Connexion(Socket *a, Socket *b)</div><div class="ttdoc">Constructeur. </div><div class="ttdef"><b>Definition:</b> Connexion.cpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 15 Mai 2014 14:52:18 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Mai 15 2014 15:39:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.1.2
 </small></address>
 </body>
 </html>

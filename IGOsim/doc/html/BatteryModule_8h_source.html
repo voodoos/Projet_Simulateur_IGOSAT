@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
 <title>IGOsat Simulator:  Fichier source de src/BatteryModule/BatteryModule.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.1.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -88,15 +87,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">BatteryModule.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿#pragma once</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Battery.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;BatteryController.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;BatteryPhysics.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;MacroModule.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classBatteryModule.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBatteryModule.html">BatteryModule</a>:<span class="keyword">public</span> <a class="code" href="classMacroModule.html">MacroModule</a>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classBatteryModule.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBatteryModule.html" title="Un exemple de batterie.">BatteryModule</a>:<span class="keyword">public</span> <a class="code" href="classMacroModule.html">MacroModule</a>{</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classBattery.html">Battery</a> *battery;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classBatteryController.html">BatteryController</a> *batteryController;</div>
@@ -104,24 +103,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classBatteryModule.html#a2fb494ef5f124c38c0fdf9ccfb31918f">BatteryModule</a>(std::string <a class="code" href="classModule.html#a794fbb44972c7c73cc197159093e66d1">name</a>, Params params = Params());</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classBatteryModule.html">BatteryModule</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classBatteryModule.html" title="Un exemple de batterie.">BatteryModule</a>();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> process(std::shared_ptr&lt;Message&gt;);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="ttc" id="classModule_html_a794fbb44972c7c73cc197159093e66d1"><div class="ttname"><a href="classModule.html#a794fbb44972c7c73cc197159093e66d1">Module::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> Module.h:55</div></div>
-<div class="ttc" id="classBatteryController_html"><div class="ttname"><a href="classBatteryController.html">BatteryController</a></div><div class="ttdef"><b>Definition:</b> BatteryController.h:7</div></div>
-<div class="ttc" id="classBatteryPhysics_html"><div class="ttname"><a href="classBatteryPhysics.html">BatteryPhysics</a></div><div class="ttdef"><b>Definition:</b> BatteryPhysics.h:7</div></div>
-<div class="ttc" id="classBatteryModule_html"><div class="ttname"><a href="classBatteryModule.html">BatteryModule</a></div><div class="ttdoc">Un exemple de batterie. </div><div class="ttdef"><b>Definition:</b> BatteryModule.h:17</div></div>
-<div class="ttc" id="classBatteryModule_html_a2fb494ef5f124c38c0fdf9ccfb31918f"><div class="ttname"><a href="classBatteryModule.html#a2fb494ef5f124c38c0fdf9ccfb31918f">BatteryModule::BatteryModule</a></div><div class="ttdeci">BatteryModule(std::string name, Params params=Params())</div><div class="ttdef"><b>Definition:</b> BatteryModule.cpp:5</div></div>
-<div class="ttc" id="classMacroModule_html"><div class="ttname"><a href="classMacroModule.html">MacroModule</a></div><div class="ttdef"><b>Definition:</b> MacroModule.h:29</div></div>
-<div class="ttc" id="classBattery_html"><div class="ttname"><a href="classBattery.html">Battery</a></div><div class="ttdef"><b>Definition:</b> Battery.h:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 15 Mai 2014 14:52:18 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Mai 15 2014 15:39:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.1.2
 </small></address>
 </body>
 </html>

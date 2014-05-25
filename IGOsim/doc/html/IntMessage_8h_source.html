@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
 <title>IGOsat Simulator:  Fichier source de src/Core/Messages/IntMessage.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.1.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -92,27 +91,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Message.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classIntMessage.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIntMessage.html">IntMessage</a>: <span class="keyword">public</span> <a class="code" href="classMessage.html">Message</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="classIntMessage.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIntMessage.html" title="Classe de messages contenant entier comme le payload.">IntMessage</a>: <span class="keyword">public</span> <a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> payload;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classIntMessage.html">IntMessage</a>(std::string <a class="code" href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">name</a>, <span class="keywordtype">int</span> payload, <span class="keywordtype">int</span> time=0);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classIntMessage.html" title="Classe de messages contenant entier comme le payload.">IntMessage</a>(std::string <a class="code" href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">name</a>, <span class="keywordtype">int</span> payload, <span class="keywordtype">int</span> time=0);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classIntMessage.html#a00d3fe88985495e98725c12bfc21c39d">getPayload</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classIntMessage.html#a00d3fe88985495e98725c12bfc21c39d" title="Renvoie la charge utile du message.">getPayload</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::ostream &amp;<a class="code" href="classIntMessage.html#a222a5ba75846757bfc24cea19ce345ed">operator&lt;&lt;</a>(std::ostream &amp;os);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::ostream &amp;<a class="code" href="classIntMessage.html#a222a5ba75846757bfc24cea19ce345ed" title="Operateur de sortie surchargé">operator&lt;&lt;</a>(std::ostream &amp;os);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="ttc" id="classMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">Classe abstraite de base pour les messages. </div><div class="ttdef"><b>Definition:</b> Message.h:15</div></div>
-<div class="ttc" id="classIntMessage_html_a00d3fe88985495e98725c12bfc21c39d"><div class="ttname"><a href="classIntMessage.html#a00d3fe88985495e98725c12bfc21c39d">IntMessage::getPayload</a></div><div class="ttdeci">int getPayload()</div><div class="ttdoc">Renvoie la charge utile du message. </div><div class="ttdef"><b>Definition:</b> IntMessage.cpp:8</div></div>
-<div class="ttc" id="classMessage_html_ac7adddb666acdc47c48f684bd6810a51"><div class="ttname"><a href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">Message::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> Message.h:18</div></div>
-<div class="ttc" id="classIntMessage_html"><div class="ttname"><a href="classIntMessage.html">IntMessage</a></div><div class="ttdoc">Classe de messages contenant entier comme le payload. </div><div class="ttdef"><b>Definition:</b> IntMessage.h:9</div></div>
-<div class="ttc" id="classIntMessage_html_a222a5ba75846757bfc24cea19ce345ed"><div class="ttname"><a href="classIntMessage.html#a222a5ba75846757bfc24cea19ce345ed">IntMessage::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os)</div><div class="ttdoc">Operateur de sortie surchargé </div><div class="ttdef"><b>Definition:</b> IntMessage.cpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 15 Mai 2014 14:52:18 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Mai 15 2014 15:39:23 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.1.2
 </small></address>
 </body>
 </html>
