@@ -16,7 +16,7 @@
 
 #ifdef __APPLE__
     #define setXMLpath XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
-#elif
+#else
     #define setXMLpath  std::cout<<std::endl;
 #endif
 
