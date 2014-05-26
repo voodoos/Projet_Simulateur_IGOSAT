@@ -1515,16 +1515,6 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="0ccbf832-f184-4bbe-9a40-7b203f82ddc7" name="clock" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="d05ec2fa-64d7-4cd2-bf50-b8ef14732317" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="49bc3f2d-8ca2-4c2b-9b5d-79addd886390" name="int" direction="In" isUnique="false">
-                  <elementDefinition Id="8628092a-9834-4535-a236-56280709d6d8" />
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
           <operation Id="8bdb1061-e4fb-4b77-91de-d725f6e22f46" name="logv" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="64c38ef5-6014-4e58-bb99-d25329e5f2ca" />
             <ownedParameters>

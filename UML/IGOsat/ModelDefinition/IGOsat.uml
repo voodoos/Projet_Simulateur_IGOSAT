@@ -4262,24 +4262,6 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="d05ec2fa-64d7-4cd2-bf50-b8ef14732317"
-            name="clock"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8628092a-9834-4535-a236-56280709d6d8"
-                  name="int"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="64c38ef5-6014-4e58-bb99-d25329e5f2ca"
             name="logv"
             isLeaf="false"
