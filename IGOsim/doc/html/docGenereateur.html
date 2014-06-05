@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
 <title>IGOsat Simulator: Référence Génerateur des classes</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.1.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -81,12 +80,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="objectif"></a>
 Les objectifs</h1>
-<p>Pour faciliter la création des nouveaux modules, le script de générateur des modules est proposé. Il permet de créer une classe de base d'un Module/MacroModule et un fichier XML avec la configuration de ce <a class="el" href="classModule.html" title="Les briques de base du simulateur. ">Module</a>. Ce script est écrit en langage Python, il faut donc avoir l'interprète de Python installé sur votre ordinateur.</p>
+<p>Pour faciliter la création des nouveaux modules, le script de générateur des modules est proposé. Il permet de créer une classe de base d'un Module/MacroModule et un fichier XML avec la configuration de ce <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a>. Ce script est écrit en langage Python, il faut donc avoir l'interprète de Python installé sur votre ordinateur.</p>
 <h1><a class="anchor" id="manuel"></a>
 Manuel de création d'un module</h1>
 <p>Le script de génération des modules se trouve dans le répertoire Projet_Simulateur_IGOSAT/IGOgen/src/. Pour le lancer, saisissez "python IGOgen.py" dans la console en se trouvant dans un bon repertoire. Vous allez voir des options intuitives:</p>
-<p>&gt;Choisissez une composante à créer: &gt;[1] : <a class="el" href="classModule.html" title="Les briques de base du simulateur. ">Module</a> &gt;[2] : Macromodule</p>
-<p>Alors, vous choisissez ce que vous voulez créer. Au niveau de génération, la seule difference entre <a class="el" href="classModule.html" title="Les briques de base du simulateur. ">Module</a> et <a class="el" href="classMacroModule.html">MacroModule</a>, c'est une classe qui sera generée. Puis, le script vous demande de tapez le nom d'un module. Soyez attentif au choix de ce nom, vu que ce sera le nom de classe. En accord avec la convention, on donne un nom simple au Macromodule (par exemple <a class="el" href="classBattery.html">Battery</a>, Antenne, GPS) et un nom composé avec *Module à la fin (par exemple AntenneRecepteurModule) pour les modules atomiques. (vous pouvez toujours changer cette convention si celui-ci ne vous convient pas).</p>
+<p>&gt;Choisissez une composante à créer: &gt;[1] : <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> &gt;[2] : Macromodule</p>
+<p>Alors, vous choisissez ce que vous voulez créer. Au niveau de génération, la seule difference entre <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> et <a class="el" href="classMacroModule.html">MacroModule</a>, c'est une classe qui sera generée. Puis, le script vous demande de tapez le nom d'un module. Soyez attentif au choix de ce nom, vu que ce sera le nom de classe. En accord avec la convention, on donne un nom simple au Macromodule (par exemple <a class="el" href="classBattery.html">Battery</a>, Antenne, GPS) et un nom composé avec *Module à la fin (par exemple AntenneRecepteurModule) pour les modules atomiques. (vous pouvez toujours changer cette convention si celui-ci ne vous convient pas).</p>
 <p>Puis, le script vous demande de tapez le chemin vers un fichier .XML. Si vous voulez que votre fichier module1.xml se trouve dans un repertoire config/Module1 de simulateur, tapez "Module1/module1.xml".</p>
 <p>Puis, il vous sera proposé d'ajouter des composantes. Vous pouvez ajouter au module un message, un socket ou un paramètre. Suivez les instructions. Après chaque ajoute d'un composante vous serez retourné au menu principal d'ajoute des composantes.</p>
 <p>Une fois que vous avez fini, choississez les options 4 et 5 pour générer un fichier .XML et des fichiers de classe .cpp et .h. Après avoir fait tout ça, quittez le script.</p>
@@ -95,13 +94,13 @@ Le resultat de génération</h1>
 <p>Après avoir un script executé, vous allez trouver dans le repertoire "Projet_Simulateur_IGOSAT/IGOgen/src/" les fichiers .cpp et .h de classe d'un nouveau module et soit un nouveau repertoire que vouz avez indiqué comme le repertoire contenant fichier .XML, soit un fichier .XML tout seul si vous n'avez indiqué qu'un nom de fichier.</p>
 <h1><a class="anchor" id="apres"></a>
 Qu'est-ce que je fais après?</h1>
-<p>Mettez le fichier de classe dans un bon repertoire de votre projet. Soyez vigilant avec la structure de votre projet pour ne pas la rendre décharge. Puis, il vous faut bien placer un fichier .XML. Si le repertoire que vous avez choisi existe déjà dans le repertoire "config/", juste remplacer un fichier .XML dans un bon repertoire là-bas. Sinon, remplacez le repertoire entier à "config/". Pour tester le résultat, créez votre nouveau <a class="el" href="classModule.html" title="Les briques de base du simulateur. ">Module</a> quelque part dans le projet et essayez de le compiler. Si le projet compile bien et vous n'avez pas des warnings dans la console à cause de fichier .XML introuvable, alors vous avez tout bien fait. Maintenant, il est le temps de remplir ce nouveau module par fonctionnalité non-générique. </p>
+<p>Mettez le fichier de classe dans un bon repertoire de votre projet. Soyez vigilant avec la structure de votre projet pour ne pas la rendre décharge. Puis, il vous faut bien placer un fichier .XML. Si le repertoire que vous avez choisi existe déjà dans le repertoire "config/", juste remplacer un fichier .XML dans un bon repertoire là-bas. Sinon, remplacez le repertoire entier à "config/". Pour tester le résultat, créez votre nouveau <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> quelque part dans le projet et essayez de le compiler. Si le projet compile bien et vous n'avez pas des warnings dans la console à cause de fichier .XML introuvable, alors vous avez tout bien fait. Maintenant, il est le temps de remplir ce nouveau module par fonctionnalité non-générique. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 15 Mai 2014 14:52:18 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 25 2014 14:11:42 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.1.2
 </small></address>
 </body>
 </html>

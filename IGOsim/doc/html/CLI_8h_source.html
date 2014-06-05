@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
 <title>IGOsat Simulator:  Fichier source de src/Core/CLI.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.1.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -88,37 +87,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">CLI.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;HCI.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classCLI.html">    3</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCLI.html">CLI</a> :</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">public</span> <a class="code" href="classHCI.html">HCI</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classCLI.html#afb0099de9473ff74480fa40cec78a3ac">   11</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classCLI.html">CLI</a>&amp; <a class="code" href="classCLI.html#afb0099de9473ff74480fa40cec78a3ac">getInstance</a>()</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">static</span> <a class="code" href="classCLI.html">CLI</a> instance;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">return</span> instance;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classCLI.html">CLI</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> logv(std::string, <span class="keywordtype">bool</span> withTime = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classCLI.html">CLI</a>(logLevel ll = INFO) {};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classCLI.html">CLI</a>(<a class="code" href="classCLI.html">CLI</a> <span class="keyword">const</span>&amp;);              </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> operator=(<a class="code" href="classCLI.html">CLI</a> <span class="keyword">const</span>&amp;);     </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="ttc" id="classCLI_html_afb0099de9473ff74480fa40cec78a3ac"><div class="ttname"><a href="classCLI.html#afb0099de9473ff74480fa40cec78a3ac">CLI::getInstance</a></div><div class="ttdeci">static CLI &amp; getInstance()</div><div class="ttdoc">Retourne l&#39;instance unique de CLI. </div><div class="ttdef"><b>Definition:</b> CLI.h:11</div></div>
-<div class="ttc" id="classCLI_html"><div class="ttname"><a href="classCLI.html">CLI</a></div><div class="ttdef"><b>Definition:</b> CLI.h:3</div></div>
-<div class="ttc" id="classHCI_html"><div class="ttname"><a href="classHCI.html">HCI</a></div><div class="ttdef"><b>Definition:</b> HCI.h:7</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿#pragma once</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;HCI.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="classCLI.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCLI.html" title="Implémentation de l&#39;interface en ligne de commande (Command Line Interface) Sorties et entrées via la...">CLI</a> :</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span> <a class="code" href="classHCI.html">HCI</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classCLI.html#ab29c9ac6d7c2e6b25eeacf0c5fc144a9" title="Le constructeur qui définit le log level.">CLI</a>(logLevel = INFO);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classCLI.html#a9f59d57abf434f7161fcf3f61b725752" title="Destructeur.">~CLI</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCLI.html#a844e89b9d79ecf64b1a52cc80fb42663" title="Affiche le message mess dans la ligne de commande avec ou sans la valeur du timer actuel...">logv</a>(std::string, <span class="keywordtype">bool</span> = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 15 Mai 2014 14:52:18 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 25 2014 14:11:42 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.1.2
 </small></address>
 </body>
 </html>

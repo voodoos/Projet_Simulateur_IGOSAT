@@ -1,8 +1,9 @@
 var searchData=
 [
   ['getcounter',['getCounter',['../classTimer.html#a03ffd75bbb89ff1644839523af9fda03',1,'Timer']]],
+  ['getdataoutput',['getDataOutput',['../classHCIs.html#a15b2703edaaf748e452e9d4df4262465',1,'HCIs']]],
   ['getfirstmessage',['getFirstMessage',['../classSocket.html#a71e162a0ca00b1a46fe23eaccb09f76d',1,'Socket']]],
-  ['getinstance',['getInstance',['../classCLI.html#afb0099de9473ff74480fa40cec78a3ac',1,'CLI::getInstance()'],['../classTimer.html#a8357f90f20707f9693fc713319de923a',1,'Timer::getInstance()']]],
+  ['getinstance',['getInstance',['../classHCIs.html#ae18a8eafd21d1490bf59e395a278a0c6',1,'HCIs::getInstance()'],['../classTimer.html#a8357f90f20707f9693fc713319de923a',1,'Timer::getInstance()']]],
   ['getmodulebyname',['getModuleByName',['../classMacroModule.html#ab98b15af55e4cd1ad3a20fc53af09aa4',1,'MacroModule']]],
   ['getname',['getName',['../classMessage.html#ac03b02000572b0852c574498bf138e87',1,'Message::getName()'],['../classModule.html#a3c1ecab9c7fa778807e253c26aa54310',1,'Module::getName()'],['../classSocket.html#aaefa10006cbf7a7a082e4adc606b3cea',1,'Socket::getName()']]],
   ['getowner',['getOwner',['../classSocket.html#a6421574ae64f7b40e7c3f7bbb5cc3cee',1,'Socket']]],

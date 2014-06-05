@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
 <title>IGOsat Simulator:  Fichier source de src/Core/Messages/FloatMessage.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.1.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -93,27 +92,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Message.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classFloatMessage.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFloatMessage.html">FloatMessage</a>: <span class="keyword">public</span> <a class="code" href="classMessage.html">Message</a>{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="classFloatMessage.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFloatMessage.html" title="Classe de messages contenant un nombre à virgule flottante comme le payload.">FloatMessage</a>: <span class="keyword">public</span> <a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">float</span> payload;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classFloatMessage.html">FloatMessage</a>(std::string <a class="code" href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">name</a>, <span class="keywordtype">float</span> payload, <span class="keywordtype">int</span> time=0);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classFloatMessage.html" title="Classe de messages contenant un nombre à virgule flottante comme le payload.">FloatMessage</a>(std::string <a class="code" href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">name</a>, <span class="keywordtype">float</span> payload, <span class="keywordtype">int</span> time=0);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classFloatMessage.html#a9b3814111c4194bc64a14f51dc4d10ce">getPayload</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classFloatMessage.html#a9b3814111c4194bc64a14f51dc4d10ce" title="Renvoie la charge utile du message.">getPayload</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::ostream&amp; <a class="code" href="classFloatMessage.html#a8522c594c26e327e92546913d4ab4f4a">operator&lt;&lt;</a>(std::ostream &amp;os);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::ostream&amp; <a class="code" href="classFloatMessage.html#a8522c594c26e327e92546913d4ab4f4a" title="Operateur de sortie surchargé">operator&lt;&lt;</a>(std::ostream &amp;os);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="ttc" id="classMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">Classe abstraite de base pour les messages. </div><div class="ttdef"><b>Definition:</b> Message.h:15</div></div>
-<div class="ttc" id="classFloatMessage_html_a9b3814111c4194bc64a14f51dc4d10ce"><div class="ttname"><a href="classFloatMessage.html#a9b3814111c4194bc64a14f51dc4d10ce">FloatMessage::getPayload</a></div><div class="ttdeci">float getPayload()</div><div class="ttdoc">Renvoie la charge utile du message. </div><div class="ttdef"><b>Definition:</b> FloatMessage.cpp:8</div></div>
-<div class="ttc" id="classFloatMessage_html_a8522c594c26e327e92546913d4ab4f4a"><div class="ttname"><a href="classFloatMessage.html#a8522c594c26e327e92546913d4ab4f4a">FloatMessage::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os)</div><div class="ttdoc">Operateur de sortie surchargé </div><div class="ttdef"><b>Definition:</b> FloatMessage.cpp:12</div></div>
-<div class="ttc" id="classMessage_html_ac7adddb666acdc47c48f684bd6810a51"><div class="ttname"><a href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">Message::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> Message.h:18</div></div>
-<div class="ttc" id="classFloatMessage_html"><div class="ttname"><a href="classFloatMessage.html">FloatMessage</a></div><div class="ttdoc">Classe de messages contenant un nombre à virgule flottante comme le payload. </div><div class="ttdef"><b>Definition:</b> FloatMessage.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 15 Mai 2014 14:52:18 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 25 2014 14:11:42 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.1.2
 </small></address>
 </body>
 </html>
