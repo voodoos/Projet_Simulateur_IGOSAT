@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module name="Thermique">
+    <parameters>
+    		<parameter name="temperature">
+	   			<unit>C</unit>
+	   			<value>0</value>
+    		</parameter>
+    		<parameter name="tension">
+	   			<unit>V</unit>
+	   			<value>0</value>
+    		</parameter>
+    </parameters>
+    <messages>
+    		<message name="getTemp">
+	   			<time>0</unit>
+    		</message>
+            <message name="getVolt">
+	   			<time>0</unit>
+    		</message>
+    </messages>
+    <sockets>
+    		<socket name="toODB">
+            </socket>
+            <socket name="fromODB">
+            </socket>
+    </sockets>
+</module>
+

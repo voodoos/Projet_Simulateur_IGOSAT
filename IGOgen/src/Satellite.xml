@@ -2,18 +2,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <module name="Satellite">
     <parameters>
-    		<parameter name="poids">
-	   			<unit>kg</unit>
-	   			<value>3</value>
-    		</parameter>
-    		<parameter name="altitude">
-	   			<unit>km</unit>
-	   			<value>650</value>
-    		</parameter>
+        <parameter name="poids">
+            <unit>kg</unit>
+            <value>3</value>
+        </parameter>
+        <parameter name="altitude">
+            <unit>km</unit>
+            <value>650</value>
+        </parameter>
+        <parameter name="temp">
+            <unit>C</unit>
+            <value>0</value>
+        </parameter>
     </parameters>
     <messages>
     </messages>
     <sockets>
+        <socket name="toPayload"></socket>
     </socket>
+    <socket name="toBus"></socket>
+</socket>
+</sockets>
 </module>
 

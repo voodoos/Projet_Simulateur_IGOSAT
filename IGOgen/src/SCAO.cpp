@@ -1,8 +1,14 @@
-
 #include "SCAO.h"
+
 using namespace std;
 
 SCAO::SCAO(std::string name, Params params) : Module(name, params, "SCAO.xml"){
+    
+    
+    //Ajout des composants:
+    addSubModule(new Magnetometre());
+    addSubModule(new Magnetocoupleurs());
+    
 
 }
 SCAO::~SCAO() {

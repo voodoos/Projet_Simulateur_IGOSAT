@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "Magnetometre.h"
 #include "Module.h"
 /*!
 * \class SCAO
