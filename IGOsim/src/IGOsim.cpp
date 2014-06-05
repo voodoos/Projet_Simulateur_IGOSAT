@@ -19,9 +19,9 @@
 
 
 #ifdef __APPLE__
-    #define setXMLpath XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
+#define setXMLpath XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
 #else
-    #define setXMLpath  std::cout<<std::endl;
+#define setXMLpath  std::cout<<std::endl;
 #endif
 
 //For convenience:
@@ -32,29 +32,28 @@ int main(int argc, char *argv[])
 {
     /* BASIC CONFIGURATION */
     //XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
-
-    Timer::getInstance().addPhysics(&bp);
     
-     Exemple de batterie controlleur:
-
+    //On initialise les interfaces utilisateurs.
+    HCIs::getInstance().setLog("test.log", HCI::INFO);
+    HCIs::getInstance().addDataOutput("BV", "batterieVoltage.data");
+    
     /*Le module de base, le Satellite */
     //Sate
     
-
-        /* Exemple batterie */ 
-        BatteryModule *bm = new BatteryModule("BatteryModule");
-
-        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
-        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
-        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 10));
-        
-
-    Exemple de batterie module: 
-
-        //delete(bm);
-        
-        cin.ignore();
-
+    
+    /* Exemple batterie */
+    BatteryModule *bm = new BatteryModule("BatteryModule");
+    
+    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
+    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
+    (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 10));
+    
+    
+    Timer::getInstance().start(100);
+    
+    //delete(bm);
+    
+    cin.ignore();
+    
 	return 0;
 }
-
