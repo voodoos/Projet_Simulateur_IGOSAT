@@ -48,7 +48,6 @@ def generateXML():
 
 	#Creation XML
 
-	xmlFile.write("\n")
 	xmlFile.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n")
 	xmlFile.write("<module name=\""+moduleName+"\">\n")
 
@@ -83,7 +82,7 @@ def generateXML():
 		xmlFile.write("    		<socket name=\""+socket['name']+"\">\n")
 		xmlFile.write("    		</socket>\n")
 	
-	xmlFile.write("    </socket>\n")
+	xmlFile.write("    </sockets>\n")
 
 	xmlFile.write("</module>\n")
 	xmlFile.write("\n")
@@ -96,7 +95,6 @@ def generateCPP():
 	implementationFile = open(moduleName+".cpp", "w")
 
 	#Creation of class implementation
-	implementationFile.write("\n")
 	implementationFile.write("#include \""+moduleName+".h\"")
 	implementationFile.write("\n")
 	implementationFile.write("using namespace std;\n")
