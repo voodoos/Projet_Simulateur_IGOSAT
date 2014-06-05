@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>IGOsat Simulator:  Fichier source de src/headers/BatteryModule.h</title>
+<title>IGOsat Simulator:  Fichier source de src/BatteryModule/BatteryModule.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d0381950fc41278198232cb047ffc1f9.html">headers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_90b4cf55dedf4042d56fdc1807462dc2.html">BatteryModule</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -87,20 +87,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">BatteryModule.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿#pragma once</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;MacroModule.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="code" href="classBatteryModule.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBatteryModule.html">BatteryModule</a>:<span class="keyword">public</span> <a class="code" href="classMacroModule.html">MacroModule</a>{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classBatteryModule.html">BatteryModule</a>(std::string <a class="code" href="classModule.html#a794fbb44972c7c73cc197159093e66d1">name</a>, Params params);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> process(<a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Battery.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;BatteryController.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;BatteryPhysics.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;MacroModule.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classBatteryModule.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBatteryModule.html" title="Un exemple de batterie.">BatteryModule</a>:<span class="keyword">public</span> <a class="code" href="classMacroModule.html">MacroModule</a>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classBattery.html">Battery</a> *battery;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classBatteryController.html">BatteryController</a> *batteryController;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classBatteryPhysics.html">BatteryPhysics</a> *batteryPhysics;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classBatteryModule.html#a2fb494ef5f124c38c0fdf9ccfb31918f">BatteryModule</a>(std::string <a class="code" href="classModule.html#a794fbb44972c7c73cc197159093e66d1">name</a>, Params params = Params());</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classBatteryModule.html" title="Un exemple de batterie.">BatteryModule</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> process(std::shared_ptr&lt;Message&gt;);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Mars 12 2014 23:25:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 25 2014 14:11:42 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

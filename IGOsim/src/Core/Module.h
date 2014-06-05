@@ -1,5 +1,6 @@
-﻿#pragma once
+#pragma once
 
+#include <memory>
 #include <queue>
 #include <string>
 #include <unordered_map>
@@ -8,10 +9,17 @@
 
 #include "ISynchronized.h"
 #include "Memory.h"
-#include "Message.h"
 #include "Socket.h"
+#include "Message.h"
+#include "IntMessage.h"
+#include "StringMessage.h"
+#include "FloatMessage.h"
+#include "StringMessage.h"
+#include "Socket.h"
+#include "Timer.h"
 
-#define NOP -1 /*! NoOperation valeur de Timer*/
+#define NOP -1 /*! NoOperation valeur de Timer
+                        \todo déplacer dans TImer.h*/
 
 /*!
 * \class Module
@@ -40,23 +48,25 @@ typedef std::unordered_map<std::string, Socket> Sockets;
 */
 typedef std::unordered_map<std::string, int> Messages;
 
+
 class Module : public ISynchronized
 {
 protected:
-    std::string name;                       /*!< Le nom du module */
-    Memory<int> memory;                     /*!< La mémoire du module */
-    Sockets sockets;                        /*!< Les connecteurs du module */
-    Messages messagesAllowed;               /*!< Les messages compris par le module ET leurs temps d'éxecution */
-    Params parameters;                      /*!< Les paramètres d'état du modules */
-    std::queue<Message> tasks;              /*!< La file d'attente des messages à traiter */
-    int taskTimer;                          /*!< Le timer de la tâche courante */
+    std::string name;                           /*!< Le nom du module */
+    std::string confPath;                       /*!< Le chemin vers le fichier de configuration */
+    Memory<int> memory;                         /*!< La mémoire du module */
+    Sockets sockets;                            /*!< Les connecteurs du module */
+    Messages messagesAllowed;                   /*!< Les messages compris par le module ET leurs temps d'éxecution */
+    Params parameters;                          /*!< Les paramètres d'état du modules */
+    std::queue<std::shared_ptr<Message>> tasks; /*!< La file d'attente des messages à traiter */
+    int taskTimer;                              /*!< Le timer de la tâche courante */
 
 public:
     /*!
-    * \fn Module(std::string = "DefaultName", Params = Params())
+    * \fn Module(std::string = "DefaultName", Params = Params(), std::string cp = "")
     * \brief Constructeur par défault, pour un module sans mémoire.
     */
-    Module(std::string = "DefaultName", Params = Params());
+    Module(std::string = "DefaultName", Params = Params(), std::string cp = std::string());
 
     /*!
     * \fn Module(std::string, Memory<int>, Params = Params())
@@ -87,10 +97,10 @@ public:
     void addSocket(Socket);
 
     /*!
-    * \fn void addMessage(Message msg, int processingTime)
+    * \fn void addMessage(std::string msgName, int processingTime)
     * \brief Fonction d'ajout d'un message au module, et de son temps d'éxecution simulé.
     */
-    void addMessage(Message, int);
+    void addMessage(std::string, int);
 
     /*!
     * \fn Socket *getSocketByName(std::string)
@@ -116,10 +126,23 @@ public:
     void setParamValueByName(std::string, double);
 
     /*!
-    * \fn bool isMessageAllowed(Message)
+    * \fn bool isMessageAllowed(std::string msgName)
     * \brief Vérifie si le message est un des messages compris par ce module.
     */
-    bool isMessageAllowed(Message);
+    bool isMessageAllowed(std::string);
+    
+    /*!
+     * \fn &operator[](std::string)
+     * \brief Surcharge d'operateur [] pour acceder aux sockets du Module
+     */
+    Socket* operator[](std::string);
+
+
+    /*!
+    * \fn std::string getName() const;
+    * \brief Vérifie si le message est un des messages compris par ce module.
+    */
+    std::string getName() const;
 
 private:
     /*!
@@ -131,11 +154,11 @@ private:
     void getMessages();
 
     /*!
-    * \fn virtual void process() = 0
+    * \fn virtual void process(std::shared_ptr<Message>) = 0
     * \brief La méthode virtuelle pure chargée d'effectuer les actions du module à chaque temps.
     * 
     * Cette méthode, appellée par clock à chaque temps va poursuivre le traitement des tâches en file d'attente.
     *
     */
-    virtual void process(Message) = 0;
+    virtual void process(std::shared_ptr<Message>) = 0;
 };

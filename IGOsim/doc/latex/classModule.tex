@@ -19,7 +19,7 @@ Graphe d'héritage de Module\-:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classModule_a3412148164f0668b2ae4cd1285c2790c}{\hyperlink{classModule_a3412148164f0668b2ae4cd1285c2790c}{Module} (std\-::string=\char`\"{}Default\-Name\char`\"{}, Params=Params())}\label{classModule_a3412148164f0668b2ae4cd1285c2790c}
+\hypertarget{classModule_abcdd948c7444d3420f04be1bd332fbae}{\hyperlink{classModule_abcdd948c7444d3420f04be1bd332fbae}{Module} (std\-::string=\char`\"{}Default\-Name\char`\"{}, Params=Params(), std\-::string cp=std\-::string())}\label{classModule_abcdd948c7444d3420f04be1bd332fbae}
 
 \begin{DoxyCompactList}\small\item\em Constructeur par défault, pour un module sans mémoire. \end{DoxyCompactList}\item 
 \hypertarget{classModule_ae2ce24f11deec1453dfaba1f21a36f2c}{\hyperlink{classModule_ae2ce24f11deec1453dfaba1f21a36f2c}{Module} (std\-::string, \hyperlink{classMemory}{Memory}$<$ int $>$, Params=Params())}\label{classModule_ae2ce24f11deec1453dfaba1f21a36f2c}
@@ -33,10 +33,10 @@ virtual void \hyperlink{classModule_ab7ea9648fa500696c85e93ebd0666390}{clock} (i
 \hypertarget{classModule_aeb7302c667eb923a4dc25ae235c744dc}{void \hyperlink{classModule_aeb7302c667eb923a4dc25ae235c744dc}{add\-Socket} (\hyperlink{classSocket}{Socket})}\label{classModule_aeb7302c667eb923a4dc25ae235c744dc}
 
 \begin{DoxyCompactList}\small\item\em Fonction d'ajout d'un connecteur au module. \end{DoxyCompactList}\item 
-\hypertarget{classModule_a7adde67e02dd73bbea1441f7833edc4b}{void \hyperlink{classModule_a7adde67e02dd73bbea1441f7833edc4b}{add\-Message} (\hyperlink{classMessage}{Message}, int)}\label{classModule_a7adde67e02dd73bbea1441f7833edc4b}
+\hypertarget{classModule_a146f454fded03cda14359e419086afa5}{void \hyperlink{classModule_a146f454fded03cda14359e419086afa5}{add\-Message} (std\-::string, int)}\label{classModule_a146f454fded03cda14359e419086afa5}
 
 \begin{DoxyCompactList}\small\item\em Fonction d'ajout d'un message au module, et de son temps d'éxecution simulé. \end{DoxyCompactList}\item 
-\hyperlink{classSocket}{Socket} \& \hyperlink{classModule_a818c5fc693a7ea20db6a2245e94f6561}{get\-Socket\-By\-Name} (std\-::string)
+\hyperlink{classSocket}{Socket} $\ast$ \hyperlink{classModule_aed844ffed911793d3895c5a2bc4f9d43}{get\-Socket\-By\-Name} (std\-::string)
 \begin{DoxyCompactList}\small\item\em Récupère le bon connecteur, ou lève une exception. \end{DoxyCompactList}\item 
 \hypertarget{classModule_a93e2ee84587751939c1fd31cb0802e41}{double {\bfseries get\-Param\-Value\-By\-Name} (std\-::string)}\label{classModule_a93e2ee84587751939c1fd31cb0802e41}
 
@@ -44,13 +44,21 @@ virtual void \hyperlink{classModule_ab7ea9648fa500696c85e93ebd0666390}{clock} (i
 \hypertarget{classModule_ace0e4299e1a6f9b46aa9fd316483895d}{void {\bfseries set\-Param\-Value\-By\-Name} (std\-::string, double)}\label{classModule_ace0e4299e1a6f9b46aa9fd316483895d}
 
 \item 
-\hypertarget{classModule_ac37dde7b4cbe2ea7b319cd43282296ac}{bool \hyperlink{classModule_ac37dde7b4cbe2ea7b319cd43282296ac}{is\-Message\-Allowed} (\hyperlink{classMessage}{Message})}\label{classModule_ac37dde7b4cbe2ea7b319cd43282296ac}
+\hypertarget{classModule_a6e425394cec58009568822cc7a09c8c1}{bool \hyperlink{classModule_a6e425394cec58009568822cc7a09c8c1}{is\-Message\-Allowed} (std\-::string)}\label{classModule_a6e425394cec58009568822cc7a09c8c1}
+
+\begin{DoxyCompactList}\small\item\em Vérifie si le message est un des messages compris par ce module. \end{DoxyCompactList}\item 
+\hypertarget{classModule_a2752ad2f437a772d02b474383b5a214f}{\hyperlink{classSocket}{Socket} $\ast$ \hyperlink{classModule_a2752ad2f437a772d02b474383b5a214f}{operator\mbox{[}$\,$\mbox{]}} (std\-::string)}\label{classModule_a2752ad2f437a772d02b474383b5a214f}
+
+\begin{DoxyCompactList}\small\item\em Surcharge d'operateur \mbox{[}\mbox{]} pour acceder aux sockets du \hyperlink{classModule}{Module}. \end{DoxyCompactList}\item 
+\hypertarget{classModule_a3c1ecab9c7fa778807e253c26aa54310}{std\-::string \hyperlink{classModule_a3c1ecab9c7fa778807e253c26aa54310}{get\-Name} () const }\label{classModule_a3c1ecab9c7fa778807e253c26aa54310}
 
 \begin{DoxyCompactList}\small\item\em Vérifie si le message est un des messages compris par ce module. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs protégés}
 \begin{DoxyCompactItemize}
 \item 
 std\-::string \hyperlink{classModule_a794fbb44972c7c73cc197159093e66d1}{name}
+\item 
+std\-::string \hyperlink{classModule_a5c7481c5ac746e01b225b6782e915dac}{conf\-Path}
 \item 
 \hyperlink{classMemory}{Memory}$<$ int $>$ \hyperlink{classModule_a48fa02fe55d33daffff725c615a63bb9}{memory}
 \item 
@@ -60,7 +68,8 @@ Messages \hyperlink{classModule_aaadd1f971bebf7bb5eae12fcc5689198}{messages\-All
 \item 
 Params \hyperlink{classModule_a232443111a9d59c17724992ddf75fbad}{parameters}
 \item 
-std\-::queue$<$ \hyperlink{classMessage}{Message} $>$ \hyperlink{classModule_aeace7c2bfd88f9946a25fb06974ca522}{tasks}
+std\-::queue$<$ std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classMessage}{Message} $>$ $>$ \hyperlink{classModule_a93e833bd46e53a2d52ab63afb304b840}{tasks}
 \item 
 int \hyperlink{classModule_afc209c4f9120425219f7775c79cf4bea}{task\-Timer}
 \end{DoxyCompactItemize}
@@ -84,30 +93,33 @@ Il s'agit de la classe centrale du simulateur, qui sera construit comme un assem
 Méthode appellée à chaque pas de temps, commune à tous les modules. 
 
 Cette méthode effectue trois actions, lire les messages arrivés, avancer dans un processus interne, envoyer un message. Ces actions prennent tous du temps\-: elles peuvent durer plusieurs \char`\"{}ticks\char`\"{}. \begin{DoxyRefDesc}{A faire}
-\item[\hyperlink{todo__todo000003}{A faire}]Lever une exception \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000007}{A faire}]Lever une exception \end{DoxyRefDesc}
 
 
 Implémente \hyperlink{classISynchronized_af7155c662758d6c70f381bb9b11afcd6}{I\-Synchronized}.
 
-\hypertarget{classModule_a818c5fc693a7ea20db6a2245e94f6561}{\index{Module@{Module}!get\-Socket\-By\-Name@{get\-Socket\-By\-Name}}
+\hypertarget{classModule_aed844ffed911793d3895c5a2bc4f9d43}{\index{Module@{Module}!get\-Socket\-By\-Name@{get\-Socket\-By\-Name}}
 \index{get\-Socket\-By\-Name@{get\-Socket\-By\-Name}!Module@{Module}}
-\subsubsection[{get\-Socket\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket} \& Module\-::get\-Socket\-By\-Name (
+\subsubsection[{get\-Socket\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket} $\ast$ Module\-::get\-Socket\-By\-Name (
 \begin{DoxyParamCaption}
 \item[{std\-::string}]{}
 \end{DoxyParamCaption}
-)}}\label{classModule_a818c5fc693a7ea20db6a2245e94f6561}
+)}}\label{classModule_aed844ffed911793d3895c5a2bc4f9d43}
 
 
 Récupère le bon connecteur, ou lève une exception. 
 
 \begin{DoxyRefDesc}{A faire}
-\item[\hyperlink{todo__todo000001}{A faire}]Créer et gérer l'exception \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000009}{A faire}]Créer et gérer l'exception \end{DoxyRefDesc}
 \begin{DoxyRefDesc}{A faire}
-\item[\hyperlink{todo__todo000004}{A faire}]Faire le retour d'un objet \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000008}{A faire}]Faire le retour d'un objet \end{DoxyRefDesc}
 
 
 \subsection{Documentation des données membres}
-\hypertarget{classModule_a48fa02fe55d33daffff725c615a63bb9}{\index{Module@{Module}!memory@{memory}}
+\hypertarget{classModule_a5c7481c5ac746e01b225b6782e915dac}{\index{Module@{Module}!conf\-Path@{conf\-Path}}
+\index{conf\-Path@{conf\-Path}!Module@{Module}}
+\subsubsection[{conf\-Path}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Module\-::conf\-Path\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_a5c7481c5ac746e01b225b6782e915dac}
+Le chemin vers le fichier de configuration \hypertarget{classModule_a48fa02fe55d33daffff725c615a63bb9}{\index{Module@{Module}!memory@{memory}}
 \index{memory@{memory}!Module@{Module}}
 \subsubsection[{memory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory}$<$int$>$ Module\-::memory\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_a48fa02fe55d33daffff725c615a63bb9}
 La mémoire du module \hypertarget{classModule_aaadd1f971bebf7bb5eae12fcc5689198}{\index{Module@{Module}!messages\-Allowed@{messages\-Allowed}}
@@ -122,9 +134,9 @@ Le nom du module \hypertarget{classModule_a232443111a9d59c17724992ddf75fbad}{\in
 Les paramètres d'état du modules \hypertarget{classModule_af0415ddaab230958f91665c66b078085}{\index{Module@{Module}!sockets@{sockets}}
 \index{sockets@{sockets}!Module@{Module}}
 \subsubsection[{sockets}]{\setlength{\rightskip}{0pt plus 5cm}Sockets Module\-::sockets\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_af0415ddaab230958f91665c66b078085}
-Les connecteurs du module \hypertarget{classModule_aeace7c2bfd88f9946a25fb06974ca522}{\index{Module@{Module}!tasks@{tasks}}
+Les connecteurs du module \hypertarget{classModule_a93e833bd46e53a2d52ab63afb304b840}{\index{Module@{Module}!tasks@{tasks}}
 \index{tasks@{tasks}!Module@{Module}}
-\subsubsection[{tasks}]{\setlength{\rightskip}{0pt plus 5cm}std\-::queue$<${\bf Message}$>$ Module\-::tasks\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_aeace7c2bfd88f9946a25fb06974ca522}
+\subsubsection[{tasks}]{\setlength{\rightskip}{0pt plus 5cm}std\-::queue$<$std\-::shared\-\_\-ptr$<${\bf Message}$>$ $>$ Module\-::tasks\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_a93e833bd46e53a2d52ab63afb304b840}
 La file d'attente des messages à traiter \hypertarget{classModule_afc209c4f9120425219f7775c79cf4bea}{\index{Module@{Module}!task\-Timer@{task\-Timer}}
 \index{task\-Timer@{task\-Timer}!Module@{Module}}
 \subsubsection[{task\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}int Module\-::task\-Timer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classModule_afc209c4f9120425219f7775c79cf4bea}
@@ -132,5 +144,5 @@ Le timer de la tâche courante
 
 La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
 \item 
-src/headers/Module.\-h\item 
-src/includes/Module.\-cpp\end{DoxyCompactItemize}
+src/\-Core/Module.\-h\item 
+src/\-Core/Module.\-cpp\end{DoxyCompactItemize}

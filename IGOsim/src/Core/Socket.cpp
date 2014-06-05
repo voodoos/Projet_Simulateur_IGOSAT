@@ -1,10 +1,10 @@
-﻿#include "Socket.h"
+#include "Socket.h"
 
 //For convenience:
 using namespace std;
 
 
-Socket::Socket(std::string name) : name(name), timer(-1)
+Socket::Socket(string name, string owner) : name(name),owner(owner),timer(NOM)
 {
 }
 
@@ -27,18 +27,18 @@ void Socket::setConnexion(Connexion &c){
     connexion = &c;
 }
 
-void Socket::receive(Message m){
+void Socket::receive(std::shared_ptr<Message> m){
     //On ajoute le message à la queue:
     messageQueue.push(m);
 
     //Si la queue était vide:
     if (messageQueue.size() == 1) {
         //On règle le timer:
-        timer = m.getTransmissionTime();
+        timer = m->getTransmissionTime();
     }
 }
 
-void Socket::send(Message m){
+void Socket::send(std::shared_ptr<Message>m){
     /*! \todo Et si connexion est null ? */
     connexion->dispatch(m, this);
 }
@@ -53,21 +53,25 @@ std::string Socket::getName(){
     return name;
 }
 
+std::string Socket::getOwner(){
+    return owner;
+}
+
 bool Socket::hasMessage(){
     return !messageQueue.empty();
 }
 
-Message Socket::getFirstMessage(){
+std::shared_ptr<Message> Socket::getFirstMessage(){
     //On vérifie qu'il y a effectivement des messages:
     if (messageQueue.size() > 0){
 
         //On récupère et supprime le premier message:
-        Message m(messageQueue.front());
+        std::shared_ptr<Message>m = messageQueue.front();
         messageQueue.pop();
 
         //Et on met règle le timer pour le message suivant, ou à zéro si c'est fini:
         if (messageQueue.size() > 0) {
-            timer = messageQueue.front().getTransmissionTime();
+            timer = messageQueue.front()->getTransmissionTime();
         }
         else {
             timer = -1;

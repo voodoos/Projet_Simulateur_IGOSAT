@@ -1,6 +1,7 @@
-﻿#pragma once
+#pragma once
 
 #include <string>
+#include <memory>
 
 /*!
 * \class Message
@@ -13,9 +14,8 @@
 
 class Message
 {
-private:
-    std::string name;       /*!< Nom du message*/
-    std::string payload;    /*!< Charge utile du message*/
+protected:
+    std::string name;                  /*!< Nom du message*/
     unsigned int transmissionTime;     /*!< Temps de traitement du message*/
 
 public:
@@ -23,7 +23,7 @@ public:
     * \fn Message(std::string)
     * \brief Constructeur par défaut
     */
-    Message(std::string name = "Default Name", std::string payload = "", int = 0);
+    Message(std::string name = "Default Name", int = 0);
 
     /*!
     * \fn ~Message()
@@ -36,17 +36,36 @@ public:
     * \brief Renvoie le nom du message
     */
     std::string getName();
-
+    
     /*!
-    * \fn std::string getPayload()
-    * \brief Renvoie la charge utile du message
-    */
-    std::string getPayload();
+     * \fn std::ostream& operator<<(std::ostream &os)
+     * \brief Operateur de sortie surchargé
+     */
+    virtual std::ostream &operator<<(std::ostream &os)=0;
     
     /*!
     * \fn int getTransmissionTime()
     * \brief Renvoie le temps de traitement du message
     */
     unsigned int getTransmissionTime();
+    
+    /*!
+     * \fn std::shared_ptr<Message> createMessage(std::string, int=0, unsigned=0)
+     * \brief Crée et retourne le pointeur partagé au nouveau IntMessage
+     */
+    static std::shared_ptr<Message> createMessage(std::string, int=0, unsigned int=0);
+    
+    /*!
+     * \fn std::shared_ptr<Message> createMessage(std::string, std::string="", unsigned=0)
+     * \brief Crée et retourne le pointeur partagé au nouveau StringMessage
+     */
+    static std::shared_ptr<Message> createMessage(std::string, std::string="", unsigned int=0);
+    
+    /*!
+     * \fn std::shared_ptr<Message> createMessage(std::string, float=0, unsigned=0)
+     * \brief Crée et retourne le pointeur partagé au nouveau FloatMessage
+     */
+    static std::shared_ptr<Message> createMessage(std::string, float=0, unsigned=0);
 };
+
 

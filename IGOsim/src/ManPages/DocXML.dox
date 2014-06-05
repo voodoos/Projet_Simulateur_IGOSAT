@@ -1,0 +1,64 @@
+﻿/*! \page xmlRef Référence XML
+\Description Description des attributs utilisés dans les différents fichiers de configuration xml
+
+\section xml_mod Configuration des modules
+\subsection xml_mod_exemple Exemple
+~~~~~~~~~~~~~~~~~~~~~{.xml}
+<?xml version="1.0" encoding="utf-8"?>
+<module name="Battery">
+    <parameters>
+        <parameter name="voltage">
+            <unit>V</unit>
+            <value>40</value>
+        </parameter>
+        <parameter name="temp">
+            <unit>K</unit>
+            <value>40</value>
+        </parameter>
+    </parameters>
+
+    <messages>
+        <message name="getVoltage">
+            <time>5</time>
+        </message>
+    </messages>
+</module>
+~~~~~~~~~~~~~~~~~~~~~
+
+\subsection xml_mod_mod Noeud principal <module />
+Ce noeud, unique doit impérativement être l'unique présent à la racine du document, et donc contenir tous les autres. Il est paramétré par un seul attribut, le **nom du module**.
+
+~~~~~~~~~~~~~~~~~~~~~{.xml}
+<module name="NomModule"></module> 
+~~~~~~~~~~~~~~~~~~~~~
+
+L'attribut name de ce noeud doit impérativement **correspondre au nom du module que l'on souhaite configurer**.
+
+\subsection xml_mod_params <parameters />
+Ce noeud regroupe les différents paramètres (physiques) du module.
+
+\subsection xml_mod_param <parameter />
+Cet élément décrit un paramètre du module. Il est constitué d'un attribut, le **nom du paramètre**, et de deux sous-éléments: `<unit />` l'unité du paramètre et `<value />` sa valeur en **double**.
+
+~~~~~~~~~~~~~~~~~~~~~{.xml}
+<parameter name="NomDuParam">
+    <unit>UnitéDuParam</unit>
+    <value>ValeurDuParamEnDouble</value>
+</parameter>
+~~~~~~~~~~~~~~~~~~~~~
+
+
+\subsection xml_mod_messs <messages />
+Ce noeud regroupe les différents méssages compris par ce module.
+
+\subsection xml_mod_mess <message />
+Cet élément décrit un message du module. Il est constitué d'un attribut, le **nom du message**, et d'un sous-élément:
+<time /> qui modélise le **temps de transmission du message**.
+
+~~~~~~~~~~~~~~~~~~~~~{.xml}
+<message name="NomDuMessage">
+    <time>TempsDeTransmission</time>
+</message>
+~~~~~~~~~~~~~~~~~~~~~
+
+*/

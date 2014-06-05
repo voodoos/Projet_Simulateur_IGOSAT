@@ -1,19 +1,65 @@
-﻿#include "Module.h"
+#include "Module.h"
+
+#include "HCIs.h"
+#include "HCI.h"
 #include "Memory.cpp"
+#include "XMLReader.h"
+
+#include "rapidxml.hpp"
 
 //For convenience:
 using namespace std;
 
 
-Module::Module(string name, Params params)
-: name(name), parameters(params), taskTimer(NOP)
+Module::Module(string name, Params params, string cp)
+: name(name), parameters(params), confPath(cp), taskTimer(NOP)
 {
-    cout << "Initializing module with name " << name << endl;
+    //Chemin par défaut:
+    if (confPath.empty()) {
+        confPath = name;
+    }
+
+    //On charge les paramètres du module:
+    try {
+         parameters = XMLReader::readParams(confPath);
+    }
+    catch (runtime_error) {
+        //Si fichier xml n'existe pas, on prend les valeurs du contructeur:
+        parameters = params;
+    }
+    catch (int) {
+        //Si fichier xml invalide, on prend les valeurs du contructeur:
+        parameters = params;
+    }
+
+    //On charge les messages du module:
+    try {
+        messagesAllowed = XMLReader::readMessages(confPath);
+    }
+    catch (runtime_error) {}
+    catch (int) {}
+    
+    //On charge les sockets du module:
+    try{
+        vector<std::string>socketNames = XMLReader::readSockets(confPath);
+        for (vector<string>::iterator it = socketNames.begin(); it != socketNames.end(); ++it) {
+            addSocket(Socket(*it, this->name));
+        }
+    }
+    catch (runtime_error) {}
+    catch (int) {}
+
+    //On enregistre le module dans le timer:
+    Timer::getInstance().add(this);
+
+    //Petit log:
+    HCIs::getInstance().log(HCI::INFO, "Initializing module with name " + name, false);
 }
 
 Module::Module(string name, Memory<int> mem, Params params)
 : name(name), memory(mem), parameters(params), taskTimer(NOP)
 {
+    Timer::getInstance().add(this);
 }
 
 
@@ -30,8 +76,8 @@ void Module::clock(int time) {
     //On traite un peu:
     //Si fin attente tâche suivante:
     if (taskTimer == 0) {
-        Message nextMsg = tasks.front();
-        if (isMessageAllowed(nextMsg)){
+        shared_ptr<Message> nextMsg = tasks.front();
+        if (isMessageAllowed(nextMsg->getName())){
 
             //Process est virtuelle pure, dépend de chaque module !
             process(nextMsg);
@@ -40,7 +86,7 @@ void Module::clock(int time) {
 
             //On met à jour le timer:
             if (tasks.size() > 0){
-                taskTimer = messagesAllowed[nextMsg.getName()];
+                taskTimer = messagesAllowed[nextMsg->getName()];
             }
             else {
                 taskTimer = NOP;
@@ -66,12 +112,12 @@ void Module::addSocket(Socket soc)
     sockets[soc.getName()] = soc;
 }
 
-void Module::addMessage(Message msg, int processingTime)
+void Module::addMessage(string msg, int processingTime)
 {
-    //Onvérifie l'absence de doublons:
+    //On vérifie l'absence de doublons:
     if (!isMessageAllowed(msg)){
         //On ajoute le message dans la hash_table, avec pour clé le nom du message
-        messagesAllowed[msg.getName()] = processingTime;
+        messagesAllowed[msg] = processingTime;
     }
 }
 
@@ -110,16 +156,20 @@ void Module::setParamValueByName(string pname, double value){
     }
 }
 
-bool Module::isMessageAllowed(Message m)
+bool Module::isMessageAllowed(string  m)
 {
     try {
-        messagesAllowed.at(m.getName());
+        messagesAllowed.at(m);
     }
     catch (const out_of_range &e) {
         return false;
     }
 
     return true;
+}
+
+string Module::getName() const {
+    return name;
 }
 
 void Module::getMessages() {
@@ -131,7 +181,7 @@ void Module::getMessages() {
             tasks.push(sockets[kv.first].getFirstMessage());
             //Et on met règle le timer pour le message suivant, ou à zéro si c'est fini:
             if (tasks.size() > 0) {
-                taskTimer = messagesAllowed[tasks.front().getName()];
+                taskTimer = messagesAllowed[tasks.front()->getName()];
             }
             else {
                 taskTimer = NOP;
@@ -140,4 +190,8 @@ void Module::getMessages() {
             sockets[kv.first].clock(0);
         }
     }
+}
+
+Socket* Module::operator[](std::string sname){
+    return getSocketByName(sname);
 }

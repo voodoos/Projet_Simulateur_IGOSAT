@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>IGOsat Simulator: Référence XML</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">IGOsat Simulator
+   </div>
+   <div id="projectbrief">Simulateur fonctionnel d&#39;IGOsat.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Référence XML </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Description des attributs utilisés dans les différents fichiers de configuration xml</p>
+<h1><a class="anchor" id="xml_mod"></a>
+Configuration des modules</h1>
+<h2><a class="anchor" id="xml_mod_exemple"></a>
+Exemple</h2>
+<div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;utf-8&quot;</span>?&gt;</div>
+<div class="line">&lt;module name=<span class="stringliteral">&quot;Battery&quot;</span>&gt;</div>
+<div class="line">    &lt;parameters&gt;</div>
+<div class="line">        &lt;parameter name=<span class="stringliteral">&quot;voltage&quot;</span>&gt;</div>
+<div class="line">            &lt;unit&gt;V&lt;/unit&gt;</div>
+<div class="line">            &lt;value&gt;40&lt;/value&gt;</div>
+<div class="line">        &lt;/parameter&gt;</div>
+<div class="line">        &lt;parameter name=<span class="stringliteral">&quot;temp&quot;</span>&gt;</div>
+<div class="line">            &lt;unit&gt;K&lt;/unit&gt;</div>
+<div class="line">            &lt;value&gt;40&lt;/value&gt;</div>
+<div class="line">        &lt;/parameter&gt;</div>
+<div class="line">    &lt;/parameters&gt;</div>
+<div class="line"></div>
+<div class="line">    &lt;messages&gt;</div>
+<div class="line">        &lt;message name=<span class="stringliteral">&quot;getVoltage&quot;</span>&gt;</div>
+<div class="line">            &lt;time&gt;5&lt;/time&gt;</div>
+<div class="line">        &lt;/message&gt;</div>
+<div class="line">    &lt;/messages&gt;</div>
+<div class="line">&lt;/module&gt;</div>
+</div><!-- fragment --><h2><a class="anchor" id="xml_mod_mod"></a>
+Noeud principal &lt;module /&gt;</h2>
+<p>Ce noeud, unique doit impérativement être l'unique présent à la racine du document, et donc contenir tous les autres. Il est paramétré par un seul attribut, le <b>nom du module</b>.</p>
+<div class="fragment"><div class="line">&lt;module name=<span class="stringliteral">&quot;NomModule&quot;</span>&gt;&lt;/module&gt; </div>
+</div><!-- fragment --><p>L'attribut name de ce noeud doit impérativement <b>correspondre au nom du module que l'on souhaite configurer</b>.</p>
+<h2><a class="anchor" id="xml_mod_params"></a>
+&lt;parameters /&gt;</h2>
+<p>Ce noeud regroupe les différents paramètres (physiques) du module.</p>
+<h2><a class="anchor" id="xml_mod_param"></a>
+&lt;parameter /&gt;</h2>
+<p>Cet élément décrit un paramètre du module. Il est constitué d'un attribut, le <b>nom du paramètre</b>, et de deux sous-éléments: <code>&lt;unit /&gt;</code> l'unité du paramètre et <code>&lt;value /&gt;</code> sa valeur en <b>double</b>.</p>
+<div class="fragment"><div class="line">&lt;parameter name=<span class="stringliteral">&quot;NomDuParam&quot;</span>&gt;</div>
+<div class="line">    &lt;unit&gt;UnitéDuParam&lt;/unit&gt;</div>
+<div class="line">    &lt;value&gt;ValeurDuParamEnDouble&lt;/value&gt;</div>
+<div class="line">&lt;/parameter&gt;</div>
+</div><!-- fragment --><h2><a class="anchor" id="xml_mod_messs"></a>
+&lt;messages /&gt;</h2>
+<p>Ce noeud regroupe les différents méssages compris par ce module.</p>
+<h2><a class="anchor" id="xml_mod_mess"></a>
+&lt;message /&gt;</h2>
+<p>Cet élément décrit un message du module. Il est constitué d'un attribut, le <b>nom du message</b>, et d'un sous-élément: &lt;time&gt; qui modélise le <b>temps de transmission du message</b>.</p>
+<div class="fragment"><div class="line">&lt;message name=<span class="stringliteral">&quot;NomDuMessage&quot;</span>&gt;</div>
+<div class="line">    &lt;time&gt;TempsDeTransmission&lt;/time&gt;</div>
+<div class="line">&lt;/message&gt;</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Dimanche Mai 25 2014 14:11:43 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

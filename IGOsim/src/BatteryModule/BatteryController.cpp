@@ -1,31 +1,25 @@
-﻿#include "BatteryController.h"
+#include "BatteryController.h"
 
 using namespace std;
 
 
-BatteryController::BatteryController(Params params) : Module("Battery Controller", params){
-    //Les messages compris par le controlleur:
-    addMessage(Message("getStatus", "nothing", 5), 5);
-    addMessage(Message("actualVoltage", "nothing", 5), 5);
-
-    //Les connecteurs:
-    addSocket(Socket("toBattery"));
-    addSocket(Socket("toExt"));
+BatteryController::BatteryController(Params params) : Module("BatteryController", params, "BatteryModule/BatteryController.xml"){
 }
 
-void BatteryController::process(Message m){
-    if (m.getName() == "getStatus") {
+void BatteryController::process(std::shared_ptr<Message> m){
+    if (m->getName() == "getStatus") {
         //On demande le voltage à la batterie et on attend sa réponse:
-        getSocketByName("toBattery")->send(Message("getVoltage", "nothing", 5));
+        getSocketByName("toBattery")->send(Message::createMessage("getVoltage", "nothing", 5));
     }
-    if (m.getName() == "actualVoltage") {
+    if (m->getName() == "actualVoltage") {
+        std::shared_ptr<StringMessage> sm = dynamic_pointer_cast<StringMessage>(m);
         //Reponse de la batterie:
-        if (atoi(m.getPayload().c_str()) > 10) {
+        if (atoi(sm->getPayload().c_str()) > 10) {
             //Si voltage suffisant:
-            cout << "Status OK" << endl;
+            HCIs::getInstance().log(HCI::INFO, "Status OK");
         }
         else {
-            cout << "Status KO: Insufficient voltage" << endl;
+            HCIs::getInstance().log(HCI::INFO, "Status KO: Insufficient voltage");
         }
     }
 }

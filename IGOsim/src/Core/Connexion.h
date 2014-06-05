@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "Message.h"
+#include <memory>
 
 /*!
  * \class Connexion
@@ -26,10 +27,10 @@ public:
     ~Connexion();
     
     /*!
-     * \fn dispatch(Message, Socket *)
+     * \fn dispatch(std::shared_ptr<Message>, Socket *)
      * \brief Envoye un message m reçu de socket s vers le socket d'un autre côté
      */
-    void dispatch(Message m, Socket *s);
+    void dispatch(std::shared_ptr<Message>, Socket*);
 private:
     Socket *socketA;
     Socket *socketB;

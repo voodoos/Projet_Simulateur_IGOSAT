@@ -32,3 +32,8 @@ Prod
 .DS_Store
 
 
+*.aps
+*.swp
+/IGOsim/GenCode
+/IGOgen/GenCode
+/IGOSATx

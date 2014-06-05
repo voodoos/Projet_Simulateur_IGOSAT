@@ -1,0 +1,55 @@
+Description des attributs utilisés dans les différents fichiers de configuration xml\hypertarget{xmlRef_xml_mod}{}\section{Configuration des modules}\label{xmlRef_xml_mod}
+\hypertarget{xmlRef_xml_mod_exemple}{}\subsection{Exemple}\label{xmlRef_xml_mod_exemple}
+
+\begin{DoxyCode}
+<?xml version=\textcolor{stringliteral}{"1.0"} encoding=\textcolor{stringliteral}{"utf-8"}?>
+<module name=\textcolor{stringliteral}{"Battery"}>
+    <parameters>
+        <parameter name=\textcolor{stringliteral}{"voltage"}>
+            <unit>V</unit>
+            <value>40</value>
+        </parameter>
+        <parameter name=\textcolor{stringliteral}{"temp"}>
+            <unit>K</unit>
+            <value>40</value>
+        </parameter>
+    </parameters>
+
+    <messages>
+        <message name=\textcolor{stringliteral}{"getVoltage"}>
+            <time>5</time>
+        </message>
+    </messages>
+</module>
+\end{DoxyCode}
+\hypertarget{xmlRef_xml_mod_mod}{}\subsection{Noeud principal $<$module /$>$}\label{xmlRef_xml_mod_mod}
+Ce noeud, unique doit impérativement être l'unique présent à la racine du document, et donc contenir tous les autres. Il est paramétré par un seul attribut, le {\bfseries nom du module}.
+
+
+\begin{DoxyCode}
+<module name=\textcolor{stringliteral}{"NomModule"}></module> 
+\end{DoxyCode}
+
+
+L'attribut name de ce noeud doit impérativement {\bfseries correspondre au nom du module que l'on souhaite configurer}.\hypertarget{xmlRef_xml_mod_params}{}\subsection{$<$parameters /$>$}\label{xmlRef_xml_mod_params}
+Ce noeud regroupe les différents paramètres (physiques) du module.\hypertarget{xmlRef_xml_mod_param}{}\subsection{$<$parameter /$>$}\label{xmlRef_xml_mod_param}
+Cet élément décrit un paramètre du module. Il est constitué d'un attribut, le {\bfseries nom du paramètre}, et de deux sous-\/éléments\-: {\ttfamily $<$unit /$>$} l'unité du paramètre et {\ttfamily $<$value /$>$} sa valeur en {\bfseries double}.
+
+
+\begin{DoxyCode}
+<parameter name=\textcolor{stringliteral}{"NomDuParam"}>
+    <unit>UnitéDuParam</unit>
+    <value>ValeurDuParamEnDouble</value>
+</parameter>
+\end{DoxyCode}
+\hypertarget{xmlRef_xml_mod_messs}{}\subsection{$<$messages /$>$}\label{xmlRef_xml_mod_messs}
+Ce noeud regroupe les différents méssages compris par ce module.\hypertarget{xmlRef_xml_mod_mess}{}\subsection{$<$message /$>$}\label{xmlRef_xml_mod_mess}
+Cet élément décrit un message du module. Il est constitué d'un attribut, le {\bfseries nom du message}, et d'un sous-\/élément\-: $<$time$>$ qui modélise le {\bfseries temps de transmission du message}.
+
+
+\begin{DoxyCode}
+<message name=\textcolor{stringliteral}{"NomDuMessage"}>
+    <time>TempsDeTransmission</time>
+</message>
+\end{DoxyCode}
+ 

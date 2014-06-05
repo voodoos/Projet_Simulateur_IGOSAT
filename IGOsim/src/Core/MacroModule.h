@@ -12,10 +12,24 @@
  * \brief
  */
 
+/*!
+* \typedef typedef std::unordered_map<std::string, std::shared_ptr<Module>> Modules
+* \brief Un raccourci pratique pour la hashtable des sous-modules.
+* On utilise un shared_ptr pour s'assurer de la délétion des modules lors de la destruction du macromodule
+*/
+typedef std::unordered_map<std::string, std::shared_ptr<Module>> SubModules;
+
+/*!
+* \typedef ttypedef  std::vector<std::shared_ptr<Connexion>> Connexions
+* \brief Un raccourci pratique pour e vector des Connexions.
+* On utilise un shared_ptr pour s'assurer de la délétion des connexions lors de la destruction du macromodule
+*/
+typedef  std::vector<std::shared_ptr<Connexion>> Connexions;
+
 class MacroModule : public Module {
 private:
-    std::vector<Module*>modules;         /*!< Les sous-modules de module */
-    std::vector<Connexion>connexions;   /*!< Les connexions entre les sous-modules */
+    SubModules modules;         /*!< Les sous-modules de module */
+    Connexions connexions;    /*!< Les connexions entre les sous-modules */
 
 public:
     
@@ -23,7 +37,7 @@ public:
      * \fn MacroModule()
      * \brief Constructeur par défaut
      */
-    MacroModule(std::string = "DefaultName", Params = Params());
+    MacroModule(std::string = "DefaultName", Params = Params(), std::string cp = std::string());
 
     /*!
     * \fn MacroModule(std::string, Memory<int>, Params = Params())
@@ -38,10 +52,22 @@ public:
     virtual ~MacroModule();
     
     /*!
-    * \fn void addSubModule(Module* mod, bool timer = true)
-    * \brief Ajoute un sous-module à la liste et branche le timer si timer = true.
+    * \fn void addSubModule(Module* mod)
+    * \brief Ajoute un sous-module à la liste
     */
-    void addSubModule(Module*, bool = true);
-    void addConnexion(Socket *, Socket *);
+    void addSubModule(Module*);
+
+    /*!
+    * \fn void addConnexion(Connexion* conn)
+    * \brief Ajoute une connexion à la liste 
+    */
+    void addConnexion(Connexion*);
+
+    /*!
+    * \fn std::shared_ptr<Module> getModuleByName(std::string name)
+    * \brief Renvoie le module voulu
+    * Exception gérée
+    */
+    std::shared_ptr<Module> getModuleByName(std::string);
     
 };

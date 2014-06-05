@@ -1,0 +1,52 @@
+\hypertarget{docModule_classCreation}{}\section{Création d'une nouvelle classe}\label{docModule_classCreation}
+Pour créer un nouveau macro-\/module, il faut hériter une nouvelle classe de la classe \hyperlink{classMacroModule}{Macro\-Module}. {\itshape Remarque\-: la classe \hyperlink{classMacroModule}{Macro\-Module} est héritée de \hyperlink{classModule}{Module}, un macro-\/module est donc un module.}
+
+Par exemple pour créer le macro-\/module {\bfseries \hyperlink{classBatteryModule}{Battery\-Module}}\-: {\ttfamily class \hyperlink{classBatteryModule}{Battery\-Module}\-:public \hyperlink{classMacroModule}{Macro\-Module}\{\};}
+
+Il faut également au moins redéfinir deux methodes\-:
+\begin{DoxyEnumerate}
+\item le constructeur Macro\-Module\-::\-Macro\-Module
+\item Macro\-Module\-::process (qui est héritée de Module\-::process)
+\end{DoxyEnumerate}
+
+Notez que le constructeur de votre nouveau module doit appeller le constructeur de base de la classe \hyperlink{classMacroModule}{Macro\-Module}\-:
+
+
+\begin{DoxyCode}
+\hyperlink{classBatteryModule_a2fb494ef5f124c38c0fdf9ccfb31918f}{BatteryModule::BatteryModule}(std::string name, 
+      Params params) : \hyperlink{classMacroModule}{MacroModule}(name, params, \textcolor{stringliteral}{"
+      BatteryModule/BatteryModule.xml"})\{
+    \textcolor{comment}{/* ce qu'il faut faire pendant la création d'un module */}
+\}
+\end{DoxyCode}
+
+
+Les arguments de ce constructeur de base sont les suivants\-:
+\begin{DoxyEnumerate}
+\item name \-: le nom de votre macro-\/module.
+\item params \-: un objet de type {\ttfamily std\-::unordered\-\_\-map$<$std\-::string, double$>$} avec des paramètres d'un macro-\/module.
+\item \char`\"{}\-Battery\-Module/\-Battery\-Module.\-xml\char`\"{} – le chemin vers le fichier {\ttfamily .xml} qui contient la configuration du module.
+\end{DoxyEnumerate}\hypertarget{docModule_properties}{}\section{Propriétés d'un Module}\label{docModule_properties}
+\hypertarget{docMacroModule_submodules}{}\subsection{Sous-\/modules}\label{docMacroModule_submodules}
+La difference principale entre \hyperlink{classModule}{Module} et \hyperlink{classMacroModule}{Macro\-Module} est la possibilité d'ajouter des sous-\/modules dans \hyperlink{classMacroModule}{Macro\-Module} et d'établir des liens entre eux. \hypertarget{docMacroModule_addsubmodule}{}\subsubsection{Ajout d'un sous-\/module}\label{docMacroModule_addsubmodule}
+L'ajout d'un module à un macro-\/module est effectué par la méthode Macro\-Module\-::dd\-Sub\-Module. Il faut le faire dans le constructeur du macro-\/module. Exemple du constructeur \hyperlink{classBatteryModule}{Battery\-Module} avec ajout des sous-\/modules \hyperlink{classBattery}{Battery} et \hyperlink{classBatteryController}{Battery\-Controller}\-: 
+\begin{DoxyCode}
+\hyperlink{classBatteryModule_a2fb494ef5f124c38c0fdf9ccfb31918f}{BatteryModule::BatteryModule}(std::string name, 
+      Params params) : \hyperlink{classMacroModule}{MacroModule}(name, params, \textcolor{stringliteral}{"
+      BatteryModule/BatteryModule.xml"})\{
+    \textcolor{comment}{//Les modules:}
+    addSubModule(\textcolor{keyword}{new} \hyperlink{classBattery}{Battery}());
+    addSubModule(\textcolor{keyword}{new} \hyperlink{classBatteryController}{BatteryController}());        \}
+\end{DoxyCode}
+\hypertarget{docMacroModule_connectSubModules}{}\subsubsection{Etablissement des connections entre sous-\/modules}\label{docMacroModule_connectSubModules}
+La création de connections entre sous-\/modules se fait par la méthode \hyperlink{classMacroModule_a6ad4d6abd8bb4b742b800f6fa3c98296}{Macro\-Module\-::add\-Connexion}. Exemple de constructeur \hyperlink{classBatteryModule}{Battery\-Module} avec établissement des connections entre sous-\/modules \hyperlink{classBatteryController}{Battery\-Controller} (en utilisant le \hyperlink{classSocket}{Socket} \char`\"{}to\-Battery\-Controller\char`\"{}) et \hyperlink{classBattery}{Battery} (en utilisant le \hyperlink{classSocket}{Socket} \char`\"{}to\-Battery\char`\"{})\-: 
+\begin{DoxyCode}
+\hyperlink{classBatteryModule_a2fb494ef5f124c38c0fdf9ccfb31918f}{BatteryModule::BatteryModule}(std::string name, 
+      Params params) : \hyperlink{classMacroModule}{MacroModule}(name, params, \textcolor{stringliteral}{"
+      BatteryModule/BatteryModule.xml"})\{
+     addConnexion(\textcolor{keyword}{new} \hyperlink{classConnexion}{Connexion}(getModuleByName(\textcolor{stringliteral}{"Battery"})->
+      getSocketByName(\textcolor{stringliteral}{"toBatteryController"}), getModuleByName(\textcolor{stringliteral}{"BatteryController"})->
+      getSocketByName(\textcolor{stringliteral}{"toBattery"})));
+\}
+\end{DoxyCode}
+ 

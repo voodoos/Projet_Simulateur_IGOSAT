@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>IGOsat Simulator: Page principale</title>
+<title>IGOsat Simulator: Simulateur IGOSat</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,13 +75,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">IGOsat Simulator Documentation</div>  </div>
+<div class="title">Simulateur IGOSat </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
+Introduction</h1>
+<p>Dévelloppé dans le cadre d'un projet de master, ce programme pose les bases d'un simulateur de système complexe écrit en C++, basé sur des modules abstraits synchronisés via une horloge.</p>
+<h1><a class="anchor" id="general"></a>
+Principe général de la simulation</h1>
+<p>L'idée du simulateur est de représenter le satellite comme un ensemble de modules ordonnés hiérarchiquement. Trois briques de base sont disponible: les <a class="el" href="docModule.html">modules</a>, les <a class="el" href="docMacroModule.html">macromodules</a> et les modules physique. Les modules sont des éléments finaux, qui n'en contiennent pas d'autres. Les macromodules sont des modules qui peuvent contenir d'autres modules et des connexions entre ces modules. Enfin les modules physiques sont un peu à part, il serviront à modéliser, et à synchroniser avec les modules du satellite, les différents phénomènes physiques impliqués dans la simulation.</p>
+<p>Des modules connectés au sein d'un macromodules peuvent communiquer entre-eux en s'envoyant des messages. Il est nécessaire de définir pour chaque module la liste des messages qu'ils est capable de comprendre ainsi que les traitements associés à la réception de chacun de ces messages.</p>
+<p>Tous ces modules agissent de façon synchrone. Une classe <a class="el" href="classTimer.html" title="Cette classe sert à la gestion du temps simulé">Timer</a> se charge d'appeller la méthode <a class="el" href="classModule.html#ab7ea9648fa500696c85e93ebd0666390" title="Méthode appellée à chaque pas de temps, commune à tous les modules.">Module::clock</a> de chaque module à chaque pas de temps. Tous les modules sont automatiquement inscris dans le timer lors de leur construction. Il est également possible de désynchroniser certains modules, afin qu'ils tournent à une fréquence plus ou moins élevée.</p>
+<p>Les modules peuvent êtres en partie configurés via les <a class="el" href="xmlRef.html">fichiers xml</a> qui leur sont associés, cependant cette foncitonnalité n'est pas encore complète, et le générateur associé ne peut pour le moment éditer un XML déjà créé.</p>
+<h1><a class="anchor" id="struc"></a>
+Structure du dépôt</h1>
+<pre class="fragment">IGOgen/                        Générateur de code
+IGOsim/                        Simulateur
+   | config/                   Fichiers de configuration XML
+   | doc/                      Documentation générée par Doxygen
+   | src/                      Sources du simulateur
+       | Core/                 Sources génériques du simulateur
+       | Satellite/            Sources spécifiques à IGOsat
+   | doxy.conf                 Fichier de configuration de Doxygen
+ProjetM1/                      Divers pour suivi du projet
+UML/                           Modélisation du simulateur
+README.md                      Readme basique, affiché sur accueil du dépôt
+CHANGELOG.md                   Changelog
+</pre><h1><a class="anchor" id="install_sec"></a>
+Installation</h1>
+<h2><a class="anchor" id="tools_subsec"></a>
+Récupération des sources</h2>
+<p>La méthode la plus simple pour récupérer les sources du projet est de cloner le dépôt depuis GitHub: </p>
+<pre class="fragment">git clone https://github.com/VooDooS/Projet_Simulateur_IGOSAT.git
+</pre><h2><a class="anchor" id="tools_cofig"></a>
+Configuration</h2>
+<p>Par défaut, le simulateur va aller chercher des fichiers de configuration dans le dossier <em>config/</em>, si ce n'est pas votre cas, pensez à modifier la ligne correspondante dans IGOSim.cpp, avant de compiler. Un / doit impérativement conclure le lien. </p>
+<pre class="fragment">XMLReader::setPath("Path/to/config/");
+</pre><h2><a class="anchor" id="tools_compil"></a>
+Compilation des sources</h2>
+<p>Un makefile est fourni, pour compiler, placez vous dans le dossier src, et écecutez la commande Make: </p>
+<pre class="fragment"> cd IGOSim/src/
+ make
+</pre><h1><a class="anchor" id="particip"></a>
+Comment participer ?</h1>
+<p>Si vous n'êtes pas un collaborateur du projet sur Github il vous faut créer une bifurcation (un fork) du dépôt sur votre propre compte. Il vous est ensuite possible de nous proposer vos modifications via une demande d'ajout (pull request).</p>
+<p>Sinon, pensez à créer une branche pour effectuer vos modifications en toute sécurité, et de demander une vérification commune via une demande d'ajout. Ce processus à l'avantage de permettre à tous d'être tenus au courant de l'évolution du code.</p>
+<p>Il est de plus fortement conseillé de tenir à jour le document "CHANGELOG.md", notamment lorsque les modifications concernent la partie Core du code. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Mars 12 2014 23:25:18 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 25 2014 14:11:52 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>IGOsat Simulator:  Fichier source de src/headers/Battery.h</title>
+<title>IGOsat Simulator:  Fichier source de src/BatteryModule/Battery.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d0381950fc41278198232cb047ffc1f9.html">headers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_90b4cf55dedf4042d56fdc1807462dc2.html">BatteryModule</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -87,21 +87,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">Battery.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿#pragma once</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Module.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="classBattery.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBattery.html">Battery</a>: <span class="keyword">public</span> <a class="code" href="classModule.html" title="Les briques de base du simulateur.">Module</a>{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">void</span> process(<a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a>);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">void</span> process(std::shared_ptr&lt;Message&gt;);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classBattery.html">Battery</a>(std::string = <span class="stringliteral">&quot;DefaultName&quot;</span>, Params = Params());</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classBattery.html">Battery</a>(Params = Params());</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Mars 12 2014 23:25:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 25 2014 14:11:42 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

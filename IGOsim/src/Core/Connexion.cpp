@@ -1,7 +1,13 @@
 #include "Connexion.h"
+
+#include <sstream>
+
 #include "Socket.h"
 
-#include "CLI.h"
+
+#include "HCIs.h"
+#include "HCI.h"
+
 using namespace std;
 
 Connexion::Connexion(Socket *a, Socket *b) : socketA(a), socketB(b){
@@ -22,14 +28,16 @@ Connexion::Connexion(const Connexion& c) {
 Connexion::~Connexion(){
 }
 
-void Connexion::dispatch(Message m, Socket *s){
+void Connexion::dispatch(std::shared_ptr<Message> m, Socket *s){
+    std::string msgReceived("");
     if (s->getName() == socketA->getName()) {
         socketB->receive(m);
-        CLI::getInstance().log(CLI::ERROR, "TOTO3");
-        cout << "Socket " << socketB->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketA->getName() << endl;
+        msgReceived = "Socket "+socketB->getOwner()+"."+socketB->getName() + " received " + m->getName() + " sent by " + socketA->getOwner()+"."+socketA->getName();
+        HCIs::getInstance().log(HCI::INFO, msgReceived);
     } else if(s->getName() == socketB->getName()) {
         socketA->receive(m);
-        cout << "Socket " << socketA->getName() << " received " << m.getName() << "(" << m.getPayload() << ") sent by " << socketB->getName() << endl;
+        msgReceived = "Socket "+socketA->getOwner()+"."+socketA->getName() + " received " + m->getName() + " sent by " + socketB->getOwner()+"."+socketB->getName();
+        HCIs::getInstance().log(HCI::INFO, msgReceived);
     } else {
         cout << "Unrecognized sender" << endl;
     }

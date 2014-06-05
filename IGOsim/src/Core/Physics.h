@@ -1,6 +1,8 @@
-﻿#pragma once
+#pragma once
 
-#include "Module.h"
+#include "ISynchronized.h"
+
+#include <memory>
 
 /*!
 * \class Physics
@@ -9,14 +11,14 @@
 * Prend en attribut un module dont elle à le droit de changer les paramètres.
 *
 */
-
+class Module;
 class Physics : public ISynchronized
 {
 protected:
-    Module* module;
+    std::shared_ptr<Module> module;
     
 public:
-    Physics(Module *);
+    Physics(std::shared_ptr<Module>);
     virtual ~Physics();
 
     /*!

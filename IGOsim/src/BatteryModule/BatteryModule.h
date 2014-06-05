@@ -16,6 +16,7 @@
 
 class BatteryModule:public MacroModule{
 private:
+    /*! \todo UNIQUE_PTR POINTER reset(new toto) */
     Battery *battery;
     BatteryController *batteryController;
     BatteryPhysics *batteryPhysics;
@@ -25,5 +26,5 @@ public:
     virtual ~BatteryModule();
 
 private:
-    virtual void process(Message);
+    virtual void process(std::shared_ptr<Message>);
 };

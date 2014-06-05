@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>IGOsat Simulator:  Fichier source de src/headers/Message.h</title>
+<title>IGOsat Simulator:  Fichier source de src/Core/Message.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d0381950fc41278198232cb047ffc1f9.html">headers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a2f0e5642e47e7ed59fe0f0829eafb5f.html">Core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -87,32 +87,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">Message.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿#pragma once</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="classMessage.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::string name;       </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::string payload;    </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> transmissionTime;     </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="classMessage.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMessage.html" title="Classe abstraite de base pour les messages.">Message</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">   18</a></span>&#160;    std::string <a class="code" href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">name</a>;                  </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classMessage.html#a9f2d70860e0ec546c8e00cd69a3555ee">   19</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMessage.html#a9f2d70860e0ec546c8e00cd69a3555ee">transmissionTime</a>;     </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classMessage.html#ae88f77ba817eb27909016d48bd207023" title="Constructeur par défaut.">Message</a>(std::string name = <span class="stringliteral">&quot;Default Name&quot;</span>, std::string payload = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">int</span> = 0);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classMessage.html#a154809183fa5ec6b5182c487db1167dd" title="Constructeur par défaut.">Message</a>(std::string <a class="code" href="classMessage.html#ac7adddb666acdc47c48f684bd6810a51">name</a> = <span class="stringliteral">&quot;Default Name&quot;</span>, <span class="keywordtype">int</span> = 0);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classMessage.html#a3f7275462831f787a861271687bcad67" title="Destructeur.">~Message</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::string <a class="code" href="classMessage.html#ac03b02000572b0852c574498bf138e87" title="Renvoie le nom du message.">getName</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::string <a class="code" href="classMessage.html#ad4276fb8ec3b78e30b13cd13a242b163" title="Renvoie la charge utile du message.">getPayload</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> std::ostream &amp;<a class="code" href="classMessage.html#acbdab136245666bce3752fa311150672" title="Operateur de sortie surchargé">operator&lt;&lt;</a>(std::ostream &amp;os)=0;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMessage.html#aceef88a46eac676eb977e48cf5c3e464" title="Renvoie le temps de traitement du message.">getTransmissionTime</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMessage.html#a37550fee6e64d7c83ead2628373f4db3" title="Renvoie le temps de traitement du message.">getTransmissionTime</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;Message&gt; createMessage(std::string, <span class="keywordtype">int</span>=0, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>=0);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;Message&gt; createMessage(std::string, std::string=<span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>=0);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;Message&gt; createMessage(std::string, <span class="keywordtype">float</span>=0, <span class="keywordtype">unsigned</span>=0);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mercredi Mars 12 2014 23:25:16 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 25 2014 14:11:42 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
