@@ -19,7 +19,7 @@
 
 
 #ifdef __APPLE__
-    #define setXMLpath XMLReader::setPath("/Users/stagiaire/Documents/Projet_Simulateur_IGOSAT/IGOsim/config/"");
+    #define setXMLpath XMLReader::setPath("/Users/stagiaire/Documents/Projet_Simulateur_IGOSAT/IGOsim/config/");
 #else
     #define setXMLpath  std::cout<<std::endl;
 #endif
