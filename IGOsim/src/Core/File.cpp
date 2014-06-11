@@ -1,6 +1,6 @@
 ﻿#include "File.h"
 #include "Timer.h"
-
+#include <cmath>
 #include <sstream>
 
 

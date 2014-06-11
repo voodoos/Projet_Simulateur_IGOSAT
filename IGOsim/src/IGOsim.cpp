@@ -18,11 +18,7 @@
 #include "HCIs.h"
 
 
-#ifdef __APPLE__
-    #define setXMLpath XMLReader::setPath("/Users/stagiaire/Documents/Projet_Simulateur_IGOSAT/IGOsim/config/");
-#else
-    #define setXMLpath  std::cout<<std::endl;
-#endif
+#define setXMLpath XMLReader::setPath("/Users/stagiaire/Documents/Projet_Simulateur_IGOSAT/IGOsim/config/");
 
 //For convenience:
 using namespace std;
@@ -31,11 +27,10 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     /* BASIC CONFIGURATION */
-
-    //XMLReader::setPath("/Users/CoolerMaster/Dropbox/Etudes/ProjetLong/Projet_Simulateur_IGOSAT/IGOsim/config/");
+    setXMLpath
 
     //On initialise les interfaces utilisateurs.
-    HCIs::getInstance().setLog("test.log", HCI::INFO);
+    //HCIs::getInstance().setLog("test.log", HCI::INFO);
     HCIs::getInstance().addDataOutput("BV", "batterieVoltage.data");
 
     /*Le module de base, le Satellite */

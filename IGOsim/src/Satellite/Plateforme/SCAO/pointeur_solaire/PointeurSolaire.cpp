@@ -2,7 +2,7 @@
 #include "PointeurSolaire.h"
 using namespace std;
 
-PointeurSolaire::PointeurSolaire(std::string name, Params params) : Module(name, params, "PointeurSolaire.xml"){
+PointeurSolaire::PointeurSolaire(std::string name, Params params) : Module(name, params, "Satellite/Plateforme/PointeurSolaire/PointeurSolaire.xml"){
 
 }
 PointeurSolaire::~PointeurSolaire() {
