@@ -6,7 +6,7 @@ Par exemple pour créer le macro-\/module {\bfseries \hyperlink{classBatteryModu
 Il faut également au moins redéfinir deux methodes\-:
 \begin{DoxyEnumerate}
 \item le constructeur Macro\-Module\-::\-Macro\-Module
-\item Macro\-Module\-::process (cf Module\-::process documenté \hyperlink{docModule}{ici})
+\item Macro\-Module\-::process (qui est héritée de Module\-::process)
 \end{DoxyEnumerate}
 
 Notez que le constructeur de votre nouveau module doit appeller le constructeur de base de la classe \hyperlink{classMacroModule}{Macro\-Module}\-:

@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,11 +99,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a890eb6e73b42101e282cb86474f97ca2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a890eb6e73b42101e282cb86474f97ca2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLog</b> (<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">HCI::logLevel</a>=<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2">HCI::INFO</a>)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLog</b> (HCI::logLevel=HCI::INFO)</td></tr>
 <tr class="memitem:a9e3e7099368ff5916e2d87d7741fc66a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e3e7099368ff5916e2d87d7741fc66a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLog</b> (std::string, <a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">HCI::logLevel</a>=<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0ab3f339d63b08c4a353f0f6609366d6a2">HCI::INFO</a>)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLog</b> (std::string, HCI::logLevel=HCI::INFO)</td></tr>
 <tr class="memitem:a29a701816f31e573013052410beb6a82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29a701816f31e573013052410beb6a82"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCIs.html#a29a701816f31e573013052410beb6a82">log</a> (<a class="el" href="classHCI.html#a395f0ab7958108f23c34c7a04b56c4b0">HCI::logLevel</a>, std::string, bool withTime=true)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCIs.html#a29a701816f31e573013052410beb6a82">log</a> (HCI::logLevel, std::string, bool withTime=true)</td></tr>
 <tr class="memdesc:a29a701816f31e573013052410beb6a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilise le logger configuré pour logger le message. Si aucun logger n'est configuré, command line par défaut. <br/></td></tr>
 <tr class="memitem:afeb0ee7efd2c14dfded566aacb9dc615"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHCIs.html#afeb0ee7efd2c14dfded566aacb9dc615">addDataOutput</a> (std::string, std::string)</td></tr>
 <tr class="memdesc:afeb0ee7efd2c14dfded566aacb9dc615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajout une nouvelle sortie de données (pour le moment que des fichiers).  <a href="#afeb0ee7efd2c14dfded566aacb9dc615"></a><br/></td></tr>
@@ -177,7 +177,7 @@ static <a class="el" href="classHCIs.html">HCIs</a> &amp;&#160;</td><td class="m
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche Mai 11 2014 20:22:45 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 25 2014 14:11:47 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

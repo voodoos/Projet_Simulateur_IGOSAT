@@ -63,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,7 +98,7 @@ Création d'une nouvelle classe</h1>
 <li>params: un objet de type <code>std::unordered_map&lt;std::string, double&gt;</code> avec des paramètres d'un module.</li>
 <li>"BatteryModule/BatteryController.xml": le chemin vers un fichier <code>.xml</code> qui contient la descripton des paramètres d'un module et la description des messages qui peuvent être traités par ce module.</li>
 </ol>
-<p>D'autre part, process est la méthode qui traite des messages compris par ce module. La sélection d'un message peut être réalisée à l'aide d'un classique <code>if then else</code> qui verifie le nom d'un message en utilisant la methode <a class="el" href="classMessage.html#a9134dbb49e75c4a4b8862afca70a78b9" title="Renvoie le nom du message.">Message::getName()</a>. Par exemple, le traitement des messages "getStatus" et "actualVoltage" du <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> "BatteryController" peut être implementé de la façon suivante:</p>
+<p>D'autre part, process est la méthode qui traite des messages compris par ce module. La sélection d'un message peut être réalisée à l'aide d'un classique <code>if then else</code> qui verifie le nom d'un message en utilisant la methode <a class="el" href="classMessage.html#ac03b02000572b0852c574498bf138e87" title="Renvoie le nom du message.">Message::getName()</a>. Par exemple, le traitement des messages "getStatus" et "actualVoltage" du <a class="el" href="classModule.html" title="Les briques de base du simulateur.">Module</a> "BatteryController" peut être implementé de la façon suivante:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> BatteryController::process(std::shared_ptr&lt;Message&gt; m){</div>
 <div class="line">    <span class="keywordflow">if</span> (m-&gt;getName() == <span class="stringliteral">&quot;getStatus&quot;</span>) {</div>
 <div class="line">        <span class="comment">//ce qu&#39;il faut faire à la réception d&#39;un message &quot;getStatus&quot;</span></div>
@@ -158,7 +158,7 @@ Messages</h2>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche Mai 11 2014 20:22:44 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Mai 25 2014 14:11:43 pour IGOsat Simulator par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

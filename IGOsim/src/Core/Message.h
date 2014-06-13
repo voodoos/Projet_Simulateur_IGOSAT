@@ -35,7 +35,7 @@ public:
     * \fn std::string getName()
     * \brief Renvoie le nom du message
     */
-    std::string getName() const;
+    std::string getName();
     
     /*!
      * \fn std::ostream& operator<<(std::ostream &os)
@@ -44,10 +44,10 @@ public:
     virtual std::ostream &operator<<(std::ostream &os)=0;
     
     /*!
-    * \fn int getTransmissionTime() const
+    * \fn int getTransmissionTime()
     * \brief Renvoie le temps de traitement du message
     */
-    unsigned int getTransmissionTime() const;
+    unsigned int getTransmissionTime();
     
     /*!
      * \fn std::shared_ptr<Message> createMessage(std::string, int=0, unsigned=0)

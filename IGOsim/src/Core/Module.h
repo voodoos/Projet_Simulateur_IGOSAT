@@ -111,12 +111,12 @@ public:
     Socket* getSocketByName(std::string);
 
     /*!
-    * \fn void getParameterByName(std::string) const
+    * \fn void getParameterByName(std::string)
     * \brief Récupère la valueur du paramètre, lève une exception sinon.
     *
     * \todo Créer et gérer l'exception
     */
-    double getParamValueByName(std::string) const;
+    double getParamValueByName(std::string);
     
     /*!
      * \fn void setParameterByName(std::string, double)
@@ -126,10 +126,10 @@ public:
     void setParamValueByName(std::string, double);
 
     /*!
-    * \fn bool isMessageAllowed(std::string msgName) const
+    * \fn bool isMessageAllowed(std::string msgName)
     * \brief Vérifie si le message est un des messages compris par ce module.
     */
-    bool isMessageAllowed(std::string) const;
+    bool isMessageAllowed(std::string);
     
     /*!
      * \fn &operator[](std::string)

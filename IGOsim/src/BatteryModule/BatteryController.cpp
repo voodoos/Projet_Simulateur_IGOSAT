@@ -1,7 +1,5 @@
 #include "BatteryController.h"
 
-#include "HCI.h"
-#include "HCIs.h"
 using namespace std;
 
 

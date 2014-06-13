@@ -1,5 +1,6 @@
 #include "Timer.h"
-#include "CLI.h"
+#include "HCIs.h"
+#include "HCI.h"
 
 #include "File.h"
 #include "Module.h"
@@ -19,7 +20,7 @@ void Timer::add(File *f){
 }
 
 void Timer::start(unsigned int c){
-    for (counter=0; counter<c; ++counter) {
+    for (counter = 0; counter<c; ++counter) {
 
         //On clock la physique:
         for (vector<Physics *>::iterator it = synchronizedPhysics.begin(); it != synchronizedPhysics.end(); ++it) {
@@ -27,7 +28,7 @@ void Timer::start(unsigned int c){
         }
 
         //On clock les modules:
-        for(vector<Module *>::iterator it = synchronizedModules.begin(); it != synchronizedModules.end(); ++it) {
+        for (vector<Module *>::iterator it = synchronizedModules.begin(); it != synchronizedModules.end(); ++it) {
             (*it)->clock(counter);
         }
 
@@ -40,7 +41,7 @@ void Timer::start(unsigned int c){
 }
 
 void Timer::stop(){
-    
+
 }
 
 

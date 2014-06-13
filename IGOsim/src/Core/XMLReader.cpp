@@ -2,8 +2,8 @@
 
 #include <iostream>
 
-#include "HCI.h"
 #include "HCIs.h"
+#include "HCI.h"
 
 #include "rapidxml.hpp"
 #include "rapidxml_utils.hpp"
@@ -57,7 +57,7 @@ unordered_map<string, double> XMLReader::readParams(string confPath) {
     }
     catch (const runtime_error &error){
         //Erreur à l'ouverture du fichier:
-        HCIs::getInstance().log(HCI::WARNING, "Impossible de lire le fichier de configuration " + basePath + confPath + "\n" + error.what(), false);
+        HCIs::getInstance().log(HCI::WARNING, "Impossible de lire le fichier de configuration "+basePath+confPath+"\n"+error.what(), false);
         throw;
     }
     catch (rapidxml::parse_error &e) {

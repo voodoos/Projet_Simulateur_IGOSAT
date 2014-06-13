@@ -1,7 +1,7 @@
 ﻿#include "MacroModule.h"
 
-#include "HCI.h"
 #include "HCIs.h"
+#include "HCI.h"
 
 //For convenience:
 using namespace std;

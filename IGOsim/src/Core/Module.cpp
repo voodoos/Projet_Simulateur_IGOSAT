@@ -1,7 +1,7 @@
 #include "Module.h"
 
-#include "HCI.h"
 #include "HCIs.h"
+#include "HCI.h"
 #include "Memory.cpp"
 #include "XMLReader.h"
 
@@ -137,7 +137,7 @@ Socket* Module::getSocketByName(string sname)
     */
 }
 
-double Module::getParamValueByName(string pname) const
+double Module::getParamValueByName(string pname)
 {
     try {
         return parameters.at(pname);
@@ -156,7 +156,7 @@ void Module::setParamValueByName(string pname, double value){
     }
 }
 
-bool Module::isMessageAllowed(string  m) const
+bool Module::isMessageAllowed(string  m)
 {
     try {
         messagesAllowed.at(m);

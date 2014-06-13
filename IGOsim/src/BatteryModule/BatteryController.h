@@ -2,6 +2,8 @@
 #include <iostream>
 
 #include "Module.h"
+#include "HCI.h"
+#include "HCIs.h"
 
 class BatteryController:public Module{
 public:
