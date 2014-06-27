@@ -69,7 +69,7 @@ std::shared_ptr<Message> Socket::getFirstMessage(){
         std::shared_ptr<Message>m = messageQueue.front();
         messageQueue.pop();
 
-        //Et on met règle le timer pour le message suivant, ou à zéro si c'est fini:
+        //Et on règle le timer pour le message suivant, ou à zéro si c'est fini:
         if (messageQueue.size() > 0) {
             timer = messageQueue.front()->getTransmissionTime();
         }

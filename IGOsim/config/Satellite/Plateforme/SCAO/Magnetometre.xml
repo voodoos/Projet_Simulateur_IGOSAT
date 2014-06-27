@@ -18,18 +18,34 @@
             <unit>W</unit>
             <value>0.3</value>
         </parameter>
-        <parameter name="température_min">
+        <parameter name="temp_min">
             <unit>C</unit>
             <value>-50</value>
         </parameter>
-        <parameter name="température_max">
+        <parameter name="temp_max">
             <unit>C</unit>
             <value>85</value>
         </parameter>
+        <parameter name="opChampMagn">
+            <unit>tesla</unit>
+            <value>20</value>
+        </parameter>
     </parameters>
+    
     <messages>
+        <message name="getTemp">
+            <time>5</time>
+        </message>
+        <message name="getTension">
+            <time>5</time>
+        </message>
+        <message name="getChampMagn">
+            <time>5</time>
+        </message>
     </messages>
+    
     <sockets>
-    </socket>
+        <socket name="toODB"></socket>
+    </sockets>
 </module>
 

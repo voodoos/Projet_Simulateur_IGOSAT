@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module name="ODBmicroController">
+    <parameters>
+    </parameters>
+    <messages>
+        <message name="readTemp">
+            <time>5</time>
+        </message>
+        <message name="readPosition">
+            <time>5</time>
+        </message>
+        <message name="readTime">
+            <time>5</time>
+        </message>
+    </messages>
+    <sockets>
+        <socket name="toODB"></socket>
+        <socket name="toAlimentationController"></socket>
+    </sockets>
+</module>
+

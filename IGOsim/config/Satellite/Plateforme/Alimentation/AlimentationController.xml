@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module name="AlimentationController">
+    <parameters>
+        <parameter name="charge">
+            <unit>%</unit>
+            <value>100</value>
+        </parameter>
+    </parameters>
+    <messages>
+        <message name="getCharge">
+            <time>1</time>
+        </message>
+        <message name="actualCharge">
+            <time>1</time>
+        </message>
+    </messages>
+    <sockets>
+        <socket name="toAlimentation"></socket>
+        <socket name="toODBmicroController"></socket>
+    </sockets>
+</module>
+

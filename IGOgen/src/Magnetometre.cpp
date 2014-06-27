@@ -2,26 +2,26 @@
 #include "Magnetometre.h"
 using namespace std;
 
-Magnetometre::Magnetometre(std::string name, Params params) : Module(name, params, "Satellite/Plateforme/magnetometre/Magnetometre.xml"){
+Magnetometre::Magnetometre(Params params) : Module("Magnetometre", params, "Satellite/Plateforme/SCAO/Magnetometre.xml"){
 
 }
 Magnetometre::~Magnetometre() {
 
 }
 
-void Magnetometre::process(shared_ptr<Message>){
+void Magnetometre::process(shared_ptr<Message> m){
 
     
     //mesure de la température
-    if(m->getName() == "getTemp") {
-        getSocketByName("toODB")->send(Message::createMessage("opTemp", (float) getParamValueByName("temperature"),5));
+  /* if(m->getName() == "getTemp") {
+        getSocketByName("toODB")->send(Message::createMessage("temp_min", (float) getParamValueByName("temperature"),5));
     }
     
     //mesure de la tension
     if(m->getName() == "getTension") {
         getSocketByName("toODB")->send(Message::createMessage("opTension", (float) getParamValueByName("tension"),5));
-    }
-    
+    }*/
+   
     
     // l'ODB envoie une commande de controle d'attitude pour mesurer l'orientation
     /*if(m->getName() == "mesureChampMagn") {
@@ -30,8 +30,12 @@ void Magnetometre::process(shared_ptr<Message>){
     
     
     // le magnétomètre mesure le champ magnétique
-    if(m->getName() == "getChampMagn") {
-        getSocketByName("toODB")->send(Message::createMessage("opChampMagn", (float) getParamValueByName("tesla"),5));
+   if(m->getName() == "getChampMagn") {
+       stringstream ss;
+       ss << getParamValueByName("opChampMagn");
+       string message = "Champ Magnetique " + ss.str();
+       HCIs::getInstance().log(HCI::INFO, message);
+
     }
     
     

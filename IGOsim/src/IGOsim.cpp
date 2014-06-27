@@ -12,6 +12,8 @@
 #include "Socket.h"
 #include "Timer.h"
 #include "XMLReader.h"
+#include "Magnetometre.h"
+#include "ODBModule.h"
 
 //Output:
 #include "HCI.h"
@@ -27,7 +29,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     /* BASIC CONFIGURATION */
-    setXMLpath
+    setXMLpath;
 
     //On initialise les interfaces utilisateurs.
     //HCIs::getInstance().setLog("test.log", HCI::INFO);
@@ -37,18 +39,21 @@ int main(int argc, char *argv[])
     //Sate
 
         /* Exemple batterie */ 
-        BatteryModule *bm = new BatteryModule("BatteryModule");
+//        BatteryModule *bm = new BatteryModule("BatteryModule");
+    ODBModule *om = new ODBModule("ODBModule");
+//
+//        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
+//        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
+//        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 10));
+//        (*bm)["toMagnetometre"]->send(Message::createMessage("getChampMagn", "nothing", 5));
+    (*om)["ext"]->send(Message::createMessage("start", "nothing", 5));
+    
+    
+    
 
-        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
-        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 5));
-        (*bm)["fromExt"]->send(Message::createMessage("getStatus", "nothing", 10));
-        
+    Timer::getInstance().start(100);
 
-        Timer::getInstance().start(100);
-
-        //delete(bm);
-        
-        cin.ignore();
+    delete(om);
 
 	return 0;
 }

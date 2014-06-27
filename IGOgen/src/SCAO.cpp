@@ -15,6 +15,6 @@ SCAO::~SCAO() {
 
 }
 
-void SCAO::process(shared_ptr<Message>){
+void SCAO::process(shared_ptr<Message> m){
 
 }

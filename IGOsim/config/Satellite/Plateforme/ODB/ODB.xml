@@ -18,7 +18,7 @@
 	   			<unit>Wh</unit>
 	   			<value>0.6</value>
     		</parameter>
-    		<parameter name="température">
+    		<parameter name="température_min">
 	   			<unit>C</unit>
 	   			<value>-20</value>
     		</parameter>
@@ -26,10 +26,25 @@
 	   			<unit>C</unit>
 	   			<value>60</value>
     		</parameter>
+            <parameter name="memoire">
+	   			<unit>%</unit>
+	   			<value>100</value>
+    		</parameter>
     </parameters>
     <messages>
+        <message name="getTension">
+            <time>1</time>
+        </message>
+        <message name="getTempérature_min">
+            <time>5</time>
+        </message>
+        <message name="getTempérature_max">
+            <time>5</time>
+        </message>
+
     </messages>
     <sockets>
+        <socket name="toODBmicroController"></socket>
     </socket>
 </module>
 

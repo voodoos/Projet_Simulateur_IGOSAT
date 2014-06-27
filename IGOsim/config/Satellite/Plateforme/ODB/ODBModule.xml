@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<module name="BatteryModule">
+<module name="ODBModule">
     <parameters>
     </parameters>
-
     <messages>
         <message name="getStatus">
-            <time>5</time>
+            <time>1</time>
         </message>
     </messages>
-    
     <sockets>
-        <socket name="fromExt"></socket>
-        <socket name="toMagnetometre"></socket>
+        <socket name="toAlimentationModule"></socket>
+        <socket name="ext"></socket>
     </sockets>
 </module>
+

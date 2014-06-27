@@ -3,15 +3,17 @@
 #include "Module.h"
 #include "HCI.h"
 #include "HCIs.h"
+
+
 /*!
-* \class Magnetometre
+* \class AlimentationController
 * \brief Description d'un module
 *
 */
-class Magnetometre:public Module{
+class AlimentationController:public Module{
 public:
- Magnetometre(Params params = Params());
- virtual ~Magnetometre();
+ AlimentationController(std::string name, Params params = Params());
+ virtual ~AlimentationController();
 private:
  virtual void process(std::shared_ptr<Message>);
 };

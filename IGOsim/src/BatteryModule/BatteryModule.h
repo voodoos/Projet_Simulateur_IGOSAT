@@ -5,7 +5,7 @@
 #include "BatteryController.h"
 #include "BatteryPhysics.h"
 #include "MacroModule.h"
-
+#include "Magnetometre.h"
 /*!
 * \class BatteryModule
 * \brief Un exemple de batterie
@@ -20,6 +20,7 @@ private:
     Battery *battery;
     BatteryController *batteryController;
     BatteryPhysics *batteryPhysics;
+    Magnetometre *magnetometre;
 
 public:
     BatteryModule(std::string name, Params params = Params());
